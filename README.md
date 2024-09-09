@@ -25,6 +25,7 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 * 診断結果を表示
 * Xにて共有
 * 下記のサイトに遷移
+
 ANSWER1の場合
 https://ca-voir.com/nobuyo-kitchen-ojakhuri-jp/
 

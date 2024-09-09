@@ -22,9 +22,23 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 ## 実装を予定している機能
 ### MVP
 * 診断
+* 診断結果を表示
 * Xにて共有
 * 下記のサイトに遷移
-https://ca-voir.com/topics/nobuyo-kitchen/
+ANSWER1の場合
+https://ca-voir.com/nobuyo-kitchen-ojakhuri-jp/
+ANSWER2の場合
+https://ca-voir.com/nobuyo-kitchen-badrijani-jp/
+ANSWER3の場合
+https://ca-voir.com/nobuyo-kitchen-sokos-chashushuli-jp/
+ANSWER4の場合
+https://ca-voir.com/nobuyo-kitchen-pkhali-jp/
+ANSWER5の場合
+https://ca-voir.com/nobuyo-kitchen-ostri-jp/
+ANSWER6の場合
+https://ca-voir.com/nobuyo-kitchen-chikhirtma-jp/
+ANSWER7の場合
+https://ca-voir.com/nobuyo-kitchen-shkmeruli-jp/
 * ユーザー新規登録
 * ログイン
 * 投稿(ログイン後)

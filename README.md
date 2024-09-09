@@ -31,4 +31,3 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 ### その後の機能
 * いいね
 * コメント(ログイン後)
-# master

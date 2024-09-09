@@ -27,18 +27,25 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 * 下記のサイトに遷移
 ANSWER1の場合
 https://ca-voir.com/nobuyo-kitchen-ojakhuri-jp/
+
 ANSWER2の場合
 https://ca-voir.com/nobuyo-kitchen-badrijani-jp/
+
 ANSWER3の場合
 https://ca-voir.com/nobuyo-kitchen-sokos-chashushuli-jp/
+
 ANSWER4の場合
 https://ca-voir.com/nobuyo-kitchen-pkhali-jp/
+
 ANSWER5の場合
 https://ca-voir.com/nobuyo-kitchen-ostri-jp/
+
 ANSWER6の場合
 https://ca-voir.com/nobuyo-kitchen-chikhirtma-jp/
+
 ANSWER7の場合
 https://ca-voir.com/nobuyo-kitchen-shkmeruli-jp/
+
 * ユーザー新規登録
 * ログイン
 * 投稿(ログイン後)

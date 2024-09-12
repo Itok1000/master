@@ -30,10 +30,26 @@ Xで共有できるジョージア料理診断サービスWebアプリです。
 
 https://ca-voir.com/topics/nobuyo-kitchen/
 
+ジョージア料理は過去に2品作って、実際に作ろうと思ったら一般の人が作ろうとするとスパイスが買えなかったりするケースがあります。
+なので、スパイスをたくさん扱っている店舗情報(Webサイトなど)かジョージアスパイスが販売されている楽天、AmazonなどのECサイト紹介などもアプリに載せる認識です
+
 ## サービスの利用イメージ
 
-ユーザーがこのサービスをログインなしでいくつかの質問を診断することができ、診断した結果に応じておすすめのジョージア料理と作り方のページに遷移できるところです。
+ユーザーがこのサービスをログインなしでいくつかの質問を診断することができます。
+この診断は、YESNO方式を用いて、ユーザーの好み、ユーザーの状況に基づいて診断結果を表示します。
+(例)
+お酒はよく飲む
+はい　いいえ
+時間がないので、手軽に作りたい
+はい　いいえ
+がっつりしたのが食べたい
+はい　いいえ
+スパイスに抵抗がない
+はい　いいえ
+etc
 
+診断した結果に応じておすすめのジョージア料理と作り方のページに遷移できるところです。
+※ジョージア料理と作り方のページについては2次利用や3次利用になるので、現在担当者に問い合わせしております
 ## ユーザーの獲得について
 
 X(旧Twitter)を用いてWebアプリ上でリリース公開します
@@ -51,7 +67,35 @@ X(旧Twitter)を用いてWebアプリ上でリリース公開します
 - 診断
 - 診断結果を表示
 - Xにて共有
-- 下記のサイトに遷移ANSWER1の場合https://ca-voir.com/nobuyo-kitchen-ojakhuri-jp/ANSWER2の場合https://ca-voir.com/nobuyo-kitchen-badrijani-jp/ANSWER3の場合https://ca-voir.com/nobuyo-kitchen-sokos-chashushuli-jp/ANSWER4の場合https://ca-voir.com/nobuyo-kitchen-pkhali-jp/ANSWER5の場合https://ca-voir.com/nobuyo-kitchen-ostri-jp/ANSWER6の場合https://ca-voir.com/nobuyo-kitchen-chikhirtma-jp/ANSWER7の場合https://ca-voir.com/nobuyo-kitchen-shkmeruli-jp/
+- 下記のサイトに遷移
+ANSWER1の場合
+
+https://ca-voir.com/nobuyo-kitchen-ojakhuri-jp/
+
+ANSWER2の場合
+
+https://ca-voir.com/nobuyo-kitchen-badrijani-jp/
+
+ANSWER3の場合
+
+https://ca-voir.com/nobuyo-kitchen-sokos-chashushuli-jp/
+
+ANSWER4の場合
+
+https://ca-voir.com/nobuyo-kitchen-pkhali-jp/
+
+ANSWER5の場合
+
+https://ca-voir.com/nobuyo-kitchen-ostri-jp/
+
+ANSWER6の場合
+
+https://ca-voir.com/nobuyo-kitchen-chikhirtma-jp/
+
+ANSWER7の場合
+
+https://ca-voir.com/nobuyo-kitchen-shkmeruli-jp/
+
 - ユーザー新規登録
 - ログイン
 - 投稿(ログイン後)

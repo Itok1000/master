@@ -100,6 +100,9 @@ https://ca-voir.com/nobuyo-kitchen-shkmeruli-jp/
 ### 画面遷移図
 Figma：https://www.figma.com/design/7mF5VkcFrHRPTxVFbwi1wh/%E7%84%A1%E9%A1%8C?node-id=0-1&node-type=canvas&t=RkSKDCDXuFFcGs0e-0
 
+### ER図
+Figma：https://www.figma.com/board/upCfXoU2vajH1QZWP60v2e/%E7%84%A1%E9%A1%8C?node-id=0-1&node-type=canvas&t=EYO0Kka19bUoUsQ6-0
+
 ### READMEに記載した機能
 - [〇] 診断機能（未ログインでも閲覧可能）
 - [〇] 診断結果を表示機能（未ログインでも閲覧可能）

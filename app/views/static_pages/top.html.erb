@@ -3,5 +3,26 @@
     <h1>ジョージア料理診断アプリ</h1>
     <h2>ガマルジョバ</h2>
     <h3>გამარჯობა</h3>
+    <br>
+    <h4>診断始める前に、こちらを確認</h4>
+    
+    <div class="button-container">
+      <!-- 上部のボタン（Flag_of_Georgia.png） -->
+      <div class="button left-button">
+        <%= link_to 'ジョージアって何?', '/georgia', class: 'button-text'%>
+      </div>
+
+      <!-- 下部のボタン（Image07.png） -->
+      <div class="button right-button">
+        <%= link_to 'ジョージア料理って何？', '/food', class: 'button-text'%>
+      </div>
+    </div>
+
+    <h5>確認出来たら</h5>
+
+    <!-- 診断スタートボタンの追加 -->
+    <div class="start-button-container">
+      <%= link_to '診断スタート', '/diagnosis', class: 'start-button' %>
+    </div>
   </div>
 </div>

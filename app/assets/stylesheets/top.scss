@@ -1,0 +1,106 @@
+.top-wrapper {
+  background-color: #fbecc0;
+  position: relative;
+  background-position: center;
+  padding: 50px 0; /* 上下に余白を追加して全体をスクロール可能にする */
+  min-height: 100vh; /* ビューポートの高さを最低限カバーする */
+}
+
+.top-inner-text {
+  width: 100%;
+  text-align: center;
+  font-size: 4.5rem;
+  color: black;
+  margin-bottom: 50px; /* ボタンとの間に余白を追加 */
+  opacity: 0; /* 初めは透明に設定 */
+  transform: translateY(100%); /* 下からスライドするために位置を下に設定 */
+  animation: fadeInFromBottom 1s forwards; /* フェードインアニメーションの設定 */
+}
+
+@keyframes fadeInFromBottom {
+  to {
+    opacity: 1; /* アニメーション終了時に完全に表示 */
+    transform: translateY(0); /* アニメーション終了時の位置 */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .top-inner-text {
+    font-size: 2rem;
+  }
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* ボタンを縦に配置 */
+  align-items: center; /* ボタンを中央揃え */
+  margin-top: 20px; /* 上に余白を追加して題名の下に配置 */
+}
+
+.button {
+  width: 501px;  /* 指定された幅に変更 */
+  height: 378px; /* 指定された高さに変更 */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-bottom: 20px; /* ボタン間のスペース */
+}
+
+.left-button {
+  background-image: url('Flag_of_Georgia.png');
+}
+
+.right-button {
+  background-image: url('Image07.png');
+}
+
+.button-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.left-button .button-text {
+  color: black;
+}
+
+.right-button .button-text {
+  color: white;
+}
+
+.start-button-container {
+  margin-top: 20px; /* タイトルからボタンまでの余白 */
+  display: flex;
+  justify-content: center; /* ボタンを中央に配置 */
+}
+
+.start-button {
+  display: inline-block;
+  background-color: orange;
+  color: white;
+  width: 290px;
+  height: 106px;
+  line-height: 106px; /* ボタン内のテキストを中央揃え（縦） */
+  text-align: center;
+  font-size: 1.8rem;
+  text-decoration: none; /* 下線を削除 */
+  border-radius: 10px; /* 角を少し丸める */
+  font-weight: bold;
+}
+
+.start-button:hover {
+  background-color: #ff7f50; /* ホバー時の色変更 */
+  color: white;
+}
+
+.footer-bottom{
+  background-color: #F0DB87; /* ホバー時の色変更 */
+}
+
+.custom-bg {
+  background-color: #F0DB87; /* 背景色をオレンジ系に設定 */
+}

@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   root "static_pages#top"
+  # ルート側にdiagnoses(診断機能)を追加
+  resources :diagnoses, only: %i[index new]
 end

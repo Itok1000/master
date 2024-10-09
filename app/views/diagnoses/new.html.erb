@@ -1,0 +1,41 @@
+<div class="diagnosis-wrapper">
+  <div class="diagnosis-inner-text">
+  <h1>設問にYESかNOで答えてね</h1>
+  <%= form_for(@diagnosis, url: diagnoses_path, method: :post, class: 'form-horizontal') do |f| %>
+    <div class="form-group">
+      <label>お酒はよく飲む</label>
+      <br>
+      <%= f.radio_button :question1, "1", id: "question1_yes", class: "hidden-radio" %>
+        <label for="question1_yes" class="button yes-button">YES</label>
+
+      <%= f.radio_button :question1, "2", id: "question1_no", class: "hidden-radio" %>
+        <label for="question1_no" class="button no-button">NO</label>
+      <br>
+    </div>
+    
+    <div class="form-group">
+      <label>時間がないので、手軽に作りたい</label>
+      <br>
+      <%= f.radio_button :question2, "1", id: "question2_yes", class: "hidden-radio" %>
+        <label for="question2_yes" class="button yes-button">YES</label>
+
+      <%= f.radio_button :question2, "2", id: "question2_no", class: "hidden-radio" %>
+        <label for="question2_no" class="button no-button">NO</label>
+      <br>
+    </div>
+    
+    <div class="form-group">
+      <label>がっつりしたのが食べたい</label>
+      <br>
+      <%= f.radio_button :question3, "1", id: "question3_yes", class: "hidden-radio" %>
+        <label for="question3_yes" class="button yes-button">YES</label>
+
+      <%= f.radio_button :question2, "2", id: "question3_no", class: "hidden-radio" %>
+        <label for="question3_no" class="button no-button">NO</label>
+      <br>
+    </div>
+    <%= link_to "診断結果を見る", "#", class: 'result' %>
+  <% end %>
+  </div>
+</div>
+

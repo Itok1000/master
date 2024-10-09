@@ -1,0 +1,117 @@
+/* app/assets/stylesheets/diagnoses.scss */
+/*トップページ（static_pages/top.html.erb）と診断ページ（diagnosis/new.html.erb）は異なるページです。
+それぞれのページに固有のスタイルを適用する方がメンテナンスしやすく、将来的な変更も管理しやすくなります。
+ですので、診断ページのCSSは、トップページのCSSファイル（top.scss）に追加するのではなく、
+専用のCSSファイルに分離することをお勧めします。*/
+
+/* 診断ページの全体デザイン */
+.diagnosis-wrapper {
+    background-color: #fbecc0;
+    position: relative;
+    background-position: center;
+    padding: 50px 0; /* 上下に余白を追加して全体をスクロール可能にする */
+    min-height: 100vh; /* ビューポートの高さを最低限カバーする */
+  }
+
+.diagnosis-inner-text {
+    width: 100%;
+    text-align: center;
+    font-size: 4.5rem;
+    color: black;
+    margin-bottom: 50px; /* ボタンとの間に余白を追加 */
+  }
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+    text-align: center;
+  }
+
+
+/* ラジオボタンを隠す */
+.hidden-radio {
+    display: none;
+  }
+
+/* YESボタンのスタイル */
+.yes-button {
+    display: inline-block;
+    background-color: #FF0505;
+    color: white;
+    width: 290px;
+    height: 106px;
+    line-height: 106px; /* ボタン内のテキストを中央揃え（縦） */
+    text-align: center;
+    font-size: 2.8rem;
+    text-decoration: none; /* 下線を削除 */
+    border-radius: 10px; /* 角を少し丸める */
+    font-weight: bold;
+}
+
+.yes-button:hover {
+    background-color: #ff0505b2; /* ホバー時の色変更 */
+    color: white;
+  }
+  
+  /* NOボタンのスタイル */
+.no-button {
+    display: inline-block;
+    background-color: #05D2FF;
+    color: white;
+    width: 290px;
+    height: 106px;
+    line-height: 106px; /* ボタン内のテキストを中央揃え（縦） */
+    text-align: center;
+    font-size: 2.8rem;
+    text-decoration: none; /* 下線を削除 */
+    border-radius: 10px; /* 角を少し丸める */
+    font-weight: bold;
+}
+
+.no-button:hover {
+    background-color: #05d1ffb7; /* ホバー時の色変更 */
+    color: white;
+  }
+
+
+/* チェックされた場合に色を変える */
+input[type="radio"]:checked + .yes-button {
+    background-color: #cc0000; /* YESが選択されたときの色 */
+  }
+  
+input[type="radio"]:checked + .no-button {
+    background-color: #0088cc; /* NOが選択されたときの色 */
+}
+  
+  /* 診断結果を見るボタン */
+.result {
+  display: inline-block;
+  background-color: orange;
+  color: white;
+  width: 290px;
+  height: 106px;
+  line-height: 106px; /* ボタン内のテキストを中央揃え（縦） */
+  text-align: center;
+  font-size: 1.8rem;
+  text-decoration: none; /* 下線を削除 */
+  border-radius: 10px; /* 角を少し丸める */
+  font-weight: bold;
+}
+
+.result:hover {
+    background-color: #ff7f50; /* ホバー時の色変更 */
+    color: white;
+  }
+
+
+

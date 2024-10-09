@@ -16,7 +16,7 @@
 .diagnosis-inner-text {
     width: 100%;
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     color: black;
     margin-bottom: 50px; /* ボタンとの間に余白を追加 */
   }
@@ -41,7 +41,12 @@
 /* ラジオボタンを隠す */
 .hidden-radio {
     display: none;
+    text-align: center;
   }
+
+.col-6{
+  text-align: center;
+}
 
 /* YESボタンのスタイル */
 .yes-button {

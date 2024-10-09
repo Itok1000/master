@@ -1,0 +1,33 @@
+<div class="intoro">
+            <h5>診断結果</h5>
+            <p>あなたにおすすめの香りは…</p>
+        </div>
+        <div class="tweet-container">
+            <div class="tweet">
+                <% if @diagnosis.question == "111" %>
+                <h6>オジャフリ</h6>
+
+                <% elsif @diagnosis.question == "121" %>
+                <h6>パドリジャーニ</h6>
+
+                <% elsif @diagnosis.question == "122" %>
+                <h6>ソコスチャシュシュリ</h6>
+
+                <% elsif @diagnosis.question == "221" %>
+                <h6>プパリ</h6>
+
+                <% elsif @diagnosis.question == "212" %>
+                <h6>オーストリ</h6>
+
+                <% elsif @diagnosis.question == "222" %>
+                <h6>チヒルトゥマ</h6>
+
+                <% elsif @diagnosis.question == "112" %>
+                <h6>シュクメルリ</h6>
+
+                <% elsif @diagnosis.question == "211" %>
+                <h6>チャホフビリ</h6>
+                
+                <% end %>
+
+        </div>

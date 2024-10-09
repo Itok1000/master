@@ -1,3 +1,6 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 @import 'top';
+/*application.scss に診断ページ用のスタイルを読み込む
+app/assets/stylesheets/application.scssにdiagnoses.scssをインポート*/
+@import 'diagnoses';

@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   root "static_pages#top"
+  # ルート側にdiagnoses(診断機能)を追加
+  # 現在のroutes.rbでは、診断機能を提供するresources :diagnosesに対してindexとshowアクションしかルートが設定されていないが
+  # トップページから診断フォーム（newアクション）に進む必要がある
+  resources :diagnoses, only: %i[index show new create]
 end

@@ -104,3 +104,68 @@
 .custom-bg {
   background-color: #F0DB87; /* 背景色をオレンジ系に設定 */
 }
+
+.georgia-deta {
+  font-size: 1.8rem;
+  text-align: start;
+}
+
+.georgia-flag{
+  position: absolute;
+  top: 10px; /* 上からの距離 */
+  right: 40px; /* 右からの距離（大きくすると左に移動） */
+  width: 410px; /* 幅を200pxに設定 */
+  height: 376px; /* 高さを150pxに設定 */
+}
+
+.image01{
+  position: absolute;
+  top: 20px; /* 上からの距離 */
+  right: 30px; /* 右からの距離（大きくすると左に移動） */
+  width: 200px; /* 幅を200pxに設定 */
+  height: 200px; /* 高さを150pxに設定 */
+}
+
+
+.image02{
+  position: absolute;
+  bottom: 20px; /* 下からの距離 */
+  right: 30px; /* 右からの距離（大きくすると左に移動） */
+  width: 200px; /* 幅を200pxに設定 */
+  height: 200px; /* 高さを150pxに設定 */
+}
+
+.georgia-inner-text {
+  width: 100%;
+  text-align: start;
+  font-size: 4.5rem;
+  color: black;
+  margin-bottom: 50px; /* ボタンとの間に余白を追加 */
+  opacity: 0; /* 初めは透明に設定 */
+  transform: translateY(100%); /* 下からスライドするために位置を下に設定 */
+  animation: fadeInFromBottom 1s forwards; /* フェードインアニメーションの設定 */
+}
+
+@keyframes fadeInFromBottom {
+  to {
+    opacity: 1; /* アニメーション終了時に完全に表示 */
+    transform: translateY(0); /* アニメーション終了時の位置 */
+  }
+}
+
+.food-container {
+  display: flex;
+  justify-content: space-between; /* 左右に画像を配置 */
+  align-items: center; /* 縦方向を中央揃え */
+  width: 100%; /* 親要素の幅を100%に設定 */
+  margin-top: 20px; /* 上に余白を追加 */
+}
+
+.image05, .image06 {
+  width: 45%; /* 画像を45%の幅に設定して左右に配置 */
+  height: auto; /* 高さを自動調整 */
+  object-fit: cover; /* 画像の比率を維持して調整 */
+}
+
+
+

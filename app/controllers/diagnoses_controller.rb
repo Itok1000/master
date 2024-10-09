@@ -10,15 +10,13 @@ class DiagnosesController < ApplicationController
   def create
     @diagnosis = Diagnosis.new(diagnosis_params)
 
-    # いずれかの質問が未選択の場合、エラーメッセージを表示してフォームに戻る
+    # すべての質問が回答されているかチェック
     if diagnosis_params[:question1].blank? || diagnosis_params[:question2].blank? || diagnosis_params[:question3].blank?
       flash[:alert] = "選択されていない回答があります"
       render :new
     else
-      # 質問の回答を連結して1つの文字列にする処理
-      if params[:diagnosis][:question].present?
-        @diagnosis.question = params[:diagnosis][:question].join("")
-      end
+      # 各質問の回答を連結して一つの文字列にする
+      @diagnosis.question = "#{diagnosis_params[:question1]}#{diagnosis_params[:question2]}#{diagnosis_params[:question3]}"
 
       if @diagnosis.save
         flash[:notice] = "診断が完了しました"
@@ -31,7 +29,8 @@ class DiagnosesController < ApplicationController
   end
 
   private
-    def diagnosis_params
-      params.require(:diagnosis).permit(:question1, :question2, :question3, question: [])
-    end
+
+  def diagnosis_params
+    params.require(:diagnosis).permit(:question1, :question2, :question3)
+  end
 end

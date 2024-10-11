@@ -1,5 +1,8 @@
 <%= form_for(@diagnosis, class: 'form-horizontal') do |f| %>
   <div class="diagnosis-wrapper">
+      <div class="top-inner-text">
+      <h2>3つの質問にYESかNOで答えてね</h2>
+      </div>
       <div class="row">
           <div class="diagnosis-inner-text">
               <p>Question1. お酒はよく飲む</p>
@@ -38,7 +41,7 @@
           </div>
       </div>
       <div class="diagnosis-inner-text">
-      <%= f.submit "診断結果を見る", class: 'result' %>
+      <%= f.submit t('diagnoses.botton.result'), class: 'result' %>
       </div>
   </div>
 <% end %>

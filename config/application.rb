@@ -29,5 +29,11 @@ module Myapp
       g.helper false
       g.test_framework nil
     end
+
+    # Railsのi18nのデフォルト設定を :ja にする
+    # config/application.rb に設定を記述
+    # config.i18n.default_locale = :ja という記述を追加
+    config.i18n.default_locale = :ja
+    # Railsアプリケーションのデフォルトの言語設定が日本語（:ja）に設定される
   end
 end

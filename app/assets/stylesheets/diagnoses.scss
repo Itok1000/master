@@ -99,7 +99,7 @@ input[type="radio"]:checked + .no-button {
 }
   
   /* 診断結果を見るボタンとユーザー登録するボタンのスタイル */
-.result, .user-registration {
+.result{
   display: inline-block;
   background-color: orange;
   color: white;

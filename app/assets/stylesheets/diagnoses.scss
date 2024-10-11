@@ -118,7 +118,8 @@ input[type="radio"]:checked + .no-button {
     color: white;
   }
 
-  .image-container {
+/*診断結果画像の配置スタイル*/
+.image-container {
     position: relative; /* テキストを絶対配置するために相対配置 */
     max-width: 100%; /* 画面幅に合わせて画像サイズを自動調整 */
     height: auto; /* 高さを自動調整 */
@@ -126,11 +127,13 @@ input[type="radio"]:checked + .no-button {
     overflow: hidden; /* 親要素を超えた場合に隠す */
 }
 
+/*診断結果回答の配置スタイル*/
 .answer-image {
     width: 100%; /* 親要素の幅に合わせて自動調整 */
     height: auto; /* アスペクト比を維持したまま高さを調整 */
 }
 
+/*料理名のスタイル */
 .text-overlay {
     position: absolute;
     top: 50%;
@@ -173,6 +176,7 @@ input[type="radio"]:checked + .no-button {
   text-align: center;
 }
 
+/* 結果ボタンコンテナをフレックスボックスで水平方向に配置 */
 .button-container {
   display: flex;
   flex-direction: column; /* ボタンを縦に配置 */
@@ -219,6 +223,16 @@ input[type="radio"]:checked + .no-button {
 .diagnosis-again:hover {
   background-color: rgba(193, 6, 235, 0.544); /* ホバー時の色変更 */
   color: white;
+}
+
+/* もう一度診断する？とユーザー登録へを中央揃え左右に配置 */
+.button-container2{
+  display: flex;
+    justify-content: space-between;
+    width: 100%; /* ボタンが両端に配置されるための幅を確保 */
+    padding: 0 50px; /* 左右の端にスペースを確保 */
+    margin-top: 20px; /* タイトルとの余白 */
+    align-items: center; /* ボタンを中央揃え */
 }
 
 

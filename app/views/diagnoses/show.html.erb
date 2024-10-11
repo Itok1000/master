@@ -22,7 +22,7 @@
       <p>ホクホクのジャガイモと、カリカリのお肉が食欲をそそるので、ビールとの相性が抜群</p>
       </div>
       <div class="button-container">
-      <a href="https://ca-voir.com/nobuyo-kitchen-ojakhuri-jp/" class="btn btn-primary">詳細はこちら</a>
+      <a href="https://ca-voir.com/nobuyo-kitchen-ojakhuri-jp/" class="how-to-make">作り方はこちら</a>
       </div>
 
 
@@ -156,6 +156,9 @@
       <div class="button-container">
       <a href="https://ca-voir.com/nobuyo-kitchen-shkmeruli-jp/" class="how-to-make">作り方はこちら</a>
       </div>
+
+
+
     <!-- 211 の場合（チャホフビリ） -->
     <% elsif @diagnosis.question == "211" %>
       <div class="image-container">
@@ -178,11 +181,10 @@
       </div>
     <% end %>
   </div>
-    <div class="button-container">
+    <div class="button-container2">
       <%= link_to "もう一度診断する？", new_diagnosis_path, class:"diagnosis-again" %>
-    </div>
       <%= link_to "ユーザー登録へ", "", class:"result" %>
-    
+    </div>
 </div>
 
         

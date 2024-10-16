@@ -183,6 +183,18 @@
   </div>
     <div class="button-container2">
       <%= link_to t('diagnoses.botton.diagnosis-again'), new_diagnosis_path, class:"diagnosis-again" %>
+        <div class="share-buttons">
+          <!-- Xシェアボタン -->
+            <a href="https://twitter.com/share"
+            class="twitter-share-button"
+            data-url="<%= request.original_url %>"
+            data-text="おすすめのジョージア料理は <%= @recipe_name %> です！ #ジョージア料理診断 #ジョージア料理 #ジョージア"
+            data-lang="ja"
+            data-show-count="false">
+            Xでシェア
+            </a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
         <div class="text-overlay">
          <p>新規登録、ログインして
          料理のコメント投稿、評価をしてみよう！</p>

@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   # 現在のroutes.rbでは、診断機能を提供するresources :diagnosesに対してindexとshowアクションしかルートが設定されていないが
   # トップページから診断フォーム（newアクション）に進む必要がある
   resources :diagnoses, only: %i[index show new create]
+  get "images/ogp.png", to: "images#ogp", as: "images_ogp"
   # ●resources について
   # Ruby on Railsのルーティングに広く使用され、特定のリソースに対して標準的なRESTfulルートを一括で生成
   # 例えば、resources :users と記述することで、ユーザーに関連する一連のルート（index, new, create, show, edit, update, destroy）が自動的に設定される

@@ -1,4 +1,7 @@
 class DiagnosesController < ApplicationController
+  # 診断機能はログインなしで使用できるようにする
+  skip_before_action :require_login, only: %i[new create show]
+
   def new
     @diagnosis = Diagnosis.new
   end

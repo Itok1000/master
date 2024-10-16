@@ -20,4 +20,18 @@ Rails.application.routes.draw do
   # 現在のroutes.rbでは、診断機能を提供するresources :diagnosesに対してindexとshowアクションしかルートが設定されていないが
   # トップページから診断フォーム（newアクション）に進む必要がある
   resources :diagnoses, only: %i[index show new create]
+  # ●resources について
+  # Ruby on Railsのルーティングに広く使用され、特定のリソースに対して標準的なRESTfulルートを一括で生成
+  # 例えば、resources :users と記述することで、ユーザーに関連する一連のルート（index, new, create, show, edit, update, destroy）が自動的に設定される
+  # これにより、コントローラの各アクションがURLとHTTPメソッドに紐づけられ、CRUD操作のルーティングが容易になる
+
+  # ●only指定について
+  # onlyオプションを使用すると、resources メソッドで生成されるルートの中から特定のアクションだけを選択して生成できる
+  # 例えば、resources :users, only: %i[new create] と指定すると、ユーザーの新規作成のみを生成し、
+  # その他のアクションのルートは除外される
+  # ログインログアウト時のルート追加
+  resources :users, only: %i[new create]
+  get "login", to: "user_sessions#new"
+  post "login", to: "user_sessions#create"
+  delete "logout", to: "user_sessions#destroy"
 end

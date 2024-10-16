@@ -8,6 +8,33 @@ class DiagnosesController < ApplicationController
 
   def show
     @diagnosis = Diagnosis.find(params[:id])
+
+    # 診断結果に対応する料理名を設定
+    recipe_names = {
+      "111" => "シュクメルリ",
+      "112" => "オジャフリ",
+      "121" => "オーストリ",
+      "122" => "ソコスチャシュシュリ",
+      "211" => "チャホフビリ",
+      "212" => "パドリジャーニ",
+      "221" => "チヒルトゥマ",
+      "222" => "プパリ"
+    }
+    @recipe_name = recipe_names[@diagnosis.question] || "ジョージア料理"
+
+    # メタタグの設定
+    set_meta_tags title: "診断結果",
+                  description: "おすすめのジョージア料理は #{@recipe_name} です",
+                  og: {
+                    title: "診断結果",
+                    description: "おすすめのジョージア料理は #{@recipe_name} です",
+                    image: ogp_image_url(@diagnosis.question), # 動的に生成されたOGP画像のURL
+                    url: request.original_url
+                  },
+                  twitter: {
+                    card: "summary_large_image",
+                    image: ogp_image_url(@recipe_name)
+                  }
   end
 
   def create
@@ -32,6 +59,10 @@ class DiagnosesController < ApplicationController
   end
 
   private
+  # OGP画像のURLを生成するためのメソッドを追加
+  def ogp_image_url(question)
+    images_ogp_url(text: question)
+  end
 
   def diagnosis_params
     params.require(:diagnosis).permit(:question1, :question2, :question3)

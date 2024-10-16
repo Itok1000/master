@@ -1,4 +1,9 @@
 ja:
+  notices:
+    login_success: "ログイン成功しました"
+    logout_success: "ログアウトしました"
+  alerts:
+    invalid_credentials: "メールまたはパスワードが間違っています。"
   static_pages:
     What kind of country is Georgia?: ジョージアってどんな国？
     reference_materials: "参考資料:"
@@ -25,7 +30,7 @@ ja:
       chikirtma2: "ジョージアでよく用いるスパイスが必要でなく、粉末ブイヨンやコンソメを使えば手軽に作れる"
       chikirtma3: "鶏のあっさり感と卵のトロミが身体に染みるので、体調が悪いとき、二日酔い時におすすめ"
       shkmeruli1: "鶏肉とガーリックのクリーム煮込み"
-      shkmeruli2: "ニンニクは刻みでもいいけどニンニクチューブでもおいしく作れる…"
+      shkmeruli2: "ニンニクは刻みでもいいけどニンニクチューブでもおいしく作れる"
       shkmeruli3: "本場は鶏肉とニンニクのみの材料で作るけど、シチューみたいにジャガイモ、玉ねぎ、サツマイモを入れるのもあり"
       chakhohbili1: "鶏肉のトマト煮込み"
       chakhohbili2: "見た目からそうに見えるけど、スパイスはほとんど使わず、鶏肉の癖のない香ばしさとトマトのうまみとの組み合わせは万人受け間違いなし"

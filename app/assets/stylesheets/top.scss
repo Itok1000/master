@@ -78,7 +78,7 @@
   justify-content: center; /* ボタンを中央に配置 */
 }
 
-.start-button {
+.orange {
   display: inline-block;
   background-color: orange;
   color: white;
@@ -92,13 +92,13 @@
   font-weight: bold;
 }
 
-.start-button:hover {
+.orange:hover {
   background-color: #ff7f50; /* ホバー時の色変更 */
   color: white;
 }
 
 .footer-bottom{
-  background-color: #F0DB87; /* ホバー時の色変更 */
+  background-color: #F0DB87; 
 }
 
 .custom-bg {
@@ -166,6 +166,28 @@
   height: auto; /* 高さを自動調整 */
   object-fit: cover; /* 画像の比率を維持して調整 */
 }
+
+/* EmailとPasswordの入力欄の背景色を変更 */
+.custom-input {
+  background-color: #F5F5F5; /* 背景色 */
+}
+
+/* こちらのリンクの文字を少し大きくする */
+.custom-link {
+  font-size: 1.8rem; /* 少し大きめの文字サイズ */
+  text-decoration: underline; /* リンクらしさを強調 */
+}
+
+/* ログインボタンとその前後の要素に余裕を持たせる */
+.start-button {
+  margin-top: 20px; /* ボタンとの間に余裕を持たせる */
+}
+
+/* パスワードをお忘れの方の下のリンクとの間隔調整 */
+.mt-3 {
+  margin-top: 15px; /* 初めての方はこちらとの間隔調整 */
+}
+
 
 
 

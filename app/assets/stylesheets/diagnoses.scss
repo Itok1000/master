@@ -5,13 +5,6 @@
 専用のCSSファイルに分離することをお勧めします。*/
 
 /* 診断ページの全体デザイン */
-.diagnosis-wrapper {
-    background-color: #fbecc0;
-    position: relative;
-    background-position: center;
-    padding: 50px 0; /* 上下に余白を追加して全体をスクロール可能にする */
-    min-height: 100vh; /* ビューポートの高さを最低限カバーする */
-  }
 
 .diagnosis-inner-text {
     width: 100%;
@@ -97,26 +90,7 @@ input[type="radio"]:checked + .yes-button {
 input[type="radio"]:checked + .no-button {
     background-color: #0088cc; /* NOが選択されたときの色 */
 }
-  
-  /* 診断結果を見るボタンとユーザー登録するボタンのスタイル */
-.result{
-  display: inline-block;
-  background-color: orange;
-  color: white;
-  width: 290px;
-  height: 106px;
-  line-height: 106px; /* ボタン内のテキストを中央揃え（縦） */
-  text-align: center;
-  font-size: 1.8rem;
-  text-decoration: none; /* 下線を削除 */
-  border-radius: 10px; /* 角を少し丸める */
-  font-weight: bold;
-}
 
-.result:hover {
-    background-color: #ff7f50; /* ホバー時の色変更 */
-    color: white;
-  }
 
 /*診断結果画像の配置スタイル*/
 .image-container {

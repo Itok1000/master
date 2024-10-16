@@ -1,0 +1,36 @@
+<div class="top-wrapper">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-auto">
+      <div class='text-center'>
+        <h1>ログイン</h1>
+      </div>
+
+      <%= form_with url: login_path do |f| %>
+        <div class="mb-3">
+          <%= f.label :email %>
+          <%= f.email_field :email, class: "form-control custom-input" %>
+        </div>
+        
+        <div class="mb-3">
+          <%= f.label :password %>
+          <%= f.password_field :password, class: "form-control custom-input" %>
+        </div>
+
+        <!-- 「パスワードをお忘れの方はこちら」のリンク -->
+        <div class='text-center'>
+          <%= link_to 'パスワードをお忘れの方はこちら', '#', class: 'custom-link' %>
+        </div>
+
+        <!-- ログインボタン -->
+        <div class="text-center mt-3">
+          <%= f.submit "ログイン", class: "orange" %>
+        </div>
+      <% end %>
+
+      <!-- 「初めての方はこちら」のリンク -->
+      <div class='text-center mt-3'>
+        <%= link_to '初めての方はこちら', new_user_path, class: 'custom-link' %>
+      </div>
+    </div>
+  </div>
+</div>

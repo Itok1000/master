@@ -32,7 +32,13 @@ Rails.application.routes.draw do
   # その他のアクションのルートは除外される
   # ログインログアウト時のルート追加
   resources :users, only: %i[new create]
+  # get 'login', to: 'user_sessions#new' はログインフォームを表示するためのGETリクエストを処理
   get "login", to: "user_sessions#new"
+  # post 'login', to: 'user_sessions#create' はログインフォームから送信された情報を処理するPOSTリクエストを扱う
   post "login", to: "user_sessions#create"
+  # delete 'logout', to: 'user_sessions#destroy' は、Railsのルーティング設定でログアウト機能を実装するために使用される記述
+  # HTTP の DELETE メソッドを利用し、logout パスへのリクエストがあった場合に user_sessions コントローラーの destroy アクションを呼び出す。
+  # このアクションでは、ユーザーのセッションを終了させるログアウト処理が行われる
+  # ユーザーがログアウトボタンをクリックすると、サーバーによってセッションが破棄され、その後ユーザーはログイン画面やホームページにリダイレクトされる流れになる
   delete "logout", to: "user_sessions#destroy"
 end

@@ -2,6 +2,15 @@ class UsersController < ApplicationController
     # ●skip_before_action について
     # Railsのコントローラーにおいて特定のアクションが実行される前に設定されたフィルターをスキップするために使用される
     # これにより、特定のアクションでフィルターを適用しないように指定できる
+    # 次のコードでは、
+    # ```ruby
+    #  skip_before_action :require_login, only: [:new, :create]
+
+    # ```
+    # require_login というフィルターを new および create アクションに対してスキップしている
+    # このフィルターは通常、ユーザーがログインしているかどうかを確認するために使用されるが、
+    # 新規ユーザー登録のページ（new アクション）やユーザー登録処理（create アクション）では、ユーザーがログインしているかどうかを確認は不要
+    # したがって、これらのアクションではログインの確認をスキップしています。このようにして、未ログインのユーザーでもアクセスできるページを作成することが可能
     skip_before_action :require_login, only: %i[new create]
 
     def new

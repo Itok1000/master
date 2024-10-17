@@ -28,6 +28,12 @@ gem "meta-tags"
 gem "mini_magick"
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
+
+#### **Gemfileに gem 'sorcery', '0.16.3' を記述する**
+# Railsプロジェクトで使用するgem（ライブラリ）を管理するファイル
+# このファイルにはプロジェクトに必要なすべてのgemが記述されます。 bundle install コマンドを実行すると、Gemfileに記載されたgemがインストールされる
+# 開発者はプロジェクトの依存関係を一元的に管理し、他の開発者と環境を一致させることができる
+# Gemfileでは、gemの名前と必要に応じたバージョン指定を行うことにより、プロジェクトが必要とする正確なgemが提供され、バージョンの衝突や不整合が防げる
 gem "sorcery", "0.16.3"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"

@@ -3,26 +3,61 @@
     <h1>ジョージア料理診断アプリ</h1>
     <h2>ガマルジョバ</h2>
     <h3>გამარჯობა</h3>
+  
     <br>
-    <h4>診断始める前に、こちらを確認</h4>
-    
-    <div class="button-container">
-      <!-- 上部のボタン（Flag_of_Georgia.png） -->
-      <div class="button left-button">
-        <%= link_to 'ジョージアって何?', georgia_path, class: 'button-text'%>
-      </div>
-
-      <!-- 下部のボタン（Image07.png） -->
-      <div class="button right-button">
-        <%= link_to 'ジョージア料理って何？', food_path, class: 'button-text'%>
-      </div>
+    <% if logged_in? %>
+      <!-- ログイン後のコンテンツ -->
+      <h4>クリックして、コメントや投稿をしてみよう</h4>
     </div>
-
-    <h5>確認出来たら</h5>
-
-    <!-- 診断スタートボタンの追加 -->
-    <div class="start-button-container">
-      <%= link_to '診断スタート', new_diagnosis_path, class: 'orange' %>
-    </div>
+      <div class="food-container">
+        <!-- ログイン後の掲示板一覧の表示 -->
+        <div class="food-grid">
+          <!-- 画像を含むボタン例 -->
+          <div class="food-item">
+          <!-- 画像を含むボタンの中に文字を中央揃えにする -->
+            <%= link_to image_tag('Answer01.png', class: 'food-image'), '#', class: 'food-link' %>
+          </div>
+          <div class="food-item">
+            <%= link_to image_tag('Answer02.png', class: 'food-image'), '#', class: 'food-link' %>
+          </div>
+          <div class="food-item">
+            <%= link_to image_tag('Answer03.png', class: 'food-image'), '#', class: 'food-link' %>
+          </div>
+          <div class="food-item">
+            <%= link_to image_tag('Answer04.png', class: 'food-image'), '#', class: 'food-link' %>
+          </div>
+          <div class="food-item">
+            <%= link_to image_tag('Answer05.png', class: 'food-image'), '#', class: 'food-link' %>
+          </div>
+          <div class="food-item">
+            <%= link_to image_tag('Answer06.png', class: 'food-image'), '#', class: 'food-link' %>
+          </div>
+          <div class="food-item">
+            <%= link_to image_tag('Answer07.png', class: 'food-image'), '#', class: 'food-link' %>
+          </div>
+          <div class="food-item">
+            <%= link_to image_tag('Answer08.png', class: 'food-image'), '#', class: 'food-link' %>
+          </div>
+        </div>
+      </div>
+    <% else %>
+      <!-- ログイン前のコンテンツ -->
+      <h4>診断始める前に、こちらを確認</h4>
+      <div class="button-container">
+        <!-- 上部のボタン（Flag_of_Georgia.png） -->
+        <div class="button upper-button">
+          <%= link_to 'ジョージアって何?', georgia_path, class: 'button-text'%>
+        </div>
+        <!-- 下部のボタン（Image07.png） -->
+        <div class="button under-button">
+          <%= link_to 'ジョージア料理って何？', food_path, class: 'button-text'%>
+        </div>
+      </div>
+      <h5>確認出来たら</h5>
+      <!-- 診断スタートボタン -->
+      <div class="start-button-container">
+        <%= link_to '診断スタート', new_diagnosis_path, class: 'orange' %>
+      </div>
+    <% end %>
   </div>
 </div>

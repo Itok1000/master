@@ -46,11 +46,11 @@
   margin-bottom: 20px; /* ボタン間のスペース */
 }
 
-.left-button {
+.upper-button {
   background-image: url('Flag_of_Georgia.png');
 }
 
-.right-button {
+.under-button {
   background-image: url('Image07.png');
 }
 
@@ -64,11 +64,11 @@
   text-decoration: none;
 }
 
-.left-button .button-text {
+.upper-button .button-text {
   color: black;
 }
 
-.right-button .button-text {
+.under-button .button-text {
   color: white;
 }
 
@@ -188,6 +188,57 @@
   margin-top: 15px; /* 初めての方はこちらとの間隔調整 */
 }
 
+/* 掲示板料理のグリッドレイアウト */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列表示 */
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
+}
 
+/* 各掲示板料理アイテム */
+.food-item {
+  text-align: center;
+}
+
+/* 掲示板料理画像のスタイル */
+.food-image {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.food-image:hover {
+  transform: scale(1.05); /* ホバー時の拡大効果 */
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .food-grid {
+    grid-template-columns: 1fr; /* スマホ画面では1列表示 */
+  }
+
+  .food-image {
+    width: 100%; /* 幅を100%に変更 */
+    height: auto; /* 高さは自動調整 */
+  }
+}
+
+.food-link {
+  display: inline-block; /* コンテンツをブロックにする */
+}
+
+.food-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+}
 
 

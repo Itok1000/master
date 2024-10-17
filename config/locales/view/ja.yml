@@ -1,4 +1,22 @@
 ja:
+  helpers:
+    submit:
+      create: 登録
+      submit: 保存
+      update: 更新
+    label:
+      email: メールアドレス
+      password: パスワード
+  user_sessions:
+    new:
+      title: ログイン
+      login: ログイン
+      to_register_page: 初めての方はこちら
+      password_forget: パスワードをお忘れの方はこちら
+  header:
+    login: ログイン
+    logout: ログアウト
+    new: 新規登録
   notices:
     login_success: "ログイン成功しました"
     logout_success: "ログアウトしました"

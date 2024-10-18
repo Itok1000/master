@@ -12,10 +12,9 @@ class SorceryCore < ActiveRecord::Migration[7.2]
       # データベースのインデックスは、特定のカラムのデータを迅速に検索するために使用される
       t.string :crypted_password
       t.string :salt
-      t.string :first_name,       null: false
-      t.string :last_name,        null: false
+      t.string :user_name,       null: false
 
-      t.timestamps                null: false
+      t.timestamps null: false
     end
   end
 end

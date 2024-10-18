@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
   before_action :require_login
   # require_login は、gem 'sorcery' が提供するメソッドの一つで、ユーザーがログインしているかどうかを判定
   # ログインしていない場合は、not_authenticated メソッドで指定されたパスにリダイレクト
+  add_flash_types :success, :danger
+  # フラッシュメッセージのタイプを追加するメソッド
+  # デフォルトでは、notice と alert の二種類のキーしか用意されていないので、
+  # 今回は、成功・失敗した際のメッセージに適用されるキーを追加するために、success と danger という2つのキーを追加
   private
 
   # not_authenticated メソッドも gem 'sorcery' が提供するもので、ログインしていない場合に指定されたパスにリダイレクト

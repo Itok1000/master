@@ -40,20 +40,16 @@ class DiagnosesController < ApplicationController
   def create
     @diagnosis = Diagnosis.new(diagnosis_params)
 
-    # すべての質問が回答されているかチェック
+    # 部分的に質問が未選択の場合 にもフラッシュメッセージを表示
     if diagnosis_params[:question1].blank? || diagnosis_params[:question2].blank? || diagnosis_params[:question3].blank?
-      flash[:alert] = "選択されていない回答があります"
-      render :new
+      flash.now[:danger] = t("users.create.diagnoses_null")
+      render :new, status: :unprocessable_entity
     else
       # 各質問の回答を連結して一つの文字列にする
       @diagnosis.question = "#{diagnosis_params[:question1]}#{diagnosis_params[:question2]}#{diagnosis_params[:question3]}"
 
       if @diagnosis.save
-        flash[:notice] = "診断が完了しました"
-        redirect_to diagnosis_path(@diagnosis)
-      else
-        flash[:alert] = "診断に失敗しました"
-        render :new
+        redirect_to diagnosis_path(@diagnosis), success: t("users.create.diagnoses_success")
       end
     end
   end

@@ -23,7 +23,7 @@ class UsersController < ApplicationController
         # redirect_to root_path
         # ↓
         # ユーザー登録保存出来たら、ユーザー登録が完了しましたと表示する
-        redirect_to root_path, success: t("users.create.success")
+        redirect_to login_path, success: t("users.create.success")
       else # step5追加、修正
         # render :new
         # ↓

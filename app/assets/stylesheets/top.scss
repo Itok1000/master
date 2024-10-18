@@ -197,12 +197,10 @@
   margin: 0 auto;
 }
 
-/* 各掲示板料理アイテム */
 .food-item {
-  text-align: center;
+  position: relative; /* 画像とテキストを相対的に配置するために設定 */
 }
 
-/* 掲示板料理画像のスタイル */
 .food-image {
   width: 500px;
   height: 300px;
@@ -215,6 +213,18 @@
   transform: scale(1.05); /* ホバー時の拡大効果 */
 }
 
+.food-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  width: 100%; /* テキストを中央揃えにするために幅を100%に設定 */
+}
+
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
   .food-grid {
@@ -225,18 +235,4 @@
     width: 100%; /* 幅を100%に変更 */
     height: auto; /* 高さは自動調整 */
   }
-}
-
-.food-link {
-  display: inline-block; /* コンテンツをブロックにする */
-}
-
-.food-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.8rem;
-  color: white;
-  font-weight: bold;
 }

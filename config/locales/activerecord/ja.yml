@@ -5,7 +5,6 @@ ja:
     attributes:
       user:
         email: メールアドレス
-        last_name: 苗字
-        first_name: 名前
+        user_name: ユーザーネーム
         password: パスワード
         password_confirmation: パスワード確認

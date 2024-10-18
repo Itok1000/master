@@ -41,6 +41,6 @@ class UsersController < ApplicationController
     # permitメソッドで許可される属性（名前、姓、メールアドレス、パスワードなど）を指定する
     # これによりホワイトリストに書かれていない値（例えば ageやaddressなど）は弾かれて、不正なパラメータがデータに影響を与えることを防ぐ
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:user_name, :email, :password, :password_confirmation)
     end
 end

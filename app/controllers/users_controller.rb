@@ -19,10 +19,17 @@ class UsersController < ApplicationController
 
     def create
       @user = User.new(user_params)
-      if @user.save
-        redirect_to root_path
-      else
-        render :new
+      if @user.save # step5修正
+        # redirect_to root_path
+        # ↓
+        # ユーザー登録保存出来たら、ユーザー登録が完了しましたと表示する
+        redirect_to root_path, success: t("users.create.success")
+      else # step5追加、修正
+        # render :new
+        # ↓
+        # ユーザー登録保存に失敗したら、ユーザー登録が失敗しましたと表示する
+        flash.now[:danger] = t("users.create.failure")
+        render :new, status: :unprocessable_entity
       end
     end
 

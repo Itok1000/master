@@ -14,7 +14,7 @@ class SorceryCore < ActiveRecord::Migration[7.2]
       t.string :salt
       t.string :user_name,       null: false
 
-      t.timestamps                null: false
+      t.timestamps null: false
     end
   end
 end

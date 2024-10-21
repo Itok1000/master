@@ -6,4 +6,14 @@ class StaticPagesController < ApplicationController
     def georgia; end
     # foodアクションを追加して、app/views/static_pages/georgia.html.erbをレンダリングするようにする
     def food; end
+
+    # 各料理掲示板一覧アクションを追加して、レンダリングするようにする
+    def ojakhuri; end
+    def badrijani; end
+    def food; end
+    def food; end
+    def food; end
+    def food; end
+    def food; end
+    def food; end
 end

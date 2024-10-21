@@ -44,6 +44,9 @@ class DiagnosesController < ApplicationController
     if diagnosis_params[:question1].blank? || diagnosis_params[:question2].blank? || diagnosis_params[:question3].blank?
       flash.now[:danger] = t("users.create.diagnoses_null")
       render :new, status: :unprocessable_entity
+    elsif diagnosis_params[:question1].blank? && diagnosis_params[:question2].blank? && diagnosis_params[:question3].blank?
+      flash.now[:danger] = t("users.create.diagnoses_null")
+      render :new, status: :unprocessable_entity
     else
       # 各質問の回答を連結して一つの文字列にする
       @diagnosis.question = "#{diagnosis_params[:question1]}#{diagnosis_params[:question2]}#{diagnosis_params[:question3]}"

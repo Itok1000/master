@@ -231,8 +231,15 @@
     grid-template-columns: 1fr; /* スマホ画面では1列表示 */
   }
 
-  .food-image {
+  .post-food-image,.food-image {
     width: 100%; /* 幅を100%に変更 */
     height: auto; /* 高さは自動調整 */
   }
+}
+
+.post-food-image {
+  width: 1000px;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
 }

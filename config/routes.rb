@@ -15,15 +15,8 @@ Rails.application.routes.draw do
 
   get "/georgia", to: "static_pages#georgia" # ジョージアページのルートを追加(ボタンをクリックすると、app/views/static_pages/georgia.html.erbに遷移するようにルートを設定し、リンクを修正するから)
   get "/food", to: "static_pages#food"
-  # 各料理ごとのルートを設定
-  get "/ojakhuri", to: "static_pages#ojakhuri", as: :ojakhuri
-  get "/badrijani", to: "static_pages#badrijani", as: :badrijani
-  get "/sokos", to: "static_pages#sokos", as: :sokos
-  get "/pkhali", to: "static_pages#pkhali", as: :pkhali
-  get "/ostri", to: "static_pages#ostri", as: :ostri
-  get "/chikirtma", to: "static_pages#chikirtma", as: :chikirtma
-  get "/shkmeruli", to: "static_pages#shkmeruli", as: :shkmeruli
-  get "/chakhohbili", to: "static_pages#chakhohbili", as: :chakhohbili
+  # detailsをトップレベルのルートとして定義
+  get "/details", to: "static_pages#details"
 
   # ルート側にdiagnoses(診断機能)を追加
   # 現在のroutes.rbでは、診断機能を提供するresources :diagnosesに対してindexとshowアクションしかルートが設定されていないが

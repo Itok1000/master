@@ -1,18 +1,20 @@
 <div class="top-wrapper">
-  <div class="top-inner-text">
+  <!-- エラーメッセージの表示 -->
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
             <h1><%= t('.title') %></h1>
+            <%= render 'shared/error_messages', object: @post %>
             <%= form_with model: @post, url: posts_path(recipe: params[:recipe]), class: "new_post" do |f| %>
+                
                 <%= hidden_field_tag :recipe, params[:recipe] %>
                 <div class="mb-3">
                   <%= f.label :title %>
-                  <%= f.text_field :title, class: "form-control" %>
+                  <%= f.text_field :title, class: "form-control custom-input" %>
                 </div>
                 <div class="mb-3">
                   <%= f.label :body %>
-                  <%= f.text_area :body, class: "form-control", rows: "10" %>
+                  <%= f.text_area :body, class: "form-control custom-input", rows: "10" %>
                 </div>
                 <%= f.submit nil, class: "btn btn-primary" %>
               <% end %>              

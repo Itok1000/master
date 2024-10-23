@@ -34,7 +34,7 @@ class UserSessionsController < ApplicationController
     def destroy
       logout
       # ログアウトしましたとフラッシュメッセージを放つ
-      redirect_to roots_path, status: :see_other, danger: t("user_sessions.destroy.success")
+      redirect_to root_path, status: :see_other, danger: t("user_sessions.destroy.success")
       # redirect_toについて
       # redirect_to メソッドは、指定されたURLへユーザーをリダイレクトする
       # リダイレクトはサーバーがクライアントに別のURLへの移動を指示するプロセス

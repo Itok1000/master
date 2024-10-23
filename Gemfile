@@ -38,6 +38,10 @@ gem "sorcery", "0.16.3"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
+# # **Draper（ドレッパー）**
+# Draperとは、Ruby on Railsで使うgemの一つ
+# Draperをインストールすると、デコレーターを作成できるようになり、ユーザーに表示するデータを整形・加工するための処理（ビューに関するロジック）をモデルから分離し、コードの保守性と読みやすさを向上させることができる
+gem 'draper', '4.0.2'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 

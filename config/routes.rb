@@ -14,9 +14,7 @@ Rails.application.routes.draw do
   root "static_pages#top"
 
   get "/georgia", to: "static_pages#georgia" # ジョージアページのルートを追加(ボタンをクリックすると、app/views/static_pages/georgia.html.erbに遷移するようにルートを設定し、リンクを修正するから)
-  get "/food", to: "static_pages#food"
-  # detailsをトップレベルのルートとして定義
-  get "/details", to: "static_pages#details"
+
 
   # ルート側にdiagnoses(診断機能)を追加
   # 現在のroutes.rbでは、診断機能を提供するresources :diagnosesに対してindexとshowアクションしかルートが設定されていないが
@@ -43,4 +41,15 @@ Rails.application.routes.draw do
   # このアクションでは、ユーザーのセッションを終了させるログアウト処理が行われる
   # ユーザーがログアウトボタンをクリックすると、サーバーによってセッションが破棄され、その後ユーザーはログイン画面やホームページにリダイレクトされる流れになる
   delete "logout", to: "user_sessions#destroy"
+  # ルート側にposts(掲示板機能)を追加
+  # resourcesメソッドのonlyオプションにnewを記載することで、GETメソッドで /posts/new というURLパターンにリクエストが飛んだ際に boardsコントローラーのnewアクションが動くように定義され
+  resources :users, only: %i[new create]
+  # resources :posts, only: %i[index new create] を記載することで、掲示板の一覧表示と新規作成画面へのルーティングが設定される
+  # createを記載することで、POSTメソッドで /boards というURLパターンにリクエストが飛んだ際に boardsコントローラーのcreateアクションが動くように定義される
+  # また、URLパターンを生成してくれる boards_path（URLヘルパー）も生成される
+  resources :posts, only: %i[index new create]
+  get "/food", to: "static_pages#food"
+  # resourcesメソッドのonlyオプションにnewを記載することで、GETメソッドで /posts/new というURLパターンにリクエストが飛んだ際に
+  # boardsコントローラーのnewアクションが動くように定義される
+  # また、URLパターンを生成してくれる new_posts_path（URLヘルパー）も生成される
 end

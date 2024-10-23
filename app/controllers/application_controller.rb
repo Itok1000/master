@@ -15,8 +15,9 @@ class ApplicationController < ActionController::Base
 
   # not_authenticated メソッドも gem 'sorcery' が提供するもので、ログインしていない場合に指定されたパスにリダイレクト
   def not_authenticated
-    redirect_to login_path
+    redirect_to login_path, danger: t("defaults.flash_message.require_login")
     # application_controller.rb でこのメソッドをオーバーライドすることで、
     # デフォルトのリダイレクト先を root_path から login_path に変更
+    # defaults.flash_message.require_login = 未ログイン時にログインページにリダイレクトさせた際に表示されるフラッシューメッセージを設定
   end
 end

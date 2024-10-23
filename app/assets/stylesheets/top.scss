@@ -243,3 +243,23 @@
   object-fit: cover;
   transition: transform 0.2s ease;
 }
+
+
+.blue{
+  display: inline-block;
+    background-color: #0578FF;
+    color: white;
+    width: 150px;
+    height: 106px;
+    line-height: 106px; /* ボタン内のテキストを中央揃え（縦） */
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none; /* 下線を削除 */
+    font-weight: bold;
+    border-radius: 10px; /* 角を少し丸める */
+}
+
+.blue:hover {
+  background-color: #0548ffa0; /* ホバー時の色変更 */
+  color: white;
+}

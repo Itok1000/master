@@ -1,11 +1,5 @@
 class PostsController < ApplicationController
     def index
-        # includesメソッド
-        # 関連するテーブルをまとめてDBから取得できるメソッド
-        # Post.includes(:user) は、Boardモデルのレコードと、それに関連するUserモデルのレコードを一度に取得する
-        # これにより、最初のクエリでBoardレコードを取得し、2つ目のクエリで関連するUserレコードを一度に取得するため、クエリの発行回数を2回に抑えてN+1問題に対応している
-        @posts = Post.includes(:user)
-
         # 各料理掲示板一覧アクションを追加して、レンダリングするようにする
         @recipe = params[:recipe]
 
@@ -21,7 +15,14 @@ class PostsController < ApplicationController
           "chakhohbili" => { name: "チャホフビリ", image: "Answer08.png", description: I18n.t("diagnoses.description.chakhohbili2") }
         }
 
+
         @recipe_info = recipes[@recipe]
+        # includesメソッド
+        # 関連するテーブルをまとめてDBから取得できるメソッド
+        # Post.includes(:user) は、Boardモデルのレコードと、それに関連するUserモデルのレコードを一度に取得する
+        # これにより、最初のクエリでBoardレコードを取得し、2つ目のクエリで関連するUserレコードを一度に取得するため、クエリの発行回数を2回に抑えてN+1問題に対応している
+        # 該当する料理の投稿をフィルタリングして取得
+        @posts = Post.where(recipe: @recipe).includes(:user)
     end
     # newアクションは、新規作成画面を表示するためのアクション
     # Boardモデルの新しいインスタンスを@postに代入している
@@ -32,8 +33,12 @@ class PostsController < ApplicationController
 
     def create
       @post = current_user.posts.build(post_params)
+      # 投稿を作成する際に、どの料理の掲示板に投稿するかを recipe パラメータとして受け取って保存
+      # create アクションにこの処理を追加
+      @post.recipe = params[:recipe]  # 料理の種類を保存
+
       if @post.save
-        redirect_to posts_path, success: t("defaults.flash_message.created", item: Post.model_name.human)
+        redirect_to posts_path(recipe: @post.recipe), success: t("defaults.flash_message.created", item: Post.model_name.human)
       else
         flash.now[:danger] = t("defaults.flash_message.not_created", item: Post.model_name.human)
         render :new, status: :unprocessable_entity

@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
     def index
-
         # 各料理掲示板一覧アクションを追加して、レンダリングするようにする
         @recipe = params[:recipe]
 
@@ -17,7 +16,7 @@ class PostsController < ApplicationController
         }
 
 
-        @recipe_info = recipes[@recipe] 
+        @recipe_info = recipes[@recipe]
         # includesメソッド
         # 関連するテーブルをまとめてDBから取得できるメソッド
         # Post.includes(:user) は、Boardモデルのレコードと、それに関連するUserモデルのレコードを一度に取得する

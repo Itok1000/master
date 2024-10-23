@@ -6,5 +6,4 @@ class UserDecorator < Draper::Decorator
   def full_name
     object.user_name # ここで user_name を返す
   end
-
 end

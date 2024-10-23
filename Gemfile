@@ -41,7 +41,7 @@ gem "sorcery", "0.16.3"
 # # **Draper（ドレッパー）**
 # Draperとは、Ruby on Railsで使うgemの一つ
 # Draperをインストールすると、デコレーターを作成できるようになり、ユーザーに表示するデータを整形・加工するための処理（ビューに関するロジック）をモデルから分離し、コードの保守性と読みやすさを向上させることができる
-gem 'draper', '4.0.2'
+gem "draper", "4.0.2"
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 

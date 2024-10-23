@@ -48,7 +48,7 @@ Rails.application.routes.draw do
   # createを記載することで、POSTメソッドで /boards というURLパターンにリクエストが飛んだ際に boardsコントローラーのcreateアクションが動くように定義される
   # また、URLパターンを生成してくれる boards_path（URLヘルパー）も生成される
   resources :posts, only: %i[index new create]
-  
+
   # resourcesメソッドのonlyオプションにnewを記載することで、GETメソッドで /posts/new というURLパターンにリクエストが飛んだ際に
   # boardsコントローラーのnewアクションが動くように定義される
   # また、URLパターンを生成してくれる new_posts_path（URLヘルパー）も生成される

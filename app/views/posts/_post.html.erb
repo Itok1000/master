@@ -1,7 +1,7 @@
 <div class="col-sm-12 col-lg-4 mb-3">
   <div id="post-id-<%= post.id %>">
     <div class="card">
-      <%= image_tag "post_placeholder.png", class: "card-img-top" %>
+      <%= image_tag post.post_image.thumb.url, class: "card-img-top", width: "300", height:"200" %>
       <div class="card-body">
         <div class="d-flex">
           <h4 class="card-title">

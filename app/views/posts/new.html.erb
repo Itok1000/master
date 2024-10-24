@@ -8,13 +8,21 @@
             <%= form_with model: @post, url: posts_path(recipe: params[:recipe]), class: "new_post" do |f| %>
                 
                 <%= hidden_field_tag :recipe, params[:recipe] %>
+                <!-- タイトルの入力欄 -->
                 <div class="mb-3">
                   <%= f.label :title %>
                   <%= f.text_field :title, class: "form-control custom-input" %>
                 </div>
+                <!-- 本文の入力欄 -->
                 <div class="mb-3">
                   <%= f.label :body %>
                   <%= f.text_area :body, class: "form-control custom-input", rows: "10" %>
+                </div>
+                <!-- 画像ファイルをアップロードするボタンを設置 -->
+                <div class="mb-3">
+                  <%= f.label :post_image %>
+                  <%= f.file_field :post_image, class: "form-control", accept: 'image/*' %>
+                  <%= f.hidden_field :post_image_cache %>
                 </div>
                 <%= f.submit nil, class: "btn btn-primary" %>
               <% end %>              

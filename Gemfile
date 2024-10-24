@@ -24,24 +24,42 @@ gem "jbuilder"
 gem "rails-i18n", "~> 7.0.0"
 
 gem "meta-tags"
-
+#### ** 画像を合成する役割のために使用 ** ####
+# アップロードされた画像が強制的にそのサイズに引き伸ばされてしまうのを防ぐ
+# OGPを使ったXのシェア機能においても万能
 gem "mini_magick"
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
+#### ** ユーザー登録機能時に必要 ** ####
 #### **Gemfileに gem 'sorcery', '0.16.3' を記述する**
 # Railsプロジェクトで使用するgem（ライブラリ）を管理するファイル
-# このファイルにはプロジェクトに必要なすべてのgemが記述されます。 bundle install コマンドを実行すると、Gemfileに記載されたgemがインストールされる
+# このファイルにはプロジェクトに必要なすべてのgemが記述される
+# bundle install コマンドを実行すると、Gemfileに記載されたgemがインストールされる
 # 開発者はプロジェクトの依存関係を一元的に管理し、他の開発者と環境を一致させることができる
 # Gemfileでは、gemの名前と必要に応じたバージョン指定を行うことにより、プロジェクトが必要とする正確なgemが提供され、バージョンの衝突や不整合が防げる
 gem "sorcery", "0.16.3"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
+
+#### ** 画像アップロード機能時に必要 ** ####
+# ファイルアップロードを簡単に行うためのRubyライブラリ
+# 画像やビデオなどのファイルをWebアプリケーションにアップロードし、管理する機能を提供する
+# これにより、複雑なアップロード処理を簡素化することができる
+# ファイルのリサイズやフォーマット変換、バリデーションなどの機能も提供しており、
+# ユーザーがアップロードしたファイルの安全性と品質を確保するのに役立つ
+gem "carrierwave", "2.2.2"
+
+
+
+#### ** ユーザーに表示するデータを整形・加工する時に必要 ** ####
 # # **Draper（ドレッパー）**
 # Draperとは、Ruby on Railsで使うgemの一つ
 # Draperをインストールすると、デコレーターを作成できるようになり、ユーザーに表示するデータを整形・加工するための処理（ビューに関するロジック）をモデルから分離し、コードの保守性と読みやすさを向上させることができる
 gem "draper", "4.0.2"
+
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 

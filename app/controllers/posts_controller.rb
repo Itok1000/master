@@ -26,7 +26,7 @@ class PostsController < ApplicationController
     end
     # newアクションは、新規作成画面を表示するためのアクション
     # Boardモデルの新しいインスタンスを@postに代入している
-    # この@boardは、掲示板作成画面のビュー（app/views/posts/new.html.erb）に渡される
+    # この@postは、掲示板作成画面のビュー（app/views/posts/new.html.erb）に渡される
     def new
       @post = Post.new
     end
@@ -48,8 +48,9 @@ class PostsController < ApplicationController
     private
 
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.require(:post).permit(:title, :body, :post_image, :post_image_cache)
     end
+  # ストロングパラメーターを使用して、予期しないパラメータのマスアサインメントによるセキュリティリスクを防ぐ
 end
 
 # N+1問題

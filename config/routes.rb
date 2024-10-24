@@ -26,30 +26,52 @@ Rails.application.routes.draw do
   # 例えば、resources :users と記述することで、ユーザーに関連する一連のルート（index, new, create, show, edit, update, destroy）が自動的に設定される
   # これにより、コントローラの各アクションがURLとHTTPメソッドに紐づけられ、CRUD操作のルーティングが容易になる
 
+  
+  
   # ●only指定について
   # onlyオプションを使用すると、resources メソッドで生成されるルートの中から特定のアクションだけを選択して生成できる
   # 例えば、resources :users, only: %i[new create] と指定すると、ユーザーの新規作成のみを生成し、
   # その他のアクションのルートは除外される
   # ログインログアウト時のルート追加
   resources :users, only: %i[new create]
+  
   # get 'login', to: 'user_sessions#new' はログインフォームを表示するためのGETリクエストを処理
   get "login", to: "user_sessions#new"
+  
+  
   # post 'login', to: 'user_sessions#create' はログインフォームから送信された情報を処理するPOSTリクエストを扱う
   post "login", to: "user_sessions#create"
+  
+  
   # delete 'logout', to: 'user_sessions#destroy' は、Railsのルーティング設定でログアウト機能を実装するために使用される記述
   # HTTP の DELETE メソッドを利用し、logout パスへのリクエストがあった場合に user_sessions コントローラーの destroy アクションを呼び出す。
   # このアクションでは、ユーザーのセッションを終了させるログアウト処理が行われる
   # ユーザーがログアウトボタンをクリックすると、サーバーによってセッションが破棄され、その後ユーザーはログイン画面やホームページにリダイレクトされる流れになる
   delete "logout", to: "user_sessions#destroy"
+  
   # ルート側にposts(掲示板機能)を追加
-  # resourcesメソッドのonlyオプションにnewを記載することで、GETメソッドで /posts/new というURLパターンにリクエストが飛んだ際に boardsコントローラーのnewアクションが動くように定義され
+  # resourcesメソッドのonlyオプションにnewを記載することで、GETメソッドで /posts/new というURLパターンにリクエストが飛んだ際に postsコントローラーのnewアクションが動くように定義される
   resources :users, only: %i[new create]
-  # resources :posts, only: %i[index new create] を記載することで、掲示板の一覧表示と新規作成画面へのルーティングが設定される
-  # createを記載することで、POSTメソッドで /boards というURLパターンにリクエストが飛んだ際に boardsコントローラーのcreateアクションが動くように定義される
-  # また、URLパターンを生成してくれる boards_path（URLヘルパー）も生成される
-  resources :posts, only: %i[index new create]
+  # resources :posts, only: %i[index new create show] を記載することで、掲示板の一覧表示と新規作成画面,掲示板詳細閲覧のルーティングが設定される
+  # createを記載することで、POSTメソッドで /posts というURLパターンにリクエストが飛んだ際に postsコントローラーのcreateアクションが動くように定義される
+  # また、URLパターンを生成してくれる posts_path（URLヘルパー）も生成される
+  
+  
+  resources :posts, only: %i[index new create show] do
+    resources :comments, only: %i[create edit destroy], shallow: true
+    #### **ネストしたルーティングについて**
+  # あるリソースが別のリソースに属する形でルーティングを定義すること 
+  # ネスト
+  # 入れ子構造のことを意味し、プログラミングでは、ある要素が他の要素の内部に含まれている状態を指す
+  # 例⇒掲示板（Board）に属するコメント（Comment）を扱う場合、commentsリソースをpostsリソースの中にネスト
+  # こうすることで、URLが直感的になり、関連するリソースの関係が明確になる
 
+  ### **shallow オプションについて**
+  # shallowオプションは、ネストしたリソースの一部のアクションに対して、親リソースのIDを含まないURLを生成するために使用する 
+  # 例えば、コメントの編集や削除アクションでは、特定のコメントを操作するために掲示板のIDは必要ない 
+  # このような場合、shallowオプションを使うことで、URLを簡潔にし、可読性を向上させることができる
+  end
   # resourcesメソッドのonlyオプションにnewを記載することで、GETメソッドで /posts/new というURLパターンにリクエストが飛んだ際に
-  # boardsコントローラーのnewアクションが動くように定義される
+  # postsコントローラーのnewアクションが動くように定義される
   # また、URLパターンを生成してくれる new_posts_path（URLヘルパー）も生成される
 end

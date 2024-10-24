@@ -19,13 +19,13 @@ class PostsController < ApplicationController
         @recipe_info = recipes[@recipe]
         # includesメソッド
         # 関連するテーブルをまとめてDBから取得できるメソッド
-        # Post.includes(:user) は、Boardモデルのレコードと、それに関連するUserモデルのレコードを一度に取得する
-        # これにより、最初のクエリでBoardレコードを取得し、2つ目のクエリで関連するUserレコードを一度に取得するため、クエリの発行回数を2回に抑えてN+1問題に対応している
+        # Post.includes(:user) は、Postモデルのレコードと、それに関連するUserモデルのレコードを一度に取得する
+        # これにより、最初のクエリでPostレコードを取得し、2つ目のクエリで関連するUserレコードを一度に取得するため、クエリの発行回数を2回に抑えてN+1問題に対応している
         # 該当する料理の投稿をフィルタリングして取得
         @posts = Post.where(recipe: @recipe).includes(:user)
     end
     # newアクションは、新規作成画面を表示するためのアクション
-    # Boardモデルの新しいインスタンスを@postに代入している
+    # Postモデルの新しいインスタンスを@postに代入している
     # この@postは、掲示板作成画面のビュー（app/views/posts/new.html.erb）に渡される
     def new
       @post = Post.new
@@ -45,6 +45,20 @@ class PostsController < ApplicationController
       end
     end
 
+
+    # 掲示板詳細画面を閲覧するためのアクション
+    def show 
+      @post = Post.find(params[:id])
+      # Postモデルの新しいインスタンスを@commentに代入している
+      # この@commentは、掲示板作成画面のコメント欄（app/views/posts/new.html.erb）に渡される
+      @comment = Comment.new
+      # includesメソッド
+        # 関連するテーブルをまとめてDBから取得できるメソッド
+        # Post.includes(:user) は、Postモデルのレコードと、それに関連するUserモデルのレコードを一度に取得する
+        # これにより、最初のクエリでPostレコードを取得し、2つ目のクエリで関連するUserレコードを一度に取得するため、クエリの発行回数を2回に抑えてN+1問題に対応している
+      @comments = @post.comments.includes(:user).order(created_at: :desc)
+    end
+
     private
 
     def post_params
@@ -57,4 +71,4 @@ end
 # SQLが必要以上に実行されてしまいパフォーマンスが落ちる問題
 # SQLの実行とは、データベースに対してデータの読み書きや検索を行う命令を送信することを意味する
 # パフォーマンスが落ちるとは、アプリケーションが要求された操作を完了するまでにかかる時間が増加し、全体的な動作速度が遅くなることを意味する
-# includesメソッドを使わず、Board.all で取得した場合、掲示板の投稿者名を表示する部分でN+1問題が発生する
+# includesメソッドを使わず、Post.all で取得した場合、掲示板の投稿者名を表示する部分でN+1問題が発生する

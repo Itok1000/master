@@ -3,6 +3,7 @@ ja:
     models:
       user: ユーザー
       post: 掲示板
+      comment: コメント
     attributes:
       user:
         email: メールアドレス
@@ -13,3 +14,5 @@ ja:
         title: タイトル
         body: 本文
         post_image: 画像をアップロード
+      comment:
+        body: コメント

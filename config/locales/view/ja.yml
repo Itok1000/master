@@ -1,10 +1,12 @@
 ja:
   defaults:
+    post: 投稿
     flash_message:
-      require_login: ログインしてください
       created: "%{item}を作成しました"
       not_created: "%{item}を作成出来ませんでした"
       require_login: ログインしてください
+      created: "%{item}を作成しました"
+      not_created: "%{item}を作成出来ませんでした"
   helpers:
     submit:
       create: 登録

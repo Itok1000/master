@@ -1,4 +1,4 @@
-<div class="container pt-5">
+<div class="top-wrapper">
   <div class="row mb-3">
     <div class="col-lg-8 offset-lg-2">
       <h1><%= t('.title') %></h1>
@@ -6,41 +6,31 @@
         <div class="card-body">
           <div class="row">
             <div class="col-md-3">
-              <%= image_tag @board.board_image_url, width: "300", height: "200", class: "card-img-top img-fluid" %>
+              <%= image_tag @post.post_image_url, width: "300", height: "200", class: "card-img-top img-fluid" %>
             </div>
             <div class="col-md-9">
-              <h3 style="display: inline;"><%= @board.title %></h3>
+              <h3 style="display: inline;"><%= @post.title %></h3>
               <ul class="list-inline">
-                <li class="list-inline-item"><%= "by #{@board.user.decorate.full_name}" %></li>
-                <li class="list-inline-item"><%= l @board.created_at, format: :long %></li>
+                <li class="list-inline-item"><%= "by #{@post.user.decorate.full_name}" %></li>
+                <li class="list-inline-item"><%= l @post.created_at, format: :long %></li>
               </ul>
               <div class='d-flex justify-content-end'>
-                <%= link_to "#", id: "button-edit-#{@board.id}" do %>
+                <%= link_to "#", id: "button-edit-#{@post.id}" do %>
                   <i class='bi bi-pencil-fill'></i>
                 <% end %>
-                <%= link_to "#", id: "button-delete-#{@board.id}", class: "ms-2" do %>
+                <%= link_to "#", id: "button-delete-#{@post.id}", class: "ms-2" do %>
                   <i class="bi bi-trash-fill"></i>
                 <% end %>
               </div>
               </div>
             </div>
-            <p><%= simple_format(@board.body) %></p>
+            <p><%= simple_format(@post.body) %></p>
           </div>
         </article>
       </div>
     </div>
-   
-    <% if flash[:danger] %>
-    <div class="row mb-3">
-      <div class="col-lg-8 offset-lg-2">
-        <div class="alert alert-danger">
-          <%= flash[:danger] %>
-        </div>
-      </div>
-    </div>
-    <% end %>
 
-    <%= render 'comments/form', comment: @comment, board: @board %>
+    <%= render 'comments/form', comment: @comment, post: @post %>
     <div class="row">
       <div class="col-lg-8 offset-lg-2">
         <table class="table">

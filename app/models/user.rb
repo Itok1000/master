@@ -12,5 +12,37 @@ class User < ApplicationRecord
   # ユーザーが複数のpostレコードを持つことを示す
   has_many :posts, dependent: :destroy
   # dependent: :destroyを記述することによって、destroy 時に関連づけられたモデルに対して destroy が実行されるようになる
-  # 今回の場合では、ユーザーが削除されたときに、そのユーザーに関連するBoardレコードも一緒に削除される
+  # 今回の場合では、ユーザーが削除されたときに、そのユーザーに関連するPostレコードも一緒に削除される
+
+
+  def own?(object)
+    # own? メソッドについて
+    # own? メソッド
+    # あるオブジェクトが特定のユーザーに属しているかどうかを判定するために作られたインスタンスメソッド
+
+    # インスタンスメソッド
+    # クラスのインスタンスに対して呼び出すことができるメソッド
+    # ユーザーオブジェクトと任意のオブジェクトを比較し、
+    # そのオブジェクトの user_idがユーザーオブジェクトのidと一致するかどうかを確認する
+    id == object&.user_id
+    # id == object&.user_id の解説
+    # id は現在のユーザーオブジェクトのID
+
+    # object&.user_id
+    # 与えられたオブジェクトの user_id を取得する
+    # ここで、&.（セーフナビゲーション演算子）を使用することで、object が nil の場合でもエラーを発生させずに nil を返す
+    # 例えば次のような使い方ができる
+    # current_user.own?(comment)
+    # この場合、current_user.id == comment&.user_id を比較することになり、
+    # 特定のコメントが現在ログインしているユーザーが投稿したものであるかどうかを判定することができる# id == object&.user_id の解説
+    # id は現在のユーザーオブジェクトのID
+
+    # object&.user_id
+    # 与えられたオブジェクトの user_id を取得する
+    # ここで、&.（セーフナビゲーション演算子）を使用することで、object が nil の場合でもエラーを発生させずに nil を返す
+    # 例えば次のような使い方ができる
+    # current_user.own?(comment)
+    # この場合、current_user.id == comment&.user_id を比較することになり、
+    # 特定のコメントが現在ログインしているユーザーが投稿したものであるかどうかを判定することができる
+  end
 end

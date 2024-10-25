@@ -47,15 +47,15 @@ class PostsController < ApplicationController
 
 
     # 掲示板詳細画面を閲覧するためのアクション
-    def show 
+    def show
       @post = Post.find(params[:id])
       # Postモデルの新しいインスタンスを@commentに代入している
       # この@commentは、掲示板作成画面のコメント欄（app/views/posts/new.html.erb）に渡される
       @comment = Comment.new
       # includesメソッド
-        # 関連するテーブルをまとめてDBから取得できるメソッド
-        # Post.includes(:user) は、Postモデルのレコードと、それに関連するUserモデルのレコードを一度に取得する
-        # これにより、最初のクエリでPostレコードを取得し、2つ目のクエリで関連するUserレコードを一度に取得するため、クエリの発行回数を2回に抑えてN+1問題に対応している
+      # 関連するテーブルをまとめてDBから取得できるメソッド
+      # Post.includes(:user) は、Postモデルのレコードと、それに関連するUserモデルのレコードを一度に取得する
+      # これにより、最初のクエリでPostレコードを取得し、2つ目のクエリで関連するUserレコードを一度に取得するため、クエリの発行回数を2回に抑えてN+1問題に対応している
       @comments = @post.comments.includes(:user).order(created_at: :desc)
     end
 

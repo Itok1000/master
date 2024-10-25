@@ -27,6 +27,7 @@ class PostsController < ApplicationController
     # newアクションは、新規作成画面を表示するためのアクション
     # Postモデルの新しいインスタンスを@postに代入している
     # この@postは、掲示板作成画面のビュー（app/views/posts/new.html.erb）に渡される
+
     def new
       @post = Post.new
     end
@@ -58,6 +59,14 @@ class PostsController < ApplicationController
       # これにより、最初のクエリでPostレコードを取得し、2つ目のクエリで関連するUserレコードを一度に取得するため、クエリの発行回数を2回に抑えてN+1問題に対応している
       @comments = @post.comments.includes(:user).order(created_at: :desc)
     end
+
+    # 掲示板を削除するためのアクション
+    def destroy
+      @post = current_user.posts.find(params[:id])
+      @post.destroy
+      redirect_to posts_path, status: :see_other, success: t("defaults.flash_message.destroy", item: Post.model_name.human)
+    end
+
 
     private
 

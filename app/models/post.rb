@@ -7,6 +7,12 @@ class Post < ApplicationRecord
     # belongs_to :userとは、PostモデルがUserモデルに属していることを示す。
     # この記述により、Postモデルの各レコードはUserモデルのレコードに関連付けられることになる
 
+
+    has_many :comments, dependent: :destroy
+    has_many :ratings, dependent: :destroy
+    # dependent: :destroyを記述することによって、destroy 時に関連づけられたモデルに対して destroy が実行されるようになる
+    # 今回の場合では、掲示板が削除されたときに、そのユーザーに関連するCommentレコードとRatingレコードも一緒に削除される
+
     mount_uploader :post_image, PostImageUploader
     # 下記の記述を加えることで、Postモデルに対して CarrierWave の アップローダークラス（PostImageUploader）をマウントする
     # これにより、Postモデルのインスタンスで post_image という属性を持つことができ、画像のアップロードや取得が簡単に行えるようになる

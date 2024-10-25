@@ -1,9 +1,13 @@
+<% content_for(:title, t('.title')) %>
 <div class="top-wrapper">
-  <!-- エラーメッセージの表示 -->
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
-            <h1><%= t('.title') %></h1>
+              <div class="top-inner-text">
+                <h1><%= t('.title') %></h1>
+                <h2>他のユーザーの参考になるように、感想を共有してみよう</h2>
+              </div>
+            <!-- エラーメッセージの表示 -->
             <%= render 'shared/error_messages', object: @post %>
             <%= form_with model: @post, url: posts_path(recipe: params[:recipe]), class: "new_post" do |f| %>
                 

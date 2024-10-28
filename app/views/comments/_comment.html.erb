@@ -1,8 +1,8 @@
-<tr id="comment-<%= comment.id %>">
+ <tr id="comment-<%= comment.id %>">
   <td>
     <h3 class="small"><%= comment.user.decorate.full_name %></h3>
     <p><%= simple_format(comment.body) %></p>
-    <li class="list-inline-item"><%= l @post.created_at, format: :long %></li>
+    <li class="list-inline-item" ><%= l @post.created_at, format: :long %></li>
   </td>
   <% if current_user.own?(comment) %>
     <td class="action">
@@ -20,4 +20,4 @@
       </ul>
     </td>
   <% end %>
-</tr>
+ </tr>

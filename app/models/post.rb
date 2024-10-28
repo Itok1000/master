@@ -9,7 +9,6 @@ class Post < ApplicationRecord
 
 
     has_many :comments, dependent: :destroy
-    has_many :ratings, dependent: :destroy
     # dependent: :destroyを記述することによって、destroy 時に関連づけられたモデルに対して destroy が実行されるようになる
     # 今回の場合では、掲示板が削除されたときに、そのユーザーに関連するCommentレコードとRatingレコードも一緒に削除される
 

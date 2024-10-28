@@ -56,7 +56,7 @@ Rails.application.routes.draw do
   # createを記載することで、POSTメソッドで /posts というURLパターンにリクエストが飛んだ際に postsコントローラーのcreateアクションが動くように定義される
   # また、URLパターンを生成してくれる posts_path（URLヘルパー）も生成される
 
-  resources :posts, only: %i[index new create show] do
+  resources :posts, only: %i[index new create show edit destroy update] do
     resources :comments, only: %i[create edit destroy], shallow: true
     #### **ネストしたルーティングについて**
     # あるリソースが別のリソースに属する形でルーティングを定義すること

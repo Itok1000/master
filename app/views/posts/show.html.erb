@@ -16,12 +16,14 @@
                 <li class="list-inline-item"><%= l @post.created_at, format: :long %></li>
               </ul>
               <div class='d-flex justify-content-end'>
-                <%= link_to "#", id: "button-edit-#{@post.id}" do %>
+               <% if current_user.own?(@post) %> <!-- ログインユーザーが投稿者の場合のみ表示 -->
+                <%= link_to edit_post_path(@post), id: "button-edit-#{@post.id}" do %>
                   <i class='bi bi-pencil-fill'></i>
                 <% end %>
-                <%= link_to "#", id: "button-delete-#{@post.id}", class: "ms-2" do %>
+                <%= link_to post_path(@post), id: "button-delete-#{@post.id}", data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') } do %>
                   <i class="bi bi-trash-fill"></i>
                 <% end %>
+               <% end %>
               </div>
               </div>
             </div>

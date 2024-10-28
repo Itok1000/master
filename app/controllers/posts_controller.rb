@@ -60,11 +60,46 @@ class PostsController < ApplicationController
       @comments = @post.comments.includes(:user).order(created_at: :desc)
     end
 
+    # 掲示板編集画面を閲覧するためのアクション
+    def edit
+      # 編集画面表示に必要なアクションをコントローラーに定義する
+      @post = current_user.posts.find(params[:id])
+      # current_user.boards.find(params[:id])と記述することで、ログインしているユーザーが投稿した掲示板一覧の中から、
+      # params[:id]の値と同じIDを持ったBoardレコードのみを取得する
+      # そのためログインしているユーザーが投稿した掲示板一覧の中に無い掲示板を取得しようとすると、
+      # ActiveRecord::RecordNotFoundエラーが発生して、他者が投稿した掲示板の編集画面は表示されない
+      # 下記のような表現だと、別ユーザーがその掲示板にアクセスできてしまうので✖
+
+      # Board.find(params[:id])
+      # 指定されたIDの掲示板の編集画面を表示することができるが、この場合、すべてのユーザーがその掲示板にアクセスできることになる
+
+      # @board = Board.find(params[:id])
+      # .../boards/255/edit のURLにアクセスすると、IDが255の掲示板の編集画面を誰でも表示できてしまう
+      # 他のユーザーが作成した掲示板の編集画面にアクセスできてしまうのはサービスとしてもセキュリティ面でも問題
+    end
+
+
+    # 掲示板編集後、更新するためのアクション
+    def update
+      @post = current_user.posts.find(params[:id])
+     # パラメータを更新すると、「掲示板を更新しました」とフラッシュメッセージが出る
+     if @post.update(post_params)
+      redirect_to post_path(@post), success: t("defaults.flash_message.updated", item: Post.model_name.human)
+     else
+      # それ以外だと、「掲示板を更新出来ませんでした」とフラッシュメッセージが出る
+      flash.now[:danger] = t("defaults.flash_message.not_updated", item: Post.model_name.human)
+      render :edit, status: :unprocessable_entity
+     end
+    end
+
+
     # 掲示板を削除するためのアクション
     def destroy
       @post = current_user.posts.find(params[:id])
-      @post.destroy
-      redirect_to posts_path, status: :see_other, success: t("defaults.flash_message.destroy", item: Post.model_name.human)
+       # 削除が成功するとtrueを返すが、削除が失敗した場合にはActiveRecord::RecordNotDestroyed例外を発生させる(例外処理)
+       # 削除に失敗すると即座に例外を発生させて処理を停止したい場合に有用
+       @post.destroy!
+        redirect_to posts_path(recipe: @post.recipe), success: t("defaults.flash_message.deleted", item: Post.model_name.human), status: :see_other
     end
 
 

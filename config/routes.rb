@@ -56,8 +56,26 @@ Rails.application.routes.draw do
   # createを記載することで、POSTメソッドで /posts というURLパターンにリクエストが飛んだ際に postsコントローラーのcreateアクションが動くように定義される
   # また、URLパターンを生成してくれる posts_path（URLヘルパー）も生成される
 
+  # 投稿のリソース(一覧、新規作成、詳細、編集、削除、更新)
+  # コメントのリソース(作成、編集、削除)
+  # いいねのリソース(作成、削除)
   resources :posts, only: %i[index new create show edit destroy update] do
     resources :comments, only: %i[create edit destroy], shallow: true
+    resource :favorites, only: [ :create, :destroy ]
+
+     collection do
+      get :likes
+      get :posts
+     end
+    #### **いいねのリソースだけ複数形でない理由**
+    # いいね機能の場合、1人のユーザーは1つの投稿に対して1回しかいいねできないという制約がある
+    # そのため、いいねの削除を行う際には、ユーザーIDと投稿IDがわかれば、どのいいねを削除するかを特定できる
+    # したがって、いいねのIDをURLに含める必要はない
+    ### **resourcesとresourceの違い**
+    # URLに:idを含めるかどうか
+    # resourcesを使用すると:idが含まれ、特定の要素を操作するためのIDが必要
+    # 一方、resourceを使用すると:idが含まれず、他のリソースとの関連付けによって特定できる
+
     #### **ネストしたルーティングについて**
     # あるリソースが別のリソースに属する形でルーティングを定義すること
     # ネスト
@@ -69,6 +87,13 @@ Rails.application.routes.draw do
     # shallowオプションは、ネストしたリソースの一部のアクションに対して、親リソースのIDを含まないURLを生成するために使用する
     # 例えば、コメントの編集や削除アクションでは、特定のコメントを操作するために掲示板のIDは必要ない
     # このような場合、shallowオプションを使うことで、URLを簡潔にし、可読性を向上させることができる
+
+    ### **collection**
+    # collectionは、resorces, resorceで作成されるRESTfulなルーティングにアクションを追加する際に使用
+    # RESTfulなルーティングにアクションを追加するものとしてmemberもあるが、
+    # memberは個々のリソースに対するアクション、collectionはリソース全体に対するアクションに使用
+    # 個々の掲示板（board）に対してプレビューを行いたいとかではなく、掲示板全体（boards）の中からブックマークされている
+    # 掲示板の一覧を表示したいということで、collectionを使って get :bookmarks を記述している
   end
   # resourcesメソッドのonlyオプションにnewを記載することで、GETメソッドで /posts/new というURLパターンにリクエストが飛んだ際に
   # postsコントローラーのnewアクションが動くように定義される

@@ -28,6 +28,7 @@
               </div>
             </div>
             <p><%= simple_format(@post.body) %></p>
+            <td><%= render "favorites/favorite", post: @post %></td>
           </div>
         </article>
       </div>

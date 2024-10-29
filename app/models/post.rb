@@ -10,7 +10,7 @@ class Post < ApplicationRecord
 
     has_many :comments, dependent: :destroy
     # dependent: :destroyを記述することによって、destroy 時に関連づけられたモデルに対して destroy が実行されるようになる
-    # 今回の場合では、掲示板が削除されたときに、そのユーザーに関連するCommentレコードとRatingレコードも一緒に削除される
+    # 今回の場合では、掲示板が削除されたときに、そのユーザーに関連するCommentレコードも一緒に削除される
 
     mount_uploader :post_image, PostImageUploader
     # 下記の記述を加えることで、Postモデルに対して CarrierWave の アップローダークラス（PostImageUploader）をマウントする
@@ -21,4 +21,14 @@ class Post < ApplicationRecord
 
     # この設定により、Postモデルは画像のアップロード機能を持ち、ビューで画像を表示するためのURLを生成することが可能となる
     belongs_to :user
+
+    has_many :favorites, dependent: :destroy
+    # dependent: :destroyを記述することによって、destroy 時に関連づけられたモデルに対して destroy が実行されるようになる
+    # 今回の場合では、掲示板が削除されたときに、そのユーザーに関連するFavoriteレコードも一緒に削除される
+    def favorited_by?(user)
+        favorites.exists?(user_id: user.id)
+    end
+    # def favorited_by?(user)メソッド
+    # このコードは、Postモデルにfavorited_by?(user)メソッドを追加
+    # 指定されたユーザが特定の投稿（Postインスタンス）をいいねしているかどうかを判定
 end

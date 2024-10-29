@@ -12,6 +12,10 @@ ja:
       not_updated: "%{item}を更新出来ませんでした"
       not_created: "%{item}を作成出来ませんでした"
       deleted: "%{item}を削除しました"
+  favorites:
+    create:
+      success: いいねしました
+    deleted: いいねを取り消しました
   helpers:
     submit:
       create: 登録

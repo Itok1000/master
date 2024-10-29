@@ -22,6 +22,7 @@
         <ul class="list-inline">
           <li><i class="bi bi-person"></i><%= post.user.decorate.full_name %></li>
           <li><i class="bi bi-calendar"></i><%= l post.created_at, format: :long %></li>
+          <td><%= render "favorites/favorite", post: post %></td>
         </ul>
       </div>
     </div>

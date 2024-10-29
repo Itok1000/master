@@ -61,8 +61,8 @@ Rails.application.routes.draw do
   # いいねのリソース(作成、削除)
   resources :posts, only: %i[index new create show edit destroy update] do
     resources :comments, only: %i[create edit destroy], shallow: true
-    resource :favorites, only: [:create, :destroy]
-    
+    resource :favorites, only: [ :create, :destroy ]
+
      collection do
       get :likes
       get :posts
@@ -76,7 +76,7 @@ Rails.application.routes.draw do
     # resourcesを使用すると:idが含まれ、特定の要素を操作するためのIDが必要
     # 一方、resourceを使用すると:idが含まれず、他のリソースとの関連付けによって特定できる
 
-     #### **ネストしたルーティングについて**
+    #### **ネストしたルーティングについて**
     # あるリソースが別のリソースに属する形でルーティングを定義すること
     # ネスト
     # 入れ子構造のことを意味し、プログラミングでは、ある要素が他の要素の内部に含まれている状態を指す
@@ -92,7 +92,7 @@ Rails.application.routes.draw do
     # collectionは、resorces, resorceで作成されるRESTfulなルーティングにアクションを追加する際に使用
     # RESTfulなルーティングにアクションを追加するものとしてmemberもあるが、
     # memberは個々のリソースに対するアクション、collectionはリソース全体に対するアクションに使用
-    # 個々の掲示板（board）に対してプレビューを行いたいとかではなく、掲示板全体（boards）の中からブックマークされている 
+    # 個々の掲示板（board）に対してプレビューを行いたいとかではなく、掲示板全体（boards）の中からブックマークされている
     # 掲示板の一覧を表示したいということで、collectionを使って get :bookmarks を記述している
   end
   # resourcesメソッドのonlyオプションにnewを記載することで、GETメソッドで /posts/new というURLパターンにリクエストが飛んだ際に

@@ -28,7 +28,7 @@ class Post < ApplicationRecord
     def favorited_by?(user)
         favorites.exists?(user_id: user.id)
     end
-    # def favorited_by?(user)メソッド
-    # このコードは、Postモデルにfavorited_by?(user)メソッドを追加
-    # 指定されたユーザが特定の投稿（Postインスタンス）をいいねしているかどうかを判定
+  # def favorited_by?(user)メソッド
+  # このコードは、Postモデルにfavorited_by?(user)メソッドを追加
+  # 指定されたユーザが特定の投稿（Postインスタンス）をいいねしているかどうかを判定
 end

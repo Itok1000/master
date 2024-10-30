@@ -102,6 +102,7 @@ class PostsController < ApplicationController
         redirect_to posts_path(recipe: @post.recipe), success: t("defaults.flash_message.deleted", item: Post.model_name.human), status: :see_other
     end
 
+    # いいね！した投稿を保存するためのアクション
     def favorites
       # current_userがいいねしている投稿を取得
       @favorite_posts = current_user.favorites.includes(:post).map(&:post)

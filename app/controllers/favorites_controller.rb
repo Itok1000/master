@@ -3,16 +3,15 @@ class FavoritesController < ApplicationController
 
     def create
         post = Post.find(params[:post_id])
-        favorite = @post.favorites.new(user: current_user)
+        favorite = post.favorites.build(user_id: current_user.id)
         favorite.save
-            redirect_to request.referer, success: t(".success") # リファラで前ページに戻る
+        redirect_to request.referer, success: t(".success") # リファラで前ページに戻る
     end
 
     def destroy
-        post = Post.find(params[:post_id])
-        favorite = @post.favorites.find_by(user: current_user)
-            favorite.destroy
-            redirect_to request.referer, success: t(".deleted") # リファラで前ページに戻る
+        favorite = current_user.favorites.find(params[:id])
+        favorite.destroy!
+        redirect_to request.referer, success: t(".deleted") # リファラで前ページに戻る
     end
 
     private

@@ -64,7 +64,7 @@ class PostsController < ApplicationController
     def edit
       # 編集画面表示に必要なアクションをコントローラーに定義する
       @post = current_user.posts.find(params[:id])
-      # current_user.boards.find(params[:id])と記述することで、ログインしているユーザーが投稿した掲示板一覧の中から、
+      # current_user.posts.find(params[:id])と記述することで、ログインしているユーザーが投稿した掲示板一覧の中から、
       # params[:id]の値と同じIDを持ったBoardレコードのみを取得する
       # そのためログインしているユーザーが投稿した掲示板一覧の中に無い掲示板を取得しようとすると、
       # ActiveRecord::RecordNotFoundエラーが発生して、他者が投稿した掲示板の編集画面は表示されない
@@ -74,7 +74,7 @@ class PostsController < ApplicationController
       # 指定されたIDの掲示板の編集画面を表示することができるが、この場合、すべてのユーザーがその掲示板にアクセスできることになる
 
       # @board = Board.find(params[:id])
-      # .../boards/255/edit のURLにアクセスすると、IDが255の掲示板の編集画面を誰でも表示できてしまう
+      # .../posts/255/edit のURLにアクセスすると、IDが255の掲示板の編集画面を誰でも表示できてしまう
       # 他のユーザーが作成した掲示板の編集画面にアクセスできてしまうのはサービスとしてもセキュリティ面でも問題
     end
 
@@ -102,7 +102,10 @@ class PostsController < ApplicationController
         redirect_to posts_path(recipe: @post.recipe), success: t("defaults.flash_message.deleted", item: Post.model_name.human), status: :see_other
     end
 
-
+    def favorites
+      # current_userがいいねしている投稿を取得
+      @favorite_posts = current_user.favorites.includes(:post).map(&:post)
+    end
     private
 
     def post_params

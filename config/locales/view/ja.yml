@@ -107,5 +107,9 @@ ja:
       title: 評価の詳細とみんなの反応
     index:
       title: みんなの評価
+      no_result: 投稿がありません
     edit:
       title: 料理の評価を修正
+    favorites:
+      title: 「いいね！」した投稿
+      no_result: 「いいね！」した投稿がありません

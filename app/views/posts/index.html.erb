@@ -28,7 +28,7 @@
        <% if @posts.present? %>
           <%= render @posts %>
         <% else %>
-          <div class="mb-3">掲示板がありません</div>
+          <div class="mb-3"><%= t('posts.index.no_result') %></div>
         <% end %>
       </div>
      </div>

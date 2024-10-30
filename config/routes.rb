@@ -64,8 +64,8 @@ Rails.application.routes.draw do
     resource :favorites, only: [ :create, :destroy ]
 
      collection do
-      get :likes
       get :favorites
+      get :posts
      end
     #### **いいねのリソースだけ複数形でない理由**
     # いいね機能の場合、1人のユーザーは1つの投稿に対して1回しかいいねできないという制約がある
@@ -80,7 +80,7 @@ Rails.application.routes.draw do
     # あるリソースが別のリソースに属する形でルーティングを定義すること
     # ネスト
     # 入れ子構造のことを意味し、プログラミングでは、ある要素が他の要素の内部に含まれている状態を指す
-    # 例⇒掲示板（Board）に属するコメント（Comment）を扱う場合、commentsリソースをpostsリソースの中にネスト
+    # 例⇒掲示板（Post）に属するコメント（Comment）を扱う場合、commentsリソースをpostsリソースの中にネスト
     # こうすることで、URLが直感的になり、関連するリソースの関係が明確になる
 
     ### **shallow オプションについて**
@@ -92,7 +92,7 @@ Rails.application.routes.draw do
     # collectionは、resorces, resorceで作成されるRESTfulなルーティングにアクションを追加する際に使用
     # RESTfulなルーティングにアクションを追加するものとしてmemberもあるが、
     # memberは個々のリソースに対するアクション、collectionはリソース全体に対するアクションに使用
-    # 個々の掲示板（board）に対してプレビューを行いたいとかではなく、掲示板全体（boards）の中からブックマークされている
+    # 個々の掲示板（post）に対してプレビューを行いたいとかではなく、掲示板全体（posts）の中からブックマークされている
     # 掲示板の一覧を表示したいということで、collectionを使って get :bookmarks を記述している
   end
   # resourcesメソッドのonlyオプションにnewを記載することで、GETメソッドで /posts/new というURLパターンにリクエストが飛んだ際に

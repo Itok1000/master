@@ -65,7 +65,7 @@ Rails.application.routes.draw do
 
      collection do
       get :likes
-      get :posts
+      get :favorites
      end
     #### **いいねのリソースだけ複数形でない理由**
     # いいね機能の場合、1人のユーザーは1つの投稿に対して1回しかいいねできないという制約がある

@@ -9,6 +9,7 @@ class FavoritesController < ApplicationController
     end
 
     def destroy
+        post = Post.find(params[:post_id])
         favorite = current_user.favorites.find(params[:id])
         favorite.destroy!
         redirect_to request.referer, success: t(".deleted") # リファラで前ページに戻る

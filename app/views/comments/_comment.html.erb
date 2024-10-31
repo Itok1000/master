@@ -1,8 +1,8 @@
- <tr id="comment-<%= comment.id %>">
+<tr id="comment-<%= comment.id %>">
   <td>
     <h3 class="small"><%= comment.user.decorate.full_name %></h3>
     <p><%= simple_format(comment.body) %></p>
-    <li class="list-inline-item" ><%= l @post.created_at, format: :long %></li>
+    <li class="list-inline-item"><%= l comment.created_at, format: :long %></li>
   </td>
   <% if current_user.own?(comment) %>
     <td class="action">
@@ -13,11 +13,11 @@
           <% end %>
         </li>
         <li class="list-inline-item">
-          <%= link_to "#", class: "delete-comment-link" do %>
+          <%= link_to comment_path(comment), class: "delete-comment-link", data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') } do %>
             <i class="bi bi-trash-fill"></i>
           <% end %>
         </li>
       </ul>
     </td>
   <% end %>
- </tr>
+</tr>

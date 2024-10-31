@@ -17,6 +17,9 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   # dependent: :destroyを記述することによって、destroy 時に関連づけられたモデルに対して destroy が実行されるようになる
   # 今回の場合では、掲示板が削除されたときに、そのユーザーに関連するFavoriteレコードも一緒に削除される
+  has_many :comments, dependent: :destroy
+  # dependent: :destroyを記述することによって、destroy 時に関連づけられたモデルに対して destroy が実行されるようになる
+  # 今回の場合では、掲示板が削除されたときに、そのユーザーに関連するCommentsレコードも一緒に削除される
 
   def own?(object)
     # own? メソッドについて

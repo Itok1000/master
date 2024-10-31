@@ -87,7 +87,7 @@ gem "draper", "4.0.2"
 # 柔軟な検索条件 ： 部分一致検索、完全一致検索、範囲検索など、さまざまな検索条件をサポートする
 # ソート機能 ： 検索結果を特定のカラムでソートする機能も提供する
 # シンプルな構文 ： ransackはシンプルなRuby構文を使用しているため、既存のコードに容易に統合できる
-gem "ransack", "3.2.1"
+gem "ransack"
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 

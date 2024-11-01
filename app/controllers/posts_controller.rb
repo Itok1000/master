@@ -116,6 +116,7 @@ class PostsController < ApplicationController
       @favorite_posts = @q.result.includes(:user)
     end
 
+
     private
 
     def post_params

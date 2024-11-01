@@ -4,11 +4,7 @@
   <div class="row">
     <div class="col-lg-10 offset-lg-1">
       <!-- 検索フォーム -->
-      <form>
-        <div class="input-group mb-3"><input class="form-control" placeholder="検索ワード" type="search"/>
-          <div class="input-group-append"><input type="submit" value="検索" class="btn btn-primary"/></div>
-        </div>
-      </form>
+      <%= render 'search_form', url: favorites_posts_path, favorite_posts: @q %>
     </div>
   </div>
   <!-- 掲示板一覧 -->
@@ -16,7 +12,7 @@
     <div class="col-12">
       <div class="row">
         <% if @favorite_posts.present? %>
-          <%= render @favorite_posts %>
+          <%= render partial: 'posts/post', collection: @favorite_posts, as: :post %>
         <% else %>
           <p><%= t('.no_result') %></p>
         <% end %>

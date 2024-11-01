@@ -2,7 +2,7 @@ ja:
   activerecord:
     models:
       user: ユーザー
-      post: 掲示板
+      post: 料理の評価
       comment: コメント
     attributes:
       user:

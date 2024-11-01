@@ -1,11 +1,11 @@
 <% if post.favorited_by?(current_user) %>
   <%= button_to post_favorites_path(post), method: :delete, class: "btn btn-link" do %>
     <i class="bi bi-heart-fill" style="color: red;"></i>
-     いいね <%= post.favorites.count %> 件
+     参考になった <%= post.favorites.count %> 件
   <% end %>
 <% else %>
   <%= button_to post_favorites_path(post), method: :post, class: "btn btn-link" do %>
     <i class="bi bi-heart"></i>
-     いいね <%= post.favorites.count %> 件
+    参考になった <%= post.favorites.count %> 件
   <% end %>
 <% end %>

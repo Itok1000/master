@@ -108,5 +108,5 @@ ja:
     edit:
       title: 料理の評価を修正
     favorites:
-      title: 「いいね！」した投稿
-      no_result: 「いいね！」した投稿がありません
+      title: 「参考になった」投稿
+      no_result: 「参考になった」投稿はございません

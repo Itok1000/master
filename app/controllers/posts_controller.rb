@@ -1,33 +1,33 @@
 class PostsController < ApplicationController
-    def index
-        # 各料理掲示板一覧アクションを追加して、レンダリングするようにする
-        @recipe = params[:recipe]
+  def index
+    # 各料理掲示板一覧アクションを追加して、レンダリングするようにする
+    @recipe = params[:recipe]
 
-        # 料理に応じた情報をハッシュで定義
-        recipes = {
-          "ojakhuri" => { name: "オジャフリ", image: "Answer01.png", description: I18n.t("diagnoses.description.ojakhuri2") },
-          "badrijani" => { name: "パドリジャーニ", image: "Answer02.png", description: I18n.t("diagnoses.description.badrijani2") },
-          "sokos" => { name: "ソコスチャシュシュリ", image: "Answer03.png", description: I18n.t("diagnoses.description.sokos_chashushuli2") },
-          "pkhali" => { name: "プパリ", image: "Answer04.png", description: I18n.t("diagnoses.description.pkhali5") },
-          "ostri" => { name: "オーストリ", image: "Answer05.png", description: I18n.t("diagnoses.description.ostri2") },
-          "chikirtma" => { name: "チヒルトゥマ", image: "Answer06.png", description: I18n.t("diagnoses.description.chikirtma3") },
-          "shkmeruli" => { name: "シュクメルリ", image: "Answer07.png", description: I18n.t("diagnoses.description.shkmeruli4") },
-          "chakhohbili" => { name: "チャホフビリ", image: "Answer08.png", description: I18n.t("diagnoses.description.chakhohbili2") }
-        }
+    # 料理に応じた情報をハッシュで定義
+    recipes = {
+      "ojakhuri" => { name: "オジャフリ", image: "Answer01.png", description: I18n.t("diagnoses.description.ojakhuri2") },
+      "badrijani" => { name: "パドリジャーニ", image: "Answer02.png", description: I18n.t("diagnoses.description.badrijani2") },
+      "sokos" => { name: "ソコスチャシュシュリ", image: "Answer03.png", description: I18n.t("diagnoses.description.sokos_chashushuli2") },
+      "pkhali" => { name: "プパリ", image: "Answer04.png", description: I18n.t("diagnoses.description.pkhali5") },
+      "ostri" => { name: "オーストリ", image: "Answer05.png", description: I18n.t("diagnoses.description.ostri2") },
+      "chikirtma" => { name: "チヒルトゥマ", image: "Answer06.png", description: I18n.t("diagnoses.description.chikirtma3") },
+      "shkmeruli" => { name: "シュクメルリ", image: "Answer07.png", description: I18n.t("diagnoses.description.shkmeruli4") },
+      "chakhohbili" => { name: "チャホフビリ", image: "Answer08.png", description: I18n.t("diagnoses.description.chakhohbili2") }
+    }
 
 
-        @recipe_info = recipes[@recipe]
-        # includesメソッド
-        # 関連するテーブルをまとめてDBから取得できるメソッド
-        # Post.includes(:user) は、Postモデルのレコードと、それに関連するUserモデルのレコードを一度に取得する
-        # これにより、最初のクエリでPostレコードを取得し、2つ目のクエリで関連するUserレコードを一度に取得するため、クエリの発行回数を2回に抑えてN+1問題に対応している
-        # 該当する料理の投稿をフィルタリングして取得
-        @posts = Post.where(recipe: @recipe).includes(:user)
-    end
+    @recipe_info = recipes[@recipe]
+    # includesメソッド
+    # 関連するテーブルをまとめてDBから取得できるメソッド
+    # Post.includes(:user) は、Postモデルのレコードと、それに関連するUserモデルのレコードを一度に取得する
+    # これにより、最初のクエリでPostレコードを取得し、2つ目のクエリで関連するUserレコードを一度に取得するため、クエリの発行回数を2回に抑えてN+1問題に対応している
+    # 該当する料理の投稿をフィルタリングして取得
+    @posts = Post.where(recipe: @recipe).includes(:user)
+  end
+
     # newアクションは、新規作成画面を表示するためのアクション
     # Postモデルの新しいインスタンスを@postに代入している
     # この@postは、掲示板作成画面のビュー（app/views/posts/new.html.erb）に渡される
-
     def new
       @post = Post.new
     end
@@ -103,10 +103,19 @@ class PostsController < ApplicationController
     end
 
     # いいね！した投稿を保存するためのアクション
-    def favorites
+    # def favorites
       # current_userがいいねしている投稿を取得
-      @favorite_posts = current_user.favorites.includes(:post).map(&:post)
+      # @favorite_posts = current_user.favorites.includes(:post).map(&:post)
+    # end
+    def favorites
+      # `current_user`がいいねした投稿を取得し、検索条件を適用
+      # @favorite_postsの取得方法をransackを用いて行うよう変更
+      # favoritesアクションで検索フォームから送信されたparams[:q]を受け取り、current_userがいいねした投稿の中から検索
+      @q = Post.joins(:favorites).where(favorites: { user_id: current_user.id }).ransack(params[:q])
+      # @q.resultで取得された検索結果を@favorite_postsに代入
+      @favorite_posts = @q.result.includes(:user)
     end
+    
     private
 
     def post_params

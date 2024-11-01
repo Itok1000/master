@@ -61,7 +61,7 @@ Rails.application.routes.draw do
   # いいねのリソース(作成、削除)
   resources :posts, only: %i[index new create show edit destroy update] do
     resources :comments, only: %i[create destroy], shallow: true
-    resource :favorites, only: [ :create, :destroy ]
+    resource :favorites, only: [:create, :destroy]
 
      collection do
       get :favorites

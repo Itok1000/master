@@ -28,18 +28,18 @@ class Post < ApplicationRecord
     def favorited_by?(user)
         favorites.exists?(user_id: user.id)
     end
-  # def favorited_by?(user)メソッド
-  # このコードは、Postモデルにfavorited_by?(user)メソッドを追加
-  # 指定されたユーザが特定の投稿（Postインスタンス）をいいねしているかどうかを判定
-  
-  # Ransack needs attributes explicitly allowlisted as searchableとエラーが出た時に追記
-  # Ransackで検索を行う属性を明示的に指定する必要があるため,Postモデルにransackable_attributesメソッドを追加し、
-  # 検索可能な属性を定義しなければならない
+    # def favorited_by?(user)メソッド
+    # このコードは、Postモデルにfavorited_by?(user)メソッドを追加
+    # 指定されたユーザが特定の投稿（Postインスタンス）をいいねしているかどうかを判定
+
+    # Ransack needs attributes explicitly allowlisted as searchableとエラーが出た時に追記
+    # Ransackで検索を行う属性を明示的に指定する必要があるため,Postモデルにransackable_attributesメソッドを追加し、
+    # 検索可能な属性を定義しなければならない
     def self.ransackable_attributes(auth_object = nil)
-      ["body", "created_at", "id", "post_image", "recipe", "title", "updated_at", "user_id"]
+      [ "body", "created_at", "id", "post_image", "recipe", "title", "updated_at", "user_id" ]
     end
 
     def self.ransackable_associations(auth_object = nil)
-      ["comments", "favorites", "user"]
+      [ "comments", "favorites", "user" ]
     end
 end

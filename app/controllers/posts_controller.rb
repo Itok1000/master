@@ -104,8 +104,8 @@ class PostsController < ApplicationController
 
     # いいね！した投稿を保存するためのアクション
     # def favorites
-      # current_userがいいねしている投稿を取得
-      # @favorite_posts = current_user.favorites.includes(:post).map(&:post)
+    # current_userがいいねしている投稿を取得
+    # @favorite_posts = current_user.favorites.includes(:post).map(&:post)
     # end
     def favorites
       # `current_user`がいいねした投稿を取得し、検索条件を適用
@@ -115,7 +115,7 @@ class PostsController < ApplicationController
       # @q.resultで取得された検索結果を@favorite_postsに代入
       @favorite_posts = @q.result.includes(:user)
     end
-    
+
     private
 
     def post_params

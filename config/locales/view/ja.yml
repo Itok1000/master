@@ -114,6 +114,7 @@ ja:
       no_result: 「参考になった」投稿はございません
     posts:
       title: 投稿一覧
+      no_result: 投稿がありません
   profiles:
     show:
       title: プロフィール設定

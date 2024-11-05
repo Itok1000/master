@@ -1,18 +1,27 @@
-<div class="top-wrapper">
 <% content_for(:title, t('.title')) %>
-<div class="container pt-3">
-  <h1>あなたの投稿一覧</h1>
-  <% if @user_posts.present? %>
-    <div class="row">
-      <% @user_posts.each do |post| %>
-        <div class="col-12 mb-3">
-          <%= render post %> <!-- 各投稿を表示する -->
-        </div>
-      <% end %>
+<div class="top-wrapper">
+   <div class = "text-center">
+    <h1>投稿一覧</h1>
+   </div>
+ <div class="container pt-3">
+    <div class="col-lg-10 offset-lg-1">
+      <!-- 検索フォームをここに追加 -->
+      <%= render 'search_form', url: posts_posts_path, post_posts: @q %>
     </div>
-    <%= paginate @user_posts %> <!-- ページネーションの表示 -->
-  <% else %>
-    <p>まだ投稿がありません。</p>
-  <% end %>
+  <div class="row">
+    <div class="col-12">
+      <div class="row">
+       <% if @user_posts.present? %>
+          <div class="row">
+          <%= render partial: 'posts/post', collection: @user_posts, as: :post %> <!-- 各投稿を表示する -->
+          <%= paginate @user_posts %> <!-- ページネーションの表示 -->
+       <% else %>
+          <p><%= t('.no_result') %></p>
+       <% end %>
+      </div>
+    </div>
+   </div>
+  </div>
+  </div>
 </div>
-</div>
+

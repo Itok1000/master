@@ -117,7 +117,7 @@ class PostsController < ApplicationController
     end
 
     def posts
-      # PostsControllerのpostsアクション内に、ログインユーザーの投稿を取得する処理を追加する 
+      # PostsControllerのpostsアクション内に、ログインユーザーの投稿を取得する処理を追加する
       # 現在のユーザーを取得するためにcurrent_userを使い、関連付けを活用してそのユーザーの投稿のみを取得する
       @user_posts = current_user.posts.page(params[:page]).per(10) # 10件ずつページネーション
     end

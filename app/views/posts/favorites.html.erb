@@ -1,5 +1,8 @@
 <% content_for(:title, t('.title')) %>
 <div class="top-wrapper">
+   <div class = "text-center">
+    <h1>参考になった投稿</h1>
+   </div>
     <div class="container pt-3">
   <div class="row">
     <div class="col-lg-10 offset-lg-1">
@@ -13,6 +16,7 @@
       <div class="row">
         <% if @favorite_posts.present? %>
           <%= render partial: 'posts/post', collection: @favorite_posts, as: :post %>
+          <%= paginate @favorite_posts %> <!-- ページネーションの表示 -->
         <% else %>
           <p><%= t('.no_result') %></p>
         <% end %>

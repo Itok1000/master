@@ -28,7 +28,8 @@
             <li class='nav-item'><%= link_to t('header.show'), profile_path , class: 'nav-link'%></li>
             <li><hr class='dropdown-divider'></li>
             <li class='nav-item'><%= link_to '「参考になった」投稿', favorites_posts_path, class: 'nav-link' %></li>
-            <li class='nav-item'><%= link_to '投稿一覧', '#', class: 'nav-link' %></li>
+            <!-- ユーザー自身が投稿したものをヘッダーの「投稿一覧」にアクセスした際に確認できるように実装 -->
+            <li class='nav-item'><%= link_to '投稿一覧', posts_posts_path, class: 'nav-link' %></li>
            </div>
           </ul>
         </li>

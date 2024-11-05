@@ -112,6 +112,8 @@ ja:
     favorites:
       title: 「参考になった」投稿
       no_result: 「参考になった」投稿はございません
+    posts:
+      title: 投稿一覧
   profiles:
     show:
       title: プロフィール設定

@@ -1,0 +1,18 @@
+<div class="top-wrapper">
+<% content_for(:title, t('.title')) %>
+<div class="container pt-3">
+  <h1>あなたの投稿一覧</h1>
+  <% if @user_posts.present? %>
+    <div class="row">
+      <% @user_posts.each do |post| %>
+        <div class="col-12 mb-3">
+          <%= render post %> <!-- 各投稿を表示する -->
+        </div>
+      <% end %>
+    </div>
+    <%= paginate @user_posts %> <!-- ページネーションの表示 -->
+  <% else %>
+    <p>まだ投稿がありません。</p>
+  <% end %>
+</div>
+</div>

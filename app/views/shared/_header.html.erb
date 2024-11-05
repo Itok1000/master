@@ -10,7 +10,7 @@
 
     <div class='collapse navbar-collapse' id='navbarSupportedContent'>
       <ul class='navbar-nav ms-auto main-nav align-items-center'>
-        <!-- 「いいね！」した投稿 -->
+      <!-- ログアウト -->
         <li class='nav-item'>
           <%= link_to t('header.logout'), logout_path, data: { turbo_method: :delete } , class: 'nav-link'%>
         </li>
@@ -25,7 +25,7 @@
           <!-- ドロップダウンメニュー -->
           <ul class='dropdown-menu dropdown-menu-end custom-bg'>
            <div style='text-align: center;'>
-            <li class='nav-item'><%= link_to 'プロフィール設定', '#' , class: 'nav-link'%></li>
+            <li class='nav-item'><%= link_to t('header.show'), profile_path , class: 'nav-link'%></li>
             <li><hr class='dropdown-divider'></li>
             <li class='nav-item'><%= link_to '「参考になった」投稿', favorites_posts_path, class: 'nav-link' %></li>
             <li class='nav-item'><%= link_to '投稿一覧', '#', class: 'nav-link' %></li>

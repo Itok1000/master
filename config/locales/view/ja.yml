@@ -13,6 +13,7 @@ ja:
       not_updated: "%{item}を更新出来ませんでした"
       not_created: "%{item}を作成出来ませんでした"
       deleted: "%{item}を削除しました"
+    edit: 編集
   helpers:
     submit:
       create: 登録
@@ -46,6 +47,7 @@ ja:
     login: ログイン
     logout: ログアウト
     new: 新規登録
+    show: プロフィール設定
   notices:
     login_success: "ログイン成功しました"
     logout_success: "ログアウトしました"
@@ -110,3 +112,9 @@ ja:
     favorites:
       title: 「参考になった」投稿
       no_result: 「参考になった」投稿はございません
+  profiles:
+    show:
+      title: プロフィール設定
+    edit:
+      title: プロフィール編集
+      to_login_page: ログインページへ

@@ -51,7 +51,7 @@ Rails.application.routes.draw do
 
   # ルート側にposts(掲示板機能)を追加
   # resourcesメソッドのonlyオプションにnewを記載することで、GETメソッドで /posts/new というURLパターンにリクエストが飛んだ際に postsコントローラーのnewアクションが動くように定義される
-  resources :users, only: %i[new create]
+  # resources :users, only: %i[new create]
   # resources :posts, only: %i[index new create show] を記載することで、掲示板の一覧表示と新規作成画面,掲示板詳細閲覧のルーティングが設定される
   # createを記載することで、POSTメソッドで /posts というURLパターンにリクエストが飛んだ際に postsコントローラーのcreateアクションが動くように定義される
   # また、URLパターンを生成してくれる posts_path（URLヘルパー）も生成される
@@ -62,6 +62,7 @@ Rails.application.routes.draw do
   resources :posts, only: %i[index new create show edit destroy update] do
     resources :comments, only: %i[create destroy], shallow: true
     resource :favorites, only: [ :create, :destroy ]
+
 
      collection do
       get :favorites
@@ -95,6 +96,8 @@ Rails.application.routes.draw do
     # 個々の掲示板（post）に対してプレビューを行いたいとかではなく、掲示板全体（posts）の中からブックマークされている
     # 掲示板の一覧を表示したいということで、collectionを使って get :bookmarks を記述している
   end
+
+  resource :profile, only: %i[show edit update]
   # resourcesメソッドのonlyオプションにnewを記載することで、GETメソッドで /posts/new というURLパターンにリクエストが飛んだ際に
   # postsコントローラーのnewアクションが動くように定義される
   # また、URLパターンを生成してくれる new_posts_path（URLヘルパー）も生成される

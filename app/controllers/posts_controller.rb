@@ -22,7 +22,7 @@ class PostsController < ApplicationController
     # Post.includes(:user) は、Postモデルのレコードと、それに関連するUserモデルのレコードを一度に取得する
     # これにより、最初のクエリでPostレコードを取得し、2つ目のクエリで関連するUserレコードを一度に取得するため、クエリの発行回数を2回に抑えてN+1問題に対応している
     # 該当する料理の投稿をフィルタリングして取得
-    @posts = Post.where(recipe: @recipe).includes(:user)
+    @posts = Post.where(recipe: @recipe).includes(:user).page(params[:page]).per(9)
   end
 
     # newアクションは、新規作成画面を表示するためのアクション

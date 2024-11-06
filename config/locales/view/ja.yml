@@ -123,8 +123,8 @@ ja:
       to_login_page: ログインページへ
   views:
     pagination:
-      first: "&laquo; 最初"
-      last: "最後 &raquo;"
-      previous: "&lsaquo; 前"
-      next: "次 &rsaquo;"
+      first: "&laquo; 最初へ"
+      last: "最後へ &raquo;"
+      previous: "&lsaquo; 一つ前に戻る"
+      next: "次へ &rsaquo;"
       truncate: "..."

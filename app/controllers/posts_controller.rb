@@ -113,7 +113,7 @@ class PostsController < ApplicationController
       # favoritesアクションで検索フォームから送信されたparams[:q]を受け取り、current_userがいいねした投稿の中から検索
       @q = Post.joins(:favorites).where(favorites: { user_id: current_user.id }).ransack(params[:q])
       # @q.resultで取得された検索結果を@favorite_postsに代入
-      @favorite_posts = @q.result.page(params[:page]).per(10)
+      @favorite_posts = @q.result.page(params[:page]).per(9)
     end
 
     def posts
@@ -124,7 +124,7 @@ class PostsController < ApplicationController
       # 　検索フォームを動かすためのアクション
       # @user_posts = current_user.posts.page(params[:page]).per(10) # 10件ずつページネーション
       # postsアクションでユーザーの投稿を検索条件に応じて取得するようにし、検索フォームをposts.html.erbに表示する
-      @user_posts = @q.result.page(params[:page]).per(10)
+      @user_posts = @q.result.page(params[:page]).per(9)
     end
 
 

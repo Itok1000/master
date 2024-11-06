@@ -30,6 +30,7 @@
      <!--  例えば、new アクションのリンクに recipe パラメータを追加し、新規投稿画面にそれを渡す-->
      <%= link_to t('posts.new.title'), new_post_path(recipe: @recipe), class: "blue" %>
      </div>
+     <%= paginate @posts %> <!-- ページネーションの表示 -->
    </div>
   </div>
 </div>

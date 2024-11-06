@@ -263,3 +263,21 @@
   background-color: #0548ffa0; /* ホバー時の色変更 */
   color: white;
 }
+
+/*ページネーション自体のデザイン*/
+.pagination>li>a {	
+  background: #fbecc0;		
+  border: none;		/*枠線をなくす*/
+  color: black;	/*文字の色を変える*/
+}
+
+/* 表示しているページ番号のデザイン */
+.pagination>.active>a {		
+  background: #bf392b;	   /*背景の色を変える*/
+  border-radius: 15px;	   /*角を丸くする*/
+}
+
+/*ホバー時のデザイン*/
+.pagination>li>a:hover {		
+  border-radius: 15px;	  /*角を丸くする*/
+}

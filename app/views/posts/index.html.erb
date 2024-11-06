@@ -19,7 +19,8 @@
    <div class="col-12">
      <div class="row">
        <% if @posts.present? %>
-          <%= render @posts %>
+          <%= render partial: 'posts/post', collection: @posts, as: :post %> <!-- 明示的なパス指定 -->
+          <%= paginate @posts %> <!-- ページネーションの表示 -->
         <% else %>
           <div class="mb-3"><%= t('posts.index.no_result') %></div>
         <% end %>
@@ -30,7 +31,6 @@
      <!--  例えば、new アクションのリンクに recipe パラメータを追加し、新規投稿画面にそれを渡す-->
      <%= link_to t('posts.new.title'), new_post_path(recipe: @recipe), class: "blue" %>
      </div>
-     <%= paginate @posts %> <!-- ページネーションの表示 -->
    </div>
   </div>
 </div>

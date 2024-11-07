@@ -110,18 +110,10 @@
   text-align: start;
 }
 
-.georgia{
-  position: absolute;
-  top: 10px; /* 上からの距離 */
-  right: 40px; /* 右からの距離（大きくすると左に移動） */
-  width: 410px; /* 幅を200pxに設定 */
-  height: 376px; /* 高さを150pxに設定 */
-}
-
 
 .image02{
   position: absolute;
-  bottom: 20px; /* 下からの距離 */
+  top: 10px; /* 上からの距離 */
   right: 30px; /* 右からの距離（大きくすると左に移動） */
   width: 200px; /* 幅を200pxに設定 */
   height: 200px; /* 高さを150pxに設定 */
@@ -153,7 +145,7 @@
   margin-top: 20px; /* 上に余白を追加 */
 }
 
-.image05, .image06 {
+.georgia, .image05, .image06 {
   width: 45%; /* 画像を45%の幅に設定して左右に配置 */
   height: auto; /* 高さを自動調整 */
   object-fit: cover; /* 画像の比率を維持して調整 */
@@ -272,4 +264,16 @@
 /*ホバー時のデザイン*/
 .pagination>li>a:hover {		
   border-radius: 15px;	  /*角を丸くする*/
+}
+
+#table-comment {
+  width: 100%; /* テーブル全体の幅を100%に固定 */
+  table-layout: fixed; /* 各セルの幅を均等にする */
+}
+
+#table-comment td {
+  width: 100%; /* 各セルも100%に */
+  padding: 10px; /* 内側の余白 */
+  vertical-align: top;
+  word-wrap: break-word; /* 長い単語を改行 */
 }

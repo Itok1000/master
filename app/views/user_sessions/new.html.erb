@@ -16,11 +16,6 @@
           <%= f.password_field :password, class: "form-control custom-input" %>
         </div>
 
-        <!-- 「パスワードをお忘れの方はこちら」のリンク -->
-        <div class='text-center'>
-          <%= link_to t('user_sessions.new.password_forget'), '#', class: 'custom-link' %>
-        </div>
-
         <!-- ログインボタン -->
         <div class="text-center mt-3">
           <%= f.submit t('user_sessions.new.login'), class: "orange" %>
@@ -31,6 +26,11 @@
       <div class='text-center mt-3'>
         <%= link_to t('user_sessions.new.to_register_page'), new_user_path, class: 'custom-link' %>
       </div>
+
+      <!-- 「パスワードをお忘れの方はこちら」のリンク -->
+        <div class='text-center'>
+          <%= link_to t('user_sessions.new.password_forget'), '#', class: 'custom-link' %>
+        </div>
     </div>
   </div>
 </div>

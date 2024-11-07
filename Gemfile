@@ -124,3 +124,11 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# 送信されるメールをブラウザで確認できる時に必要
+# メールの送信処理が実行されると、メールの内容がブラウザ上で表示され、実際にメールが送信されることなく内容を確認することができる
+# これにより、メールの内容やフォーマットを簡単に確認・修正することが可能となる
+group :development do
+  gem 'letter_opener', '~> 1.7.0'
+  gem 'letter_opener_web', '~> 2.0.0'
+end

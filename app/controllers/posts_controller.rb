@@ -122,7 +122,7 @@ class PostsController < ApplicationController
       # PostsControllerのpostsアクション内に、ログインユーザーの投稿を取得する処理を追加する
       # 現在のユーザーを取得するためにcurrent_userを使い、関連付けを活用してそのユーザーの投稿のみを取得する
       # 　検索フォームを動かすためのアクション
-      # @user_posts = current_user.posts.page(params[:page]).per(10) # 10件ずつページネーション
+      # @user_posts = current_user.posts.page(params[:page]).per(9) # 9件ずつページネーション
       # postsアクションでユーザーの投稿を検索条件に応じて取得するようにし、検索フォームをposts.html.erbに表示する
       @user_posts = @q.result.page(params[:page]).per(9)
     end

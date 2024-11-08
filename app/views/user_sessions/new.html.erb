@@ -1,5 +1,6 @@
 <% content_for(:title, t('.title')) %>
 <div class="top-wrapper">
+ <div class="container">
   <div class="row">
     <div class="col-md-10 col-lg-8 mx-auto">
       <div class='text-center'>
@@ -18,7 +19,7 @@
 
         <!-- ログインボタン -->
         <div class="text-center mt-3">
-          <%= f.submit t('user_sessions.new.login'), class: "orange" %>
+          <%= f.submit t('user_sessions.new.login'),class: "btn btn-primary" %>
         </div>
       <% end %>
 
@@ -33,4 +34,5 @@
         </div>
     </div>
   </div>
+ </div>
 </div>

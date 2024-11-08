@@ -1,5 +1,6 @@
 <% content_for(:title, t('.title')) %>
 <div class="top-wrapper">
+ <div class="container">
   <div class="row">
     <div class="col-md-10 col-lg-8 mx-auto">
       <h1>ユーザー登録</h1>
@@ -22,8 +23,9 @@
           <%= f.label :password_confirmation, class: "form-label" %>
           <%= f.password_field :password_confirmation, class: "form-control custom-input" %>
         </div>
-        <%= f.submit "登録する", class: "orange" %>
+        <%= f.submit "登録する", class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>
+ </div>
 </div>

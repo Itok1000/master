@@ -1,5 +1,6 @@
 <% content_for(:title, t('.title')) %>
 <div class="top-wrapper">
+ <div class="container">
   <div class="row">
     <div class="col-md-10 col-lg-8 mx-auto">
       <div class='text-center'>
@@ -16,14 +17,9 @@
           <%= f.password_field :password, class: "form-control custom-input" %>
         </div>
 
-        <!-- 「パスワードをお忘れの方はこちら」のリンク -->
-        <div class='text-center'>
-          <%= link_to t('user_sessions.new.password_forget'), '#', class: 'custom-link' %>
-        </div>
-
         <!-- ログインボタン -->
         <div class="text-center mt-3">
-          <%= f.submit t('user_sessions.new.login'), class: "orange" %>
+          <%= f.submit t('user_sessions.new.login'),class: "btn btn-primary" %>
         </div>
       <% end %>
 
@@ -31,6 +27,12 @@
       <div class='text-center mt-3'>
         <%= link_to t('user_sessions.new.to_register_page'), new_user_path, class: 'custom-link' %>
       </div>
+
+      <!-- 「パスワードをお忘れの方はこちら」のリンク -->
+        <div class='text-center'>
+          <%= link_to t('user_sessions.new.password_forget'), '#', class: 'custom-link' %>
+        </div>
     </div>
   </div>
+ </div>
 </div>

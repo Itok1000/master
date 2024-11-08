@@ -173,15 +173,6 @@ GEM
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
     language_server-protocol (3.17.0.3)
-    launchy (2.5.2)
-      addressable (~> 2.8)
-    letter_opener (1.7.0)
-      launchy (~> 2.2)
-    letter_opener_web (2.0.0)
-      actionmailer (>= 5.2)
-      letter_opener (~> 1.7)
-      railties (>= 5.2)
-      rexml
     logger (1.6.1)
     loofah (2.22.0)
       crass (~> 1.0.2)
@@ -412,8 +403,6 @@ DEPENDENCIES
   jquery-rails
   jsbundling-rails
   kaminari (= 1.2.2)
-  letter_opener (~> 1.7.0)
-  letter_opener_web (~> 2.0.0)
   meta-tags
   mini_magick
   pg (~> 1.1)

@@ -1,8 +1,20 @@
+    <head>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&display=swap" rel="stylesheet">
+    </head>
 <div class="top-wrapper">
   <div class="top-inner-text">
-    <h1>ジョージア料理診断アプリ</h1>
-    <h2>ガマルジョバ</h2>
-    <h3>გამარჯობა</h3>
+      <div class = "kaisei-decol-regular">
+       <h1>ジョージア料理診断アプリ</h1>
+       <h2>ガマルジョバ</h2> 
+      </div>
+      <div class = "noto-serif-georgian-uniquifier">
+      <h3>გამარჯობა</h3>
+      </div>
     <br>
     <% if logged_in? %>
       <!-- ログイン後のコンテンツ -->
@@ -64,18 +76,26 @@
       </div>
     <% else %>
       <!-- ログイン前のコンテンツ -->
+      <div class = "kaisei-decol-regular">
       <h4>診断始める前に、こちらを確認</h4>
+      </div>
       <div class="button-container">
         <!-- 上部のボタン（Flag_of_Georgia.png） -->
         <div class="button upper-button">
+         <div class = "kaisei-decol-regular">
           <%= link_to 'ジョージアって何?', georgia_path, class: 'button-text'%>
+         </div>
         </div>
         <!-- 下部のボタン（Image07.png） -->
         <div class="button under-button">
+         <div class = "kaisei-decol-regular">
           <%= link_to 'ジョージア料理って何？', food_path, class: 'button-text'%>
+         </div>
         </div>
       </div>
-      <h5>確認出来たら</h5>
+      <div class = "kaisei-decol-regular">
+       <h5>確認出来たら</h5>
+      </div>
       <!-- 診断スタートボタン -->
       <div class="start-button-container">
         <%= link_to '診断スタート', new_diagnosis_path, class: 'orange' %>

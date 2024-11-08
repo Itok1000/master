@@ -277,3 +277,19 @@
   vertical-align: top;
   word-wrap: break-word; /* 長い単語を改行 */
 }
+
+.kaisei-decol-regular {
+  font-family: "Kaisei Decol", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.noto-serif-georgian-uniquifier {
+  font-family: "Noto Serif Georgian", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+

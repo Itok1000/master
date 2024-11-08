@@ -48,6 +48,10 @@ ja:
     logout: ログアウト
     new: 新規登録
     show: プロフィール設定
+  password_ressets:
+    new:
+      title: パスワードリセット
+      submit: 送信
   notices:
     login_success: "ログイン成功しました"
     logout_success: "ログアウトしました"

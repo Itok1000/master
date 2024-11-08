@@ -21,6 +21,9 @@ class User < ApplicationRecord
   # dependent: :destroyを記述することによって、destroy 時に関連づけられたモデルに対して destroy が実行されるようになる
   # 今回の場合では、掲示板が削除されたときに、そのユーザーに関連するCommentsレコードも一緒に削除される
 
+  validates :reset_password_token, presence: true, uniqueness: true, allow_nil: true
+  # Userモデルにパスワード再設定のバリデーションを設定
+
   def own?(object)
     # own? メソッドについて
     # own? メソッド

@@ -9,8 +9,8 @@ class PasswordResetsController < ApplicationController
     skip_before_action :require_login
     def new; end
 
-    # request password reset.
-    # you get here when the user entered their email in the reset password form and submitted it.
+    # パスワードのリセットを要求する
+    # ユーザーがパスワードのリセットフォームに電子メールを入力して送信すると、ここに表示される
     def create
       @user = User.find_by(email: params[:email])
 
@@ -23,7 +23,7 @@ class PasswordResetsController < ApplicationController
       redirect_to login_path, success: t(".success")
     end
 
-    # This is the reset password form.
+    # パスワード再設定フォーム
     def edit
       @token = params[:id]
       @user = User.load_from_reset_password_token(params[:id])
@@ -34,7 +34,7 @@ class PasswordResetsController < ApplicationController
       nil
     end
 
-    # This action fires when the user has sent the reset password form.
+    # このアクションは、ユーザーがパスワード リセット フォームを送信したときに起動
     def update
       @token = params[:id]
       @user = User.load_from_reset_password_token(params[:id])
@@ -44,9 +44,9 @@ class PasswordResetsController < ApplicationController
         return
       end
 
-      # the next line makes the password confirmation validation work
+      # パスワード確認の検証を機能させている
       @user.password_confirmation = params[:user][:password_confirmation]
-      # the next line clears the temporary token and updates the password
+      # 一時トークンをクリアし、パスワードを更新
       if @user.change_password(params[:user][:password])
         redirect_to(login_path, success: t(".success"))
       else

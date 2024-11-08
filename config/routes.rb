@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -48,13 +49,6 @@ Rails.application.routes.draw do
   # このアクションでは、ユーザーのセッションを終了させるログアウト処理が行われる
   # ユーザーがログアウトボタンをクリックすると、サーバーによってセッションが破棄され、その後ユーザーはログイン画面やホームページにリダイレクトされる流れになる
   delete "logout", to: "user_sessions#destroy"
-
-  # ルート側にpassword_resets(パスワードリセット)を追加
-  # resources :password_resets, only: [:new, :create, :edit, :update]を記載することで、
-  # パスワードリセット画面表示と新規パスワード作成,編集、更新のルーティングが設定される
-  # 新しいパスワードを再設定するためのフォーム、およびUserモデル内のパスワードを変更するためのフォームが必要になるので、
-  # config/routes.rbにnew、create、edit、updateのルーティングも用意するという意味合い
-  resources :password_resets, only: [ :new, :create, :edit, :update ]
 
   # ルート側にposts(掲示板機能)を追加
   # resourcesメソッドのonlyオプションにnewを記載することで、GETメソッドで /posts/new というURLパターンにリクエストが飛んだ際に postsコントローラーのnewアクションが動くように定義される

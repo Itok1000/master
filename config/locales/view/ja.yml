@@ -134,3 +134,6 @@ ja:
       previous: "&lsaquo; 一つ前に戻る"
       next: "次へ &rsaquo;"
       truncate: "..."
+  terms:
+    terms:
+      title: 利用規約

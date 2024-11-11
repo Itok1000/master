@@ -60,10 +60,11 @@ ja:
   alerts:
     invalid_credentials: "メールまたはパスワードが間違っています。"
   static_pages:
-    What kind of country is Georgia?: ジョージアってどんな国？
+    What kind of country is Georgia?: ジョージアって何？
+    What is a Georgian_Food?: ジョージア料理って何？
     reference_materials: "参考資料:"
     georgia:
-      title: ジョージアってどんな国？
+      title: ジョージアって何？
     food:
       title: ジョージア料理って何？
   diagnoses:

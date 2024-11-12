@@ -103,8 +103,8 @@ ja:
       chakhohbili3: "骨付き鶏肉や皮付きの鶏肉を使うのがコツ"
     botton:
       how-to-make: 作り方はこちら
-      diagnosis-again: もう一度診断する？
-      registration: ユーザー登録へ
+      diagnosis-again: もう一度診断
+      registration: ユーザー登録
       result: 診断結果を見る
   posts:
     new:

@@ -60,6 +60,7 @@ ja:
   alerts:
     invalid_credentials: "メールまたはパスワードが間違っています。"
   static_pages:
+    how_to_use_this_app: このアプリの使い方
     What kind of country is Georgia?: ジョージアって何？
     What is a Georgian_Food?: ジョージア料理って何？
     reference_materials: "参考資料:"
@@ -67,6 +68,8 @@ ja:
       title: ジョージアって何？
     food:
       title: ジョージア料理って何？
+    how_to_use:
+      title: このアプリの使い方
   diagnoses:
     new:
       title: 診断スタート

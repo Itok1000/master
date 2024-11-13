@@ -46,7 +46,11 @@
   margin-bottom: 20px; /* ボタン間のスペース */
 }
 
-.upper-button {
+.upper-button{
+  background-image: url('atmosphere_tbilisi.png');
+}
+
+.middle-button {
   background-image: url('Flag_of_Georgia.png');
 }
 
@@ -65,9 +69,12 @@
 }
 
 .upper-button .button-text {
-  color: black;
+  color: white;
 }
 
+.middle-button .button-text {
+  color: black;
+}
 .under-button .button-text {
   color: white;
 }

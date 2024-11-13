@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   root "static_pages#top"
 
+  get "/how_to_use", to: "static_pages#how_to_use" # このアプリの使い方のルートを追加(ボタンをクリックすると、app/views/static_pages/how_to_use.html.erbに遷移するようにルートを設定し、リンクを修正するから)
   get "/georgia", to: "static_pages#georgia" # ジョージアページのルートを追加(ボタンをクリックすると、app/views/static_pages/georgia.html.erbに遷移するようにルートを設定し、リンクを修正するから)
   get "/food", to: "static_pages#food" # ジョージア料理とは何かのルートを追加(ボタンをクリックすると、app/views/static_pages/food.html.erbに遷移するようにルートを設定し、リンクを修正するから)
   get "/terms", to: "terms#terms" # 利用規約のルートを追加

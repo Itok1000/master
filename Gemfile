@@ -119,8 +119,8 @@ group :development, :test do
   # 自然言語に近い構文を使用するため、テストコードの読み書きがしやすくなっている
   # 豊富な機能を活用することで、初学者でも効果的なテストコードを作成することができる
   # 初めてのテストコード作成においても、RSpecを利用することで品質の高いコードを開発する手助けになる
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
+  gem "rspec-rails"
+  gem "factory_bot_rails"
 end
 
 group :development do

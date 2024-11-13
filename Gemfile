@@ -112,6 +112,15 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+  # RSpec
+  # Rubyプログラミング言語用のテストフレームワーク
+  # Railsと組み合わせて使用することが多く、Railsアプリケーションの自動テストを作成するために便利
+  # プログラミング初学者にも利用しやすい
+  # 自然言語に近い構文を使用するため、テストコードの読み書きがしやすくなっている
+  # 豊富な機能を活用することで、初学者でも効果的なテストコードを作成することができる
+  # 初めてのテストコード作成においても、RSpecを利用することで品質の高いコードを開発する手助けになる
+  gem "rspec-rails"
+  gem "factory_bot_rails"
 end
 
 group :development do

@@ -31,6 +31,9 @@
        <p><%= t('diagnoses.description.ojakhuri1') %></p>
        <p><%= t('diagnoses.description.ojakhuri2') %></p>
        <p><%= t('diagnoses.description.ojakhuri3') %></p>
+       <br>
+       <p><%= t('diagnoses.New registration, login') %></p>
+       <p><%= t('diagnoses.lets_post_comments_and_rate_the_dishes!') %></p>
        </div>
       </div>
       <div class="button-container">
@@ -57,6 +60,9 @@
         <p><%= t('diagnoses.description.badrijani1') %></p>
         <p><%= t('diagnoses.description.badrijani2') %></p>
         <p><%= t('diagnoses.description.badrijani3') %></p>
+        <br>
+        <p><%= t('diagnoses.New registration, login') %></p>
+        <p><%= t('diagnoses.lets_post_comments_and_rate_the_dishes!') %></p>
        </div>
       </div>
       <div class="button-container">
@@ -82,6 +88,9 @@
        <div class = "kaisei-decol-regular">
         <p><%= t('diagnoses.description.sokos_chashushuli1') %></p>
         <p><%= t('diagnoses.description.sokos_chashushuli2') %></p>
+        <br>
+        <p><%= t('diagnoses.New registration, login') %></p>
+        <p><%= t('diagnoses.lets_post_comments_and_rate_the_dishes!') %></p>
        </div>
       </div>
       <div class="button-container">
@@ -92,8 +101,7 @@
     <!-- 222 の場合（プパリ） -->
     <% elsif @diagnosis.question == "222" %>
       <div class="image-container">
-        <%= image_tag 'Answer03.png', alt: 'ソコスチャシュシュリ', class: 'answer-image' %>
-        <img src="/assets/Answer04.png" alt="プパリ" class="answer-image">
+        <%= image_tag 'Answer04.png', alt: 'プパリ', class: 'answer-image' %>
         <div class="text-overlay">
           <h6>プパリ</h6>
           <div class = "noto-serif-georgian-uniquifier">
@@ -110,6 +118,9 @@
         <p><%= t('diagnoses.description.pkhali2') %></p>
         <p><%= t('diagnoses.description.pkhali3') %></p>
         <p><%= t('diagnoses.description.pkhali4') %></p>
+        <br>
+        <p><%= t('diagnoses.New registration, login') %></p>
+        <p><%= t('diagnoses.lets_post_comments_and_rate_the_dishes!') %></p>
        </div>
       </div>
       <div class="button-container">
@@ -136,6 +147,9 @@
         <p><%= t('diagnoses.description.ostri1') %></p>
         <p><%= t('diagnoses.description.ostri2') %></p>
         <p><%= t('diagnoses.description.ostri3') %></p>
+        <br>
+        <p><%= t('diagnoses.New registration, login') %></p>
+        <p><%= t('diagnoses.lets_post_comments_and_rate_the_dishes!') %></p>
        </div> 
       </div>
       <div class="button-container">
@@ -162,6 +176,9 @@
         <p><%= t('diagnoses.description.chikirtma1') %></p>
         <p><%= t('diagnoses.description.chikirtma2') %></p>
         <p><%= t('diagnoses.description.chikirtma3') %></p>
+        <br>
+        <p><%= t('diagnoses.New registration, login') %></p>
+        <p><%= t('diagnoses.lets_post_comments_and_rate_the_dishes!') %></p>
        </div>
       </div>
       <div class="button-container">
@@ -188,6 +205,9 @@
         <p><%= t('diagnoses.description.shkmeruli1') %></p>
         <p><%= t('diagnoses.description.shkmeruli2') %></p>
         <p><%= t('diagnoses.description.shkmeruli3') %></p>
+        <br>
+        <p><%= t('diagnoses.New registration, login') %></p>
+        <p><%= t('diagnoses.lets_post_comments_and_rate_the_dishes!') %></p>
        </div>
       </div>
       <div class="button-container">
@@ -215,6 +235,9 @@
         <p><%= t('diagnoses.description.chakhohbili1') %></p>
         <p><%= t('diagnoses.description.chakhohbili2') %></p>
         <p><%= t('diagnoses.description.chakhohbili3') %></p>
+        <br>
+        <p><%= t('diagnoses.New registration, login') %></p>
+        <p><%= t('diagnoses.lets_post_comments_and_rate_the_dishes!') %></p>
        </div>
       </div>
       <div class="button-container">
@@ -235,10 +258,6 @@
             Xでシェア
             </a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-        <div class="text-overlay">
-         <p>新規登録、ログインして
-         料理のコメント投稿、評価をしてみよう！</p>
         </div>
       <%= link_to t('diagnoses.botton.registration'), new_user_path, class:"orange" %>
     </div>

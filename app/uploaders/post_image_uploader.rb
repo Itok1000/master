@@ -62,7 +62,7 @@ class PostImageUploader < CarrierWave::Uploader::Base
 
 
 
-  # board_imageカラムに値が無い場合は、 x 200 画像（board_placeholder.png）を表示するように設定
+  # board_imageカラムに値が無い場合は、300 x 200 画像（board_placeholder.png）を表示するように設定
   def default_url
     "post_placeholder"
   end

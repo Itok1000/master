@@ -1,8 +1,16 @@
+<head>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&display=swap" rel="stylesheet">
+</head>
 <% content_for(:title, t('.title')) %>
 <div class="top-wrapper">
   <div class="top-inner-text">
      <div class="text-overlay">
      <h1><%= @recipe_info[:name] %></h1>
+      <div class = "noto-serif-georgian-uniquifier">
+       <h2><%= @recipe_info[:name2] %></h2>
+      </div>
      </div>
       <%= image_tag @recipe_info[:image], class: "post-food-image" %>
   </div>

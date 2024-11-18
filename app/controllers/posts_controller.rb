@@ -5,14 +5,14 @@ class PostsController < ApplicationController
 
     # 料理に応じた情報をハッシュで定義
     recipes = {
-      "ojakhuri" => { name: "オジャフリ", image: "Answer01.png", description: I18n.t("diagnoses.description.ojakhuri2") },
-      "badrijani" => { name: "パドリジャーニ", image: "Answer02.png", description: I18n.t("diagnoses.description.badrijani2") },
-      "sokos" => { name: "ソコスチャシュシュリ", image: "Answer03.png", description: I18n.t("diagnoses.description.sokos_chashushuli2") },
-      "pkhali" => { name: "プパリ", image: "Answer04.png", description: I18n.t("diagnoses.description.pkhali5") },
-      "ostri" => { name: "オーストリ", image: "Answer05.png", description: I18n.t("diagnoses.description.ostri2") },
-      "chikirtma" => { name: "チヒルトゥマ", image: "Answer06.png", description: I18n.t("diagnoses.description.chikirtma3") },
-      "shkmeruli" => { name: "シュクメルリ", image: "Answer07.png", description: I18n.t("diagnoses.description.shkmeruli4") },
-      "chakhohbili" => { name: "チャホフビリ", image: "Answer08.png", description: I18n.t("diagnoses.description.chakhohbili2") }
+      "ojakhuri" => { name: "オジャフリ", name2: "ოჯახური",image: "Answer01.png", description: I18n.t("diagnoses.description.ojakhuri2") },
+      "badrijani" => { name: "パドリジャーニ", name2: "ბადრიჯანი", image: "Answer02.png", description: I18n.t("diagnoses.description.badrijani2") },
+      "sokos" => { name: "ソコスチャシュシュリ", name2: "სოკოს ჭაშუშული", image: "Answer03.png", description: I18n.t("diagnoses.description.sokos_chashushuli2") },
+      "pkhali" => { name: "プパリ", name2: "ფხალი", image: "Answer04.png", description: I18n.t("diagnoses.description.pkhali5") },
+      "ostri" => { name: "オーストリ", name2: "ოსტრი", image: "Answer05.png", description: I18n.t("diagnoses.description.ostri2") },
+      "chikirtma" => { name: "チヒルトゥマ", name2: "ჩიხირთმა", image: "Answer06.png", description: I18n.t("diagnoses.description.chikirtma3") },
+      "shkmeruli" => { name: "シュクメルリ", name2: "შქმერული", image: "Answer07.png", description: I18n.t("diagnoses.description.shkmeruli4") },
+      "chakhohbili" => { name: "チャホフビリ", name2: "ჩახოხბილი", image: "Answer08.png", description: I18n.t("diagnoses.description.chakhohbili2") }
     }
 
 

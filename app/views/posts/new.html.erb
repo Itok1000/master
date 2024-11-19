@@ -7,7 +7,7 @@
                 <h1><%= t('.title') %></h1>
                 <h2>他のユーザーの参考になるように、感想を共有してみよう</h2>
               </div>
-            <%= form_with model: @post, url: posts_path(recipe: params[:recipe]), class: "new_post" do |f| %>
+            <%= form_with model: @post, url: posts_path(recipe: params[:recipe]), html: { multipart: true }, class: "new_post" do |f| %>
                 <%= hidden_field_tag :recipe, params[:recipe] %>
                 <%= render 'form', post: @post %>
               <% end %>              

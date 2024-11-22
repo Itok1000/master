@@ -71,53 +71,54 @@ X(旧Twitter)を用いてWebアプリ上でリリース公開します
 
 ### 実装機能
 〇がついている箇所はログインなしで利用可能です
-診断〇
-診断結果を表示〇
-Xにてシェア共有〇
-下記のサイトに遷移〇
-ANSWER1の場合
-https://ca-voir.com/nobuyo-kitchen-ojakhuri-jp/
+・診断〇
+・診断結果を表示〇
+・Xにてシェア共有〇
+・下記のサイトに遷移〇
+・ANSWER1の場合
 
-ANSWER2の場合
+・https://ca-voir.com/nobuyo-kitchen-ojakhuri-jp/
 
-https://ca-voir.com/nobuyo-kitchen-badrijani-jp/
+・ANSWER2の場合
 
-ANSWER3の場合
+・https://ca-voir.com/nobuyo-kitchen-badrijani-jp/
 
-https://ca-voir.com/nobuyo-kitchen-sokos-chashushuli-jp/
+・ANSWER3の場合
 
-ANSWER4の場合
+・https://ca-voir.com/nobuyo-kitchen-sokos-chashushuli-jp/
 
-https://ca-voir.com/nobuyo-kitchen-pkhali-jp/
+・ANSWER4の場合
 
-ANSWER5の場合
+・https://ca-voir.com/nobuyo-kitchen-pkhali-jp/
 
-https://ca-voir.com/nobuyo-kitchen-ostri-jp/
+・ANSWER5の場合
 
-ANSWER6の場合
+・https://ca-voir.com/nobuyo-kitchen-ostri-jp/
 
-https://ca-voir.com/nobuyo-kitchen-chikhirtma-jp/
+・ANSWER6の場合
 
-ANSWER7の場合
+・https://ca-voir.com/nobuyo-kitchen-chikhirtma-jp/
 
-https://ca-voir.com/nobuyo-kitchen-shkmeruli-jp/
+・ANSWER7の場合
 
-ユーザー新規登録
-ログイン
-口コミ投稿
-いいね
-コメント
-いいねと投稿したものを保存する機能
-タイトルを動的に出力
-ファビコン機能
-デコレーターの導入
-画像加工・合成
-OGP（動的）
+・https://ca-voir.com/nobuyo-kitchen-shkmeruli-jp/
+
+・ユーザー新規登録
+・ログイン
+・口コミ投稿
+・いいね
+・コメント
+・いいねと投稿したものを保存する機能
+・タイトルを動的に出力
+・ファビコン機能
+・デコレーターの導入
+・画像加工・合成
+・OGP（動的）
 
 今後予定してる機能
-レーティング機能
-パスワードリセット
-独自ドメイン
+・レーティング機能
+・パスワードリセット
+・独自ドメイン
 
 
 
@@ -128,11 +129,16 @@ Figma：https://www.figma.com/design/7mF5VkcFrHRPTxVFbwi1wh/%E7%84%A1%E9%A1%8C?n
 https://app.diagrams.net/#HItok1000%2Fmaster%2FER_diagram_request%2F%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB.drawio#%7B%22pageId%22%3A%22C5RBs43oDa-KdzZeNtuy%22%7D
 
 ### ■ 技術スタック
-フロントエンド	Rails 7.2.1, JavaScript, Bootstrap, CANVA, 農民イラスト，BecassoApp, 
+・フロントエンド	Rails 7.2.1, JavaScript, Bootstrap, CANVA, 農民イラスト，BecassoApp, 
 https://www.mofa.go.jp/mofaj/area/georgia/index.html (ジョージアって何？のコーナーにて位置を参考にしたため)
-バックエンド	Rails 7.2.1, (ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x86_64-linux])
-インフラ	fly.io, AWS S3
-データベース	PostgreSQL
-認証	Sorcery
-開発環境	Docker
+
+・バックエンド	Rails 7.2.1, (ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x86_64-linux])
+
+・インフラ	fly.io, AWS S3
+
+・データベース	PostgreSQL
+
+・認証	Sorcery
+
+・開発環境	Docker
 

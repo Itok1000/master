@@ -8,8 +8,12 @@ class PostImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick # MiniMagickを使うためのインクルード
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
-  # storage :fog
+  # Rails.env.production? の場合(つまり本番環境)で storage :fog を使用し、それ以外の環境（開発・テスト）では storage :file するように条件分岐させ
+  if Rails.env.production?|| Rails.env.test?
+    storage :fog
+  else
+    storage :file
+  end
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:

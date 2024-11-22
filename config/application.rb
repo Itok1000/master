@@ -1,9 +1,9 @@
-require 'dotenv/load'
+require "dotenv/load"
 
-access_key = ENV['S3_ACCESS_KEY_ID']
-secret_key = ENV['S3_SECRET_ACCESS_KEY']
-region = ENV['S3_REGION']
-bucket_name = ENV['S3_BUCKET_NAME']
+access_key = ENV["S3_ACCESS_KEY_ID"]
+secret_key = ENV["S3_SECRET_ACCESS_KEY"]
+region = ENV["S3_REGION"]
+bucket_name = ENV["S3_BUCKET_NAME"]
 
 require_relative "boot"
 

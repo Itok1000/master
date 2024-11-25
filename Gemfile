@@ -31,6 +31,10 @@ gem "mini_magick"
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
+#### ** WebP変換するときに必要 ** ####
+# JPEGやPNGの画像をWebPに変換するだけでだいぶ容量が軽くなる
+gem "rmagick"
+
 #### ** デバック時に必要 ** ####
 # pry-byebugの主な機能は以下のとおり
 # - ステップ実行：

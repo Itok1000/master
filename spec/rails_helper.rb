@@ -67,5 +67,10 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  # factory botで作成したデータをテストコードに反映する
+  # インプットフェーズで学んだfactory botを利用して、データ作成を簡素化してテストコードに反映させる
+  # factory botのセットアップ
+  # specファイルでfactory botが利用できるようにRSpecの設定ファイルである rails_helper.rb に追記
   config.include FactoryBot::Syntax::Methods
 end

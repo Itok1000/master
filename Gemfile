@@ -57,7 +57,7 @@ gem "pry-byebug"
 # bundle install コマンドを実行すると、Gemfileに記載されたgemがインストールされる
 # 開発者はプロジェクトの依存関係を一元的に管理し、他の開発者と環境を一致させることができる
 # Gemfileでは、gemの名前と必要に応じたバージョン指定を行うことにより、プロジェクトが必要とする正確なgemが提供され、バージョンの衝突や不整合が防げる
-gem 'sorcery'
+gem "sorcery"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
@@ -144,8 +144,8 @@ group :test do
 end
 
 # gem 'letter_opener_web'は、Railsアプリケーションの開発環境において、送信されるメールをブラウザで確認できるgem
-# メールの送信処理が実行されると、メールの内容がブラウザ上で表示され、実際にメールが送信されることなく内容を確認することができる 
+# メールの送信処理が実行されると、メールの内容がブラウザ上で表示され、実際にメールが送信されることなく内容を確認することができる
 # これにより、メールの内容やフォーマットを簡単に確認・修正することが可能となる
 group :development do
-  gem 'letter_opener_web', '~> 2.0'
+  gem "letter_opener_web", "~> 2.0"
 end

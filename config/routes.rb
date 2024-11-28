@@ -104,7 +104,13 @@ Rails.application.routes.draw do
   # resourcesメソッドのonlyオプションにnewを記載することで、GETメソッドで /posts/new というURLパターンにリクエストが飛んだ際に
   # postsコントローラーのnewアクションが動くように定義される
   # また、URLパターンを生成してくれる new_posts_path（URLヘルパー）も生成される
+
+  # ルート側にpassword_resets(パスワードリセット機能)を追加
+  # 現在のroutes.rbでは、診断機能を提供するresources :password_resetsに対してindexとshowアクションしかルートが設定されていないが
+  # トップページからパスワードリセット機能フォーム（新規、作成、編集、更新）に進む必要がある
   resources :password_resets, only: [ :new, :create, :edit, :update ]
+  # get "password/reset", to: "password_resets#new" はパスワードリセットフォームを表示するためのGETリクエストを処理
   get "password/reset", to: "password_resets#new"
+  # post "password/reset", to: "password_resets#create" はパスワードリセットフォームから送信された情報を処理するPOSTリクエストを扱う
   post "password/reset", to: "password_resets#create"
 end

@@ -104,7 +104,7 @@ Rails.application.routes.draw do
   # resourcesメソッドのonlyオプションにnewを記載することで、GETメソッドで /posts/new というURLパターンにリクエストが飛んだ際に
   # postsコントローラーのnewアクションが動くように定義される
   # また、URLパターンを生成してくれる new_posts_path（URLヘルパー）も生成される
-  resources :password_resets, only: [:new, :create, :edit, :update]
+  resources :password_resets, only: [ :new, :create, :edit, :update ]
   get "password/reset", to: "password_resets#new"
   post "password/reset", to: "password_resets#create"
 end

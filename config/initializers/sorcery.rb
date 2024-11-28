@@ -6,7 +6,7 @@
 # :magic_login, :external
 
 # Here you can configure each submodule's features.
-Rails.application.config.sorcery.submodules = [:reset_password]
+Rails.application.config.sorcery.submodules = [ :reset_password ]
 Rails.application.config.sorcery.configure do |config|
   # -- core --
   # What controller action to call for non-authenticated users. You can also
@@ -404,26 +404,26 @@ Rails.application.config.sorcery.configure do |config|
     #
     user.reset_password_mailer = UserMailer
 
-    # Reset password email method on your mailer class.
-    # Default: `:reset_password_email`
-    #
-    # user.reset_password_email_method_name =
+     # Reset password email method on your mailer class.
+     # Default: `:reset_password_email`
+     #
+     # user.reset_password_email_method_name =
 
-    # When true, sorcery will not automatically
-    # send the password reset details email, and allow you to
-    # manually handle how and when the email is sent
-    # Default: `false`
-    #
-    # user.reset_password_mailer_disabled =
+     # When true, sorcery will not automatically
+     # send the password reset details email, and allow you to
+     # manually handle how and when the email is sent
+     # Default: `false`
+     #
+     # user.reset_password_mailer_disabled =
 
-    # How many seconds before the reset request expires. nil for never expires.
-    # Default: `nil`
-    #
+     # How many seconds before the reset request expires. nil for never expires.
+     # Default: `nil`
+     #
      user.reset_password_expiration_period = 24.hours  # オプションでリセットトークンの有効期間を設定
 
-    # Hammering protection: how long in seconds to wait before allowing another email to be sent.
-    # Default: `5 * 60`
-    #
+     # Hammering protection: how long in seconds to wait before allowing another email to be sent.
+     # Default: `5 * 60`
+     #
      user.reset_password_time_between_emails = 1 * 1  # 必要に応じて再送信間隔を設定
 
     # Access counter to a reset password page attribute name

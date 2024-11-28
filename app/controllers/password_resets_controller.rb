@@ -13,7 +13,7 @@ class PasswordResetsController < ApplicationController
       Rails.logger.warn "Password reset requested for non-existent email: #{params[:email]}"
     end
 
-    redirect_to login_path, success: t('.success')
+    redirect_to login_path, success: t(".success")
   end
 
   # This is the reset password form.
@@ -41,9 +41,9 @@ class PasswordResetsController < ApplicationController
     @user.password_confirmation = params[:user][:password_confirmation]
     # the next line clears the temporary token and updates the password
     if @user.change_password(params[:user][:password])
-      redirect_to(login_path, success: t('.success'))
+      redirect_to(login_path, success: t(".success"))
     else
-      render action: 'edit'
+      render action: "edit"
     end
   end
 end

@@ -29,7 +29,7 @@ ja:
       title: ログイン
       login: ログイン
       to_register_page: 初めての方はこちら
-      password_forget: パスワードをお忘れの方はこちら(準備中)
+      password_forget: パスワードをお忘れの方はこちら
     create:
       success: ログインしました
       failure: ログインに失敗しました

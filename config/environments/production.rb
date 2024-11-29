@@ -86,18 +86,18 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
+    address:              "smtp.gmail.com",
     port:                 587,
-    domain:               'example.com', # 自分のドメイン名
-    user_name:            ENV['SMTP_USERNAME'], # Gmailアカウント
-    password:             ENV['SMTP_PASSWORD'], # Gmailアカウントのパスワード
-    authentication:       'plain',
+    domain:               "example.com", # 自分のドメイン名
+    user_name:            ENV["SMTP_USERNAME"], # Gmailアカウント
+    password:             ENV["SMTP_PASSWORD"], # Gmailアカウントのパスワード
+    authentication:       "plain",
     enable_starttls_auto: true
   }
 
-  config.action_mailer.default_url_options = { host: 'your-production-domain.com', protocol: 'https' }
+  config.action_mailer.default_url_options = { host: "your-production-domain.com", protocol: "https" }
   # Fly.io ドメインを使用している場合:
-  config.action_mailer.default_url_options = { host: 'gamarjoba.fly.dev', protocol: 'https' }
+  config.action_mailer.default_url_options = { host: "gamarjoba.fly.dev", protocol: "https" }
 
 
   # Ignore bad email addresses and do not raise email delivery errors.

@@ -83,6 +83,23 @@ Rails.application.configure do
   # 本番環境では、メール内でリンクを生成するためにホスト名が必要ですが、それが指定されていない
   config.action_mailer.default_url_options = { host: "your-production-domain.com", protocol: "https" }
   # この設定により、メール内で生成されるリンク（edit_password_reset_urlなど）が正しいホスト名を持つようになる
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              "smtp.gmail.com",
+    port:                 587,
+    domain:               "example.com", # 自分のドメイン名
+    user_name:            ENV["SMTP_USERNAME"], # Gmailアカウント
+    password:             ENV["SMTP_PASSWORD"], # Gmailアカウントのパスワード
+    authentication:       "plain",
+    enable_starttls_auto: true
+  }
+
+  config.action_mailer.default_url_options = { host: "your-production-domain.com", protocol: "https" }
+  # Fly.io ドメインを使用している場合:
+  config.action_mailer.default_url_options = { host: "gamarjoba.fly.dev", protocol: "https" }
+
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false

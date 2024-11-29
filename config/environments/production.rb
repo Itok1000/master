@@ -96,7 +96,8 @@ Rails.application.configure do
   }
 
   config.action_mailer.default_url_options = { host: 'your-production-domain.com', protocol: 'https' }
-
+  # Fly.io ドメインを使用している場合:
+  config.action_mailer.default_url_options = { host: 'gamarjoba.fly.dev', protocol: 'https' }
 
 
   # Ignore bad email addresses and do not raise email delivery errors.

@@ -141,7 +141,6 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-  # gem "webdrivers", "~> 5.0", require: false
 end
 
 # gem 'letter_opener_web'は、Railsアプリケーションの開発環境において、送信されるメールをブラウザで確認できるgem

@@ -38,6 +38,12 @@ Rails.application.routes.draw do
   # ログインログアウト時のルート追加
   resources :users, only: %i[new create]
 
+  # ここにGoogle認証用のルートを追加する
+  get "/auth/:provider/callback", to: "sessions#create"
+  get "/auth/failure", to: redirect("/")
+  # 認証関連のルートは、ユーザー関連のルートの近くに配置することで、
+  # 他の認証やユーザー管理に関連するルートと一緒にまとめられるから、管理がしやすくなる
+
   # get 'login', to: 'user_sessions#new' はログインフォームを表示するためのGETリクエストを処理
   get "login", to: "user_sessions#new"
 

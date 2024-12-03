@@ -10,6 +10,11 @@ class User < ApplicationRecord
   # - email：値が空でないこと・ユニークな値であること
   validates :email, presence: true, uniqueness: true
   # ユーザーが複数のpostレコードを持つことを示す
+
+
+  has_many :authentications, dependent: :destroy
+  # - UserモデルとAuthenticationモデルを作成して、外部ログインをサポート
+
   has_many :posts, dependent: :destroy
   # dependent: :destroyを記述することによって、destroy 時に関連づけられたモデルに対して destroy が実行されるようになる
   # 今回の場合では、ユーザーが削除されたときに、そのユーザーに関連するPostレコードも一緒に削除される

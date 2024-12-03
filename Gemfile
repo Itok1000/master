@@ -158,7 +158,7 @@ end
 gem "config"
 
 # google認証用
-gem 'googleauth'
+gem "googleauth"
 gem "omniauth"
 gem "omniauth-google-oauth2"
 gem "omniauth-rails_csrf_protection"

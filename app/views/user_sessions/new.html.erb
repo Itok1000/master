@@ -32,27 +32,6 @@
         <div class='text-center'>
           <%= link_to t('user_sessions.new.password_forget'), new_password_reset_path, class: 'custom-link' %>
         </div>
-
-        <!-- Googleログイン機能のボタンを追加します -->
-        <!-- data-client_idは環境変数から取得 -->
-        <div class='text-center mt-3'>
-         <body>
-          <script src="https://accounts.google.com/gsi/client" async></script>
-           <div id="g_id_onload"
-            data-client_id="<%= ENV['GOOGLE_CLIENT_ID'] %>"
-            data-login_uri="<%= ENV['GOOGLE_REDIRECT_URI'] %>"
-            data-auto_prompt="false">
-           </div>
-          <div class="g_id_signin"
-            data-type="standard"
-            data-size="large"
-            data-theme="outline"
-            data-text="sign_in_with"
-            data-shape="rectangular"
-            data-logo_alignment="left">
-          </div>
-         <body>
-        </div>
     </div>
   </div>
  </div>

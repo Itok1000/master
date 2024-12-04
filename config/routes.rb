@@ -39,10 +39,10 @@ Rails.application.routes.draw do
   resources :users, only: %i[new create]
 
   # Google Oauthルーディング
-  post 'oauth/callback', to: 'oauths#callback'
-  get 'oauth/callback', to: 'oauths#callback'
-  get 'oauth/:provider', to: 'oauths#oauth', as: :auth_at_provider
-  
+  post "oauth/callback", to: "oauths#callback"
+  get "oauth/callback", to: "oauths#callback"
+  get "oauth/:provider", to: "oauths#oauth", as: :auth_at_provider
+
   # 認証関連のルートは、ユーザー関連のルートの近くに配置することで、
   # 他の認証やユーザー管理に関連するルートと一緒にまとめられるから、管理がしやすくなる
 

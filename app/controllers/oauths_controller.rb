@@ -2,10 +2,10 @@ class OauthsController < ApplicationController
     # newとcreateアクションに対してrequire_loginというbefore_action（フィルタ）をスキップ(ログイン不要)
     skip_before_action :require_login
     def oauth
-      #指定されたプロバイダの認証ページにユーザーをリダイレクトさせる
+      # 指定されたプロバイダの認証ページにユーザーをリダイレクトさせる
       login_at(auth_params[:provider])
     end
-  
+
     def callback
       provider = auth_params[:provider]
       # 既存のユーザーをプロバイダ情報を元に検索し、存在すればログイン
@@ -21,13 +21,13 @@ class OauthsController < ApplicationController
         end
       end
     end
-  
+
     private
-  
+
     def auth_params
       params.permit(:code, :provider)
     end
-  
+
     def signup_and_login(provider)
       @user = create_from(provider)
       reset_session

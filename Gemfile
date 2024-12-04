@@ -148,7 +148,7 @@ end
 # これにより、メールの内容やフォーマットを簡単に確認・修正することが可能となる
 group :development do
   gem "letter_opener"
-  gem "letter_opener_web", "~> 2.0"
+  gem "letter_opener_web", "~> 3.0"
 end
 
 # Railsアプリケーションで設定管理を簡単に行うためのgem

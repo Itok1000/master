@@ -155,4 +155,4 @@ end
 # 環境ごとに異なる設定を一元管理することができ、開発環境、テスト環境、本番環境で異なる設定値を使いたい場合に非常に便利
 # config/settings.ymlファイル に共通の設定を書き、config/settings/development.yml、config/settings/production.yml、
 # config/settings/test.yml に環境ごとの設定を書き分ける
-gem "config"
+gem 'config'

@@ -41,7 +41,6 @@ Rails.application.routes.draw do
   # get 'login', to: 'user_sessions#new' はログインフォームを表示するためのGETリクエストを処理
   get "login", to: "user_sessions#new"
 
-
   # post 'login', to: 'user_sessions#create' はログインフォームから送信された情報を処理するPOSTリクエストを扱う
   post "login", to: "user_sessions#create"
 

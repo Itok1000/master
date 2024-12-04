@@ -158,10 +158,10 @@ Rails.application.config.sorcery.configure do |config|
   # config.auth0.callback_url = "https://0.0.0.0:3000/oauth/callback?provider=auth0"
   # config.auth0.site = "https://example.auth0.com"
   # credentials.ymlから情報を取得
-  config.google.key = Rails.application.credentials.dig(:google, :google_client_id)
-  config.google.secret = Rails.application.credentials.dig(:google, :google_client_secret)
+  # config.google.key = Rails.application.credentials.dig(:google, :google_client_id)
+  # config.google.secret = Rails.application.credentials.dig(:google, :google_client_secret)
   # 外部サービスから取得したユーザー情報をUserモデルの指定した属性にマッピング
-  config.google.user_info_mapping = { email: "email", username: "name" }
+  # config.google.user_info_mapping = { email: "email", username: "name" }
   # For Microsoft Graph, the key will be your App ID, and the secret will be your app password/public key.
   # The callback URL "can't contain a query string or invalid special characters"
   # See: https://docs.microsoft.com/en-us/azure/active-directory/active-directory-v2-limitations#restrictions-on-redirect-uris
@@ -541,7 +541,7 @@ Rails.application.config.sorcery.configure do |config|
      # Class which holds the various external provider data for this user.
      # Default: `nil`
      #
-     user.authentications_class = Authentication
+     # user.authentications_class = Authentication
 
     # User's identifier in the `authentications` class.
     # Default: `:user_id`

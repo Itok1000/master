@@ -8,79 +8,79 @@
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.submodules = [ :reset_password, :external ]
 Rails.application.config.sorcery.configure do |config|
-  # -- core --
-  # What controller action to call for non-authenticated users. You can also
-  # override the 'not_authenticated' method of course.
-  # Default: `:not_authenticated`
-  #
-  # config.not_authenticated_action =
+   # -- core --
+   # What controller action to call for non-authenticated users. You can also
+   # override the 'not_authenticated' method of course.
+   # Default: `:not_authenticated`
+   #
+   # config.not_authenticated_action =
 
-  # When a non logged-in user tries to enter a page that requires login, save
-  # the URL he wants to reach, and send him there after login, using 'redirect_back_or_to'.
-  # Default: `true`
-  #
-  # config.save_return_to_url =
+   # When a non logged-in user tries to enter a page that requires login, save
+   # the URL he wants to reach, and send him there after login, using 'redirect_back_or_to'.
+   # Default: `true`
+   #
+   # config.save_return_to_url =
 
-  # Set domain option for cookies; Useful for remember_me submodule.
-  # Default: `nil`
-  #
-  # config.cookie_domain =
+   # Set domain option for cookies; Useful for remember_me submodule.
+   # Default: `nil`
+   #
+   # config.cookie_domain =
 
-  # Allow the remember_me cookie to be set through AJAX
-  # Default: `true`
-  #
-  # config.remember_me_httponly =
+   # Allow the remember_me cookie to be set through AJAX
+   # Default: `true`
+   #
+   # config.remember_me_httponly =
 
-  # Set token randomness. (e.g. user activation tokens)
-  # The length of the result string is about 4/3 of `token_randomness`.
-  # Default: `15`
-  #
-  # config.token_randomness =
+   # Set token randomness. (e.g. user activation tokens)
+   # The length of the result string is about 4/3 of `token_randomness`.
+   # Default: `15`
+   #
+   # config.token_randomness =
 
-  # -- session timeout --
-  # How long in seconds to keep the session alive.
-  # Default: `3600`
-  #
-  # config.session_timeout =
+   # -- session timeout --
+   # How long in seconds to keep the session alive.
+   # Default: `3600`
+   #
+   # config.session_timeout =
 
-  # Use the last action as the beginning of session timeout.
-  # Default: `false`
-  #
-  # config.session_timeout_from_last_action =
+   # Use the last action as the beginning of session timeout.
+   # Default: `false`
+   #
+   # config.session_timeout_from_last_action =
 
-  # Invalidate active sessions. Requires an `invalidate_sessions_before` timestamp column
-  # Default: `false`
-  #
-  # config.session_timeout_invalidate_active_sessions_enabled =
+   # Invalidate active sessions. Requires an `invalidate_sessions_before` timestamp column
+   # Default: `false`
+   #
+   # config.session_timeout_invalidate_active_sessions_enabled =
 
-  # -- http_basic_auth --
-  # What realm to display for which controller name. For example {"My App" => "Application"}
-  # Default: `{"application" => "Application"}`
-  #
-  # config.controller_to_realm_map =
+   # -- http_basic_auth --
+   # What realm to display for which controller name. For example {"My App" => "Application"}
+   # Default: `{"application" => "Application"}`
+   #
+   # config.controller_to_realm_map =
 
-  # -- activity logging --
-  # Will register the time of last user login, every login.
-  # Default: `true`
-  #
-  # config.register_login_time =
+   # -- activity logging --
+   # Will register the time of last user login, every login.
+   # Default: `true`
+   #
+   # config.register_login_time =
 
-  # Will register the time of last user logout, every logout.
-  # Default: `true`
-  #
-  # config.register_logout_time =
+   # Will register the time of last user logout, every logout.
+   # Default: `true`
+   #
+   # config.register_logout_time =
 
-  # Will register the time of last user action, every action.
-  # Default: `true`
-  #
-  # config.register_last_activity_time =
+   # Will register the time of last user action, every action.
+   # Default: `true`
+   #
+   # config.register_last_activity_time =
 
-  # -- external --
-  # What providers are supported by this app
-  # i.e. [:twitter, :facebook, :github, :linkedin, :xing, :google, :liveid, :salesforce, :slack, :line].
-  # Default: `[]`
-  #
-  # config.external_providers = %i[google]
+   # -- external --
+   # What providers are supported by this app
+   # i.e. [:twitter, :facebook, :github, :linkedin, :xing, :google, :liveid, :salesforce, :slack, :line].
+   # Default: `[]`
+   #
+   config.external_providers = %i[google]
 
   # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
   # Path to ca_file. By default use a internal ca-bundle.crt.
@@ -157,9 +157,13 @@ Rails.application.config.sorcery.configure do |config|
   # config.auth0.secret = ""
   # config.auth0.callback_url = "https://0.0.0.0:3000/oauth/callback?provider=auth0"
   # config.auth0.site = "https://example.auth0.com"
-  #
-
-  #
+  # credentials.ymlから情報を取得
+  config.google.key = Rails.application.credentials.dig(:google, :google_client_id)
+  config.google.secret = Rails.application.credentials.dig(:google, :google_client_secret)
+  # API設定で承認済みのリダイレクトURIとして登録したurlを設定
+  config.google.callback_url = "http://localhost:3000/oauth/callback?provider=google"
+  # 外部サービスから取得したユーザー情報をUserモデルの指定した属性にマッピング
+  config.google.user_info_mapping = { email: "email", username: "name" }
   # For Microsoft Graph, the key will be your App ID, and the secret will be your app password/public key.
   # The callback URL "can't contain a query string or invalid special characters"
   # See: https://docs.microsoft.com/en-us/azure/active-directory/active-directory-v2-limitations#restrictions-on-redirect-uris
@@ -422,124 +426,124 @@ Rails.application.config.sorcery.configure do |config|
      #
      user.reset_password_time_between_emails = 1 * 1  # 必要に応じて再送信間隔を設定
 
-    # Access counter to a reset password page attribute name
-    # Default: `:access_count_to_reset_password_page`
-    #
-    # user.reset_password_page_access_count_attribute_name =
+     # Access counter to a reset password page attribute name
+     # Default: `:access_count_to_reset_password_page`
+     #
+     # user.reset_password_page_access_count_attribute_name =
 
-    # -- magic_login --
-    # Magic login code attribute name.
-    # Default: `:magic_login_token`
-    #
-    # user.magic_login_token_attribute_name =
+     # -- magic_login --
+     # Magic login code attribute name.
+     # Default: `:magic_login_token`
+     #
+     # user.magic_login_token_attribute_name =
 
-    # Magic login expiry attribute name.
-    # Default: `:magic_login_token_expires_at`
-    #
-    # user.magic_login_token_expires_at_attribute_name =
+     # Magic login expiry attribute name.
+     # Default: `:magic_login_token_expires_at`
+     #
+     # user.magic_login_token_expires_at_attribute_name =
 
-    # When was magic login email sent — used for hammering protection.
-    # Default: `:magic_login_email_sent_at`
-    #
-    # user.magic_login_email_sent_at_attribute_name =
+     # When was magic login email sent — used for hammering protection.
+     # Default: `:magic_login_email_sent_at`
+     #
+     # user.magic_login_email_sent_at_attribute_name =
 
-    # REQUIRED:
-    # Magic login mailer class.
-    # Default: `nil`
-    #
-    # user.magic_login_mailer_class =
+     # REQUIRED:
+     # Magic login mailer class.
+     # Default: `nil`
+     #
+     # user.magic_login_mailer_class =
 
-    # Magic login email method on your mailer class.
-    # Default: `:magic_login_email`
-    #
-    # user.magic_login_email_method_name =
+     # Magic login email method on your mailer class.
+     # Default: `:magic_login_email`
+     #
+     # user.magic_login_email_method_name =
 
-    # When true, sorcery will not automatically
-    # send magic login details email, and allow you to
-    # manually handle how and when the email is sent
-    # Default: `true`
-    #
-    # user.magic_login_mailer_disabled =
+     # When true, sorcery will not automatically
+     # send magic login details email, and allow you to
+     # manually handle how and when the email is sent
+     # Default: `true`
+     #
+     # user.magic_login_mailer_disabled =
 
-    # How many seconds before the request expires. nil for never expires.
-    # Default: `nil`
-    #
-    # user.magic_login_expiration_period =
+     # How many seconds before the request expires. nil for never expires.
+     # Default: `nil`
+     #
+     # user.magic_login_expiration_period =
 
-    # Hammering protection: how long in seconds to wait before allowing another email to be sent.
-    # Default: `5 * 60`
-    #
-    # user.magic_login_time_between_emails =
+     # Hammering protection: how long in seconds to wait before allowing another email to be sent.
+     # Default: `5 * 60`
+     #
+     # user.magic_login_time_between_emails =
 
-    # -- brute_force_protection --
-    # Failed logins attribute name.
-    # Default: `:failed_logins_count`
-    #
-    # user.failed_logins_count_attribute_name =
+     # -- brute_force_protection --
+     # Failed logins attribute name.
+     # Default: `:failed_logins_count`
+     #
+     # user.failed_logins_count_attribute_name =
 
-    # This field indicates whether user is banned and when it will be active again.
-    # Default: `:lock_expires_at`
-    #
-    # user.lock_expires_at_attribute_name =
+     # This field indicates whether user is banned and when it will be active again.
+     # Default: `:lock_expires_at`
+     #
+     # user.lock_expires_at_attribute_name =
 
-    # How many failed logins are allowed.
-    # Default: `50`
-    #
-    # user.consecutive_login_retries_amount_limit =
+     # How many failed logins are allowed.
+     # Default: `50`
+     #
+     # user.consecutive_login_retries_amount_limit =
 
-    # How long the user should be banned, in seconds. 0 for permanent.
-    # Default: `60 * 60`
-    #
-    # user.login_lock_time_period =
+     # How long the user should be banned, in seconds. 0 for permanent.
+     # Default: `60 * 60`
+     #
+     # user.login_lock_time_period =
 
-    # Unlock token attribute name
-    # Default: `:unlock_token`
-    #
-    # user.unlock_token_attribute_name =
+     # Unlock token attribute name
+     # Default: `:unlock_token`
+     #
+     # user.unlock_token_attribute_name =
 
-    # Unlock token mailer method
-    # Default: `:send_unlock_token_email`
-    #
-    # user.unlock_token_email_method_name =
+     # Unlock token mailer method
+     # Default: `:send_unlock_token_email`
+     #
+     # user.unlock_token_email_method_name =
 
-    # When true, sorcery will not automatically
-    # send email with the unlock token
-    # Default: `false`
-    #
-    # user.unlock_token_mailer_disabled = true
+     # When true, sorcery will not automatically
+     # send email with the unlock token
+     # Default: `false`
+     #
+     # user.unlock_token_mailer_disabled = true
 
-    # REQUIRED:
-    # Unlock token mailer class.
-    # Default: `nil`
-    #
-    # user.unlock_token_mailer =
+     # REQUIRED:
+     # Unlock token mailer class.
+     # Default: `nil`
+     #
+     # user.unlock_token_mailer =
 
-    # -- activity logging --
-    # Last login attribute name.
-    # Default: `:last_login_at`
-    #
-    # user.last_login_at_attribute_name =
+     # -- activity logging --
+     # Last login attribute name.
+     # Default: `:last_login_at`
+     #
+     # user.last_login_at_attribute_name =
 
-    # Last logout attribute name.
-    # Default: `:last_logout_at`
-    #
-    # user.last_logout_at_attribute_name =
+     # Last logout attribute name.
+     # Default: `:last_logout_at`
+     #
+     # user.last_logout_at_attribute_name =
 
-    # Last activity attribute name.
-    # Default: `:last_activity_at`
-    #
-    # user.last_activity_at_attribute_name =
+     # Last activity attribute name.
+     # Default: `:last_activity_at`
+     #
+     # user.last_activity_at_attribute_name =
 
-    # How long since user's last activity will they be considered logged out?
-    # Default: `10 * 60`
-    #
-    # user.activity_timeout =
+     # How long since user's last activity will they be considered logged out?
+     # Default: `10 * 60`
+     #
+     # user.activity_timeout =
 
-    # -- external --
-    # Class which holds the various external provider data for this user.
-    # Default: `nil`
-    #
-    # user.authentications_class = Authentication
+     # -- external --
+     # Class which holds the various external provider data for this user.
+     # Default: `nil`
+     #
+     user.authentications_class = Authentication
 
     # User's identifier in the `authentications` class.
     # Default: `:user_id`

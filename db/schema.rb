@@ -16,8 +16,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_12_04_041443) do
 
   create_table "authentications", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.string "provider"
-    t.string "uid"
+    t.string "provider", null: false
+    t.string "uid", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_authentications_on_user_id"

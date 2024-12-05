@@ -1,0 +1,2 @@
+sorcery:
+  GOOGLE_CALLBACK_URL: 'https://gamarjoba.fly.dev/oauth/callback?provider=google'

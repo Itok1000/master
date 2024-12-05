@@ -25,6 +25,16 @@
         </div>
         <%= f.submit "登録する", class: "btn btn-primary" %>
       <% end %>
+      <br>
+        <!-- 「Googleログインの方はこちら」のリンク -->
+        <div class='text-center text-sm'>
+          または
+        </div>
+         <div class='text-center'>
+          <%= link_to auth_at_provider_path(provider: :google), data: { turbo: false } do %>
+           <%= image_tag "google_sign_in.png", class: "w-1/2 md:w-3/5 mx-auto py-5" %>
+          <% end %>
+         </div>
     </div>
   </div>
  </div>

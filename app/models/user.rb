@@ -12,7 +12,8 @@ class User < ApplicationRecord
   # ユーザーが複数のpostレコードを持つことを示す
 
 
-  has_many :authentications, dependent: :destroy
+  has_many :authenticates, dependent: :destroy
+  accepts_nested_attributes_for :authenticates
   # - UserモデルとAuthenticationモデルを作成して、外部ログインをサポート
 
   has_many :posts, dependent: :destroy

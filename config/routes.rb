@@ -54,6 +54,11 @@ Rails.application.routes.draw do
   # ユーザーがログアウトボタンをクリックすると、サーバーによってセッションが破棄され、その後ユーザーはログイン画面やホームページにリダイレクトされる流れになる
   delete "logout", to: "user_sessions#destroy"
 
+  # Google認証機能のためのルート側
+  post "oauth/callback" => "oauths#callback"
+  get "oauth/callback" => "oauths#callback"
+  get "oauth/:provider" => "oauths#oauth", as: :auth_at_provider
+
   # ルート側にposts(掲示板機能)を追加
   # resourcesメソッドのonlyオプションにnewを記載することで、GETメソッドで /posts/new というURLパターンにリクエストが飛んだ際に postsコントローラーのnewアクションが動くように定義される
   # resources :users, only: %i[new create]

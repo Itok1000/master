@@ -80,7 +80,7 @@ Rails.application.config.sorcery.configure do |config|
    # i.e. [:twitter, :facebook, :github, :linkedin, :xing, :google, :liveid, :salesforce, :slack, :line].
    # Default: `[]`
    #
-   # config.external_providers = %i[google]
+    config.external_providers = %i[google]
 
     # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
     # Path to ca_file. By default use a internal ca-bundle.crt.
@@ -158,12 +158,12 @@ Rails.application.config.sorcery.configure do |config|
     # config.auth0.callback_url = "https://0.0.0.0:3000/oauth/callback?provider=auth0"
     # config.auth0.site = "https://example.auth0.com"
     # .envファイルに設定したAPIキーを取得する
-    # config.google.key = ENV["GOOGLE_CLIENT_ID"]
-    # config.google.secret = ENV["GOOGLE_CLIENT_SECRET"]
+     config.google.key = ENV["GOOGLE_CLIENT_ID"]
+     config.google.secret = ENV["GOOGLE_CLIENT_SECRET"]
     # API設定で承認のリダイレクトURIとして設定したもの
-    # config.google.callback_url = ENV["GOOGLE_CALLBACK_URL"]
+     config.google.callback_url = ENV["GOOGLE_CALLBACK_URL"]
     # 外部サービスから取得したユーザー情報をUserモデルの指定した属性にマッピング
-    # config.google.user_info_mapping = { email: "email", name: "name" }
+     config.google.user_info_mapping = { email: "email", user_name: "name" }
   # For Microsoft Graph, the key will be your App ID, and the secret will be your app password/public key.
   # The callback URL "can't contain a query string or invalid special characters"
   # See: https://docs.microsoft.com/en-us/azure/active-directory/active-directory-v2-limitations#restrictions-on-redirect-uris
@@ -543,7 +543,7 @@ Rails.application.config.sorcery.configure do |config|
      # Class which holds the various external provider data for this user.
      # Default: `nil`
      # 外部サービスとの認証情報を保存するモデルを指定
-     # user.authentications_class = Authentication
+      user.authentications_class = Authentication
 
     # User's identifier in the `authentications` class.
     # Default: `:user_id`

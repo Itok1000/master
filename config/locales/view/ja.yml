@@ -57,6 +57,9 @@ ja:
   notices:
     login_success: "ログイン成功しました"
     logout_success: "ログアウトしました"
+  oauths:
+    login_success: "Googleアカウントでログインしました"
+    login_failure: "Google認証に失敗しました"
   alerts:
     invalid_credentials: "メールまたはパスワードが間違っています。"
   static_pages:

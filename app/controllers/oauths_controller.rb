@@ -12,16 +12,16 @@ class OauthsController < ApplicationController
         Rails.logger.debug "User logged in successfully: #{@user.inspect}"
         reset_session
         auto_login(@user)
-        redirect_to root_path, success: "Googleアカウントでログインしました"
+        redirect_to root_path, success: t("oauths.login_success")
       else
         begin
           Rails.logger.debug "User not found, signing up"
           sign_up_and_login_from(provider)
-          redirect_to root_path, success: "Googleアカウントでログインしました"
+          redirect_to root_path, success: t("oauths.login_success")
         rescue => e
           Rails.logger.error "Google認証に失敗しました: #{e.message}"
           Rails.logger.error "バックトレース: #{e.backtrace.join("\n")}"
-          redirect_to root_path, danger: "Google認証に失敗しました"
+          redirect_to root_path, danger: t("oauths.login_failure")
         end
       end
     end

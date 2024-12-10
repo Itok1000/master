@@ -19,7 +19,7 @@ class OauthsController < ApplicationController
           sign_up_and_login_from(provider)
           redirect_to root_path, success: t("oauths.login_success")
         rescue => e
-          Rails.logger.error "Google認証に失敗しました: #{e.message}"
+          Rails.logger.error "#{t("oauths.login_failure")}: #{e.message}"
           Rails.logger.error "バックトレース: #{e.backtrace.join("\n")}"
           redirect_to root_path, danger: t("oauths.login_failure")
         end

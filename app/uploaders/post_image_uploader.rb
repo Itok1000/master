@@ -64,6 +64,19 @@ class PostImageUploader < CarrierWave::Uploader::Base
   # アップロード可能なファイル形式を jpg、jpeg、gif、png のみに制限し、
   # 想定外のファイル形式がアップロードされるのを防ぐことができる
 
+  # WebPに変換
+  process :convert_to_webp
+
+  def convert_to_webp
+    manipulate! do |img|
+      img.format "webp"
+      img
+    end
+  end
+  # 拡張子を.webpで保存
+  def filename
+    super.chomp(File.extname(super)) + ".webp" if original_filename.present?
+  end
 
 
   # board_imageカラムに値が無い場合は、300 x 200 画像（board_placeholder.png）を表示するように設定

@@ -28,6 +28,12 @@
      <img src="https://i.gyazo.com/1ed020c1c3e22b1317a8cbff3b38e2f5.png" class: 'food-link'>
      <p>診断はログインなしで行うことが可能です</p>
      <p>ユーザー登録しログインすると、各料理の掲示板にとびます</p>
+     <p>Google認証によるログインも下記から可能です</p>
+          <div class='text-center'>
+           <%= link_to auth_at_provider_path(provider: :google), data: { turbo: false } do %>
+           <%= image_tag "google_sign_in.png", class: "w-1/2 md:w-3/5 mx-auto py-5" %>
+           <% end %>
+          </div>
      <a href="https://gyazo.com/f6b4f7b458a27a77058943d580e464cb"><video width="748" autoplay muted loop playsinline><source src="https://i.gyazo.com/f6b4f7b458a27a77058943d580e464cb.mp4" type="video/mp4"/></video></a>
      <p>ここでは自ら作った物を各料理掲示板の中で口コミをすることができ、<br>
      画像アップロードして投稿することもできます</p>

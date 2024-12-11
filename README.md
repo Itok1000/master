@@ -41,7 +41,7 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 ### サービスの利用イメージ
 ユーザーがこのサービスをログインなしでいくつかの質問を診断することができます。
 この診断は、YESNO方式を用いて、ユーザーの好み、ユーザーの状況に基づいて診断結果を表示します。
-[![Image from Gyazo](https://i.gyazo.com/3339a039f1563f078ea806471012d485.gif)](https://gyazo.com/3339a039f1563f078ea806471012d485)
+[![Image from Gyazo](https://i.gyazo.com/f7a907fc1267ad27e2938a8738f717a3.gif)](https://gyazo.com/f7a907fc1267ad27e2938a8738f717a3)
 
 また、Xでのシェア機能を用いて、多くの人に共有できます
 診断はログインなしで行うことが可能です

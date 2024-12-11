@@ -14,8 +14,8 @@ RSpec.describe User, type: :model do
     end
 
     it "名前が被る場合、エラーになる" do
-      create(:user, user_name: "らんてくん")
-      other = build(:user, user_name: "らんてくん")
+      create(:user, user_name: "シュクメルリ君")
+      other = build(:user, user_name: "シュクメルリ君")
       expect(other).to be_invalid
     end
 

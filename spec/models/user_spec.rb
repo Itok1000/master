@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  describe "バリデーションチェック" do
+  describe "ユーザーモデルのバリデーションチェック" do
     it "バリデーションが機能しているか" do
       user = build(:user)
       expect(user).to be_valid

@@ -19,7 +19,7 @@ RSpec.describe User, type: :model do
       expect(other).to be_invalid
     end
 
-    it "名前の文字数が長すぎないこと" do
+    it "名前の文字数が長すぎないこと(256文字以下)" do
       user = build(:user, user_name: "a" * 256)
       expect(user).to be_invalid
     end
@@ -42,6 +42,12 @@ RSpec.describe User, type: :model do
     it "パスワードと確認用パスが一致すること" do
       user = build(:user, password: "gamarjoba", password_confirmation: "gamarjoba")
       expect(user).to be_valid
+    end
+
+    it "メールアドレスが被らないこと" do
+      create(:user, email: "gamarjoba@gmail.com")
+      other = build(:user, email: "gamarjoba@gmail.com")
+      expect(other).to be_invalid
     end
   end
 end

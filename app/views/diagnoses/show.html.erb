@@ -1,6 +1,9 @@
 <head>
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <% content_for(:title, t('.title')) %>
@@ -36,7 +39,7 @@
        <p><%= t('diagnoses.lets_post_comments_and_rate_the_dishes!') %></p>
        </div>
       </div>
-      <div class="button-container">
+      <div class="diagnosis-inner-text">
       <a href="https://ca-voir.com/nobuyo-kitchen-ojakhuri-jp/" class="how-to-make"><%= t('diagnoses.botton.how-to-make') %></a>
       </div>
 
@@ -65,7 +68,7 @@
         <p><%= t('diagnoses.lets_post_comments_and_rate_the_dishes!') %></p>
        </div>
       </div>
-      <div class="button-container">
+      <div class="diagnosis-inner-text">
       <a href="https://ca-voir.com/nobuyo-kitchen-badrijani-jp/" class="how-to-make"><%= t('diagnoses.botton.how-to-make') %></a>
       </div>
 
@@ -93,7 +96,7 @@
         <p><%= t('diagnoses.lets_post_comments_and_rate_the_dishes!') %></p>
        </div>
       </div>
-      <div class="button-container">
+      <div class="diagnosis-inner-text">
       <a href="https://ca-voir.com/nobuyo-kitchen-sokos-chashushuli-jp/" class="how-to-make"><%= t('diagnoses.botton.how-to-make') %></a>
       </div>
 
@@ -123,7 +126,7 @@
         <p><%= t('diagnoses.lets_post_comments_and_rate_the_dishes!') %></p>
        </div>
       </div>
-      <div class="button-container">
+      <div class="diagnosis-inner-text">
       <a href="https://ca-voir.com/nobuyo-kitchen-pkhali-jp/" class="how-to-make"><%= t('diagnoses.botton.how-to-make') %></a>
       </div>
 
@@ -152,7 +155,7 @@
         <p><%= t('diagnoses.lets_post_comments_and_rate_the_dishes!') %></p>
        </div> 
       </div>
-      <div class="button-container">
+      <div class="diagnosis-inner-text">
       <a href="https://ca-voir.com/nobuyo-kitchen-ostri-jp/" class="how-to-make"><%= t('diagnoses.botton.how-to-make') %></a>
       </div>
 
@@ -181,7 +184,7 @@
         <p><%= t('diagnoses.lets_post_comments_and_rate_the_dishes!') %></p>
        </div>
       </div>
-      <div class="button-container">
+      <div class="diagnosis-inner-text">
       <a href="https://ca-voir.com/nobuyo-kitchen-chikhirtma-jp/" class="how-to-make"><%= t('diagnoses.botton.how-to-make') %></a>
       </div>
 
@@ -210,7 +213,7 @@
         <p><%= t('diagnoses.lets_post_comments_and_rate_the_dishes!') %></p>
        </div>
       </div>
-      <div class="button-container">
+      <div class="diagnosis-inner-text">
       <a href="https://ca-voir.com/nobuyo-kitchen-shkmeruli-jp/" class="how-to-make"><%= t('diagnoses.botton.how-to-make') %></a>
       </div>
 
@@ -240,14 +243,21 @@
         <p><%= t('diagnoses.lets_post_comments_and_rate_the_dishes!') %></p>
        </div>
       </div>
-      <div class="button-container">
+      <div class="diagnosis-inner-text">
       <a href="https://ca-voir.com/nobuyo-kitchen-chakhokhbili-jp/" class="how-to-make"><%= t('diagnoses.botton.how-to-make') %></a>
       </div>
     <% end %>
   </div>
-    <div class="button-container2">
+    <div class="diagnosis-inner-text">
       <%= link_to t('diagnoses.botton.diagnosis-again'), new_diagnosis_path, class:"diagnosis-again" %>
-        <div class="share-buttons">
+      <%= link_to t('diagnoses.botton.registration'), new_user_path, class:"orange" %>
+      <div class="overview">
+       <div class = "kaisei-decol-regular">
+       <br>
+       <p>Xのシェアはこちら</p>
+       </div>
+      </div>
+      <div class="share-buttons">
           <!-- Xシェアボタン -->
             <a href="https://twitter.com/share"
             class="twitter-share-button"
@@ -258,8 +268,7 @@
             Xでシェア
             </a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-      <%= link_to t('diagnoses.botton.registration'), new_user_path, class:"orange" %>
+      </div>
     </div>
 </div>
 

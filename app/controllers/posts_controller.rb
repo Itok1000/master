@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
     # 料理に応じた情報をハッシュで定義
     recipes = {
-      "ojakhuri" => { name: "オジャフリ", name2: "ოჯახური", image: "Answer01.png", description: I18n.t("diagnoses.description.ojakhuri2") },
+      "ojakhuri" => { name: "オジャフリ", name2: "ოჯახური", image: "Answer01.png", description: I18n.t("diagnoses.description.ojakhuri3") },
       "badrijani" => { name: "パドリジャーニ", name2: "ბადრიჯანი", image: "Answer02.png", description: I18n.t("diagnoses.description.badrijani2") },
       "sokos" => { name: "ソコスチャシュシュリ", name2: "სოკოს ჭაშუშული", image: "Answer03.png", description: I18n.t("diagnoses.description.sokos_chashushuli2") },
       "pkhali" => { name: "プパリ", name2: "ფხალი", image: "Answer04.png", description: I18n.t("diagnoses.description.pkhali5") },

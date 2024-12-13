@@ -11,8 +11,8 @@ class PostsController < ApplicationController
       "pkhali" => { name: "プパリ", name2: "ფხალი", image: "Answer04.webp", description: I18n.t("diagnoses.description.pkhali5") },
       "ostri" => { name: "オーストリ", name2: "ოსტრი", image: "Answer05.webp", description: I18n.t("diagnoses.description.ostri2") },
       "chikirtma" => { name: "チヒルトゥマ", name2: "ჩიხირთმა", image: "Answer06.webp", description: I18n.t("diagnoses.description.chikirtma3") },
-      "shkmeruli" => { name: "シュクメルリ", name2: "შქმერული", image: "Answer07.png", description: I18n.t("diagnoses.description.shkmeruli4") },
-      "chakhohbili" => { name: "チャホフビリ", name2: "ჩახოხბილი", image: "Answer08.png", description: I18n.t("diagnoses.description.chakhohbili2") }
+      "shkmeruli" => { name: "シュクメルリ", name2: "შქმერული", image: "Answer07.webp", description: I18n.t("diagnoses.description.shkmeruli4") },
+      "chakhohbili" => { name: "チャホフビリ", name2: "ჩახოხბილი", image: "Answer08.webp", description: I18n.t("diagnoses.description.chakhohbili2") }
     }
 
 

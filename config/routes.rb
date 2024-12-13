@@ -69,9 +69,11 @@ Rails.application.routes.draw do
   # 投稿のリソース(一覧、新規作成、詳細、編集、削除、更新)
   # コメントのリソース(作成、編集、削除)
   # いいねのリソース(作成、削除)
+  # 5つ星評価のリソース(一覧、新規作成、詳細、削除)
   resources :posts, only: %i[index new create show edit destroy update] do
     resources :comments, only: %i[create destroy], shallow: true
     resource :favorites, only: [ :create, :destroy ]
+    resources :feedbacks, only: %i[index new create show destroy], shallow: true
 
 
      collection do

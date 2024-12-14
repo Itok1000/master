@@ -51,7 +51,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_12_13_021121) do
   end
 
   create_table "feedbacks", force: :cascade do |t|
-    t.integer "rating"
+    t.float "rating", default: 0.0, null: false
     t.text "content"
     t.bigint "post_id", null: false
     t.bigint "user_id", null: false

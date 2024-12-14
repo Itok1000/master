@@ -34,7 +34,7 @@ class Post < ApplicationRecord
 
     has_many :feedbacks, dependent: :destroy
     # dependent: :destroyを記述することによって、destroy 時に関連づけられたモデルに対して destroy が実行されるようになる
-    
+
     # Ransack needs attributes explicitly allowlisted as searchableとエラーが出た時に追記
     # Ransackで検索を行う属性を明示的に指定する必要があるため,Postモデルにransackable_attributesメソッドを追加し、
     # 検索可能な属性を定義しなければならない

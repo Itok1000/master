@@ -73,7 +73,7 @@ Rails.application.routes.draw do
   resources :posts, only: %i[index new create show edit destroy update] do
     resources :comments, only: %i[create destroy], shallow: true
     resource :favorites, only: [ :create, :destroy ]
-    resources :feedbacks, only: %i[index new create show destroy], shallow: true
+    resources :feedbacks, only: %i[index new create destroy], shallow: true
 
 
      collection do

@@ -41,7 +41,7 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 ### サービスの利用イメージ
 ユーザーがこのサービスをログインなしでいくつかの質問を診断することができます。
 この診断は、YESNO方式を用いて、ユーザーの好み、ユーザーの状況に基づいて診断結果を表示します。
-[![Image from Gyazo](https://i.gyazo.com/3e444b4b867b7b54c3d10a88d7e7f03a.gif)](https://gyazo.com/3e444b4b867b7b54c3d10a88d7e7f03a)
+[![Image from Gyazo](https://i.gyazo.com/1aa5353cdc64e351bc318aecb53b230d.gif)](https://gyazo.com/1aa5353cdc64e351bc318aecb53b230d)
 
 また、Xでのシェア機能を用いて、多くの人に共有できます
 診断はログインなしで行うことが可能です
@@ -49,17 +49,16 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 [![Image from Gyazo](https://i.gyazo.com/b6a9c0dc1d5fcd140b71b63d5bf7cb6f.png)](https://gyazo.com/b6a9c0dc1d5fcd140b71b63d5bf7cb6f)
 
 ユーザー登録しログインすると、各料理の掲示板にとびます
+[![Image from Gyazo](https://i.gyazo.com/e20f2c3d05322e66c1d2ba8950a079e1.gif)](https://gyazo.com/e20f2c3d05322e66c1d2ba8950a079e1)
 ここでは自ら作った物を各料理掲示板の中で口コミをすることができ、画像アップロードして投稿することもできます
-[![Image from Gyazo](https://i.gyazo.com/11f45f3e97cb003c18e01210e20a79f9.gif)](https://gyazo.com/11f45f3e97cb003c18e01210e20a79f9)
-[![Image from Gyazo](https://i.gyazo.com/6a9a9217eabe91c8fe1a611db20c889d.gif)](https://gyazo.com/6a9a9217eabe91c8fe1a611db20c889d)
+[![Image from Gyazo](https://i.gyazo.com/c8ad5a7db70435e7f24b0afb8cd5ed94.gif)](https://gyazo.com/c8ad5a7db70435e7f24b0afb8cd5ed94)
+[![Image from Gyazo](https://i.gyazo.com/5c52491846cf20f6bc8f6cd56d287137.gif)](https://gyazo.com/5c52491846cf20f6bc8f6cd56d287137)
 
 参考になった口コミに関しては、いいねをすることが可能です
-[![Image from Gyazo](https://i.gyazo.com/ba7ad6ff702ba32346365971995d4064.gif)](https://gyazo.com/ba7ad6ff702ba32346365971995d4064)
+[![Image from Gyazo](https://i.gyazo.com/1ebb941ed88de444c3780a5db77e697b.gif)](https://gyazo.com/1ebb941ed88de444c3780a5db77e697b)
 いいねした投稿、ユーザー自身が投稿した口コミはヘッダー上でにアクセスできます
 [![Image from Gyazo](https://i.gyazo.com/ba7ad6ff702ba32346365971995d4064.gif)](https://gyazo.com/ba7ad6ff702ba32346365971995d4064)
-[![Image from Gyazo](https://i.gyazo.com/7789a37b7e2ca81815b0dc2612857352.gif)](https://gyazo.com/7789a37b7e2ca81815b0dc2612857352)
-[![Image from Gyazo](https://i.gyazo.com/fb38d2740504111a38a1782d7b35f90c.gif)](https://gyazo.com/fb38d2740504111a38a1782d7b35f90c)
-
+[![Image from Gyazo](https://i.gyazo.com/0a8fc9f2c31c14626613764d857a6114.gif)](https://gyazo.com/0a8fc9f2c31c14626613764d857a6114)
 ### ユーザーの獲得について
 X(旧Twitter)を用いてWebアプリ上でリリース公開します
 
@@ -109,7 +108,7 @@ X(旧Twitter)を用いてWebアプリ上でリリース公開します
 
 ・口コミ投稿
 
-・いいね
+・いいね機能
 
 ・コメント
 
@@ -121,7 +120,7 @@ X(旧Twitter)を用いてWebアプリ上でリリース公開します
 
 ・デコレーターの導入
 
-・画像加工・合成
+・画像加工・合成(WebP化)
 
 ・OGP（動的）
 

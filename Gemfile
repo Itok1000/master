@@ -157,4 +157,4 @@ end
 gem "config"
 
 # Ruby用のコードカバレッジ解析ツール
-gem 'simplecov', require: false, group: :test
+gem "simplecov", require: false, group: :test

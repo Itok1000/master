@@ -33,6 +33,7 @@ RSpec.describe "Users", type: :system do
           fill_in "user[password]", with: "123456789"
           fill_in "user[password_confirmation]", with: "123456789"
           click_button "登録する"
+          expect(page).to have_content 'ユーザー登録に失敗しました'
           expect(page).to have_content "ユーザーネームを入力してください"
       end
 
@@ -43,6 +44,7 @@ RSpec.describe "Users", type: :system do
           fill_in "user[password]", with: "123456789"
           fill_in "user[password_confirmation]", with: "123456789"
           click_button "登録する"
+          expect(page).to have_content 'ユーザー登録に失敗しました'
           expect(page).to have_content "メールアドレスを入力してください"
       end
 
@@ -53,6 +55,7 @@ RSpec.describe "Users", type: :system do
           fill_in "user[password]", with: "123456789"
           fill_in "user[password_confirmation]", with: "987654321"
           click_button "登録する"
+          expect(page).to have_content 'ユーザー登録に失敗しました'
           expect(page).to have_content "パスワード確認とパスワードの入力が一致しません"
       end
 
@@ -63,6 +66,7 @@ RSpec.describe "Users", type: :system do
           fill_in "user[password]", with: "1"
           fill_in "user[password_confirmation]", with: "1"
           click_button "登録する"
+          expect(page).to have_content 'ユーザー登録に失敗しました'
           expect(page).to have_content "パスワードは3文字以上で入力してください"
       end
 
@@ -73,7 +77,32 @@ RSpec.describe "Users", type: :system do
           fill_in "user[password]", with: "1"
           fill_in "user[password_confirmation]", with: ""
           click_button "登録する"
+          expect(page).to have_content 'ユーザー登録に失敗しました'
           expect(page).to have_content"パスワード確認を入力してください"
+      end
+
+      it '登録済みのメールアドレスの場合、新規で登録できないこと' do
+        existed_user = create(:user)
+        visit '/users/new'
+        fill_in "user[user_name]", with: "テスト太郎"
+        fill_in "user[email]", with: existed_user.email
+        fill_in "user[password]", with: 'password'
+        fill_in "user[password_confirmation]", with: 'password'
+        click_button "登録する"
+        expect(page).to have_content 'ユーザー登録に失敗しました'
+        expect(page).to have_content 'メールアドレスはすでに存在します'
+      end
+
+      it '登録済みの名前の場合、新規で登録できないこと' do
+        existed_user = create(:user)
+        visit '/users/new'
+        fill_in "user[user_name]", with: "シュクメルリ君"
+        fill_in "user[email]", with: "test@test.com"
+        fill_in "user[password]", with: 'password'
+        fill_in "user[password_confirmation]", with: 'password'
+        click_button "登録する"
+        expect(page).to have_content 'ユーザー登録に失敗しました'
+        expect(page).to have_content 'ユーザーネームはすでに存在します'
       end
     end
   end

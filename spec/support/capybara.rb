@@ -17,18 +17,14 @@ RSpec.configure do |config|
     end
   end
 
-  # Chrome
+  require 'capybara/rspec'
+  require 'selenium-webdriver'
+  # capybaraの設定を書いていく
   Capybara.register_driver :remote_chrome do |app|
-    url = 'http://chrome:4444/wd/hub'
-    caps = ::Selenium::WebDriver::Remote::Capabilities.chrome(
-      'goog:chromeOptions' => {
-        'args' => [
-          'no-sandbox',
-          'headless',
-          'disable-gpu',
-          'window-size=1680,1050'
-        ]
-      }
-    )
-    Capybara::Selenium::Driver.new(app, browser: :remote, url: url, desired_capabilities: caps)
+    options = Selenium::WebDriver::Chrome::Options.new
+    options.add_argument('no-sandbox')
+    options.add_argument('headless')
+    options.add_argument('disable-gpu')
+    options.add_argument('window-size=1680,1050')
+    Capybara::Selenium::Driver.new(app, browser: :remote, url: ENV['SELENIUM_DRIVER_URL'], capabilities: options)
   end

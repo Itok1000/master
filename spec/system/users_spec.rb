@@ -1,8 +1,6 @@
 require 'rails_helper'
 RSpec.describe "Users", type: :system do
-  
   describe "ログイン前" do
-
     context '入力情報異常系' do
       it 'ユーザーが新規作成できないこと' do
         visit '/users/new'
@@ -16,7 +14,7 @@ RSpec.describe "Users", type: :system do
     context "ユーザー登録" do
       it "フォームの入力値が正常の場合登録できること" do
         visit "users/new"
-        expect{
+        expect {
           fill_in "user[user_name]", with: "テスト太郎"
           fill_in "user[email]", with: "test@test.com"
           fill_in "user[password]", with: "123456789"
@@ -78,7 +76,7 @@ RSpec.describe "Users", type: :system do
           fill_in "user[password_confirmation]", with: ""
           click_button "登録する"
           expect(page).to have_content 'ユーザー登録に失敗しました'
-          expect(page).to have_content"パスワード確認を入力してください"
+          expect(page).to have_content "パスワード確認を入力してください"
       end
 
       it '登録済みのメールアドレスの場合、新規で登録できないこと' do

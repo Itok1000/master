@@ -155,3 +155,6 @@ end
 # config/settings.ymlファイル に共通の設定を書き、config/settings/development.yml、config/settings/production.yml、
 # config/settings/test.yml に環境ごとの設定を書き分ける
 gem "config"
+
+# Ruby用のコードカバレッジ解析ツール
+gem "simplecov", require: false, group: :test

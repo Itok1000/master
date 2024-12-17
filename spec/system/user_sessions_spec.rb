@@ -10,7 +10,6 @@ RSpec.describe "UserSessions", type: :system do
           fill_in "password", with: "123456789"
           click_button "ログイン"
           Capybara.assert_current_path("/login", ignore_query: true)
-          
       end
 
       it "メールアドレスが未記載でログインできないこと" do

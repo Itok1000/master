@@ -22,6 +22,7 @@ RSpec.describe "Users", type: :system do
           click_button "登録する"
           Capybara.assert_current_path("/login", ignore_query: true)
         }.to change { User.count }.by(1)
+          expect(page).to have_content 'ユーザー登録が完了しました'
       end
 
       it "名前が記載されていること" do

@@ -12,7 +12,7 @@ RSpec.describe "Users", type: :system do
     end
 
     context "ユーザー登録" do
-      it "フォームの入力値が正常の場合登録できること" do
+      it "フォームの入力値が正常の場合、登録できること" do
         visit "users/new"
         expect {
           fill_in "user[user_name]", with: "テスト太郎"
@@ -64,6 +64,17 @@ RSpec.describe "Users", type: :system do
           fill_in "user[email]", with: "test@test.com"
           fill_in "user[password]", with: "1"
           fill_in "user[password_confirmation]", with: "1"
+          click_button "登録する"
+          expect(page).to have_content 'ユーザー登録に失敗しました'
+          expect(page).to have_content "パスワードは3文字以上で入力してください"
+      end
+
+      it "パスワードが記載されていること" do
+        visit "users/new"
+          fill_in "user[user_name]", with: "テスト太郎"
+          fill_in "user[email]", with: "test@test.com"
+          fill_in "user[password]", with: ""
+          fill_in "user[password_confirmation]", with: "123456789"
           click_button "登録する"
           expect(page).to have_content 'ユーザー登録に失敗しました'
           expect(page).to have_content "パスワードは3文字以上で入力してください"

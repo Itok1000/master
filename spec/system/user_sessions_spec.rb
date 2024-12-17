@@ -1,11 +1,11 @@
 require 'rails_helper'
 RSpec.describe "UserSessions", type: :system do
   describe "ログイン前" do
-    context "ログイン" do
+    context "ログイン後" do
       before do
         visit "/login"
       end
-      it "フォームの入力値が正常の場合登録できること" do
+      it "フォームの入力値が正常の場合、ログインできること" do
           fill_in "email", with: "test@test.com"
           fill_in "password", with: "123456789"
           click_button "ログイン"

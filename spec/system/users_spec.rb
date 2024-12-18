@@ -114,6 +114,11 @@ RSpec.describe "Users", type: :system do
         expect(page).to have_content 'ユーザー登録に失敗しました'
         expect(page).to have_content 'ユーザーネームはすでに存在します'
       end
+
+      it 'Googleログインするためのリンクがあること' do
+        visit "users/new"
+        expect(page).to have_content 'Googleログインの方はこちら'
+      end
     end
   end
 end

@@ -1,7 +1,7 @@
 require 'rails_helper'
 RSpec.describe "UserSessions", type: :system do
   describe "ログイン前" do
-    context "ログイン後" do
+    context "ログイン" do
       before do
         visit "/login"
       end
@@ -24,6 +24,16 @@ RSpec.describe "UserSessions", type: :system do
         fill_in "password", with: ""
         click_button "ログイン"
         expect(page).to have_content 'ユーザー登録に失敗しました'
+      end
+
+      it '「初めての方はこちら」のリンクがあること' do
+        visit "/login"
+        expect(page).to have_content '初めての方はこちら'
+      end
+
+      it 'Googleログインするためのリンクがあること' do
+        visit "/login"
+        expect(page).to have_content 'Googleログインの方はこちら'
       end
     end
   end

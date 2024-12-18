@@ -12,8 +12,8 @@ RSpec.describe UserMailer, type: :mailer do
       end.to change { ActionMailer::Base.deliveries.size }.by(1)
       # ヘッダー
       expect(mail.subject).to eq('パスワードリセット')
-      expect(mail.to).to eq([user.email])
-      expect(mail.from).to eq(['from@example.com'])
+      expect(mail.to).to eq([ user.email ])
+      expect(mail.from).to eq([ 'from@example.com' ])
     end
   end
 end

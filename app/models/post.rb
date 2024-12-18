@@ -32,8 +32,6 @@ class Post < ApplicationRecord
     # このコードは、Postモデルにfavorited_by?(user)メソッドを追加
     # 指定されたユーザが特定の投稿（Postインスタンス）をいいねしているかどうかを判定
 
-    has_many :feedbacks, dependent: :destroy
-    # dependent: :destroyを記述することによって、destroy 時に関連づけられたモデルに対して destroy が実行されるようになる
 
     # Ransack needs attributes explicitly allowlisted as searchableとエラーが出た時に追記
     # Ransackで検索を行う属性を明示的に指定する必要があるため,Postモデルにransackable_attributesメソッドを追加し、

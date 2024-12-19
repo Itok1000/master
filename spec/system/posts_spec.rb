@@ -16,12 +16,10 @@ RSpec.describe "Posts", type: :system do
   describe "ログイン後" do
     context '口コミがある場合' do
       it "料理のリンクから口コミ一覧へ遷移できること" do
-        
       end
     end
 
     context '口コミがない場合' do
-
     end
   end
 end

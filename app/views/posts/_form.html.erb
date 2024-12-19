@@ -16,6 +16,10 @@
       <%= f.file_field :post_image, class: "form-control", accept: 'image/*' %>
       <%= f.hidden_field :post_image_cache %>
     </div>
-    <!-- 5つ星を評価するところを設置 app/views/ratings/_rating.html.erb-->
+    <!-- 評価表示部位 -->
+    <div class="mb-3">
+      <%= f.label "評価" %>
+      <%= render 'star', post: @post %>
+    </div>
     <%= f.submit nil, class: "btn btn-primary" %>
 <% end %>

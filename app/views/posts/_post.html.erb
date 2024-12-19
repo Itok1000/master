@@ -23,7 +23,7 @@
           <li><i class="bi bi-person"></i><%= post.user.decorate.full_name %></li>
           <li><i class="bi bi-calendar"></i><%= l post.created_at, format: :long %></li>
           <td><%= render "favorites/favorite", post: post %></td>
-          <!-- 5つ星を評価するところを設置 app/views/ratings/_rating.html.erb-->
+          <!-- 5つ星を評価を設置 -->
         </ul>
       </div>
     </div>

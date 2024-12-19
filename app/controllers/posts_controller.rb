@@ -131,7 +131,7 @@ class PostsController < ApplicationController
     private
 
     def post_params
-      params.require(:post).permit(:title, :body, :post_image, :post_image_cache)
+      params.require(:post).permit(:title, :body, :post_image, :post_image_cache, :star)
     end
   # ストロングパラメーターを使用して、予期しないパラメータのマスアサインメントによるセキュリティリスクを防ぐ
 end

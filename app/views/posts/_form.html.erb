@@ -19,6 +19,7 @@
     <!-- 評価表示部位 -->
     <div class="mb-3">
       <%= f.label "評価" %>
+      <%= @post.star %>
       <%= render 'star', post: @post %>
     </div>
     <%= f.submit nil, class: "btn btn-primary" %>

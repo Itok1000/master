@@ -2,6 +2,7 @@
         <div data-raty></div>
           <script src="https://cdn.jsdelivr.net/npm/raty-js@4.3.0/build/raty.min.js"></script>
             <script>
+            if (true) {
              let opt = {
              starOn: "<%= asset_path('star-on.png') %>",
              starOff: "<%= asset_path('star-off.png') %>",
@@ -10,6 +11,7 @@
              };
              const raty = new Raty(document.querySelector('[data-raty]'),opt);
              raty.init();
+             }
             </script>
             <link href="https://cdn.jsdelivr.net/npm/raty-js@4.3.0/src/raty.min.css" rel="stylesheet">
         

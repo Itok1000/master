@@ -28,7 +28,21 @@
               </div>
             </div>
             <p><%= simple_format(@post.body) %></p>
-            <%= @post.star %>
+            <!-- 5つ星を評価を設置 -->
+            <div data-raty></div>
+             <script src="https://cdn.jsdelivr.net/npm/raty-js@4.3.0/build/raty.min.js"></script>
+              <script>
+               let showOpt = {
+                starOn: "<%= asset_path('star-on.png') %>",
+                starOff: "<%= asset_path('star-off.png') %>",
+                starHalf: "<%= asset_path('star-half.png') %>",
+                scoreName: 'post[star]',
+                score: "<%= @post.star %>",
+                readOnly: true
+               };
+               const raty = new Raty(document.querySelector('[data-raty]'),showOpt);
+               raty.init();
+              </script>
             <td><%= render "favorites/favorite", post: @post %></td>
             <!-- 5つ星を評価するところを設置 -->
         </article>

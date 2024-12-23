@@ -22,8 +22,24 @@
        <div class = "kaisei-decol-regular">
         <p><%= @recipe_info[:description] %></p>
        </div>
-      </div>  
-    
+       <!-- 5つ星を評価を平均値で設置 -->
+       <div data-raty></div>
+      <script src="https://cdn.jsdelivr.net/npm/raty-js@4.3.0/build/raty.min.js"></script>
+        <script>
+         if (true) {
+           document.querySelector('[data-raty]').innerHTML = ''; 
+           let showOpt = {
+           starOn: "<%= asset_path('star-on.png') %>",
+           starOff: "<%= asset_path('star-off.png') %>",
+           starHalf: "<%= asset_path('star-half.png') %>",
+           scoreName: 'post[star]',
+           readOnly: true,
+          };
+          const raty = new Raty(document.querySelector('[data-raty]'), showOpt);
+          raty.init();
+        }
+        </script>
+      </div>
     <div class="container pt-3">
   <div class="row">
   </div>

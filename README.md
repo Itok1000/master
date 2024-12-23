@@ -53,6 +53,8 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 ここでは自ら作った物を各料理掲示板の中で口コミをすることができ、画像アップロードして投稿することもできます
 [![Image from Gyazo](https://i.gyazo.com/c8ad5a7db70435e7f24b0afb8cd5ed94.gif)](https://gyazo.com/c8ad5a7db70435e7f24b0afb8cd5ed94)
 [![Image from Gyazo](https://i.gyazo.com/5c52491846cf20f6bc8f6cd56d287137.gif)](https://gyazo.com/5c52491846cf20f6bc8f6cd56d287137)
+詳細を見るとレビュー評価も確認できます
+[![Image from Gyazo](https://i.gyazo.com/1cc1ef5222449bfa5ac5c40e6d6be7a8.gif)](https://gyazo.com/1cc1ef5222449bfa5ac5c40e6d6be7a8)
 
 参考になった口コミに関しては、いいねをすることが可能です
 [![Image from Gyazo](https://i.gyazo.com/1ebb941ed88de444c3780a5db77e697b.gif)](https://gyazo.com/1ebb941ed88de444c3780a5db77e697b)

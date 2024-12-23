@@ -81,7 +81,7 @@ class PostImageUploader < CarrierWave::Uploader::Base
 
   # board_imageカラムに値が無い場合は、300 x 200 画像（board_placeholder.png）を表示するように設定
   def default_url(*args)
-    ActionController::Base.helpers.asset_path("post_placeholder.png") # 拡張子に合わせて修正
+    ActionController::Base.helpers.asset_path("post_placeholder.webp") # 拡張子に合わせて修正
   end
 
   # 画像を300x200にリサイズして切り抜き

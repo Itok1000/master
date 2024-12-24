@@ -147,16 +147,19 @@ Figma：https://www.figma.com/design/7mF5VkcFrHRPTxVFbwi1wh/%E7%84%A1%E9%A1%8C?n
 https://app.diagrams.net/#HItok1000%2Fmaster%2FER_diagram_request%2F%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB.drawio#%7B%22pageId%22%3A%22C5RBs43oDa-KdzZeNtuy%22%7D
 
 ### ■ 技術スタック
-・フロントエンド	Rails 7.2.1, JavaScript, Bootstrap, CANVA, 農民イラスト，BecassoApp, 
-https://www.mofa.go.jp/mofaj/area/georgia/index.html (ジョージアって何？のコーナーにて位置を参考にしたため)
+|ツール| 内容 |
+| -------- | -------- |
 
-・バックエンド	Rails 7.2.1, (ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x86_64-linux])
+|・フロントエンド| Rails 7.2.1, JavaScript, Bootstrap, CANVA, 農民イラスト，BecassoApp, 
+https://www.mofa.go.jp/mofaj/area/georgia/index.html (ジョージアって何？のコーナーにて位置を参考にしたため)|
 
-・インフラ	fly.io, AWS S3
+|・バックエンド| Rails 7.2.1, (ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x86_64-linux])|
 
-・データベース	PostgreSQL
+|・インフラ| fly.io, AWS S3|
 
-・認証	Sorcery
+|・データベース| PostgreSQL|
 
-・開発環境	Docker
+|・認証|Sorcery|
+
+|・開発環境|Docker|
 

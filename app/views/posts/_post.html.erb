@@ -24,7 +24,7 @@
           <li><i class="bi bi-calendar"></i><%= l post.created_at, format: :long %></li>
           <!-- 5つ星を評価を設置 -->
           <div data-raty></div>
-           <script src="https://cdn.jsdelivr.net/npm/raty-js@4.3.0/build/raty.min.js"></script>
+           
            <div data-raty data-score="<%= post.star || 0 %>"></div>
             <script>
             if (true) {
@@ -43,7 +43,7 @@
               });
             }
             </script>
-            <link href="https://cdn.jsdelivr.net/npm/raty-js@4.3.0/src/raty.min.css" rel="stylesheet">
+            
           <td><%= render "favorites/favorite", post: post %></td>
         </ul>
       </div>

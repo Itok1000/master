@@ -155,5 +155,4 @@ https://app.diagrams.net/#HItok1000%2Fmaster%2FER_diagram_request%2F%E5%90%8D%E7
 ・データベース| PostgreSQL|
 ・認証|Sorcery|
 ・開発環境|Docker|
-| -------- | -------- |
 

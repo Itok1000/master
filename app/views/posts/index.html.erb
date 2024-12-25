@@ -27,21 +27,21 @@
          <p>口コミレビュー</p>
         </div>
           <div data-raty data-score="<%= @average_star %>"></div>
-          <span class="average-score-text"><%= @average_star.round(1) %></span> / 5.0
-           
+          <p><span class="average-score-text"><%= @average_star.round(1) %></span> / 5.0</p>
             <script>
             if (true) {
-            document.querySelector('[data-raty]').innerHTML = '';
              document.addEventListener("DOMContentLoaded", function() {
+              
               const ratyElement = document.querySelector("[data-raty]");
               if (ratyElement) {
+               document.querySelector('[data-raty]').innerHTML = '';
                const score = parseFloat(ratyElement.dataset.score);
                const raty = new Raty(ratyElement, {
                 starOn: "<%= asset_path('star-on.png') %>",
                 starOff: "<%= asset_path('star-off.png') %>",
                 starHalf: "<%= asset_path('star-half.png') %>",
                 score: score,
-                readOnly: true,
+                readOnly: true
                });
                raty.init();
               }

@@ -27,8 +27,8 @@
            
            <div data-raty data-score="<%= post.star || 0 %>"></div>
             <script>
-            if (true) {
               document.addEventListener("DOMContentLoaded", function() {
+                document.querySelector('[data-raty]').innerHTML = '';
                 const ratyElements = document.querySelectorAll("[data-raty]");
                   ratyElements.forEach(element => {
                     const score = parseFloat(element.dataset.score);
@@ -40,8 +40,8 @@
                       readOnly: true
                     });
                   raty.init();
+                });
               });
-            }
             </script>
             
           <td><%= render "favorites/favorite", post: post %></td>

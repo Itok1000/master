@@ -22,28 +22,6 @@
         <ul class="list-inline">
           <li><i class="bi bi-person"></i><%= post.user.decorate.full_name %></li>
           <li><i class="bi bi-calendar"></i><%= l post.created_at, format: :long %></li>
-          <!-- 5つ星を評価を設置 -->
-          <div data-raty></div>
-           
-           <div data-raty data-score="<%= post.star || 0 %>"></div>
-            <script>
-              document.addEventListener("DOMContentLoaded", function() {
-                document.querySelector('[data-raty]').innerHTML = '';
-                const ratyElements = document.querySelectorAll("[data-raty]");
-                  ratyElements.forEach(element => {
-                    const score = parseFloat(element.dataset.score);
-                    const raty = new Raty(element, {
-                      starOn: "<%= asset_path('star-on.png') %>",
-                      starOff: "<%= asset_path('star-off.png') %>",
-                      starHalf: "<%= asset_path('star-half.png') %>",
-                      score: score,
-                      readOnly: true
-                    });
-                  raty.init();
-                });
-              });
-            </script>
-            
           <td><%= render "favorites/favorite", post: post %></td>
         </ul>
       </div>

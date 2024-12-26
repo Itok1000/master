@@ -1,8 +1,7 @@
 
-        <div data-raty></div>
+        <div data-raty data-score="<%= @post.star || 0 %>" data-read-only="false" data-score-name="post[star]"></div>
           
             <script>
-            if (true) {
              document.querySelector('[data-raty]').innerHTML = '';
              let opt = {
              starOn: "<%= asset_path('star-on.png') %>",
@@ -12,6 +11,5 @@
              };
              const raty = new Raty(document.querySelector('[data-raty]'),opt);
              raty.init();
-             }
             </script>
         

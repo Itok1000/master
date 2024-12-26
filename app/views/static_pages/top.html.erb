@@ -19,7 +19,15 @@
     <% if logged_in? %>
       <!-- ログイン後のコンテンツ -->
       <div class = "kaisei-decol-regular">
-      <h4>クリックして、コメントや投稿をしてみよう</h4>
+       <h4>投稿前に、もう一回診断してみる？</h4>
+      </div>
+      <!-- 診断スタートボタン -->
+      <div class="start-button-container">
+         <%= link_to '診断スタート', new_diagnosis_path, class: 'orange' %>
+      </div>
+      <br>
+      <div class = "kaisei-decol-regular">
+       <h4>クリックして、コメントや投稿をしてみよう</h4>
       </div>
     </div>
       <div class="food-container">

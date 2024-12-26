@@ -29,7 +29,7 @@
             </div>
             <p><%= simple_format(@post.body) %></p>
             <!-- 5つ星を評価を設置 -->
-            <div data-raty></div>
+            <div data-raty data-score="<%= @post.star %>" data-read-only="true"></div>
              
               <script>
               if (true) {
@@ -47,7 +47,6 @@
               }
               </script>
             <td><%= render "favorites/favorite", post: @post %></td>
-            <!-- 5つ星を評価するところを設置 -->
         </article>
       </div>
     </div>

@@ -30,11 +30,11 @@
           <p><span class="average-score-text"><%= @average_star.round(1) %></span> / 5.0</p>
             <script>
             if (true) {
+             document.querySelector('[data-raty]').innerHTML = '';
              document.addEventListener("DOMContentLoaded", function() {
               
               const ratyElement = document.querySelector("[data-raty]");
               if (ratyElement) {
-               document.querySelector('[data-raty]').innerHTML = '';
                const score = parseFloat(ratyElement.dataset.score);
                const raty = new Raty(ratyElement, {
                 starOn: "<%= asset_path('star-on.png') %>",

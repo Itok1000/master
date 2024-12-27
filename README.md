@@ -45,7 +45,7 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 
 また、Xでのシェア機能を用いて、多くの人に共有できます
 診断はログインの有無関係なく可能です
-[![Image from Gyazo](https://i.gyazo.com/e43f7e1c8baa76f2bb3e3509dfbf440a.gif)](https://gyazo.com/e43f7e1c8baa76f2bb3e3509dfbf440a)
+[![Image from Gyazo](https://i.gyazo.com/020872b963df6db8e7a421851251c9f1.gif)](https://gyazo.com/020872b963df6db8e7a421851251c9f1)
 [![Image from Gyazo](https://i.gyazo.com/b6a9c0dc1d5fcd140b71b63d5bf7cb6f.png)](https://gyazo.com/b6a9c0dc1d5fcd140b71b63d5bf7cb6f)
 
 ユーザー登録しログインすると、各料理の掲示板にとびます

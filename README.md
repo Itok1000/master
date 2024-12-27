@@ -44,20 +44,20 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 [![Image from Gyazo](https://i.gyazo.com/1aa5353cdc64e351bc318aecb53b230d.gif)](https://gyazo.com/1aa5353cdc64e351bc318aecb53b230d)
 
 また、Xでのシェア機能を用いて、多くの人に共有できます
-診断はログインなしで行うことが可能です
+診断はログインの有無関係なく可能です
 [![Image from Gyazo](https://i.gyazo.com/e43f7e1c8baa76f2bb3e3509dfbf440a.gif)](https://gyazo.com/e43f7e1c8baa76f2bb3e3509dfbf440a)
 [![Image from Gyazo](https://i.gyazo.com/b6a9c0dc1d5fcd140b71b63d5bf7cb6f.png)](https://gyazo.com/b6a9c0dc1d5fcd140b71b63d5bf7cb6f)
 
 ユーザー登録しログインすると、各料理の掲示板にとびます
 [![Image from Gyazo](https://i.gyazo.com/e20f2c3d05322e66c1d2ba8950a079e1.gif)](https://gyazo.com/e20f2c3d05322e66c1d2ba8950a079e1)
 ここでは自ら作った物を各料理掲示板の中で口コミをすることができ、画像アップロードして投稿することもできます
-[![Image from Gyazo](https://i.gyazo.com/c8ad5a7db70435e7f24b0afb8cd5ed94.gif)](https://gyazo.com/c8ad5a7db70435e7f24b0afb8cd5ed94)
-[![Image from Gyazo](https://i.gyazo.com/5c52491846cf20f6bc8f6cd56d287137.gif)](https://gyazo.com/5c52491846cf20f6bc8f6cd56d287137)
+[![Image from Gyazo](https://i.gyazo.com/d8e53ab13039a02ce4751f4243d5c4a3.gif)](https://gyazo.com/d8e53ab13039a02ce4751f4243d5c4a3)
+[![Image from Gyazo](https://i.gyazo.com/82ed38aa4fc0c4a8ab40a6117f87da18.gif)](https://gyazo.com/82ed38aa4fc0c4a8ab40a6117f87da18)
 詳細を見るとレビュー評価も確認できます
-[![Image from Gyazo](https://i.gyazo.com/1cc1ef5222449bfa5ac5c40e6d6be7a8.gif)](https://gyazo.com/1cc1ef5222449bfa5ac5c40e6d6be7a8)
+[![Image from Gyazo](https://i.gyazo.com/773299f3a94dc1fab144c2dfc85277ef.gif)](https://gyazo.com/773299f3a94dc1fab144c2dfc85277ef)
 
 参考になった口コミに関しては、いいねをすることが可能です
-[![Image from Gyazo](https://i.gyazo.com/1ebb941ed88de444c3780a5db77e697b.gif)](https://gyazo.com/1ebb941ed88de444c3780a5db77e697b)
+[![Image from Gyazo](https://i.gyazo.com/a2e00bfdf0185eb9ef63a0d81f7408ed.gif)](https://gyazo.com/a2e00bfdf0185eb9ef63a0d81f7408ed)
 いいねした投稿、ユーザー自身が投稿した口コミはヘッダー上でにアクセスできます
 [![Image from Gyazo](https://i.gyazo.com/ba7ad6ff702ba32346365971995d4064.gif)](https://gyazo.com/ba7ad6ff702ba32346365971995d4064)
 [![Image from Gyazo](https://i.gyazo.com/0a8fc9f2c31c14626613764d857a6114.gif)](https://gyazo.com/0a8fc9f2c31c14626613764d857a6114)
@@ -132,13 +132,11 @@ X(旧Twitter)を用いてWebアプリ上でリリース公開します
 
 ・Minimagick系の画像加工（アップ時に画像を指定のサイズに加工・webp化する）
 
-今後予定してる機能
-
 ・レーティング機能
 
+今後予定してる機能
+
 ・独自ドメイン
-
-
 
 ### 画面遷移図(企画時)
 Figma：https://www.figma.com/design/7mF5VkcFrHRPTxVFbwi1wh/%E7%84%A1%E9%A1%8C?node-id=0-1&node-type=canvas&t=RkSKDCDXuFFcGs0e-0

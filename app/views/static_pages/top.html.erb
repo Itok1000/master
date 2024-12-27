@@ -9,8 +9,8 @@
 <div class="top-wrapper">
   <div class="top-inner-text">
       <div class = "kaisei-decol-regular">
-       <h1>ジョージア料理診断アプリ</h1>
-       <h2>ガマルジョバ</h2> 
+       <h1><%= t('static_pages.title') %></h1>
+       <h2><%= t('static_pages.subtitle') %></h2> 
       </div>
       <div class = "noto-serif-georgian-uniquifier">
       <h3>გამარჯობა</h3>
@@ -127,14 +127,14 @@
     <% else %>
       <!-- ログイン前のコンテンツ -->
       <div class = "kaisei-decol-regular">
-      <h4>診断始める前に、こちらを確認</h4>
+      <h4><%= t('static_pages.check here before starting diagnosis') %></h4>
       </div>
       <div class="button-container">
         <!-- 上部のボタン -->
        <div class="image-container">
         <div class="button upper-button">
          <div class = "kaisei-decol-regular">
-          <%= link_to "このアプリの使い方", how_to_use_path, class: 'button-text'%>
+          <%= link_to t('static_pages.how_to_use_this_app'), how_to_use_path, class: 'button-text'%>
          </div>
         </div>
        </div>
@@ -157,11 +157,11 @@
         <!-- みんなの口コミのボタン -->
       </div>
       <div class = "kaisei-decol-regular">
-       <h5>確認出来たら</h5>
+       <h5><%= t('static_pages.If you can confirm it.') %></h5>
       </div>
       <!-- 診断スタートボタン -->
       <div class="start-button-container">
-        <%= link_to '診断スタート', new_diagnosis_path, class: 'orange' %>
+        <%= link_to t('static_pages.start_button'), new_diagnosis_path, class: 'orange' %>
       </div>
     <% end %>
   </div>

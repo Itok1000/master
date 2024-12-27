@@ -1,0 +1,214 @@
+en:
+  defaults:
+    create: Create
+    post: Post
+    search_word: Search word (search by title or body keywords)
+    delete_confirm: Delete the post?
+    flash_message:
+      created: “%{item} has been created”
+      not_created: “%{item} could not be created”
+      require_login: Please login
+      created: “%{item} has been created”
+      updated: “%{item} has been updated”
+      not_updated: “Could not update %{item}”
+      not_created: “%{item} could not be created”
+      deleted: “%{item} has been deleted”
+    edit: edit
+  helpers:
+    submit: 
+      create: register
+      submit: save
+      update: update
+    label: 
+      email: Email address
+      password: Password
+      title: Title
+      body: Body
+  user_sessions:
+    new:
+      title: login
+      login: login
+      to_register_page: First time user?
+      password_forget: Forgot your password?
+    create:
+      success: You have logged in
+      failure: login failed
+    destroy: 
+      success: Logged out
+  users:
+    new: 
+      title: User registration
+    create:
+      success: User registration completed
+      failure: user registration failed
+      diagnoses_success: diagnoses completed
+      diagnoses_null: no answer selected
+  header:
+    login: login
+    logout: logout
+    new: New registration
+    show: Profile settings
+  password_ressets:
+    new:
+      title: Password reset
+      submit: Submit
+    edit: 
+      title: Edit password
+  notices:
+    login_success: “Login succeeded”.
+    logout_success: “You have logged out”
+  oauths:
+    login_success: “You have signed in with your Google account.
+    login_failure: “Google authentication has failed”
+  alerts:
+    invalid_credentials: “Your email or password is incorrect.”
+  static_pages:
+    title: Georgia Cuisine Diagnostic App
+    subtitle: Gamarjoba
+    check here before starting diagnosis: Check here before starting diagnosis
+    how_to_use_this_app: How to use this app
+    how_to_use1: “Gamarjoba”
+    how_to_use2: This is an everyday conversation meaning “hello” in Georgian
+    how_to_use3: We named the app in the hope that everyone will share Georgian food like in everyday conversation!
+    how_to_use4: After answering a simple yes-no question, the app will recommend a Georgian dish for you!
+    how_to_use5: Depending on the results of the diagnosis, you will be redirected to a page with recommended Georgian dishes and how to cook them.
+    how_to_use6: You can also share your recommendations with as many people as you like by using the share function on X.
+    how_to_use7: Diagnostics can be done with or without login
+    how_to_use8: You can jump to each cuisine's forum after registering and logging in.
+    how_to_use9: You can also login with Google Authentication
+    how_to_use10: Here you can review your own creations in the various forums,
+    how_to_use11: You can also upload and post images
+    how_to_use12: You can also check the review ratings by looking at the details
+    how_to_use13: You can like the reviews that you find helpful
+    how_to_use14: You can access the liked posts and your own reviews on the header
+    What kind of country is Georgia?: What kind of country is Georgia?
+    Georgia1: 1. area
+    Georgia2: 69,700 square kilometers (about one-fifth the size of Japan)
+    Georgia3: 2. population
+    Georgia4: "3.7 million (2023: UN Population Fund)"
+    Georgia5: 3. capital
+    Georgia6: Tbilisi
+    Georgia7: 4. ethnicity
+    Georgia8: Georgian (86.8%), Azerbaijani (6.2%), Armenian (4.5%), Russian (0.7%), Ossetian (0.4%)
+    Georgia9: 5. Languages
+    Georgia10: Official language is Georgian (part of the Caucasian languages)
+    Georgia11: 6. religion
+    Georgia12: Mainly Christian (Georgian Orthodox)
+    Georgia13: 7. other
+    Georgia14: Located on the eastern shore of the Black Sea, south of the Caucasus Mountains, and a major transportation hub between Asia and Europe.
+    Georgia15: The culture of vinification of grapes, the raw material for wine, has a history of more than 8,000 years and is said to be the oldest in the world. Wine production still flourishes today.
+    What is a Georgian_Food?: What is a Georgian_Food
+    Georgian_Food1: Georgia has been a major transportation hub connecting Asia and Europe with many ethnic groups since ancient times.
+    Georgian_Food2: Historically, Georgia has been dominated by neighboring countries, which has led to the development of a culture that mixes Asian and European elements in its cuisine.
+    Georgian_Food3: What is the staple food?
+    Georgian_Food4: Bread made of wheat is the staple food, as each area is surrounded by mountains.
+    Georgian_Food5: Ingredients and methods of bread making differ from area to area.
+    Georgian_Food6: Rye is also commonly consumed due to the influence of Russia, which borders to the north.
+    Georgian_Food7: What are the characteristics of the cuisine?
+    Georgian_Food8: Influenced by West Asia, with a lot of herbs and spices.
+    reference_materials: "reference materials:"
+    If you can confirm it: If you can confirm it.
+    start_button: "Diagnosis Start"
+    return_button: "Return to Top Page"
+    georgia:
+      title: What is a Georgia?
+    food:
+      title: What is a Georgian_Food?
+    how_to_use:
+      title: how_to_use_this_app
+  diagnoses:
+    new:
+      title: Start diagnoses
+    question: Please answer YES or NO to the following three questions.
+    question1: Question1. I drink a lot.
+    question2: Question2. I don't have much time, so I want to make it easy.
+    question3: Question3. I want to eat a hearty meal.
+    show:
+      title: Your recommendation is
+    recommended: recommended here
+    New registration, login: New registration, login
+    lets_post_comments_and_rate_the_dishes!: "lets_post_comments_and_rate_the_dishes!"
+    Click here to share X: Click here to share X
+    overview: Overview
+    description:
+      ojakhuri: Ojakhuri
+      badrijani: Badrijani
+      sokos_chashushuli: Sokos_chashushuli
+      pkhali: Pkhali
+      ostri: Ostri
+      chikirtma: Chikirtma
+      shkmeruli: Shkmeruli
+      chakhohbili: Chakhohbili
+      ojakhuri1: "A typical Georgian meat dish known as “family meal"
+      ojakhuri2: "A “Georgian German potato” made with potatoes, onions, pork and herbs such as garlic and pak choi"
+      ojakhuri3: The crispy potatoes and the crunchy meat are very appetizing and go great with beer!
+      badrijani1: “one of the most typical appetizers of Georgian cuisine with maximum walnut flavor”
+      badrijani2: “The grilled eggplant is rolled in a paste of walnuts, which makes it look great and is a great choice for small parties.”
+      badrijani3: “If you have a food processor or blender, you can easily make walnut paste.
+      sokos_chashushuli1: “Georgian sauteed mushrooms with herbs.”
+      sokos_chashushuli2: “Easy and tasty to make with your favorite mushrooms, sauteed with minimal spices at home.”
+      pkhali1: “One of the appetizers with vegetables and walnuts in a paste.”
+      pkhali2: “Basically spinach, beets, etc. are used in most cases, but any vegetable can be used.”
+      pkhali3: “The different colors of the various vegetables allow you to make different shades of pupali.”
+      pkhali4: “This is why in Georgia they are often prepared at banquets.”
+      pkhali5: “One of the appetizers made of a paste of vegetables and walnuts, eaten with bread.”
+      ostri1: “a stew of veal and tomatoes.”
+      ostri2: “It has a deep spicy flavor because of the abundant use of spices and chili peppers.”
+      ostri3: “In Georgia we eat it with bread, but it also goes well with rice. I recommend it to drinkers because it goes great with alcohol.”
+      chikirtma1: “Chicken and egg soup.”
+      chikirtma2: “It does not require the spices commonly used in Georgia and can easily be made with powdered bouillon or consommé.”
+      chikirtma3: “I recommend this when you are sick or hungover because the lightness of the chicken and the tenderness of the eggs soak into your body.”
+      shkmeruli1: “cream stew with chicken and garlic”
+      shkmeruli2: “You can use chopped garlic, but a garlic tube is also delicious.”
+      shkmeruli3: “The authentic version is made with only chicken and garlic, but you can also add potatoes, onions, and sweet potatoes like in a stew.”
+      shkmeruli4: “Chicken and garlic in cream, for those who like garlic.”
+      chakhohbili1: “Chicken stewed with tomatoes.”
+      chakhohbili2: “It looks spicy, but it uses very little spice, and the combination of the non-habitual savory flavor of the chicken and the umami of the tomatoes is sure to please everyone.”
+      chakhohbili3: “The trick is to use chicken with bones or skin.”
+    botton:
+      how-to-make: Here's how to make it
+      diagnosis-again: diagnosis again
+      registration: User registration
+      result: see the result of diagnosis
+  posts:
+    new:
+      TITLE: Give a rating to a dish
+    show:
+      title: Details of the rating and people's reactions
+    index:
+      title: Everyone's review
+      no_result: No postings
+    edit:
+      title: Fix food ratings
+    favorites:
+      title: “favorite” posts
+      no_result: No “favorite” posts
+    posts:
+      title: List of posts
+      no_result: No posts
+  profiles:
+    show:
+      title: Profile settings
+    edit:
+      title: edit profile
+      to_login_page: login page
+  views:
+    pagination:
+      first: “&laquo; to first”
+      last: “&raquo; to the end”
+      previous: “&lsaquo; back to previous”
+      next: “next &rsaquo;”
+      truncate: “...”
+  terms:
+    terms:
+      title: Terms of Use
+  password_resets:
+    new:
+      title: Password reset request
+      submit: Submit
+    edit:
+      title: Password reset
+    create:
+      success: Password reset instructions sent
+    update:
+      success: password changed

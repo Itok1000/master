@@ -20,14 +20,14 @@
       <div class="image-container">
         <%= image_tag 'Answer01.webp', alt: 'オジャフリ', class: 'answer-image' %>
         <div class="text-overlay">
-          <h6>オジャフリ</h6>
+          <h6><%= t('diagnoses.description.ojakhuri') %></h6>
           <div class = "noto-serif-georgian-uniquifier">
           <p>ოჯახური</p>
           </div>
         </div>
       </div>
       <div class="diagnosis-inner-text">
-      <p>概説</p>
+      <p><%= t('diagnoses.overview') %></p>
       </div>
       <div class="overview">
        <div class = "kaisei-decol-regular">
@@ -49,14 +49,14 @@
       <div class="image-container">
         <%= image_tag 'Answer02.webp', alt: 'パドリジャーニ', class: 'answer-image' %>
         <div class="text-overlay">
-          <h6>パドリジャーニ</h6>
+          <h6><%= t('diagnoses.description.badrijani') %></h6>
           <div class = "noto-serif-georgian-uniquifier">
           <p>ბადრიჯანი</p>
           </div>
         </div>
       </div>
       <div class="diagnosis-inner-text">
-      <p>概説</p>
+      <p><%= t('diagnoses.overview') %></p>
       </div>
       <div class="overview">
        <div class = "kaisei-decol-regular">
@@ -78,14 +78,14 @@
       <div class="image-container">
         <%= image_tag 'Answer03.webp', alt: 'ソコスチャシュシュリ', class: 'answer-image' %>
         <div class="text-overlay">
-          <h6>ソコスチャシュシュリ</h6>
+          <h6><%= t('diagnoses.description.sokos_chashushuli') %></h6>
           <div class = "noto-serif-georgian-uniquifier">
            <p>სოკოს ჭაშუშული</p>
           </div>
         </div>
       </div>
       <div class="diagnosis-inner-text">
-      <p>概説</p>
+      <p><%= t('diagnoses.overview') %></p>
       </div>
       <div class="overview">
        <div class = "kaisei-decol-regular">
@@ -106,7 +106,7 @@
       <div class="image-container">
         <%= image_tag 'Answer04.webp', alt: 'プパリ', class: 'answer-image' %>
         <div class="text-overlay">
-          <h6>プパリ</h6>
+          <h6><%= t('diagnoses.description.pkhali') %></h6>
           <div class = "noto-serif-georgian-uniquifier">
            <p>ფხალი</p>
           </div>
@@ -136,14 +136,14 @@
       <div class="image-container">
         <%= image_tag 'Answer05.webp', alt: 'オーストリ', class: 'answer-image' %>
         <div class="text-overlay">
-          <h6>オーストリ</h6>
+          <h6><%= t('diagnoses.description.ostri') %></h6>
           <div class = "noto-serif-georgian-uniquifier">
            <p>ოსტრი</p>
           </div>
         </div>
       </div>
       <div class="diagnosis-inner-text">
-      <p>概説</p>
+      <p><%= t('diagnoses.overview') %></p>
       </div>
       <div class="overview">
        <div class = "kaisei-decol-regular">
@@ -165,14 +165,14 @@
       <div class="image-container">
         <%= image_tag 'Answer06.webp', alt: 'チヒルトゥマ', class: 'answer-image' %>
         <div class="text-overlay">
-          <h6>チヒルトゥマ</h6>
+          <h6><%= t('diagnoses.description.chikirtma') %></h6>
           <div class = "noto-serif-georgian-uniquifier">
            <p>ჩიხირთმა</p>
           </div>
         </div>
       </div>
       <div class="diagnosis-inner-text">
-      <p>概説</p>
+      <p><%= t('diagnoses.overview') %></p>
       </div>
       <div class="overview">
        <div class = "kaisei-decol-regular">
@@ -194,14 +194,14 @@
       <div class="image-container">
         <%= image_tag 'Answer07.webp', alt: 'シュクメルリ', class: 'answer-image' %>
         <div class="text-overlay">
-          <h6>シュクメルリ</h6>
+          <h6><%= t('diagnoses.description.shkmeruli') %></h6>
           <div class = "noto-serif-georgian-uniquifier">
            <p>შქმერული</p>
           </div>
         </div>
       </div>
       <div class="diagnosis-inner-text">
-      <p>概説</p>
+      <p><%= t('diagnoses.overview') %></p>
       </div>
       <div class="overview">
        <div class = "kaisei-decol-regular">
@@ -224,14 +224,14 @@
       <div class="image-container">
         <%= image_tag 'Answer08.webp', alt: 'チャホフビリ', class: 'answer-image' %>
         <div class="text-overlay">
-          <h6>チャホフビリ</h6>
+          <h6><%= t('diagnoses.description.chakhohbili') %></h6>
           <div class = "noto-serif-georgian-uniquifier">
            <p>ჩახოხბილი</p>
           </div>
         </div>
       </div>
       <div class="diagnosis-inner-text">
-      <p>概説</p>
+      <p><%= t('diagnoses.overview') %></p>
       </div>
       <div class="overview">
        <div class = "kaisei-decol-regular">
@@ -254,7 +254,7 @@
       <div class="overview">
        <div class = "kaisei-decol-regular">
        <br>
-       <p>Xのシェアはこちら</p>
+       <p><p><%= t('diagnoses.Click here to share') %></p></p>
        </div>
       </div>
       <div class="share-buttons">
@@ -271,7 +271,7 @@
       </div>
       <br>
       <div class="overview">
-       <%= link_to 'トップページに戻る', top_path, class: 'orange' %>
+       <%= link_to t('static_pages.return_button'), top_path, class: 'orange' %>
       </div>
     </div>
 </div>

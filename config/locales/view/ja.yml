@@ -110,6 +110,8 @@ ja:
     If you can confirm it: 確認出来たら
     start_button: "診断スタート"
     return_button: "トップページに戻る"
+    another_diagnosis: "投稿前に、もう一回診断してみる？"
+    click_to_comment_or_post!: "クリックして、コメントや投稿をしてみよう"
     georgia:
       title: ジョージアって何？
     food:
@@ -128,8 +130,9 @@ ja:
     recommended: おすすめはこちら
     New registration, login: 新規登録、ログインして
     lets_post_comments_and_rate_the_dishes!:  料理のコメント投稿、評価をしてみよう！
-    Click here to share X: Xのシェアはこちら
+    Click here to share: Xのシェアはこちら
     overview: 概説
+    review: 口コミレビュー
     description:
       ojakhuri: オジャフリ
       badrijani: パドリジャーニ
@@ -170,9 +173,15 @@ ja:
       diagnosis-again: もう一度診断
       registration: ユーザー登録
       result: 診断結果を見る
+  users:
+    new:
+      title: ユーザー登録
+      register: 登録する
+      google: Googleログインの方はこちら
   posts:
     new:
       title: 料理の評価を行う
+      subtitle: 他のユーザーの参考になるように、感想を共有してみよう
     show:
       title: 評価の詳細とみんなの反応
     index:

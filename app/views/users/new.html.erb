@@ -3,7 +3,7 @@
  <div class="container">
   <div class="row">
     <div class="col-md-10 col-lg-8 mx-auto">
-      <h1>ユーザー登録</h1>
+      <h1><%= t('users.new.title') %></h1>
       <%= form_with model: @user do |f| %>
         <!-- エラーメッセージの表示 -->
         <%= render 'shared/error_messages', object: @user %>
@@ -23,12 +23,12 @@
           <%= f.label :password_confirmation, class: "form-label" %>
           <%= f.password_field :password_confirmation, class: "form-control custom-input" %>
         </div>
-        <%= f.submit "登録する", class: "btn btn-primary" %>
+        <%= f.submit t('users.new.register'), class: "btn btn-primary" %>
       <% end %>
       <br>
         <!-- 「Googleログインの方はこちら」のリンク -->
         <div class='text-center text-sm'>
-          Googleログインの方はこちら
+          <%= t('users.new.google') %>
         </div>
          <div class='text-center'>
           <%= link_to auth_at_provider_path(provider: :google), data: { turbo: false } do %>

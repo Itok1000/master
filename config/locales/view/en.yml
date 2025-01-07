@@ -110,6 +110,8 @@ en:
     If you can confirm it: If you can confirm it.
     start_button: "Diagnosis Start"
     return_button: "Return to Top Page"
+    another_diagnosis: "Would you like another diagnosis before submitting a review?"
+    click_to_comment_or_post!: "Click to comment or post!"
     georgia:
       title: What is a Georgia?
     food:
@@ -128,8 +130,9 @@ en:
     recommended: recommended here
     New registration, login: New registration, login
     lets_post_comments_and_rate_the_dishes!: "lets_post_comments_and_rate_the_dishes!"
-    Click here to share X: Click here to share X
+    Click here to share : Click here to share X
     overview: Overview
+    review: "Word of mouth reviews"
     description:
       ojakhuri: Ojakhuri
       badrijani: Badrijani
@@ -169,10 +172,16 @@ en:
       how-to-make: Here's how to make it
       diagnosis-again: diagnosis again
       registration: User registration
-      result: see the result of diagnosis
+      result: see the result
+  users:
+    new:
+      title: User Registration
+      register: Register
+      google: Click here for Google Login
   posts:
     new:
-      TITLE: Give a rating to a dish
+      title: Evaluate the food
+      subtitle: Let's share our thoughts to help other users!
     show:
       title: Details of the rating and people's reactions
     index:

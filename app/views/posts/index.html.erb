@@ -18,13 +18,13 @@
       <%= image_tag @recipe_info[:image], class: "post-food-image" %>
   </div>
       <div class="overview">
-      <p>概説</p>
+      <p><%= t('diagnoses.overview') %></p>
        <div class = "kaisei-decol-regular">
         <p><%= @recipe_info[:description] %></p>
        </div>
        <!-- 5つ星を評価を設置 -->
         <div class = "kaisei-decol-regular">
-         <p>口コミレビュー</p>
+         <p><%= t('diagnoses.review') %></p>
         </div>
           <div data-raty data-score="<%= @average_star %>"></div>
           <p><span class="average-score-text"><%= @average_star.round(1) %></span> / 5.0</p>
@@ -68,6 +68,8 @@
      <!-- new アクションで投稿を作成する際、どの料理に対する投稿かを渡す必要がある -->
      <!--  例えば、new アクションのリンクに recipe パラメータを追加し、新規投稿画面にそれを渡す-->
      <%= link_to t('posts.new.title'), new_post_path(recipe: @recipe), class: "blue" %>
+     <br>
+     <%= link_to t('static_pages.return_button'), top_path, class: 'orange' %>
      </div>
    </div>
   </div>

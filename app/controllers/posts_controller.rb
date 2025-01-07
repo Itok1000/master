@@ -5,14 +5,14 @@ class PostsController < ApplicationController
 
     # 料理に応じた情報をハッシュで定義
     recipes = {
-      "ojakhuri" => { name: "オジャフリ", name2: "ოჯახური", image: "Answer01.webp", description: I18n.t("diagnoses.description.ojakhuri3") },
-      "badrijani" => { name: "パドリジャーニ", name2: "ბადრიჯანი", image: "Answer02.webp", description: I18n.t("diagnoses.description.badrijani2") },
-      "sokos" => { name: "ソコスチャシュシュリ", name2: "სოკოს ჭაშუშული", image: "Answer03.webp", description: I18n.t("diagnoses.description.sokos_chashushuli2") },
-      "pkhali" => { name: "プパリ", name2: "ფხალი", image: "Answer04.webp", description: I18n.t("diagnoses.description.pkhali5") },
-      "ostri" => { name: "オーストリ", name2: "ოსტრი", image: "Answer05.webp", description: I18n.t("diagnoses.description.ostri2") },
-      "chikirtma" => { name: "チヒルトゥマ", name2: "ჩიხირთმა", image: "Answer06.webp", description: I18n.t("diagnoses.description.chikirtma3") },
-      "shkmeruli" => { name: "シュクメルリ", name2: "შქმერული", image: "Answer07.webp", description: I18n.t("diagnoses.description.shkmeruli4") },
-      "chakhohbili" => { name: "チャホフビリ", name2: "ჩახოხბილი", image: "Answer08.webp", description: I18n.t("diagnoses.description.chakhohbili2") }
+      "ojakhuri" => { name: I18n.t("diagnoses.description.ojakhuri"), name2: "ოჯახური", image: "Answer01.webp", description: I18n.t("diagnoses.description.ojakhuri3") },
+      "badrijani" => { name: I18n.t("diagnoses.description.badrijani"), name2: "ბადრიჯანი", image: "Answer02.webp", description: I18n.t("diagnoses.description.badrijani2") },
+      "sokos" => { name: I18n.t("diagnoses.description.sokos_chashushuli"), name2: "სოკოს ჭაშუშული", image: "Answer03.webp", description: I18n.t("diagnoses.description.sokos_chashushuli2") },
+      "pkhali" => { name: I18n.t("diagnoses.description.pkhali"), name2: "ფხალი", image: "Answer04.webp", description: I18n.t("diagnoses.description.pkhali5") },
+      "ostri" => { name: I18n.t("diagnoses.description.ostri"), name2: "ოსტრი", image: "Answer05.webp", description: I18n.t("diagnoses.description.ostri2") },
+      "chikirtma" => { name: I18n.t("diagnoses.description.chikirtma"), name2: "ჩიხირთმა", image: "Answer06.webp", description: I18n.t("diagnoses.description.chikirtma3") },
+      "shkmeruli" => { name: I18n.t("diagnoses.description.shkmeruli"), name2: "შქმერული", image: "Answer07.webp", description: I18n.t("diagnoses.description.shkmeruli4") },
+      "chakhohbili" => { name: I18n.t("diagnoses.description.chakhohbili"), name2: "ჩახოხბილი", image: "Answer08.webp", description: I18n.t("diagnoses.description.chakhohbili2") }
     }
 
 

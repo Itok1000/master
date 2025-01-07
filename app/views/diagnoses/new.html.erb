@@ -8,11 +8,11 @@
   <div class="top-wrapper">
       <div class="top-inner-text">
        <div class = "kaisei-decol-regular">
-        <h2>3つの質問にYESかNOで答えてね</h2>
+        <h2><%= t('diagnoses.question') %></h2>
        </div>
       </div>
           <div class="diagnosis-inner-text">
-              <p>Question1. お酒はよく飲む</p>         
+              <p><%= t('diagnoses.question1') %></p>         
               <%= f.radio_button :question1, "1", id: "question1_yes", class: "hidden-radio" %>
               <label for="question1_yes" class="button yes-button">YES</label>       
               <%= f.radio_button :question1, "2", id: "question1_no", class: "hidden-radio" %>
@@ -20,7 +20,7 @@
           </div>
 
           <div class="diagnosis-inner-text">
-              <p>Question2. 時間がないので、手軽に作りたい</p>
+              <p><%= t('diagnoses.question2') %></p>
               <%= f.radio_button :question2, "1", id: "question2_yes", class: "hidden-radio" %>
               <label for="question2_yes" class="button yes-button">YES</label>
               <%= f.radio_button :question2, "2", id: "question2_no", class: "hidden-radio" %>
@@ -28,7 +28,7 @@
           </div>
 
           <div class="diagnosis-inner-text">
-              <p>Question3. がっつりしたのが食べたい</p>         
+              <p><%= t('diagnoses.question3') %></p>         
               <%= f.radio_button :question3, "1", id: "question3_yes", class: "hidden-radio" %>
               <label for="question3_yes" class="button yes-button">YES</label>    
               <%= f.radio_button :question3, "2", id: "question3_no", class: "hidden-radio" %>

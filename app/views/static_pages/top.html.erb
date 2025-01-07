@@ -9,8 +9,8 @@
 <div class="top-wrapper">
   <div class="top-inner-text">
       <div class = "kaisei-decol-regular">
-       <h1>ジョージア料理診断アプリ</h1>
-       <h2>ガマルジョバ</h2> 
+       <h1><%= t('static_pages.title') %></h1>
+       <h2><%= t('static_pages.subtitle') %></h2> 
       </div>
       <div class = "noto-serif-georgian-uniquifier">
       <h3>გამარჯობა</h3>
@@ -19,15 +19,15 @@
     <% if logged_in? %>
       <!-- ログイン後のコンテンツ -->
       <div class = "kaisei-decol-regular">
-       <h4>投稿前に、もう一回診断してみる？</h4>
+       <h4><%= t('static_pages.another_diagnosis') %></h4>
       </div>
       <!-- 診断スタートボタン -->
       <div class="start-button-container">
-         <%= link_to '診断スタート', new_diagnosis_path, class: 'orange' %>
+         <%= link_to t('static_pages.start_button'), new_diagnosis_path, class: 'orange' %>
       </div>
       <br>
       <div class = "kaisei-decol-regular">
-       <h4>クリックして、コメントや投稿をしてみよう</h4>
+       <h4><%= t('static_pages.click_to_comment_or_post!') %></h4>
       </div>
     </div>
       <div class="food-container">
@@ -38,7 +38,7 @@
             <%= link_to posts_path(recipe: "ojakhuri"), class: 'food-link' do %>
               <%= image_tag('Answer01.webp', class: 'food-image') %>
                <span class="food-text">
-                オジャフリ
+                <%= t('diagnoses.description.ojakhuri') %>
                 <div class = "noto-serif-georgian-uniquifier">
                  <p>ოჯახური</p>
                 </div>
@@ -49,7 +49,7 @@
             <%= link_to posts_path(recipe: "badrijani"), class: 'food-link' do %>
               <%= image_tag('Answer02.webp', class: 'food-image')%>
                <span class="food-text">
-                パドリジャーニ
+                <%= t('diagnoses.description.badrijani') %>
                 <div class = "noto-serif-georgian-uniquifier">
                  <p>ბადრიჯანი</p>
                 </div>
@@ -60,7 +60,7 @@
             <%= link_to posts_path(recipe: "sokos"), class: 'food-link' do %>
               <%= image_tag('Answer03.webp', class: 'food-image')%>
                <span class="food-text">
-                ソコスチャシュシュリ
+                <%= t('diagnoses.description.sokos_chashushuli') %>
                 <div class = "noto-serif-georgian-uniquifier">
                  <p>სოკოს ჭაშუშული</p>
                 </div>
@@ -71,7 +71,7 @@
             <%= link_to posts_path(recipe: "pkhali"), class: 'food-link' do %>
               <%= image_tag('Answer04.webp', class: 'food-image')%>
                <span class="food-text">
-                プパリ
+                <%= t('diagnoses.description.pkhali') %>
                 <div class = "noto-serif-georgian-uniquifier">
                  <p>ფხალი</p>
                 </div>
@@ -82,7 +82,7 @@
             <%= link_to posts_path(recipe: "ostri"), class: 'food-link' do %>
               <%= image_tag('Answer05.webp', class: 'food-image')%>
                <span class="food-text">
-                オーストリ
+                <%= t('diagnoses.description.ostri') %>
                 <div class = "noto-serif-georgian-uniquifier">
                  <p>ოსტრი</p>
                 </div>
@@ -93,7 +93,7 @@
             <%= link_to posts_path(recipe: "chikirtma"), class: 'food-link' do %>
               <%= image_tag('Answer06.webp', class: 'food-image')%>
                <span class="food-text">
-                チヒルトゥマ
+                <%= t('diagnoses.description.chikirtma') %>
                 <div class = "noto-serif-georgian-uniquifier">
                  <p>ჩიხირთმა</p>
                 </div>
@@ -104,7 +104,7 @@
             <%= link_to posts_path(recipe: "shkmeruli"), class: 'food-link' do %>
               <%= image_tag('Answer07.webp', class: 'food-image')%>
                <span class="food-text">
-                シュクメルリ
+                <%= t('diagnoses.description.shkmeruli') %>
                 <div class = "noto-serif-georgian-uniquifier">
                  <p>შქმერული</p>
                 </div>
@@ -115,7 +115,7 @@
             <%= link_to posts_path(recipe: "chakhohbili"), class: 'food-link' do %>
               <%= image_tag('Answer08.webp', class: 'food-image')%>
                <span class="food-text">
-                チャホフビリ
+                <%= t('diagnoses.description.chakhohbili') %>
                 <div class = "noto-serif-georgian-uniquifier">
                  <p>ჩახოხბილი</p>
                 </div>
@@ -127,14 +127,14 @@
     <% else %>
       <!-- ログイン前のコンテンツ -->
       <div class = "kaisei-decol-regular">
-      <h4>診断始める前に、こちらを確認</h4>
+      <h4><%= t('static_pages.check here before starting diagnosis') %></h4>
       </div>
       <div class="button-container">
         <!-- 上部のボタン -->
        <div class="image-container">
         <div class="button upper-button">
          <div class = "kaisei-decol-regular">
-          <%= link_to "このアプリの使い方", how_to_use_path, class: 'button-text'%>
+          <%= link_to t('static_pages.how_to_use_this_app'), how_to_use_path, class: 'button-text'%>
          </div>
         </div>
        </div>
@@ -157,11 +157,11 @@
         <!-- みんなの口コミのボタン -->
       </div>
       <div class = "kaisei-decol-regular">
-       <h5>確認出来たら</h5>
+       <h5><%= t('static_pages.If you can confirm it.') %></h5>
       </div>
       <!-- 診断スタートボタン -->
       <div class="start-button-container">
-        <%= link_to '診断スタート', new_diagnosis_path, class: 'orange' %>
+        <%= link_to t('static_pages.start_button'), new_diagnosis_path, class: 'orange' %>
       </div>
     <% end %>
   </div>

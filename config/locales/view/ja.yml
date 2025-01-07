@@ -63,10 +63,55 @@ ja:
   alerts:
     invalid_credentials: "メールまたはパスワードが間違っています。"
   static_pages:
+    title: ジョージア料理診断アプリ
+    subtitle: ガマルジョバ
+    check here before starting diagnosis: 診断始める前に、こちらを確認
     how_to_use_this_app: このアプリの使い方
+    how_to_use1: 「ガマルジョバ」
+    how_to_use2: これはジョージア語で「こんにちは」を意味する日常会話です
+    how_to_use3: 日常会話のようにみんながジョージア料理を共有することを願って、アプリの名前にしました
+    how_to_use4: 当アプリでは、簡単な診断をYESNO形式で回答後、おすすめのジョージア料理をあなたに提案いたします
+    how_to_use5: 診断した結果に応じておすすめのジョージア料理と作り方のページに遷移できます
+    how_to_use6: また、Xでのシェア機能を用いて、多くの人に共有できます
+    how_to_use7: 診断はログインの有無関係なく可能です
+    how_to_use8: ユーザー登録しログインすると、各料理の掲示板にとびます
+    how_to_use9: Google認証によるログインも下記から可能です
+    how_to_use10: ここでは自ら作った物を各料理掲示板の中で口コミをすることができ、
+    how_to_use11: 画像アップロードして投稿することもできます
+    how_to_use12: 詳細を見るとレビュー評価も確認できます
+    how_to_use13: 参考になった口コミに関しては、いいねをすることが可能です
+    how_to_use14: いいねした投稿、ユーザー自身が投稿した口コミはヘッダー上でにアクセスできます
     What kind of country is Georgia?: ジョージアって何？
+    Georgia1: 1. 面積
+    Georgia2: 6万9,700平方キロメートル（日本の約5分の1）
+    Georgia3: 2. 人口
+    Georgia4: 370万人（2023年：国連人口基金）
+    Georgia5: 3. 首都
+    Georgia6: トビリシ
+    Georgia7: 4. 民族
+    Georgia8: ジョージア系（86.8％）、アゼルバイジャン系（6.2％）、アルメニア系（4.5％）、ロシア系（0.7％）、オセチア系（0.4％）
+    Georgia9: 5. 言語
+    Georgia10: 公用語はジョージア語（コーカサス諸語に属する）
+    Georgia11: 6. 宗教
+    Georgia12: 主としてキリスト教（ジョージア正教）
+    Georgia13: 7. その他
+    Georgia14: コーカサス山脈の南側、黒海の東岸に位置し、アジアとヨーロッパをつなぐ交通の要衝
+    Georgia15: ワインの原料となるブドウの醸造文化は8000年以上の歴史があり、世界最古ともいわれている。現在もワイン生産が盛ん
     What is a Georgian_Food?: ジョージア料理って何？
+    Georgian_Food1: ジョージアは古来から数多くの民族が行き交うアジアとヨーロッパを つなぐ交通の要衝であった
+    Georgian_Food2: 歴史上、隣接する国に支配されていたことで 料理においても、アジアの要素とヨーロッパの要素を混ぜ合わせた文化が 形成し、今に至る
+    Georgian_Food3: 主食は何？
+    Georgian_Food4: 小麦を使ったパンが主食、各エリアごと山岳に囲まれていることから
+    Georgian_Food5: パン作りの材料、製法がエリアごとで異なる
+    Georgian_Food6: 北に隣接するロシアの影響で、ライ麦もよく口にする
+    Georgian_Food7: 料理の特色は？
+    Georgian_Food8: 西アジアの影響でハーブやスパイスを多用する 歯ざわりや風味付けにクルミをよく用いる
     reference_materials: "参考資料:"
+    If you can confirm it: 確認出来たら
+    start_button: "診断スタート"
+    return_button: "トップページに戻る"
+    another_diagnosis: "投稿前に、もう一回診断してみる？"
+    click_to_comment_or_post!: "クリックして、コメントや投稿をしてみよう"
     georgia:
       title: ジョージアって何？
     food:
@@ -76,13 +121,27 @@ ja:
   diagnoses:
     new:
       title: 診断スタート
+    question: 3つの質問にYESかNOで答えてね
+    question1: Question1. お酒はよく飲む
+    question2: Question2. 時間がないので、手軽に作りたい
+    question3: Question3. がっつりしたのが食べたい
     show:
       title: あなたのおすすめは
     recommended: おすすめはこちら
     New registration, login: 新規登録、ログインして
     lets_post_comments_and_rate_the_dishes!:  料理のコメント投稿、評価をしてみよう！
+    Click here to share: Xのシェアはこちら
     overview: 概説
+    review: 口コミレビュー
     description:
+      ojakhuri: オジャフリ
+      badrijani: パドリジャーニ
+      sokos_chashushuli: ソコスチャシュシュリ
+      pkhali: プパリ
+      ostri: オーストリ
+      chikirtma: チヒルトゥマ
+      shkmeruli: シュクメルリ
+      chakhohbili: チャホフビリ
       ojakhuri1: ジョージア語で「家族の食事」と言われる代表的な肉料理
       ojakhuri2: ジャガイモと玉ねぎ、豚肉、ニンニクやパクチーなどのハーブで作られる、いわば「ジョージア風ジャーマンポテト」
       ojakhuri3: ホクホクのジャガイモと、カリカリのお肉が食欲をそそるので、ビールとの相性が抜群
@@ -114,9 +173,15 @@ ja:
       diagnosis-again: もう一度診断
       registration: ユーザー登録
       result: 診断結果を見る
+  users:
+    new:
+      title: ユーザー登録
+      register: 登録する
+      google: Googleログインの方はこちら
   posts:
     new:
       title: 料理の評価を行う
+      subtitle: 他のユーザーの参考になるように、感想を共有してみよう
     show:
       title: 評価の詳細とみんなの反応
     index:

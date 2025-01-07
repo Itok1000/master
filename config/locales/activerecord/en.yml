@@ -1,0 +1,19 @@
+en:
+  activerecord:
+    models:
+      user: User
+      post: Cooking evaluation
+      comment: Comment
+    attributes:
+      user:
+        email: email
+        user_name: User Name
+        password: Password
+        password_confirmation: Password Confirmation
+      post:
+        title: Title
+        body: Body (of letter)
+        post_image: Upload an image
+        rating: Rating Star
+      comment:
+        body: Comment

@@ -13,45 +13,45 @@
   <br>
     <div class="overview">
      <div class = "kaisei-decol-regular">
-     <p>「ガマルジョバ」</p>
+     <p><%= t('static_pages.how_to_use1') %></p>
      <div class = "noto-serif-georgian-uniquifier">
        <p>გამარჯობა</p>
      </div>
-     これはジョージア語で「こんにちは」を意味する日常会話です</p>
-     <p>日常会話のようにみんながジョージア料理を共有することを願って、アプリの名前にしました</p>
-     <p>当アプリでは、簡単な診断をYESNO形式で回答後、おすすめのジョージア料理をあなたに提案いたします</p>
+     <%= t('static_pages.how_to_use2') %></p>
+     <p><%= t('static_pages.how_to_use3') %></p>
+     <p><%= t('static_pages.how_to_use4') %></p>
      <a href="https://gyazo.com/9cd7276af41c782bcc3bd63724cd7d9d"><video width="748" autoplay muted loop playsinline><source src="https://i.gyazo.com/9cd7276af41c782bcc3bd63724cd7d9d.mp4" type="video/mp4"/></video></a>
-     <p>診断した結果に応じておすすめのジョージア料理と作り方のページに遷移できます</p>
-     <p>また、Xでのシェア機能を用いて、多くの人に共有できます</p>
+     <p><%= t('static_pages.how_to_use5') %></p>
+     <p><%= t('static_pages.how_to_use6') %></p>
      <a href="https://gyazo.com/020872b963df6db8e7a421851251c9f1"><video width="748" autoplay muted loop playsinline><source src="https://i.gyazo.com/020872b963df6db8e7a421851251c9f1.mp4" type="video/mp4"/></video></a>
      <br>
      <img src="https://i.gyazo.com/1ed020c1c3e22b1317a8cbff3b38e2f5.png" class: 'food-link'>
-     <p>診断はログインの有無関係なく可能です</p>
-     <p>ユーザー登録しログインすると、各料理の掲示板にとびます</p>
-     <p>Google認証によるログインも下記から可能です</p>
+     <p><%= t('static_pages.how_to_use7') %></p>
+     <p><%= t('static_pages.how_to_use8') %></p>
+     <p><%= t('static_pages.how_to_use9') %></p>
           <div class='text-center'>
            <%= link_to auth_at_provider_path(provider: :google), data: { turbo: false } do %>
            <%= image_tag "google_sign_in.png", class: "w-1/2 md:w-3/5 mx-auto py-5" %>
            <% end %>
           </div>
-     <p>ここでは自ら作った物を各料理掲示板の中で口コミをすることができ、</p>
+     <p><%= t('static_pages.how_to_use10') %></p>
      <a href="https://gyazo.com/d8e53ab13039a02ce4751f4243d5c4a3"><video width="748" autoplay muted loop playsinline><source src="https://i.gyazo.com/d8e53ab13039a02ce4751f4243d5c4a3.mp4" type="video/mp4"/></video></a>
      <br>
-     画像アップロードして投稿することもできます</p>
+     <%= t('static_pages.how_to_use11') %></p>
      <a href="https://gyazo.com/82ed38aa4fc0c4a8ab40a6117f87da18"><video width="748" autoplay muted loop playsinline><source src="https://i.gyazo.com/82ed38aa4fc0c4a8ab40a6117f87da18.mp4" type="video/mp4"/></video></a>
      <br>
-     <p>詳細を見るとレビュー評価も確認できます</p>
+     <p><%= t('static_pages.how_to_use12') %></p>
      <a href="https://gyazo.com/773299f3a94dc1fab144c2dfc85277ef"><video width="748" autoplay muted loop playsinline><source src="https://i.gyazo.com/773299f3a94dc1fab144c2dfc85277ef.mp4" type="video/mp4"/></video></a>
      <br>
-     <p>参考になった口コミに関しては、いいねをすることが可能です</p>
+     <p><%= t('static_pages.how_to_use13') %></p>
      <a href="https://gyazo.com/a2e00bfdf0185eb9ef63a0d81f7408ed"><video width="748" autoplay muted loop playsinline><source src="https://i.gyazo.com/a2e00bfdf0185eb9ef63a0d81f7408ed.mp4" type="video/mp4"/></video></a>
      <br>
-     <p>いいねした投稿、ユーザー自身が投稿した口コミはヘッダー上でにアクセスできます</p>
+     <p><%= t('static_pages.how_to_use14') %></p>
      <a href="https://gyazo.com/0a8fc9f2c31c14626613764d857a6114"><video width="748" autoplay muted loop playsinline><source src="https://i.gyazo.com/0a8fc9f2c31c14626613764d857a6114.mp4" type="video/mp4"/></video></a>
      </div>  
     </div>
     <br>
     <div class="overview">
-    <%= link_to 'トップページに戻る', top_path, class: 'orange' %>
+    <%= link_to t('static_pages.return_button'), top_path, class: 'orange' %>
     </div>
 </div>

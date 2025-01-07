@@ -35,7 +35,7 @@
         <br>
         <!-- 「Googleログインの方はこちら」のリンク -->
         <div class='text-center text-sm'>
-          Googleログインの方はこちら
+          <%= t('users.new.google') %>
         </div>
          <div class='text-center'>
           <%= link_to auth_at_provider_path(provider: :google), data: { turbo: false } do %>

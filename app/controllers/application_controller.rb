@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
   # set_localeは各リクエストの冒頭にロケールを設定して、リクエストが持続する間はすべての文字列が指定のロケールで翻訳されるようにする
   # ロケールはApplicationControllerのbefore_actionで設定できる
-  
+
   add_flash_types :success, :danger
   # フラッシュメッセージのタイプを追加するメソッド
   # デフォルトでは、notice と alert の二種類のキーしか用意されていないので、
@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
     { locale: I18n.locale }
   end
   # 上のようにすることで、url_forに依存するすべてのヘルパーメソッド (root_pathやroot_urlなどの名前付きメソッドや
-  # books_pathやbooks_urlなどのリソースルーティングを持つヘルパー) では自動的にロケール情報がクエリ文字列に含まれるようになる 
+  # books_pathやbooks_urlなどのリソースルーティングを持つヘルパー) では自動的にロケール情報がクエリ文字列に含まれるようになる
   # たとえばhttp://localhost:3001/?locale=jaのような形式になる
 
   private
@@ -42,7 +42,7 @@ class ApplicationController < ActionController::Base
   end
   # リクエスト間でロケールを管理する
   # I18n.localeを明示的に設定しない限り、すべての訳文でデフォルトのロケールが使われる
-  # ローカライズされたアプリケーションは、将来複数ロケールのサポートが必要 
+  # ローカライズされたアプリケーションは、将来複数ロケールのサポートが必要
   # これを行うためには、各リクエストの冒頭にロケールを設定して、
   # リクエストが持続する間はすべての文字列が指定のロケールで翻訳されるようにしておくべき
   # ロケールはApplicationControllerのbefore_actionで設定できる

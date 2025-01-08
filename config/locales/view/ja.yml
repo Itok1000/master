@@ -48,6 +48,10 @@ ja:
     logout: ログアウト
     new: 新規登録
     show: プロフィール設定
+  footer:
+    privacy_policy: プライバシーポリシー
+    terms_of_Use: 利用規約
+    contact_us: お問い合わせ
   password_ressets:
     new:
       title: パスワードリセット

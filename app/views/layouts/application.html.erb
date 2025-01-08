@@ -3,7 +3,6 @@
   <head>
     <%= favicon_link_tag('logo.png') %>
     <title><%= page_title(yield(:title)) %></title>
-    <% if Rails.env.production? %>
       <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-CJEYHWRJYG"></script>
       <script>
@@ -12,7 +11,6 @@
         gtag('js', new Date());
         gtag('config', 'G-CJEYHWRJYG');
       </script>
-    <% end %>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>

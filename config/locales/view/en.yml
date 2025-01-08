@@ -48,6 +48,10 @@ en:
     logout: logout
     new: New registration
     show: Profile settings
+  footer:
+    privacy_policy: Privacy Policy
+    terms_of_Use: Term Of Use
+    contact_us: Contact us
   password_ressets:
     new:
       title: Password reset

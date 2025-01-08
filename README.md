@@ -49,21 +49,21 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 [![Image from Gyazo](https://i.gyazo.com/b6a9c0dc1d5fcd140b71b63d5bf7cb6f.png)](https://gyazo.com/b6a9c0dc1d5fcd140b71b63d5bf7cb6f)
 
 ユーザー登録しログインすると、各料理の掲示板にとびます
-[![Image from Gyazo](https://i.gyazo.com/e20f2c3d05322e66c1d2ba8950a079e1.gif)](https://gyazo.com/e20f2c3d05322e66c1d2ba8950a079e1)
+[![Image from Gyazo](https://i.gyazo.com/714c0a7829cd9e4385083bff0c850e25.gif)](https://gyazo.com/714c0a7829cd9e4385083bff0c850e25)
 ここでは自ら作った物を各料理掲示板の中で口コミをすることができ、画像アップロードして投稿することもできます
 [![Image from Gyazo](https://i.gyazo.com/d8e53ab13039a02ce4751f4243d5c4a3.gif)](https://gyazo.com/d8e53ab13039a02ce4751f4243d5c4a3)
 [![Image from Gyazo](https://i.gyazo.com/82ed38aa4fc0c4a8ab40a6117f87da18.gif)](https://gyazo.com/82ed38aa4fc0c4a8ab40a6117f87da18)
 詳細を見るとレビュー評価も確認できます
-[![Image from Gyazo](https://i.gyazo.com/773299f3a94dc1fab144c2dfc85277ef.gif)](https://gyazo.com/773299f3a94dc1fab144c2dfc85277ef)
+[![Image from Gyazo](https://i.gyazo.com/f8098900a78af4abf9ce74265874f539.gif)](https://gyazo.com/f8098900a78af4abf9ce74265874f539)
 
 参考になった口コミに関しては、いいねをすることが可能です
 [![Image from Gyazo](https://i.gyazo.com/a2e00bfdf0185eb9ef63a0d81f7408ed.gif)](https://gyazo.com/a2e00bfdf0185eb9ef63a0d81f7408ed)
 いいねした投稿、ユーザー自身が投稿した口コミはヘッダー上でにアクセスできます
-[![Image from Gyazo](https://i.gyazo.com/ba7ad6ff702ba32346365971995d4064.gif)](https://gyazo.com/ba7ad6ff702ba32346365971995d4064)
-[![Image from Gyazo](https://i.gyazo.com/0a8fc9f2c31c14626613764d857a6114.gif)](https://gyazo.com/0a8fc9f2c31c14626613764d857a6114)
+[![Image from Gyazo](https://i.gyazo.com/343a58ce1cbdee6461bc4500aabe5a0e.gif)](https://gyazo.com/343a58ce1cbdee6461bc4500aabe5a0e)
+
 ### ユーザーの獲得について
 X(旧Twitter)を用いてWebアプリ上でリリース公開します
-
+Facebookとinstagramも個人で使用しているので、本リリース後は一般公開も検討しております
 
 ### サービスの差別化ポイント・推しポイント
 診断して結果を出すだけでなく、作り方のページに遷移して自分で料理できるチャンスを与えるところです
@@ -147,14 +147,6 @@ https://app.diagrams.net/#HItok1000%2Fmaster%2FER_diagram_request%2F%E5%90%8D%E7
 ### ■ 技術スタック
 |ツール| 内容 |
 | -------- | -------- |
-<<<<<<< HEAD
-|・フロントエンド| Rails 7.2.1, JavaScript, Bootstrap, CANVA, 農民イラスト，BecassoApp, https://www.mofa.go.jp/mofaj/area/georgia/index.html (ジョージアって何？のコーナーにて位置を参考にしたため)|
-・バックエンド| Rails 7.2.1, (ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x86_64-linux])|
-・インフラ| fly.io, AWS S3|
-・データベース| PostgreSQL|
-・認証|Sorcery|
-・開発環境|Docker|
-=======
 
 |・フロントエンド| Rails 7.2.1, JavaScript, Bootstrap, CANVA, 農民イラスト，BecassoApp, 
 https://www.mofa.go.jp/mofaj/area/georgia/index.html (ジョージアって何？のコーナーにて位置を参考にしたため)|
@@ -168,5 +160,4 @@ https://www.mofa.go.jp/mofaj/area/georgia/index.html (ジョージアって何�
 |・認証|Sorcery|
 
 |・開発環境|Docker|
->>>>>>> 6c11ed6 (READMEの修正)
 

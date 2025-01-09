@@ -41,8 +41,6 @@ ja:
     create:
       success: ユーザー登録が完了しました
       failure: ユーザー登録に失敗しました
-      diagnoses_success: 診断が完了しました
-      diagnoses_null: 選択されていない回答があります
   header:
     login: ログイン
     logout: ログアウト
@@ -125,6 +123,8 @@ ja:
   diagnoses:
     new:
       title: 診断スタート
+      diagnoses_success: 診断が完了しました
+      diagnoses_null: 選択されていない回答があります
     question: 3つの質問にYESかNOで答えてね
     question1: Question1. お酒はよく飲む
     question2: Question2. 時間がないので、手軽に作りたい

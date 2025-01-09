@@ -41,8 +41,6 @@ en:
     create:
       success: User registration completed
       failure: user registration failed
-      diagnoses_success: diagnoses completed
-      diagnoses_null: no answer selected
   header:
     login: login
     logout: logout
@@ -125,6 +123,8 @@ en:
   diagnoses:
     new:
       title: Start diagnoses
+      diagnoses_success: diagnoses completed
+      diagnoses_null: no answer selected
     question: Please answer YES or NO to the following three questions.
     question1: Question1. I drink a lot.
     question2: Question2. I don't have much time, so I want to make it easy.

@@ -76,6 +76,7 @@ Facebookとinstagramも個人で使用しているので、本リリース後は
 ・診断結果を表示〇
 ・Xにてシェア共有〇
 ・下記のサイトに遷移〇
+
 ・ANSWER1の場合
 
 ・https://ca-voir.com/nobuyo-kitchen-ojakhuri-jp/

@@ -147,7 +147,6 @@ https://app.diagrams.net/#HItok1000%2Fmaster%2FER_diagram_request%2F%E5%90%8D%E7
 ### ■ 技術スタック
 |ツール| 内容 |
 | -------- | -------- |
-
 |・フロントエンド| Rails 7.2.1, JavaScript, Bootstrap, CANVA, 農民イラスト，BecassoApp, 
 https://www.mofa.go.jp/mofaj/area/georgia/index.html (ジョージアって何？のコーナーにて位置を参考にしたため)|
 |・バックエンド| Rails 7.2.1, (ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x86_64-linux])|
@@ -155,4 +154,5 @@ https://www.mofa.go.jp/mofaj/area/georgia/index.html (ジョージアって何�
 |・データベース| PostgreSQL|
 |・認証|Sorcery|
 |・開発環境|Docker|
+| -------- | -------- |
 

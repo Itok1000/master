@@ -135,9 +135,13 @@ Facebookとinstagramも個人で使用しているので、本リリース後は
 
 ・レーティング機能
 
+・独自ドメイン
+
 今後予定してる機能
 
-・独自ドメイン
+・j18n機能を生かしてジョージア語の翻訳機能を追加
+
+・●×クイズ機能
 
 ### 画面遷移図(企画時)
 Figma：https://www.figma.com/design/7mF5VkcFrHRPTxVFbwi1wh/%E7%84%A1%E9%A1%8C?node-id=0-1&node-type=canvas&t=RkSKDCDXuFFcGs0e-0

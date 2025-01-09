@@ -36,13 +36,13 @@ en:
     destroy: 
       success: Logged out
   users:
-    new: 
-      title: User registration
+    new:
+      title: User Registration
+      register: Register
+      google: Click here for Google Login
     create:
       success: User registration completed
       failure: user registration failed
-      diagnoses_success: diagnoses completed
-      diagnoses_null: no answer selected
   header:
     login: login
     logout: logout
@@ -125,6 +125,8 @@ en:
   diagnoses:
     new:
       title: Start diagnoses
+      diagnoses_success: diagnoses completed
+      diagnoses_null: no answer selected
     question: Please answer YES or NO to the following three questions.
     question1: Question1. I drink a lot.
     question2: Question2. I don't have much time, so I want to make it easy.
@@ -177,11 +179,6 @@ en:
       diagnosis-again: diagnosis again
       registration: User registration
       result: see the result
-  users:
-    new:
-      title: User Registration
-      register: Register
-      google: Click here for Google Login
   posts:
     new:
       title: Evaluate the food

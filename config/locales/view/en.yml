@@ -36,8 +36,10 @@ en:
     destroy: 
       success: Logged out
   users:
-    new: 
-      title: User registration
+    new:
+      title: User Registration
+      register: Register
+      google: Click here for Google Login
     create:
       success: User registration completed
       failure: user registration failed
@@ -177,11 +179,6 @@ en:
       diagnosis-again: diagnosis again
       registration: User registration
       result: see the result
-  users:
-    new:
-      title: User Registration
-      register: Register
-      google: Click here for Google Login
   posts:
     new:
       title: Evaluate the food

@@ -154,5 +154,4 @@ https://www.mofa.go.jp/mofaj/area/georgia/index.html (ジョージアって何�
 |・データベース| PostgreSQL|
 |・認証|Sorcery|
 |・開発環境|Docker|
-| -------- | -------- |
 

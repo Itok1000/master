@@ -1,0 +1,19 @@
+ka:
+  activerecord:
+    models:
+      user: მომხმარებელი
+      post: სამზარეულოს შეფასება
+      comment: კომენტარი
+    attributes:
+      user:
+        email: ელ
+        user_name: მომხმარებლის სახელი
+        password: პაროლი
+        password_confirmation: პაროლის დადასტურება
+      post:
+        title: სათაური
+        body: სხეული (წერილის)
+        post_image: ატვირთეთ სურათი
+        rating: რეიტინგული ვარსკვლავი
+      comment:
+        body: კომენტარი

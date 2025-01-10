@@ -44,6 +44,6 @@ module Myapp
     # Railsアプリケーションのデフォルトの言語設定が日本語（:ja）に設定される
     config.time_zone = "Tokyo"
     # デフォルトのタイムゾーンを日本時間に設定する
-    config.i18n.available_locales = [ :ja, :en ]
+    config.i18n.available_locales = [ :ja, :en, :ka ]
   end
 end

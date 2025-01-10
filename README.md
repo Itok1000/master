@@ -105,7 +105,6 @@ Facebookとinstagramも個人で使用しているので、本リリース後は
 ・ANSWER7の場合
 
 ・https://ca-voir.com/nobuyo-kitchen-shkmeruli-jp/|
-| -------- |
 
 |ログイン後の機能|
 | -------- |
@@ -125,7 +124,6 @@ Facebookとinstagramも個人で使用しているので、本リリース後は
 |・Minimagick系の画像加工（アップ時に画像を指定のサイズに加工・webp化する）|
 |・レーティング機能|
 |・独自ドメイン|
-| -------- |
 
 
 |今後予定してる機能|
@@ -133,7 +131,7 @@ Facebookとinstagramも個人で使用しているので、本リリース後は
 |・j18n機能を生かしてジョージア語の翻訳機能を追加|
 |・●×クイズ機能|
 |・管理画面の追加|
-| -------- |
+
 
 ### 画面遷移図(企画時)
 Figma：https://www.figma.com/design/7mF5VkcFrHRPTxVFbwi1wh/%E7%84%A1%E9%A1%8C?node-id=0-1&node-type=canvas&t=RkSKDCDXuFFcGs0e-0

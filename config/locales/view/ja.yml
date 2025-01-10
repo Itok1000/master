@@ -8,7 +8,6 @@ ja:
       created: "%{item}を作成しました"
       not_created: "%{item}を作成出来ませんでした"
       require_login: ログインしてください
-      created: "%{item}を作成しました"
       updated: "%{item}を更新しました"
       not_updated: "%{item}を更新出来ませんでした"
       not_created: "%{item}を作成出来ませんでした"
@@ -48,6 +47,8 @@ ja:
     logout: ログアウト
     new: 新規登録
     show: プロフィール設定
+    helpful: 「参考になった」投稿
+    list_of_posts: 投稿一覧
   footer:
     privacy_policy: プライバシーポリシー
     terms_of_Use: 利用規約

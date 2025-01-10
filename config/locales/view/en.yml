@@ -8,7 +8,6 @@ en:
       created: “%{item} has been created”
       not_created: “%{item} could not be created”
       require_login: Please login
-      created: “%{item} has been created”
       updated: “%{item} has been updated”
       not_updated: “Could not update %{item}”
       not_created: “%{item} could not be created”
@@ -48,6 +47,8 @@ en:
     logout: logout
     new: New registration
     show: Profile settings
+    helpful: Posting of “Helpful”
+    list_of_posts: List of Posts
   footer:
     privacy_policy: Privacy Policy
     terms_of_Use: Term Of Use
@@ -62,10 +63,10 @@ en:
     login_success: “Login succeeded”.
     logout_success: “You have logged out”
   oauths:
-    login_success: “You have signed in with your Google account.
-    login_failure: “Google authentication has failed”
+    login_success: You have signed in with your Google account
+    login_failure: Google authentication has failed
   alerts:
-    invalid_credentials: “Your email or password is incorrect.”
+    invalid_credentials: “Your email or password is incorrect”
   static_pages:
     title: Georgia Cuisine Diagnostic App
     subtitle: Gamarjoba
@@ -75,8 +76,8 @@ en:
     how_to_use2: This is an everyday conversation meaning “hello” in Georgian
     how_to_use3: We named the app in the hope that everyone will share Georgian food like in everyday conversation!
     how_to_use4: After answering a simple yes-no question, the app will recommend a Georgian dish for you!
-    how_to_use5: Depending on the results of the diagnosis, you will be redirected to a page with recommended Georgian dishes and how to cook them.
-    how_to_use6: You can also share your recommendations with as many people as you like by using the share function on X.
+    how_to_use5: Depending on the results of the diagnosis, you will be redirected to a page with recommended Georgian dishes and how to cook them
+    how_to_use6: You can also share your recommendations with as many people as you like by using the share function on X
     how_to_use7: Diagnostics can be done with or without login
     how_to_use8: You can jump to each cuisine's forum after registering and logging in.
     how_to_use9: You can also login with Google Authentication
@@ -117,9 +118,9 @@ en:
     another_diagnosis: "Would you like another diagnosis before submitting a review?"
     click_to_comment_or_post!: "Click to comment or post!"
     georgia:
-      title: What is a Georgia?
+      title: What kind of country is Georgia?
     food:
-      title: What is a Georgian_Food?
+      title: What is a Georgian Food?
     how_to_use:
       title: how_to_use_this_app
   diagnoses:
@@ -128,14 +129,14 @@ en:
       diagnoses_success: diagnoses completed
       diagnoses_null: no answer selected
     question: Please answer YES or NO to the following three questions.
-    question1: Question1. I drink a lot.
+    question1: Question1. I drink a lot of alcohol.
     question2: Question2. I don't have much time, so I want to make it easy.
     question3: Question3. I want to eat a hearty meal.
     show:
       title: Your recommendation is
     recommended: recommended here
     New registration, login: New registration, login
-    lets_post_comments_and_rate_the_dishes!: "lets_post_comments_and_rate_the_dishes!"
+    lets_post_comments_and_rate_the_dishes!: "Lets post comments and rate the dishes!"
     Click here to share : Click here to share X
     overview: Overview
     review: "Word of mouth reviews"
@@ -146,34 +147,34 @@ en:
       pkhali: Pkhali
       ostri: Ostri
       chikirtma: Chikirtma
-      shkmeruli: Shkmeruli
+      shkmeruli: Shkmeruli❞
       chakhohbili: Chakhohbili
-      ojakhuri1: "A typical Georgian meat dish known as “family meal"
-      ojakhuri2: "A “Georgian German potato” made with potatoes, onions, pork and herbs such as garlic and pak choi"
+      ojakhuri1: A typical Georgian meat dish known as “family meal❞
+      ojakhuri2: A “Georgian German potato” made with potatoes, onions, pork and herbs such as garlic and pak choi
       ojakhuri3: The crispy potatoes and the crunchy meat are very appetizing and go great with beer!
-      badrijani1: “one of the most typical appetizers of Georgian cuisine with maximum walnut flavor”
-      badrijani2: “The grilled eggplant is rolled in a paste of walnuts, which makes it look great and is a great choice for small parties.”
-      badrijani3: “If you have a food processor or blender, you can easily make walnut paste.
-      sokos_chashushuli1: “Georgian sauteed mushrooms with herbs.”
-      sokos_chashushuli2: “Easy and tasty to make with your favorite mushrooms, sauteed with minimal spices at home.”
-      pkhali1: “One of the appetizers with vegetables and walnuts in a paste.”
-      pkhali2: “Basically spinach, beets, etc. are used in most cases, but any vegetable can be used.”
-      pkhali3: “The different colors of the various vegetables allow you to make different shades of pupali.”
-      pkhali4: “This is why in Georgia they are often prepared at banquets.”
-      pkhali5: “One of the appetizers made of a paste of vegetables and walnuts, eaten with bread.”
-      ostri1: “a stew of veal and tomatoes.”
-      ostri2: “It has a deep spicy flavor because of the abundant use of spices and chili peppers.”
-      ostri3: “In Georgia we eat it with bread, but it also goes well with rice. I recommend it to drinkers because it goes great with alcohol.”
-      chikirtma1: “Chicken and egg soup.”
-      chikirtma2: “It does not require the spices commonly used in Georgia and can easily be made with powdered bouillon or consommé.”
-      chikirtma3: “I recommend this when you are sick or hungover because the lightness of the chicken and the tenderness of the eggs soak into your body.”
-      shkmeruli1: “cream stew with chicken and garlic”
-      shkmeruli2: “You can use chopped garlic, but a garlic tube is also delicious.”
-      shkmeruli3: “The authentic version is made with only chicken and garlic, but you can also add potatoes, onions, and sweet potatoes like in a stew.”
-      shkmeruli4: “Chicken and garlic in cream, for those who like garlic.”
-      chakhohbili1: “Chicken stewed with tomatoes.”
-      chakhohbili2: “It looks spicy, but it uses very little spice, and the combination of the non-habitual savory flavor of the chicken and the umami of the tomatoes is sure to please everyone.”
-      chakhohbili3: “The trick is to use chicken with bones or skin.”
+      badrijani1: one of the most typical appetizers of Georgian cuisine with maximum walnut flavor
+      badrijani2: The grilled eggplant is rolled in a paste of walnuts, which makes it look great and is a great choice for small parties.
+      badrijani3: If you have a food processor or blender, you can easily make walnut paste.
+      sokos_chashushuli1: Georgian sauteed mushrooms with herbs.
+      sokos_chashushuli2: Easy and tasty to make with your favorite mushrooms, sauteed with minimal spices at home.
+      pkhali1: One of the appetizers with vegetables and walnuts in a paste.
+      pkhali2: Basically spinach, beets, etc. are used in most cases, but any vegetable can be used.
+      pkhali3: The different colors of the various vegetables allow you to make different shades of pupali.
+      pkhali4: This is why in Georgia they are often prepared at banquets.
+      pkhali5: One of the appetizers made of a paste of vegetables and walnuts, eaten with bread.
+      ostri1: a stew of veal and tomatoes.”
+      ostri2: It has a deep spicy flavor because of the abundant use of spices and chili peppers.
+      ostri3: In Georgia we eat it with bread, but it also goes well with rice. I recommend it to drinkers because it goes great with alcohol.
+      chikirtma1: Chicken and egg soup.”
+      chikirtma2: It does not require the spices commonly used in Georgia and can easily be made with powdered bouillon or consommé.
+      chikirtma3: I recommend this when you are sick or hungover because the lightness of the chicken and the tenderness of the eggs soak into your body.
+      shkmeruli1: cream stew with chicken and garlic
+      shkmeruli2: You can use chopped garlic, but a garlic tube is also delicious.
+      shkmeruli3: The authentic version is made with only chicken and garlic, but you can also add potatoes, onions, and sweet potatoes like in a stew.
+      shkmeruli4: Chicken and garlic in cream, for those who like garlic.
+      chakhohbili1: Chicken stewed with tomatoes.
+      chakhohbili2: It looks spicy, but it uses very little spice, and the combination of the non-habitual savory flavor of the chicken and the umami of the tomatoes is sure to please everyone.
+      chakhohbili3: The trick is to use chicken with bones or skin.
     botton:
       how-to-make: Here's how to make it
       diagnosis-again: diagnosis again

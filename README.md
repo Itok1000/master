@@ -77,35 +77,21 @@ Facebookとinstagramも個人で使用しているので、本リリース後は
 |・診断結果を表示|
 |・Xにてシェア共有|
 |・下記のサイトに遷移
-
 ・ANSWER1の場合
-
 ・https://ca-voir.com/nobuyo-kitchen-ojakhuri-jp/
-
 ・ANSWER2の場合
-
 ・https://ca-voir.com/nobuyo-kitchen-badrijani-jp/
-
 ・ANSWER3の場合
-
 ・https://ca-voir.com/nobuyo-kitchen-sokos-chashushuli-jp/
-
 ・ANSWER4の場合
-
 ・https://ca-voir.com/nobuyo-kitchen-pkhali-jp/
-
 ・ANSWER5の場合
-
 ・https://ca-voir.com/nobuyo-kitchen-ostri-jp/
-
 ・ANSWER6の場合
-
 ・https://ca-voir.com/nobuyo-kitchen-chikhirtma-jp/
-
 ・ANSWER7の場合
+・https://ca-voir.com/nobuyo-kitchen-shkmeruli-jp/ |
 
-・https://ca-voir.com/nobuyo-kitchen-shkmeruli-jp/|
-| -------- |
 
 |ログイン後の機能|
 | -------- |
@@ -125,7 +111,6 @@ Facebookとinstagramも個人で使用しているので、本リリース後は
 |・Minimagick系の画像加工（アップ時に画像を指定のサイズに加工・webp化する）|
 |・レーティング機能|
 |・独自ドメイン|
-| -------- |
 
 
 |今後予定してる機能|
@@ -133,7 +118,7 @@ Facebookとinstagramも個人で使用しているので、本リリース後は
 |・j18n機能を生かしてジョージア語の翻訳機能を追加|
 |・●×クイズ機能|
 |・管理画面の追加|
-| -------- |
+
 
 ### 画面遷移図(企画時)
 Figma：https://www.figma.com/design/7mF5VkcFrHRPTxVFbwi1wh/%E7%84%A1%E9%A1%8C?node-id=0-1&node-type=canvas&t=RkSKDCDXuFFcGs0e-0

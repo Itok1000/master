@@ -17,14 +17,13 @@
 
     <!-- 111 の場合（オジャフリ） -->
     <% if @diagnosis.question == "112" %>
-      <div class="image-container">
-        <%= image_tag 'Answer01.webp', alt: 'オジャフリ', class: 'answer-image' %>
+      <div class="top-inner-text">
         <div class="text-overlay">
-          <h6><%= t('diagnoses.description.ojakhuri') %></h6>
           <div class = "noto-serif-georgian-uniquifier">
-          <p>ოჯახური</p>
+            <h1><%= t('diagnoses.description.ojakhuri') %></h1>
           </div>
         </div>
+         <%= image_tag 'Answer01.webp', alt: 'オジャフリ', class: "post-food-image" %>
       </div>
       <div class="diagnosis-inner-text">
       <p><%= t('diagnoses.overview') %></p>
@@ -46,14 +45,13 @@
 
     <!-- 121 の場合（パドリジャーニ） -->
     <% elsif @diagnosis.question == "212" %>
-      <div class="image-container">
-        <%= image_tag 'Answer02.webp', alt: 'パドリジャーニ', class: 'answer-image' %>
+      <div class="top-inner-text">
         <div class="text-overlay">
-          <h6><%= t('diagnoses.description.badrijani') %></h6>
           <div class = "noto-serif-georgian-uniquifier">
-          <p>ბადრიჯანი</p>
+           <h1><%= t('diagnoses.description.badrijani') %></h1>
           </div>
         </div>
+         <%= image_tag 'Answer02.webp', alt: 'パドリジャーニ', class: "post-food-image" %>
       </div>
       <div class="diagnosis-inner-text">
       <p><%= t('diagnoses.overview') %></p>
@@ -75,14 +73,13 @@
 
     <!-- 122 の場合（ソコスチャシュシュリ） -->
     <% elsif @diagnosis.question == "122" %>
-      <div class="image-container">
-        <%= image_tag 'Answer03.webp', alt: 'ソコスチャシュシュリ', class: 'answer-image' %>
-        <div class="text-overlay">
-          <h6><%= t('diagnoses.description.sokos_chashushuli') %></h6>
+      <div class="top-inner-text">
+        <div class="text-overlay"> 
           <div class = "noto-serif-georgian-uniquifier">
-           <p>სოკოს ჭაშუშული</p>
+            <h1><%= t('diagnoses.description.sokos_chashushuli') %></h1>
           </div>
         </div>
+         <%= image_tag 'Answer03.webp', alt: 'ソコスチャシュシュリ', class: "post-food-image" %>
       </div>
       <div class="diagnosis-inner-text">
       <p><%= t('diagnoses.overview') %></p>
@@ -103,14 +100,13 @@
 
     <!-- 222 の場合（プパリ） -->
     <% elsif @diagnosis.question == "222" %>
-      <div class="image-container">
-        <%= image_tag 'Answer04.webp', alt: 'プパリ', class: 'answer-image' %>
+      <div class="top-inner-text">
         <div class="text-overlay">
-          <h6><%= t('diagnoses.description.pkhali') %></h6>
           <div class = "noto-serif-georgian-uniquifier">
-           <p>ფხალი</p>
+            <h1><%= t('diagnoses.description.pkhali') %></h1>
           </div>
         </div>
+         <%= image_tag 'Answer04.webp', alt: 'プパリ', class: "post-food-image" %>
       </div>
       <div class="diagnosis-inner-text">
       <p><%= t('diagnoses.overview') %></p>
@@ -133,14 +129,13 @@
 
     <!-- 121 の場合（オーストリ） -->
     <% elsif @diagnosis.question == "121" %>
-      <div class="image-container">
-        <%= image_tag 'Answer05.webp', alt: 'オーストリ', class: 'answer-image' %>
+      <div class="top-inner-text">
         <div class="text-overlay">
-          <h6><%= t('diagnoses.description.ostri') %></h6>
           <div class = "noto-serif-georgian-uniquifier">
-           <p>ოსტრი</p>
+            <h1><%= t('diagnoses.description.ostri') %></h1>
           </div>
         </div>
+         <%= image_tag 'Answer05.webp', alt: 'オーストリ', class: "post-food-image" %>
       </div>
       <div class="diagnosis-inner-text">
       <p><%= t('diagnoses.overview') %></p>
@@ -162,14 +157,13 @@
 
     <!-- 221 の場合（チヒルトゥマ） -->
     <% elsif @diagnosis.question == "221" %>
-      <div class="image-container">
-        <%= image_tag 'Answer06.webp', alt: 'チヒルトゥマ', class: 'answer-image' %>
+      <div class="top-inner-text">
         <div class="text-overlay">
-          <h6><%= t('diagnoses.description.chikirtma') %></h6>
           <div class = "noto-serif-georgian-uniquifier">
-           <p>ჩიხირთმა</p>
+            <h1><%= t('diagnoses.description.chikirtma') %></h1>
           </div>
         </div>
+         <%= image_tag 'Answer06.webp', alt: 'チヒルトゥマ', class: "post-food-image" %>
       </div>
       <div class="diagnosis-inner-text">
       <p><%= t('diagnoses.overview') %></p>
@@ -191,14 +185,13 @@
     
     <!-- 111 の場合（シュクメルリ） -->
     <% elsif @diagnosis.question == "111" %>
-      <div class="image-container">
-        <%= image_tag 'Answer07.webp', alt: 'シュクメルリ', class: 'answer-image' %>
+      <div class="top-inner-text">
         <div class="text-overlay">
-          <h6><%= t('diagnoses.description.shkmeruli') %></h6>
           <div class = "noto-serif-georgian-uniquifier">
-           <p>შქმერული</p>
+            <h1><%= t('diagnoses.description.shkmeruli') %></h1>
           </div>
         </div>
+         <%= image_tag 'Answer07.webp', alt: 'シュクメルリ', class: "post-food-image" %>
       </div>
       <div class="diagnosis-inner-text">
       <p><%= t('diagnoses.overview') %></p>
@@ -221,14 +214,13 @@
 
     <!-- 211 の場合（チャホフビリ） -->
     <% elsif @diagnosis.question == "211" %>
-      <div class="image-container">
-        <%= image_tag 'Answer08.webp', alt: 'チャホフビリ', class: 'answer-image' %>
+      <div class="top-inner-text">
         <div class="text-overlay">
-          <h6><%= t('diagnoses.description.chakhohbili') %></h6>
           <div class = "noto-serif-georgian-uniquifier">
-           <p>ჩახოხბილი</p>
+            <h1><%= t('diagnoses.description.chakhohbili') %></h1>
           </div>
         </div>
+         <%= image_tag 'Answer08.webp', alt: 'チャホフビリ', class: "post-food-image" %>
       </div>
       <div class="diagnosis-inner-text">
       <p><%= t('diagnoses.overview') %></p>

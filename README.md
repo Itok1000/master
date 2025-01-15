@@ -1,5 +1,5 @@
 # サービス概要
-サービスURL: https://gamarjoba.jp/
+サービスURL: **https://gamarjoba.jp/**
 [![ジョージア料理診断アプリ ガマルジョバ](https://github.com/user-attachments/assets/286864db-b868-496f-a1ed-55805c6b6295)]
 
 ガマルジョバはおすすめのジョージア料理を紹介して作り方のサイトに遷移、

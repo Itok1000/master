@@ -53,18 +53,33 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 <p align="left">診断は**ログインの有無関係なく**可能です
 <p align="left">ユーザー登録しログインすると、各料理の掲示板にとびます|
 
-
+|・口コミ投稿,コメント,レーティング機能|
+| :------------------------------------------------------------------------------------------------: |
 [![Image from Gyazo](https://i.gyazo.com/714c0a7829cd9e4385083bff0c850e25.gif)](https://gyazo.com/714c0a7829cd9e4385083bff0c850e25)
-ここでは自ら作った物を各料理掲示板の中で口コミをすることができ、画像アップロードして投稿することもできます
 [![Image from Gyazo](https://i.gyazo.com/d8e53ab13039a02ce4751f4243d5c4a3.gif)](https://gyazo.com/d8e53ab13039a02ce4751f4243d5c4a3)
 [![Image from Gyazo](https://i.gyazo.com/82ed38aa4fc0c4a8ab40a6117f87da18.gif)](https://gyazo.com/82ed38aa4fc0c4a8ab40a6117f87da18)
-詳細を見るとレビュー評価も確認できます
-[![Image from Gyazo](https://i.gyazo.com/f8098900a78af4abf9ce74265874f539.gif)](https://gyazo.com/f8098900a78af4abf9ce74265874f539)
+| <p align="left"> 
+ここでは自ら作った物を各料理掲示板の中で口コミや５つ星の評価をすることができ、画像アップロードして投稿することもできます|
 
-参考になった口コミに関しては、いいねをすることが可能です
+
+|・レーティング機能|
+| :------------------------------------------------------------------------------------------------: |
+[![Image from Gyazo](https://i.gyazo.com/f8098900a78af4abf9ce74265874f539.gif)](https://gyazo.com/f8098900a78af4abf9ce74265874f539)
+|<p align="left"> 
+各口コミ詳細を見るとレビュー評価も確認できます|
+
+|・いいね機能|
+| :------------------------------------------------------------------------------------------------: |
 [![Image from Gyazo](https://i.gyazo.com/a2e00bfdf0185eb9ef63a0d81f7408ed.gif)](https://gyazo.com/a2e00bfdf0185eb9ef63a0d81f7408ed)
-いいねした投稿、ユーザー自身が投稿した口コミはヘッダー上でにアクセスできます
+|<p align="left"> 
+参考になった口コミに関しては、「いいね」をすることが可能です|
+
+|・いいねと投稿したものを保存する機能|
+| :------------------------------------------------------------------------------------------------: |
 [![Image from Gyazo](https://i.gyazo.com/343a58ce1cbdee6461bc4500aabe5a0e.gif)](https://gyazo.com/343a58ce1cbdee6461bc4500aabe5a0e)
+|<p align="left"> 
+いいねした投稿、ユーザー自身が投稿した口コミはヘッダー上でにアクセスできます|
+
 
 # ユーザーの獲得について
 X(旧Twitter)を用いてWebアプリ上でリリース公開します

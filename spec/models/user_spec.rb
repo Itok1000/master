@@ -44,6 +44,11 @@ RSpec.describe User, type: :model do
       expect(user).to be_valid
     end
 
+    it "メールアドレスが記載されていること" do
+      no_email = build(:user, email: "")
+      expect(no_email).to be_invalid
+    end
+
     it "メールアドレスが被らないこと" do
       create(:user, email: "gamarjoba@gmail.com")
       other = build(:user, email: "gamarjoba@gmail.com")

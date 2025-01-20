@@ -29,9 +29,9 @@ class User < ApplicationRecord
   validates :reset_password_token, presence: true, uniqueness: true, allow_nil: true
 
   enum role: { general: 0, admin: 1 }
-  # 上記の記述で role カラム(integer)の値に応じて、そのユーザーが general（一般）か admin（管理者）が判別できるようになる 
+  # 上記の記述で role カラム(integer)の値に応じて、そのユーザーが general（一般）か admin（管理者）が判別できるようになる
   # 先程のマイグレーションファイルの default: 0 によって role カラムが 0 のユーザーは general となる
-  
+
   def own?(object)
     # own? メソッドについて
     # own? メソッド

@@ -75,8 +75,11 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 
 
 # ユーザーの獲得について
-X(旧Twitter)を用いてWebアプリ上でリリース公開します
-[Facebook](https://ja-jp.facebook.com/people/%E4%BC%8A%E8%97%A4%E5%81%A5%E5%A4%AA/pfbid0qTUGyTWXz25SVuS13YzG1G9jjtxvKQS9i6cuABJtmjcE3wD2pyQQmEQHQA8XquTgl/)と[instagram](https://www.instagram.com/uotiatnek2525/?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr)も個人で使用しているので、本リリース後はこちらのSNSで告知も検討しております
+・X(旧Twitter)を用いてWebアプリ上でリリース公開します
+
+・[Facebook](https://ja-jp.facebook.com/people/%E4%BC%8A%E8%97%A4%E5%81%A5%E5%A4%AA/pfbid0qTUGyTWXz25SVuS13YzG1G9jjtxvKQS9i6cuABJtmjcE3wD2pyQQmEQHQA8XquTgl/)と[instagram](https://www.instagram.com/uotiatnek2525/?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr)も個人で使用しているので、本リリース後はこちらのSNSで告知も検討します
+
+・[Qiita](https://qiita.com/jiantaiyiteng1/items/94f321646051001a72de)の記事に公開し、URLとともに機能やREADMEに記載されていない作成動機についてもまとめます
 
 # サービスの差別化ポイント・推しポイント
 診断して結果を出すだけでなく、作り方のページに遷移して自分で料理できるチャンスを与えるところです

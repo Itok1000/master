@@ -1,0 +1,19 @@
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">
+    <%= image_tag "bootstrap-logo", alt: "RUNTEQ Logo", class: "brand-image img-circle elevation-3", style: "opacity: .8", width: '33px', height: '28px' %>
+    RUNTEQ
+  </a>
+  <div class="w-100">
+    <button class="navbar-toggler d-none d-md-block" type="button" id='toggleSidebar'>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      <%= link_to t('header.logout'), admin_logout_path, data: { turbo_method: :delete }, local: true, class: 'nav-link px-3' %>
+    </div>
+  </div>
+</header>

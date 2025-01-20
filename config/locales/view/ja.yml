@@ -223,16 +223,3 @@ ja:
       success: パスワードリセット手順を送信しました
     update:
       success: パスワードを変更しました
-  admin:
-    user_sessions:
-      new:
-        title: ログイン
-        login: ログイン
-      create:
-        success: ログインしました
-        failure: ログインに失敗しました
-      destroy:
-        success: ログアウトしました
-    dashboards:
-      index:
-        title: ダッシュボード

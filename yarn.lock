@@ -176,11 +176,6 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/merge-streams/-/merge-streams-2.3.0.tgz#719df7fb41766bc143369eaa0dd56d8dc87c9958"
   integrity sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==
 
-admin-lte@^4.0.0-beta3:
-  version "4.0.0-beta3"
-  resolved "https://registry.yarnpkg.com/admin-lte/-/admin-lte-4.0.0-beta3.tgz#8be40ab4ff20f102b2525d8b28cc905240b68fb6"
-  integrity sha512-q2VoAOu1DtZ7z41M2gQ05VMNYkFCAMxFU+j/HUMwCOlr/e3VhO+qww2SGJw4OxBw5nZQ7YV78+wK2RiB7ConzQ==
-
 ansi-regex@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-5.0.1.tgz#082cb2c89c9fe8659a311a53bd6a4dc5301db304"

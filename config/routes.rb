@@ -121,4 +121,12 @@ Rails.application.routes.draw do
   get "password/reset", to: "password_resets#new"
   # post "password/reset", to: "password_resets#create" はパスワードリセットフォームから送信された情報を処理するPOSTリクエストを扱う
   post "password/reset", to: "password_resets#create"
+
+  namespace :admin do
+    root "dashboards#index"
+    resource :dashboard, only: %i[index]
+    get 'login' => 'user_sessions#new', :as => :login
+    post 'login' => "user_sessions#create"
+    delete 'logout' => 'user_sessions#destroy', :as => :logout
+  end
 end

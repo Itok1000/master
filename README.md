@@ -46,29 +46,29 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 [![Image from Gyazo](https://i.gyazo.com/dbeb05a225d249684ff0d24f7db29494.gif)](https://gyazo.com/dbeb05a225d249684ff0d24f7db29494)
 |<p align="left">ユーザーがこのサービスをログインなしでいくつかの質問を診断することができます。この診断は、YESNO方式を用いて、ユーザーの好み、ユーザーの状況に基づいて診断結果を表示します。|
 
-|・Xにてシェア共有|
+| Xにてシェア共有|
 | :------------------------------------------------------------------------------------------------: |
 [![Image from Gyazo](https://i.gyazo.com/020872b963df6db8e7a421851251c9f1.gif)](https://gyazo.com/020872b963df6db8e7a421851251c9f1)
 [![Image from Gyazo](https://i.gyazo.com/88975322fdb03ee8f1df6c058798b620.png)](https://gyazo.com/88975322fdb03ee8f1df6c058798b620)
 |<p align="left">また、Xでのシェア機能を用いて、多くの人に共有できます。診断は**ログインの有無関係なく**可能です。ユーザー登録しログインすると、各料理の掲示板にとびます|
 
-|・口コミ投稿,コメント,レーティング機能|
+| 口コミ投稿,コメント,レーティング機能|
 | :------------------------------------------------------------------------------------------------: |
 [![Image from Gyazo](https://i.gyazo.com/714c0a7829cd9e4385083bff0c850e25.gif)](https://gyazo.com/714c0a7829cd9e4385083bff0c850e25)[![Image from Gyazo](https://i.gyazo.com/d8e53ab13039a02ce4751f4243d5c4a3.gif)](https://gyazo.com/d8e53ab13039a02ce4751f4243d5c4a3)[![Image from Gyazo](https://i.gyazo.com/82ed38aa4fc0c4a8ab40a6117f87da18.gif)](https://gyazo.com/82ed38aa4fc0c4a8ab40a6117f87da18)
 |<p align="left">ここでは自ら作った物を各料理掲示板の中で口コミや５つ星の評価をすることができ、画像アップロードして投稿することもできます|
 
 
-|・レーティング機能|
+| レーティング機能|
 | :------------------------------------------------------------------------------------------------: |
 [![Image from Gyazo](https://i.gyazo.com/f8098900a78af4abf9ce74265874f539.gif)](https://gyazo.com/f8098900a78af4abf9ce74265874f539)
 |<p align="left">各口コミ詳細を見るとレビュー評価も確認できます|
 
-|・いいね機能|
+| いいね機能|
 | :------------------------------------------------------------------------------------------------: |
 [![Image from Gyazo](https://i.gyazo.com/a2e00bfdf0185eb9ef63a0d81f7408ed.gif)](https://gyazo.com/a2e00bfdf0185eb9ef63a0d81f7408ed)
 |<p align="left">参考になった口コミに関しては、「いいね」をすることが可能です|
 
-|・いいねと投稿したものを保存する機能|
+| いいねと投稿したものを保存する機能|
 | :------------------------------------------------------------------------------------------------: |
 [![Image from Gyazo](https://i.gyazo.com/343a58ce1cbdee6461bc4500aabe5a0e.gif)](https://gyazo.com/343a58ce1cbdee6461bc4500aabe5a0e)
 |<p align="left">いいねした投稿、ユーザー自身が投稿した口コミはヘッダー上でにアクセスできます|
@@ -81,7 +81,7 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 
 ・[Qiita](https://qiita.com/jiantaiyiteng1/items/94f321646051001a72de)の記事に公開し、URLとともに機能やREADMEに記載されていない作成動機についてもまとめます
 
-※また「個人開発にて得た経験と方法をもとに作成した技術記事」に機能実装についての記事を紹介しています
+※READMEには「個人開発にて得た経験と方法をもとに作成した技術記事」に機能実装についての記事を紹介しています
 
 # サービスの差別化ポイント・推しポイント
 診断して結果を出すだけでなく、作り方のページに遷移して自分で料理できるチャンスを与えるところです
@@ -91,10 +91,10 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 # 実装機能
 |ログインなしで利用可能|
 | -------- |
-|・診断機能|
-|・診断結果を表示|
-|・Xにてシェア共有|
-|・下記のサイトに遷移
+| 診断機能|
+| 診断結果を表示|
+| Xにてシェア共有|
+| 下記のサイトに遷移
 ・ANSWER1の場合
 ・https://ca-voir.com/nobuyo-kitchen-ojakhuri-jp/
 ・ANSWER2の場合
@@ -109,33 +109,34 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 ・https://ca-voir.com/nobuyo-kitchen-chikhirtma-jp/
 ・ANSWER7の場合
 ・https://ca-voir.com/nobuyo-kitchen-shkmeruli-jp/|
+| OGP（動的）|
 
 |ログイン後の機能|
 | -------- |
-|・ユーザー新規登録|
-|・ログイン|
-|・口コミ投稿|
-|・いいね機能|
-|・コメント|
-|・いいねと投稿したものを保存する機能|
-|・タイトルを動的に出力|
-|・ファビコン機能|
-|・デコレーターの導入|
-|・画像加工・合成|
-|・OGP（動的）|
-|・パスワードリセット|
-|・SNSログイン (Google)|
-|・Minimagick系の画像加工（アップ時に画像を指定のサイズに加工・webp化する）|
-|・レーティング機能|
-|・独自ドメイン|
-|・i18n機能を生かして英語とジョージア語の翻訳機能を追加|
+| ユーザー新規登録|
+| ログイン|
+| 口コミ投稿|
+| いいね機能|
+| コメント|
+| いいねと投稿したものを保存する機能|
+| 検索機能|
+| タイトルを動的に出力|
+| ファビコン機能|
+| デコレーターの導入|
+| パスワードリセット|
+| SNSログイン (Google)|
+| Minimagick系の画像加工（アップ時に画像を指定のサイズに加工・webp化する）|
+| レーティング機能|
+| 独自ドメイン|
+| i18n機能を生かして英語とジョージア語の翻訳機能を追加|
 
 
 |今後予定してる機能|
 | -------- |
-|・●×クイズ機能|
-|・管理画面の追加|
-
+| ●×クイズ機能|
+| 管理画面の追加|
+| ランキング機能|
+| オートコンプリート検索機能|
 
 # 画面遷移図(企画時)
 Figma：https://www.figma.com/design/7mF5VkcFrHRPTxVFbwi1wh/%E7%84%A1%E9%A1%8C?node-id=0-1&node-type=canvas&t=RkSKDCDXuFFcGs0e-0
@@ -146,12 +147,16 @@ https://app.diagrams.net/#HItok1000%2Fmaster%2FER_diagram_request%2F%E5%90%8D%E7
 # ■ 技術スタック
 |ツール| 内容 |
 | -------- | -------- |
-|・フロントエンド| Rails 7.2.1, JavaScript, Bootstrap, CANVA, 農民イラスト，BecassoApp, https://www.mofa.go.jp/mofaj/area/georgia/index.html (ジョージアって何？のコーナーにて位置を参考にしたため)|
-|・バックエンド| Rails 7.2.1, (ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x86_64-linux])|
-|・インフラ| fly.io,AWS S3,Google Cloud|
-|・データベース| PostgreSQL|
-|・認証|Sorcery|
-|・開発環境|Docker|
+| フロントエンド|Ruby on Rails,Node.js 20.17.0|
+| バックエンド| Rails 7.2.1, (ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x86_64-linux])|
+| CSSフレームワーク|Bootstrap, CANVA, 農民イラスト，CannonEOS M6(過去に自分が撮影した写真を使用していることから), BecassoApp, https://www.mofa.go.jp/mofaj/area/georgia/index.html (ジョージアって何？のコーナーにて位置を参考にしたため)|
+| インフラ| fly.io,AWS S3,Google Cloud|
+| データベース| PostgreSQL|
+| 認証|Sorcery|
+| 開発環境|Docker|
+| その他|rubocop,CarrierWave,mini magick,letter opener web|
+| バージョン管理|GitHub|
+
 
 # 個人開発にて得た経験と方法をもとに作成した技術記事
 |タイトル| 記事URL |

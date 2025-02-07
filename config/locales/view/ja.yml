@@ -8,6 +8,7 @@ ja:
       created: "%{item}を作成しました"
       not_created: "%{item}を作成出来ませんでした"
       require_login: ログインしてください
+      not_authorized: 権限がありません
       updated: "%{item}を更新しました"
       not_updated: "%{item}を更新出来ませんでした"
       not_created: "%{item}を作成出来ませんでした"
@@ -223,3 +224,16 @@ ja:
       success: パスワードリセット手順を送信しました
     update:
       success: パスワードを変更しました
+    admin:
+    user_sessions:
+      new:
+        title: ログイン
+        login: ログイン
+      create:
+        success: ログインしました
+        failure: ログインに失敗しました
+      destroy:
+        success: ログアウトしました
+    dashboards:
+      index:
+        title: ダッシュボード

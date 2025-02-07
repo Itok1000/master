@@ -1,17 +1,12 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
+
   get "up" => "rails/health#show", as: :rails_health_check
 
-  # Render dynamic PWA files from app/views/pwa/*
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
-  # Defines the root path route ("/")
-  # root "posts#index"
   root "static_pages#top"
   get "static_pages/top", to: "static_pages#top", as: "top" # トップページに戻りたいがためにつけた
   get "/how_to_use", to: "static_pages#how_to_use" # このアプリの使い方のルートを追加(ボタンをクリックすると、app/views/static_pages/how_to_use.html.erbに遷移するようにルートを設定し、リンクを修正するから)
@@ -121,4 +116,18 @@ Rails.application.routes.draw do
   get "password/reset", to: "password_resets#new"
   # post "password/reset", to: "password_resets#create" はパスワードリセットフォームから送信された情報を処理するPOSTリクエストを扱う
   post "password/reset", to: "password_resets#create"
+
+  namespace :admin do
+    root "dashboards#index"
+    resource :dashboard, only: %i[index]
+    get 'login' => 'user_sessions#new', :as => :login
+    post 'login' => "user_sessions#create"
+    delete 'logout' => 'user_sessions#destroy', :as => :logout
+  end
+  # 上記の namespace :admin の記載により以下が定義される
+  # Helper	HTTP verb	Path	コントローラー#アクション
+  # admin_root_path	GET	/admin	admin/dashboards#index
+  # admin_login_path	GET	/admin/login	admin/user_sessions#new
+  # admin_login_path	POST	/admin/login	admin/user_sessions#create
+  # admin_logout_path	DELETE	/admin/logout	admin/user_sessions#destroy
 end

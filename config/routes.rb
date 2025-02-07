@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 
   get "up" => "rails/health#show", as: :rails_health_check
@@ -120,9 +119,9 @@ Rails.application.routes.draw do
   namespace :admin do
     root "dashboards#index"
     resource :dashboard, only: %i[index]
-    get 'login' => 'user_sessions#new', :as => :login
-    post 'login' => "user_sessions#create"
-    delete 'logout' => 'user_sessions#destroy', :as => :logout
+    get "login" => "user_sessions#new", :as => :login
+    post "login" => "user_sessions#create"
+    delete "logout" => "user_sessions#destroy", :as => :logout
   end
   # 上記の namespace :admin の記載により以下が定義される
   # Helper	HTTP verb	Path	コントローラー#アクション

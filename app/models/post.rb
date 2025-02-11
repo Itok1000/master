@@ -2,11 +2,7 @@ class Post < ApplicationRecord
     # validatesメソッドは、各カラムにバリデーションを設定するために使用
     # presence: trueは値が空でないことを確認し、length: { maximum: *** } は文字数の最大値を制限する
     validates :title, presence: true, length: { maximum: 255 }
-    # 65_535という書き方は、数値を読みやすくするためにアンダースコアを使用しており、これは65,535と同じ意味
     validates :body, presence: true, length: { maximum: 65_535 }
-    # belongs_to :userとは、PostモデルがUserモデルに属していることを示す。
-    # この記述により、Postモデルの各レコードはUserモデルのレコードに関連付けられることになる
-
 
     has_many :comments, dependent: :destroy
     # dependent: :destroyを記述することによって、destroy 時に関連づけられたモデルに対して destroy が実行されるようになる

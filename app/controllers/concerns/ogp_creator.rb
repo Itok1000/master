@@ -1,9 +1,9 @@
 class OgpCreator
     require "mini_magick"
-    BASE_IMAGE_PATH = "./app/assets/images/ogp.png"  # 実際の画像ファイル名に変更
+    BASE_IMAGE_PATH = "./app/assets/images/ogp.png"
     GRAVITY = "center"
     TEXT_POSITION = "0,0"
-    FONT = "./app/assets/fonts/KaiseiDecol-Medium.ttf" # 使用するフォントのパス
+    FONT = "./app/assets/fonts/KaiseiDecol-Medium.ttf"
     FONT_SIZE = 65
     INDENTION_COUNT = 16
     ROW_LIMIT = 8

@@ -1,5 +1,3 @@
-# spec/support/capybara.rbファイル
-# capybaraの設定を書いていく
 
 RSpec.configure do |config|
     config.before(:each, type: :system) do
@@ -19,7 +17,7 @@ RSpec.configure do |config|
 
   require 'capybara/rspec'
   require 'selenium-webdriver'
-  # capybaraの設定を書いていく
+
   Capybara.register_driver :remote_chrome do |app|
     options = Selenium::WebDriver::Chrome::Options.new
     options.add_argument('no-sandbox')

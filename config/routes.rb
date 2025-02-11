@@ -7,63 +7,33 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   root "static_pages#top"
-  get "static_pages/top", to: "static_pages#top", as: "top" # トップページに戻りたいがためにつけた
-  get "/how_to_use", to: "static_pages#how_to_use" # このアプリの使い方のルートを追加(ボタンをクリックすると、app/views/static_pages/how_to_use.html.erbに遷移するようにルートを設定し、リンクを修正するから)
-  get "/georgia", to: "static_pages#georgia" # ジョージアページのルートを追加(ボタンをクリックすると、app/views/static_pages/georgia.html.erbに遷移するようにルートを設定し、リンクを修正するから)
-  get "/food", to: "static_pages#food" # ジョージア料理とは何かのルートを追加(ボタンをクリックすると、app/views/static_pages/food.html.erbに遷移するようにルートを設定し、リンクを修正するから)
-  get "/terms", to: "terms#terms" # 利用規約のルートを追加
+  get "static_pages/top", to: "static_pages#top", as: "top" 
+  get "/how_to_use", to: "static_pages#how_to_use" 
+  get "/georgia", to: "static_pages#georgia" 
+  get "/food", to: "static_pages#food" 
+    get "/terms", to: "terms#terms"
 
-  # ルート側にdiagnoses(診断機能)を追加
-  # 現在のroutes.rbでは、診断機能を提供するresources :diagnosesに対してindexとshowアクションしかルートが設定されていないが
-  # トップページから診断フォーム（newアクション）に進む必要がある
+  
   resources :diagnoses, only: %i[index show new create]
   get "images/ogp.png", to: "images#ogp", as: "images_ogp"
-  # ●resources について
-  # Ruby on Railsのルーティングに広く使用され、特定のリソースに対して標準的なRESTfulルートを一括で生成
-  # 例えば、resources :users と記述することで、ユーザーに関連する一連のルート（index, new, create, show, edit, update, destroy）が自動的に設定される
-  # これにより、コントローラの各アクションがURLとHTTPメソッドに紐づけられ、CRUD操作のルーティングが容易になる
+ 
 
 
 
-  # ●only指定について
-  # onlyオプションを使用すると、resources メソッドで生成されるルートの中から特定のアクションだけを選択して生成できる
-  # 例えば、resources :users, only: %i[new create] と指定すると、ユーザーの新規作成のみを生成し、
-  # その他のアクションのルートは除外される
-  # ログインログアウト時のルート追加
+  
   resources :users, only: %i[new create]
 
-  # 認証関連のルートは、ユーザー関連のルートの近くに配置することで、
-  # 他の認証やユーザー管理に関連するルートと一緒にまとめられるから、管理がしやすくなる
-
-  # get 'login', to: 'user_sessions#new' はログインフォームを表示するためのGETリクエストを処理
   get "login", to: "user_sessions#new"
 
-  # post 'login', to: 'user_sessions#create' はログインフォームから送信された情報を処理するPOSTリクエストを扱う
   post "login", to: "user_sessions#create"
 
 
-  # delete 'logout', to: 'user_sessions#destroy' は、Railsのルーティング設定でログアウト機能を実装するために使用される記述
-  # HTTP の DELETE メソッドを利用し、logout パスへのリクエストがあった場合に user_sessions コントローラーの destroy アクションを呼び出す。
-  # このアクションでは、ユーザーのセッションを終了させるログアウト処理が行われる
-  # ユーザーがログアウトボタンをクリックすると、サーバーによってセッションが破棄され、その後ユーザーはログイン画面やホームページにリダイレクトされる流れになる
   delete "logout", to: "user_sessions#destroy"
 
-  # Google認証機能のためのルート側
   post "oauth/callback" => "oauths#callback"
   get "oauth/callback" => "oauths#callback"
   get "oauth/:provider" => "oauths#oauth", as: :auth_at_provider
 
-  # ルート側にposts(掲示板機能)を追加
-  # resourcesメソッドのonlyオプションにnewを記載することで、GETメソッドで /posts/new というURLパターンにリクエストが飛んだ際に postsコントローラーのnewアクションが動くように定義される
-  # resources :users, only: %i[new create]
-  # resources :posts, only: %i[index new create show] を記載することで、掲示板の一覧表示と新規作成画面,掲示板詳細閲覧のルーティングが設定される
-  # createを記載することで、POSTメソッドで /posts というURLパターンにリクエストが飛んだ際に postsコントローラーのcreateアクションが動くように定義される
-  # また、URLパターンを生成してくれる posts_path（URLヘルパー）も生成される
-
-  # 投稿のリソース(一覧、新規作成、詳細、編集、削除、更新)
-  # コメントのリソース(作成、編集、削除)
-  # いいねのリソース(作成、削除)
-  # 5つ星評価のリソース(一覧、新規作成、詳細、削除)
   resources :posts, only: %i[index new create show edit destroy update] do
     resources :comments, only: %i[create destroy], shallow: true
     resource :favorites, only: [ :create, :destroy ]
@@ -73,47 +43,11 @@ Rails.application.routes.draw do
       get :favorites
       get :posts
      end
-    #### **いいねのリソースだけ複数形でない理由**
-    # いいね機能の場合、1人のユーザーは1つの投稿に対して1回しかいいねできないという制約がある
-    # そのため、いいねの削除を行う際には、ユーザーIDと投稿IDがわかれば、どのいいねを削除するかを特定できる
-    # したがって、いいねのIDをURLに含める必要はない
-    ### **resourcesとresourceの違い**
-    # URLに:idを含めるかどうか
-    # resourcesを使用すると:idが含まれ、特定の要素を操作するためのIDが必要
-    # 一方、resourceを使用すると:idが含まれず、他のリソースとの関連付けによって特定できる
-
-    #### **ネストしたルーティングについて**
-    # あるリソースが別のリソースに属する形でルーティングを定義すること
-    # ネスト
-    # 入れ子構造のことを意味し、プログラミングでは、ある要素が他の要素の内部に含まれている状態を指す
-    # 例⇒掲示板（Post）に属するコメント（Comment）を扱う場合、commentsリソースをpostsリソースの中にネスト
-    # こうすることで、URLが直感的になり、関連するリソースの関係が明確になる
-
-    ### **shallow オプションについて**
-    # shallowオプションは、ネストしたリソースの一部のアクションに対して、親リソースのIDを含まないURLを生成するために使用する
-    # 例えば、コメントの編集や削除アクションでは、特定のコメントを操作するために掲示板のIDは必要ない
-    # このような場合、shallowオプションを使うことで、URLを簡潔にし、可読性を向上させることができる
-
-    ### **collection**
-    # collectionは、resorces, resorceで作成されるRESTfulなルーティングにアクションを追加する際に使用
-    # RESTfulなルーティングにアクションを追加するものとしてmemberもあるが、
-    # memberは個々のリソースに対するアクション、collectionはリソース全体に対するアクションに使用
-    # 個々の掲示板（post）に対してプレビューを行いたいとかではなく、掲示板全体（posts）の中からブックマークされている
-    # 掲示板の一覧を表示したいということで、collectionを使って get :bookmarks を記述している
   end
 
   resource :profile, only: %i[show edit update]
-  # resourcesメソッドのonlyオプションにnewを記載することで、GETメソッドで /posts/new というURLパターンにリクエストが飛んだ際に
-  # postsコントローラーのnewアクションが動くように定義される
-  # また、URLパターンを生成してくれる new_posts_path（URLヘルパー）も生成される
-
-  # ルート側にpassword_resets(パスワードリセット機能)を追加
-  # 現在のroutes.rbでは、診断機能を提供するresources :password_resetsに対してindexとshowアクションしかルートが設定されていないが
-  # トップページからパスワードリセット機能フォーム（新規、作成、編集、更新）に進む必要がある
   resources :password_resets, only: [ :new, :create, :edit, :update ]
-  # get "password/reset", to: "password_resets#new" はパスワードリセットフォームを表示するためのGETリクエストを処理
   get "password/reset", to: "password_resets#new"
-  # post "password/reset", to: "password_resets#create" はパスワードリセットフォームから送信された情報を処理するPOSTリクエストを扱う
   post "password/reset", to: "password_resets#create"
 
   namespace :admin do
@@ -123,10 +57,4 @@ Rails.application.routes.draw do
     post "login" => "user_sessions#create"
     delete "logout" => "user_sessions#destroy", :as => :logout
   end
-  # 上記の namespace :admin の記載により以下が定義される
-  # Helper	HTTP verb	Path	コントローラー#アクション
-  # admin_root_path	GET	/admin	admin/dashboards#index
-  # admin_login_path	GET	/admin/login	admin/user_sessions#new
-  # admin_login_path	POST	/admin/login	admin/user_sessions#create
-  # admin_logout_path	DELETE	/admin/logout	admin/user_sessions#destroy
 end

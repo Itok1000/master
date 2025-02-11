@@ -2,8 +2,8 @@
   background-color: #fbecc0;
   position: relative;
   background-position: center;
-  padding: 50px 0; /* 上下に余白を追加して全体をスクロール可能にする */
-  min-height: 100vh; /* ビューポートの高さを最低限カバーする */
+  padding: 50px 0; 
+  min-height: 100vh; 
 }
 
 .top-inner-text {
@@ -11,16 +11,16 @@
   text-align: center;
   font-size: 4.5rem;
   color: black;
-  margin-bottom: 50px; /* ボタンとの間に余白を追加 */
-  opacity: 0; /* 初めは透明に設定 */
-  transform: translateY(100%); /* 下からスライドするために位置を下に設定 */
-  animation: fadeInFromBottom 1s forwards; /* フェードインアニメーションの設定 */
+  margin-bottom: 50px; 
+  opacity: 0; 
+  transform: translateY(100%); 
+  animation: fadeInFromBottom 1s forwards; 
 }
 
 @keyframes fadeInFromBottom {
   to {
-    opacity: 1; /* アニメーション終了時に完全に表示 */
-    transform: translateY(0); /* アニメーション終了時の位置 */
+    opacity: 1; 
+    transform: translateY(0); 
   }
 }
 
@@ -32,18 +32,18 @@
 
 .button-container {
   display: flex;
-  flex-direction: column; /* ボタンを縦に配置 */
-  align-items: center; /* ボタンを中央揃え */
-  margin-top: 20px; /* 上に余白を追加して題名の下に配置 */
+  flex-direction: column; 
+  align-items: center; 
+  margin-top: 20px; 
 }
 
 .button {
-  width: 501px;  /* 指定された幅に変更 */
-  height: 378px; /* 指定された高さに変更 */
+  width: 501px;  
+  height: 378px; 
   background-size: cover;
   background-position: center;
   position: relative;
-  margin-bottom: 20px; /* ボタン間のスペース */
+  margin-bottom: 20px; 
 }
 
 .upper-button{
@@ -80,9 +80,9 @@
 }
 
 .start-button-container {
-  margin-top: 20px; /* タイトルからボタンまでの余白 */
+  margin-top: 20px; 
   display: flex;
-  justify-content: center; /* ボタンを中央に配置 */
+  justify-content: center; 
 }
 
 .orange {
@@ -91,16 +91,16 @@
   color: white;
   width: 290px;
   height: 106px;
-  line-height: 106px; /* ボタン内のテキストを中央揃え（縦） */
+  line-height: 106px; 
   text-align: center;
   font-size: 1.8rem;
-  text-decoration: none; /* 下線を削除 */
-  border-radius: 10px; /* 角を少し丸める */
+  text-decoration: none; 
+  border-radius: 10px; 
   font-weight: bold;
 }
 
 .orange:hover {
-  background-color: #ff7f50; /* ホバー時の色変更 */
+  background-color: #ff7f50; 
   color: white;
 }
 
@@ -109,7 +109,7 @@
 }
 
 .custom-bg {
-  background-color: #F0DB87; /* 背景色をオレンジ系に設定 */
+  background-color: #F0DB87; 
 }
 
 .georgia-deta {
@@ -123,65 +123,65 @@
   text-align: start;
   font-size: 4.5rem;
   color: black;
-  margin-bottom: 50px; /* ボタンとの間に余白を追加 */
-  opacity: 0; /* 初めは透明に設定 */
-  transform: translateY(100%); /* 下からスライドするために位置を下に設定 */
-  animation: fadeInFromBottom 1s forwards; /* フェードインアニメーションの設定 */
+  margin-bottom: 50px; 
+  opacity: 0; 
+  transform: translateY(100%); 
+  animation: fadeInFromBottom 1s forwards; 
 }
 
 @keyframes fadeInFromBottom {
   to {
-    opacity: 1; /* アニメーション終了時に完全に表示 */
-    transform: translateY(0); /* アニメーション終了時の位置 */
+    opacity: 1; 
+    transform: translateY(0); 
   }
 }
 
 .food-container {
   display: flex;
-  justify-content: space-between; /* 左右に画像を配置 */
-  align-items: center; /* 縦方向を中央揃え */
-  width: 100%; /* 親要素の幅を100%に設定 */
-  margin-top: 20px; /* 上に余白を追加 */
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%;
+  margin-top: 20px;
 }
 
 .georgia, .image05, .image06 {
-  width: 45%; /* 画像を45%の幅に設定して左右に配置 */
-  height: auto; /* 高さを自動調整 */
-  object-fit: cover; /* 画像の比率を維持して調整 */
+  width: 45%; 
+  height: auto; 
+  object-fit: cover; 
 }
 
-/* EmailとPasswordの入力欄の背景色を変更 */
+
 .custom-input {
-  background-color: #F5F5F5; /* 背景色 */
+  background-color: #F5F5F5; 
 }
 
-/* こちらのリンクの文字を少し大きくする */
+
 .custom-link {
-  font-size: 1.3rem; /* 少し大きめの文字サイズ */
-  text-decoration: underline; /* リンクらしさを強調 */
+  font-size: 1.3rem; 
+  text-decoration: underline; 
 }
 
-/* ログインボタンとその前後の要素に余裕を持たせる */
+
 .start-button {
-  margin-top: 20px; /* ボタンとの間に余裕を持たせる */
+  margin-top: 20px; 
 }
 
-/* パスワードをお忘れの方の下のリンクとの間隔調整 */
+
 .mt-3 {
-  margin-top: 15px; /* 初めての方はこちらとの間隔調整 */
+  margin-top: 15px;
 }
 
-/* 掲示板料理のグリッドレイアウト */
+
 .food-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2列表示 */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 20px;
   justify-content: center;
   margin: 0 auto;
 }
 
 .food-item {
-  position: relative; /* 画像とテキストを相対的に配置するために設定 */
+  position: relative; 
 }
 
 .food-image {
@@ -193,7 +193,7 @@
 }
 
 .food-image:hover {
-  transform: scale(1.05); /* ホバー時の拡大効果 */
+  transform: scale(1.05); 
 }
 
 .food-text {
@@ -205,18 +205,18 @@
   color: white;
   font-weight: bold;
   text-align: center;
-  width: 100%; /* テキストを中央揃えにするために幅を100%に設定 */
+  width: 100%; 
 }
 
-/* レスポンシブ対応 */
+
 @media (max-width: 768px) {
   .food-grid {
-    grid-template-columns: 1fr; /* スマホ画面では1列表示 */
+    grid-template-columns: 1fr; 
   }
 
   .post-food-image,.food-image {
-    width: 100%; /* 幅を100%に変更 */
-    height: auto; /* 高さは自動調整 */
+    width: 100%; 
+    height: auto; 
   }
 }
 
@@ -234,47 +234,47 @@
   color: white;
   width: 290px;
   height: 106px;
-  line-height: 106px; /* ボタン内のテキストを中央揃え（縦） */
+  line-height: 106px; 
   text-align: center;
   font-size: 1.8rem;
-  text-decoration: none; /* 下線を削除 */
-  border-radius: 10px; /* 角を少し丸める */
+  text-decoration: none; 
+  border-radius: 10px; 
   font-weight: bold;
 }
 
 .blue:hover {
-  background-color: #0548ffa0; /* ホバー時の色変更 */
+  background-color: #0548ffa0; 
   color: white;
 }
 
-/*ページネーション自体のデザイン*/
+
 .pagination>li>a {	
   background: #fbecc0;		
-  border: none;		/*枠線をなくす*/
-  color: black;	/*文字の色を変える*/
+  border: none;		
+  color: black;	
 }
 
-/* 表示しているページ番号のデザイン */
+
 .pagination>.active>a {		
-  background: #bf392b;	   /*背景の色を変える*/
-  border-radius: 15px;	   /*角を丸くする*/
+  background: #bf392b;	   
+  border-radius: 15px;	   
 }
 
-/*ホバー時のデザイン*/
+
 .pagination>li>a:hover {		
-  border-radius: 15px;	  /*角を丸くする*/
+  border-radius: 15px;	  
 }
 
 #table-comment {
-  width: 100%; /* テーブル全体の幅を100%に固定 */
-  table-layout: fixed; /* 各セルの幅を均等にする */
+  width: 100%; 
+  table-layout: fixed; 
 }
 
 #table-comment td {
-  width: 100%; /* 各セルも100%に */
-  padding: 10px; /* 内側の余白 */
+  width: 100%; 
+  padding: 10px;
   vertical-align: top;
-  word-wrap: break-word; /* 長い単語を改行 */
+  word-wrap: break-word; 
 }
 
 .kaisei-decol-regular {

@@ -1,17 +1,13 @@
-/* app/assets/stylesheets/diagnoses.scss */
-/*トップページ（static_pages/top.html.erb）と診断ページ（diagnosis/new.html.erb）は異なるページです。
-それぞれのページに固有のスタイルを適用する方がメンテナンスしやすく、将来的な変更も管理しやすくなります。
-ですので、診断ページのCSSは、トップページのCSSファイル（top.scss）に追加するのではなく、
-専用のCSSファイルに分離することをお勧めします。*/
 
-/* 診断ページの全体デザイン */
+
+
 
 .diagnosis-inner-text {
     width: 100%;
     text-align: center;
     font-size: 2.5rem;
     color: black;
-    margin-bottom: 50px; /* ボタンとの間に余白を追加 */
+    margin-bottom: 50px; 
   }
 
 .form-group {
@@ -31,72 +27,72 @@
   }
 
 
-/* ラジオボタンを隠す */
+
 .hidden-radio {
     display: none;
     text-align: center;
   }
 
-/* YESボタンのスタイル */
+
 .yes-button {
     display: inline-block;
     background-color: #FF0505;
     color: white;
     width: 290px;
     height: 106px;
-    line-height: 106px; /* ボタン内のテキストを中央揃え（縦） */
+    line-height: 106px; 
     text-align: center;
     font-size: 2.8rem;
-    text-decoration: none; /* 下線を削除 */
-    border-radius: 10px; /* 角を少し丸める */
+    text-decoration: none;
+    border-radius: 10px; 
     font-weight: bold;
 }
 
 .yes-button:hover {
-    background-color: #ff0505b2; /* ホバー時の色変更 */
+    background-color: #ff0505b2;
     color: white;
   }
   
-  /* NOボタンのスタイル */
+
 .no-button {
     display: inline-block;
     background-color: #05D2FF;
     color: white;
     width: 290px;
     height: 106px;
-    line-height: 106px; /* ボタン内のテキストを中央揃え（縦） */
+    line-height: 106px; 
     text-align: center;
     font-size: 2.8rem;
-    text-decoration: none; /* 下線を削除 */
-    border-radius: 10px; /* 角を少し丸める */
+    text-decoration: none; 
+    border-radius: 10px; 
     font-weight: bold;
 }
 
 .no-button:hover {
-    background-color: #05d1ffb7; /* ホバー時の色変更 */
+    background-color: #05d1ffb7; 
     color: white;
   }
 
 
-/* チェックされた場合に色を変える */
+
 input[type="radio"]:checked + .yes-button {
-    background-color: #cc0000; /* YESが選択されたときの色 */
+    background-color: #cc0000; 
   }
   
 input[type="radio"]:checked + .no-button {
-    background-color: #0088cc; /* NOが選択されたときの色 */
+    background-color: #0088cc; 
 }
 
-/*診断結果画像の配置スタイル*/
+
 .image-container {
-  position: relative; /* テキストを絶対配置するために相対配置 */
-  max-width: 100%; /* 画面幅に合わせて画像サイズを自動調整 */
-  height: auto; /* 高さを自動調整 */
-  margin: 0 auto; /* 中央揃え */
-  overflow: hidden; /* 親要素を超えた場合に隠す */
+  position: relative; 
+  max-width: 100%; 
+  height: auto; 
+  margin: 0 auto; 
+  overflow: hidden; 
 }
 
-/*料理名のスタイル */
+
 .text-overlay {
     position: absolute;
     top: 50%;
@@ -115,67 +111,67 @@ input[type="radio"]:checked + .no-button {
 
 
 
-/*概要のスタイル*/
+
 .overview{
   font-size: 1.8rem;
   text-align: center;
 }
 
-/* 結果ボタンコンテナをフレックスボックスで水平方向に配置 */
+
 .button-container {
   display: flex;
-  flex-direction: column; /* ボタンを縦に配置 */
-  align-items: center; /* ボタンを中央揃え */
-  margin-top: 20px; /* 上に余白を追加して題名の下に配置 */
+  flex-direction: column; 
+  align-items: center; 
+  margin-top: 20px; 
 }
 
-/*作り方はこちらのスタイル*/
+
 .how-to-make{
   display: inline-block;
   background-color: rgb(44, 235, 6);
   color: white;
   width: 290px;
   height: 106px;
-  line-height: 106px; /* ボタン内のテキストを中央揃え（縦） */
+  line-height: 106px; 
   text-align: center;
   font-size: 1.8rem;
-  text-decoration: none; /* 下線を削除 */
-  border-radius: 10px; /* 角を少し丸める */
+  text-decoration: none; 
+  border-radius: 10px; 
   font-weight: bold;
 }
 
-/*作り方はこちらのホバー*/
+
 .how-to-make:hover {
-  background-color: rgba(44, 235, 6, 0.595); /* ホバー時の色変更 */
+  background-color: rgba(44, 235, 6, 0.595); 
   color: white;
 }
 
-/*もう一度診断するのスタイル*/
+
 .diagnosis-again{
   display: inline-block;
   background-color: rgb(193, 6, 235);
   color: white;
   width: 290px;
   height: 106px;
-  line-height: 106px; /* ボタン内のテキストを中央揃え（縦） */
+  line-height: 106px; 
   text-align: center;
   font-size: 1.8rem;
-  text-decoration: none; /* 下線を削除 */
-  border-radius: 10px; /* 角を少し丸める */
+  text-decoration: none; 
+  border-radius: 10px; 
   font-weight: bold;
 }
 
 .diagnosis-again:hover {
-  background-color: rgba(193, 6, 235, 0.544); /* ホバー時の色変更 */
+  background-color: rgba(193, 6, 235, 0.544); 
   color: white;
 }
 
-/* もう一度診断する？とユーザー登録へを中央揃え左右に配置 */
+
 .button-container2{
   display: flex;
     justify-content: space-between;
-    width: 100%; /* ボタンが両端に配置されるための幅を確保 */
-    padding: 0 50px; /* 左右の端にスペースを確保 */
-    margin-top: 20px; /* タイトルとの余白 */
-    align-items: center; /* ボタンを中央揃え */
+    width: 100%; 
+    padding: 0 50px; 
+    margin-top: 20px; 
+    align-items: center; 
 }

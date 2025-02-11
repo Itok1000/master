@@ -80,7 +80,7 @@ Rails.application.configure do
 
   # ArgumentError (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
   # このエラーは、reset_password_emailメソッドでURLを生成する際にhostが設定されていないことが原因
-  # 本番環境では、メール内でリンクを生成するためにホスト名が必要ですが、それが指定されていない
+  # 本番環境では、メール内でリンクを生成するためにホスト名が必要だが、それが指定されていない
   config.action_mailer.default_url_options = { host: "your-production-domain.com", protocol: "https" }
   # この設定により、メール内で生成されるリンク（edit_password_reset_urlなど）が正しいホスト名を持つようになる
 
@@ -88,7 +88,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              "smtp.gmail.com",
     port:                 587,
-    domain:               "example.com", # 自分のドメイン名
+    domain:               "example.com",
     user_name:            ENV["SMTP_USERNAME"], # Gmailアカウント
     password:             ENV["SMTP_PASSWORD"], # Gmailアカウントのパスワード
     authentication:       "plain",
@@ -96,7 +96,6 @@ Rails.application.configure do
   }
 
   config.action_mailer.default_url_options = { host: "your-production-domain.com", protocol: "https" }
-  # Fly.io ドメインを使用している場合:
   config.action_mailer.default_url_options = { host: "gamarjoba.fly.dev", protocol: "https" }
 
 

@@ -14,13 +14,13 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
 
   has_many :favorites, dependent: :destroy
-  
+
   has_many :comments, dependent: :destroy
- 
+
   validates :reset_password_token, presence: true, uniqueness: true, allow_nil: true
 
   enum role: { general: 0, admin: 1 }
- 
+
   def own?(object)
     id == object&.user_id
   end

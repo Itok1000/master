@@ -1,16 +1,16 @@
 class ApplicationController < ActionController::Base
   allow_browser versions: :modern
-  
+
   before_action :require_login
- 
+
   before_action :set_locale
-  
+
   add_flash_types :success, :danger
-  
+
   def default_url_options
     { locale: I18n.locale }
   end
-  
+
   private
 
   def not_authenticated

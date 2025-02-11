@@ -25,7 +25,7 @@ class DiagnosesController < ApplicationController
                   og: {
                     title: "診断結果",
                     description: "おすすめのジョージア料理は #{@recipe_name} です",
-                    image: ogp_image_url(@diagnosis.question), 
+                    image: ogp_image_url(@diagnosis.question),
                     url: request.original_url
                   },
                   twitter: {

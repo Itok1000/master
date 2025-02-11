@@ -7,20 +7,20 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   root "static_pages#top"
-  get "static_pages/top", to: "static_pages#top", as: "top" 
-  get "/how_to_use", to: "static_pages#how_to_use" 
-  get "/georgia", to: "static_pages#georgia" 
-  get "/food", to: "static_pages#food" 
+  get "static_pages/top", to: "static_pages#top", as: "top"
+  get "/how_to_use", to: "static_pages#how_to_use"
+  get "/georgia", to: "static_pages#georgia"
+  get "/food", to: "static_pages#food"
     get "/terms", to: "terms#terms"
 
-  
+
   resources :diagnoses, only: %i[index show new create]
   get "images/ogp.png", to: "images#ogp", as: "images_ogp"
- 
 
 
 
-  
+
+
   resources :users, only: %i[new create]
 
   get "login", to: "user_sessions#new"

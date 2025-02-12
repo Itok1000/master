@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= page_title(yield(:title), admin: true) %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "admin/application" %>
+    <%= javascript_include_tag "admin", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body>
+    <%= render 'admin/shared/header' %>
+    <div class="container-fluid">
+      <div class="row">
+        <%= render 'admin/shared/sidebar' %>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <%= render 'shared/flash_message' %>
+          <%= yield %>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

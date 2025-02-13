@@ -129,6 +129,8 @@ GEM
     crass (1.0.6)
     cssbundling-rails (1.4.1)
       railties (>= 6.0.0)
+    dartsass-rails (0.4.1)
+      railties (>= 6.0.0)
     date (3.3.4)
     debug (1.9.2)
       irb (~> 1.10)
@@ -486,6 +488,7 @@ DEPENDENCIES
   carrierwave (~> 3.0)
   config
   cssbundling-rails
+  dartsass-rails (~> 0.4.0)
   debug
   dotenv
   draper (= 4.0.2)

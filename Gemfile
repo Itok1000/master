@@ -97,4 +97,4 @@ gem "config"
 
 gem "simplecov", require: false, group: :test
 
-gem 'enum_help'
+gem "enum_help"

@@ -224,10 +224,10 @@ ja:
       success: パスワードリセット手順を送信しました
     update:
       success: パスワードを変更しました
-    admin:
+  admin:
     user_sessions:
       new:
-        title: ログイン
+        title: 管理者画面ログイン
         login: ログイン
       create:
         success: ログインしました

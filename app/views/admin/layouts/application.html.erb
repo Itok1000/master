@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%= favicon_link_tag('logo.png') %>
     <title><%= page_title(yield(:title), admin: true) %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "admin/application" %>
+    <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "admin", "data-turbo-track": "reload", defer: true %>
 
     <%= display_meta_tags %>
-    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
   </head>
 
   <body>

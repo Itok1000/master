@@ -43,6 +43,19 @@ ja:
     create:
       success: ユーザー登録が完了しました
       failure: ユーザー登録に失敗しました
+    index:
+        title: ユーザー一覧
+    edit:
+        title: ユーザー編集
+    show:
+        title: ユーザー詳細
+    posts:
+      index:
+        title: 口コミ一覧
+      edit:
+        title: 口コミ編集
+      show:
+        title: 口コミ詳細
   header:
     login: ログイン
     logout: ログアウト

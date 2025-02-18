@@ -145,6 +145,8 @@ GEM
       request_store (>= 1.0)
       ruby2_keywords
     drb (2.2.1)
+    enum_help (0.0.19)
+      activesupport (>= 3.0.0)
     erubi (1.13.0)
     excon (1.2.1)
     factory_bot (6.5.0)
@@ -489,6 +491,7 @@ DEPENDENCIES
   debug
   dotenv
   draper (= 4.0.2)
+  enum_help
   factory_bot_rails
   fog-aws
   jbuilder

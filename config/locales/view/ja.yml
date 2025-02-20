@@ -14,6 +14,9 @@ ja:
       not_created: "%{item}を作成出来ませんでした"
       deleted: "%{item}を削除しました"
     edit: 編集
+    show: 詳細
+    delete: 削除
+    unspecified: 指定なし
   helpers:
     submit:
       create: 登録
@@ -237,3 +240,10 @@ ja:
     dashboards:
       index:
         title: ダッシュボード
+    users:
+      index:
+        title: ユーザー一覧
+      edit:
+        title: ユーザー編集
+      show:
+        title: ユーザー詳細

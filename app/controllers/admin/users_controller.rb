@@ -2,8 +2,6 @@ class Admin::UsersController < Admin::BaseController
     before_action :set_user, only: %i[show edit update destroy]
 
     def index
-      @q = User.ransack(params[:q])
-      @users = @q.result(distinct: true).order(created_at: :desc).page(params[:page]).per(10)
     end
 
     def show; end
@@ -31,6 +29,6 @@ class Admin::UsersController < Admin::BaseController
     end
 
     def user_params
-      params.require(:user).permit(:user_name, :avatar, :role)
+      params.require(:user).permit(:email, :user_name)
     end
 end

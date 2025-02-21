@@ -240,10 +240,10 @@ ja:
     dashboards:
       index:
         title: ダッシュボード
-    users:
+    posts:
       index:
-        title: ユーザー一覧
+        title: 口コミ一覧
       edit:
-        title: ユーザー編集
+        title: 口コミ編集
       show:
-        title: ユーザー詳細
+        title: 口コミ詳細

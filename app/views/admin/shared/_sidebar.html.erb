@@ -2,16 +2,10 @@
   <div class="position-sticky pt-3 sidebar-sticky">
     <ul class="nav flex-column">
       <li class="nav-item">
-        <%= link_to admin_users_path, class: "nav-link #{active_if('admin/users')}" do %>
-          <i class="bi bi-file-earmark"></i>
-          <%= t('admin.users.index.title') %>
-        <% end %>
-      </li>
-      <li class="nav-item">
-        <%= link_to '#', class: 'nav-link' do %>
-          <i class="bi bi-person"></i>
-          <%= Post.model_name.human %>
-        <% end %>
+        <%= link_to admin_posts_path, class: "nav-link #{ active_if('admin/posts') }" do %>
+        <i class="bi bi-file-earmark"></i>
+          <%= t('admin.posts.index.title') %>
+      <% end %>
       </li>
     </ul>
   </div>

@@ -1,4 +1,3 @@
-<!-- 検索フォーム -->
 <%= search_form_for @q, url: url do |f| %>
     <div class="input-group mb-3">
       <%= f.search_field :title_or_body_cont, class: 'form-control', placeholder: t('defaults.search_word') %>

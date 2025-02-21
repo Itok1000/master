@@ -15,6 +15,7 @@ ja:
         body: 本文
         post_image: 画像をアップロード
         rating: 評価
+        user: ユーザー
       comment:
         body: コメント
   attributes:

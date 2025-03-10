@@ -143,6 +143,8 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 Figma：https://www.figma.com/design/7mF5VkcFrHRPTxVFbwi1wh/%E7%84%A1%E9%A1%8C?node-id=0-1&node-type=canvas&t=RkSKDCDXuFFcGs0e-0
 
 # ER図(企画時)
+[![Image from Gyazo](https://i.gyazo.com/9789f01580f3e75e651c231c4c6abbf8.png)](https://gyazo.com/9789f01580f3e75e651c231c4c6abbf8)
+
 https://app.diagrams.net/#HItok1000%2Fmaster%2FER_diagram_request%2F%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB.drawio#%7B%22pageId%22%3A%22C5RBs43oDa-KdzZeNtuy%22%7D
 
 # ■ 技術スタック

@@ -10,6 +10,7 @@ Rails.application.configure do
     Bullet.add_footer    = true
   end
 
+  BetterErrors::Middleware.allow_ip! "0.0.0.0/0"
   # Settings specified here will take precedence over those in config/application.rb.
   config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.perform_deliveries = true

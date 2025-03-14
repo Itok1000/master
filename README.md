@@ -140,6 +140,8 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 | オートコンプリート検索機能|
 
 # 画面遷移図(企画時)
+[![Image from Gyazo](https://i.gyazo.com/b594e92d0724eef5a28875eeb4c03912.png)](https://gyazo.com/b594e92d0724eef5a28875eeb4c03912)
+
 Figma：https://www.figma.com/design/7mF5VkcFrHRPTxVFbwi1wh/%E7%84%A1%E9%A1%8C?node-id=0-1&node-type=canvas&t=RkSKDCDXuFFcGs0e-0
 
 # ER図(企画時)

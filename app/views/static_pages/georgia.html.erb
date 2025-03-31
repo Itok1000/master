@@ -21,9 +21,34 @@
       <a href="https://www.mofa.go.jp/mofaj/area/georgia/data.html" target="_blank">外務省：ジョージアのデータ</a></p>
      </div>  
     </div>
-    <!-- 画像 -->
     <div class="food-container">
-     <%= image_tag 'Georgia.webp', alt: 'ジョージアの位置', class: 'georgia' %>
+     <div id='map'></div>
+      <style>
+        #map {
+          height: 450px;
+          width: 600px;
+          border:0;
+        }
+      </style>
+
+      <script>
+       let map
+       const display = document.getElementById('display')
+       function initMap() {
+        geocoder = new google.maps.Geocoder()
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {
+                lat: 41.75,
+                lng: 44.77
+            },
+            zoom: 6.3,
+        });
+       }
+      </script>
+       <script
+       src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap"  
+        async defer>
+       </script>
     </div>
     <br>
     <div class="overview">

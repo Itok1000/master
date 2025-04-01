@@ -91,6 +91,7 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 # 実装機能
 |ログインなしで利用可能|
 | -------- |
+|位置情報(「ジョージアって何？」におけるジョージアの位置情報を表示させるため)|
 | 診断機能|
 | 診断結果を表示|
 | Xにてシェア共有|
@@ -159,7 +160,7 @@ https://app.diagrams.net/#HItok1000%2Fmaster%2FER_diagram_request%2F%E5%90%8D%E7
 | データベース| PostgreSQL|
 | 認証|Sorcery|
 | 開発環境|Docker|
-| その他|rubocop,CarrierWave,mini magick,letter opener web|
+| その他|rubocop,CarrierWave,mini magick,letter opener web,Maps JavaScript API/Geolocation API|
 | バージョン管理|GitHub|
 
 

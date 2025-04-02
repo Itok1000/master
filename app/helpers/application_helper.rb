@@ -7,4 +7,35 @@ module ApplicationHelper
     def active_if(path)
         path == controller_path ? "active" : ""
     end
+
+    def default_meta_tags
+        {
+          site: 'ガマルジョバ',
+          title: 'ガマルジョバ/გამარჯობა',
+          reverse: true,
+          charset: 'utf-8',
+          description: 'ジョージア料理診断サービスWebアプリ ログインなしで簡単な質問をすれば、おすすめのジョージア料理をご紹介！ (Xでシェアもできるよ) ログインして、料理の口コミやいいねをしてジョージア料理の奥深さを感じてみよう！',
+          keywords: 'ジョージア,ジョージア料理,ジョージア料理診断アプリ,georgia,gamarjoba,გამარჯობა,საქართველო',
+          canonical: request.original_url,
+          separator: '|',
+          icon: [
+            { href: image_url('logo.png') },
+            { href: image_url('ジョージア料理診断アプリ ガマルジョバ.png'), rel: 'apple-touch-icon', sizes: '600x315', type: 'image/png' },
+          ],
+          og: {
+            site_name: :site,
+            title: :title,
+            description: :description,
+            type: 'website',
+            url: request.original_url,
+            image: image_url('ジョージア料理診断アプリ ガマルジョバ.png'),# 配置するパスやファイル名によって変更する
+            local: 'ja-JP',
+          },
+          twitter: {
+            card: 'summary_large_image', # Twitterで表示する場合は大きいカードに変更
+            site: '@Itoken1000', # アプリの公式Twitterアカウントがあれば、アカウント名を記載
+            image: image_url('ジョージア料理診断アプリ ガマルジョバ.png'),# 配置するパスやファイル名によって変更
+          }
+        }
+    end
 end

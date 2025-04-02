@@ -28,13 +28,13 @@ module ApplicationHelper
             description: :description,
             type: "website",
             url: request.original_url,
-            image: image_url("ジョージア料理診断アプリ ガマルジョバ.png"), # 配置するパスやファイル名によって変更する
+            image: image_url("ジョージア料理診断アプリ ガマルジョバ.png"), 
             local: "ja-JP"
           },
           twitter: {
-            card: "summary_large_image", # Twitterで表示する場合は大きいカードに変更
-            site: "@Itoken1000", # アプリの公式Twitterアカウントがあれば、アカウント名を記載
-            image: image_url("ジョージア料理診断アプリ ガマルジョバ.png") # 配置するパスやファイル名によって変更
+            card: "summary_large_image", 
+            site: "@Itoken1000", 
+            image: image_url("ジョージア料理診断アプリ ガマルジョバ.png") 
           }
         }
     end

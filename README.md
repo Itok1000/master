@@ -111,6 +111,7 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 ・ANSWER7の場合
 ・https://ca-voir.com/nobuyo-kitchen-shkmeruli-jp/|
 | OGP（動的）|
+|i18n機能を生かして英語とジョージア語の翻訳機能を追加|
 
 |ログイン後の機能|
 | -------- |
@@ -129,7 +130,7 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 | Minimagick系の画像加工（アップ時に画像を指定のサイズに加工・webp化する）|
 | レーティング機能|
 | 独自ドメイン|
-| i18n機能を生かして英語とジョージア語の翻訳機能を追加|
+|i18n機能を生かして英語とジョージア語の翻訳機能を追加|
 |管理者ページログイン機能 |
 |口コミ投稿の編集・削除機能(管理者のみ)|
 

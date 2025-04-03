@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get "/food", to: "static_pages#food"
     get "/terms", to: "terms#terms"
 
-
+  resources :quizzes, only: %i[index show new create destroy]
   resources :diagnoses, only: %i[index show new create]
   get "images/ogp.png", to: "images#ogp", as: "images_ogp"
 

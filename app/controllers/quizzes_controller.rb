@@ -1,5 +1,5 @@
 class QuizzesController < ApplicationController
-    skip_before_action :require_login, only: [ :new, :create ]
+    skip_before_action :require_login, only: [:index, :new, :create ]
     def index
       @correct_count = session[:correct_count]
       @questions = Question.all

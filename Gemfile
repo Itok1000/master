@@ -96,3 +96,5 @@ end
 gem "config"
 
 gem "simplecov", require: false, group: :test
+
+gem "active_hash"

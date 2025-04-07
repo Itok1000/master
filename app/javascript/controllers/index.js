@@ -4,5 +4,5 @@
 
 import { application } from "./application"
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
+import QuizController from "./quiz_controller";
+application.register("quiz", QuizController);

@@ -165,9 +165,9 @@
       </div>
       <br>
       <div class = "kaisei-decol-regular">
-       <h5>ジョージアについて、あなたはどのくらい知っている？</h5>
+       <h5><%= t('static_pages.How much do you know about Georgia?') %></h5>
       </div>
-       <%= link_to 'クイズを始める', new_quiz_path, class: "btn btn-lg px-4 py-2 shadow", style: "background-color: rgb(179, 62, 92); color: white; border-radius: 8px; font-weight: bold;" %>
+       <%= link_to t('static_pages.Start Quiz'), new_quiz_path, class: "btn btn-lg px-4 py-2 shadow", style: "background-color: rgb(179, 62, 92); color: white; border-radius: 8px; font-weight: bold;" %>
     <% end %>
   </div>
 </div>

@@ -3,18 +3,18 @@
     <div class="col-md-8 mx-auto">
       <div class="card mb-4 shadow" style="border: 2px solid #d99873; border-radius: 15px;">
         <div class="card-body text-center" style="background-color: #fff8e7; border-radius: 10px;">
-          <h2 class="card-title h2" style="color: #b03a2e; font-family: 'Georgia', serif;">結果</h2>
-          <p class="mt-4" style="color: #b03a2e; font-weight: bold;">正解数: <span class="text-primary"><%= @correct_count %></span> / <%= @questions.count %></p>
+          <h2 class="card-title h2" style="color: #b03a2e; font-family: 'Georgia', serif;"><%= t('quizzes.index.result') %></h2>
+          <p class="mt-4" style="color: #b03a2e; font-weight: bold;"><%= t('quizzes.index.correct_count') %> <span class="text-primary"><%= @correct_count %></span> / <%= @questions.count %></p>
         </div>
       </div>
 
       <% @questions.each_with_index do |question, index| %>
         <div class="card mb-4 shadow-sm" style="border: 1px solid #d99873; border-radius: 10px;">
           <div class="card-body" style="background-color: #fff8e7;">
-            <h3 class="h5 font-weight-bold" style="color: #b03a2e;">問題 <%= index + 1 %>: <%= question.content %></h3>
+            <h3 class="h5 font-weight-bold" style="color: #b03a2e;"><%= t('quizzes.index.question') %> <%= index + 1 %>: <%= question.content %></h3>
 
             <div class="mt-3">
-              <p class="font-weight-bold" style="color: #b03a2e;">正解:</p>
+              <p class="font-weight-bold" style="color: #b03a2e;"><%= t('quizzes.index.correct_answer') %></p>
               <ul class="list-group">
                 <% question.answers.each do |correct_answer| %>
                   <li class="list-group-item" style="color: #28a745; font-weight: bold;"><%= correct_answer %></li>
@@ -23,7 +23,7 @@
             </div>
 
             <div class="mt-3">
-              <p class="font-weight-bold" style="color: #b03a2e;">解説:</p>
+              <p class="font-weight-bold" style="color: #b03a2e;"><%= t('quizzes.index.explanation') %></p>
               <p class="text-muted mt-2"><%= question.explain %></p>
             </div>
           </div>
@@ -34,11 +34,11 @@
            target="_blank" rel="noopener noreferrer"
            class="btn btn-lg px-4 py-2 shadow"
            style="background-color: #b03a2e; color: #fff; border-radius: 8px; font-weight: bold;">
-          結果をXでシェア
+          <%= t('quizzes.index.share_on_x') %>
         </a>
       </div>
       <div class="text-center mt-4">
-       <%= link_to 'もう一度やる', new_quiz_path, class: "btn btn-lg px-4 py-2 shadow", style: "background-color: rgb(193, 6, 235); color: white; border-radius: 8px; font-weight: bold;" %>
+       <%= link_to t('quizzes.index.try_again'), new_quiz_path, class: "btn btn-lg px-4 py-2 shadow", style: "background-color: rgb(193, 6, 235); color: white; border-radius: 8px; font-weight: bold;" %>
        <%= link_to t('static_pages.return_button'), top_path, class: "btn btn-lg px-4 py-2 shadow", style: "background-color: orange; color: white; border-radius: 8px; font-weight: bold;" %>
       </div>
     </div>

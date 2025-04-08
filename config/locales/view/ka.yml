@@ -182,6 +182,22 @@ ka:
       diagnosis-again: ისევ დიაგნოზი
       registration: რეგისტრაცია
       result: ნახეთ შედეგი
+  quizzes:
+    new:
+      answer: პასუხი
+      correct: ✔ სწორია!
+      incorrect: ✖ არასწორი
+      Answer_is:  პასუხია：
+      next_question: შემდეგი კითხვა
+      look_a_result: შედეგების ნახვა
+    index:
+      question: კითხვა
+      correct_answer: უპასუხე
+      explanation: განმარტება
+      result: თქვენი შედეგი
+      correct_count: სწორი დათვლა
+      try_again: სცადეთ ისევ
+      share_on_x: გააზიარეთ X-ზე
   posts:
     new:
       title: შეაფასეთ

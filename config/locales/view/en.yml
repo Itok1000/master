@@ -182,6 +182,22 @@ en:
       diagnosis-again: diagnosis again
       registration: User registration
       result: see the result
+  quizzes:
+    new:
+      answer: Answer
+      correct: ✔ Correct！
+      incorrect: ✖ Wrong
+      Answer_is: Answer is：
+      next_question: next question
+      look_a_result: View Results
+    index:
+      question: Question
+      correct_answer: Answer
+      explanation: Explanation
+      result: Your Result
+      correct_count: Correct Count
+      try_again: Try Again
+      share_on_x: Share on X
   posts:
     new:
       title: Evaluate the food

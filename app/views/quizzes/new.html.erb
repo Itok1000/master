@@ -15,10 +15,15 @@
                 <div class="form-group">
                   <% @question.choices.shuffle.each do |choice| %>
                     <div class="form-check mb-3">
-                      <label id="answers_<%= choice %>_label" class="form-check-label d-flex align-items-center" style="cursor: pointer; background: #f8e1c4; padding: 10px; border-radius: 8px; border: 1px solid #d99873;">
-                        <%= f.check_box :selected_answers, { multiple: true, name: 'quiz[selected_answers][]', id: "answers_#{choice}", class: "form-check-input me-2", data: { action: "quiz#check", quiz_target: "checkbox" } }, choice, nil %>
-                        <span style="color: #b03a2e; font-weight: bold;"><%= simple_format(choice) %></span>
-                      </label>
+                     <label id="answers_<%= choice %>_label" 
+                      class="form-check-label d-flex align-items-center justify-content-center"
+                      style="cursor: pointer; background: #f8e1c4; padding: 15px; border-radius: 8px; border: 2px solid #d99873; transition: all 0.3s ease;"
+                      onmouseover="this.style.background='#d99873'; this.style.color='#fff';"
+                      onmouseout="if (!this.classList.contains('active')) { this.style.background='#f8e1c4'; this.style.color='#b03a2e'; }"
+                      onclick="document.querySelectorAll('.form-check-label').forEach(el => el.classList.remove('active')); this.classList.add('active'); this.style.background='#d99873'; this.style.color='#fff';">
+                      <%= f.check_box :selected_answers, { multiple: true, name: 'quiz[selected_answers][]', id: "answers_#{choice}", class: "form-check-input d-none", data: { action: "quiz#check", quiz_target: "checkbox" } }, choice, nil %>
+                      <span style="color: #b03a2e; font-weight: bold;"><%= simple_format(choice) %></span>
+                     </label>
                     </div>
                   <% end %>
                 </div>

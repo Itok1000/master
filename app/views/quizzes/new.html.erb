@@ -1,37 +1,38 @@
 <div class="top-wrapper">
-<div class="container mt-4">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title h4 mb-4"><%= @question.content %></h2>
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow" style="border: 2px solid #d99873; border-radius: 15px;">
+          <div class="card-body" style="background-color: #fff8e7; border-radius: 10px;">
+            <h2 class="card-title h4 mb-4 text-center" style="color: #b03a2e; font-family: 'Georgia', serif;">
+              <%= @question.content %>
+            </h2>
 
-          <div data-controller="quiz">
-            <%= form_with model: @quiz, url: quizzes_path do |f| %>
-              <%= f.hidden_field :question_id, value: @question.id %>
+            <div data-controller="quiz">
+              <%= form_with model: @quiz, url: quizzes_path, html: { style: "font-family: 'Georgia', serif;" } do |f| %>
+                <%= f.hidden_field :question_id, value: @question.id %>
 
-              <div class="form-group">
-                <% @question.choices.shuffle.each do |choice| %>
-                  <div class="form-check">
-                   <label id="answers_<%= choice %>_label" class="label cursor-pointer gap-4 flex items-center has_checkbox">
-                    <%= f.check_box :selected_answers, { multiple: true, name: 'quiz[selected_answers][]', id: "answers_#{choice}", data: { action: "quiz#check", quiz_target: "checkbox" } }, choice, nil %>
-                    <div class="btn btn-block hover:bg-white hover:text-primary text-xl fonr-semibold hover:border-primary h-full"><%= simple_format(choice) %></div>
-                   </label>
-                  </div>
-                <% end %>
-              </div>
+                <div class="form-group">
+                  <% @question.choices.shuffle.each do |choice| %>
+                    <div class="form-check mb-3">
+                      <label id="answers_<%= choice %>_label" class="form-check-label d-flex align-items-center" style="cursor: pointer; background: #f8e1c4; padding: 10px; border-radius: 8px; border: 1px solid #d99873;">
+                        <%= f.check_box :selected_answers, { multiple: true, name: 'quiz[selected_answers][]', id: "answers_#{choice}", class: "form-check-input me-2", data: { action: "quiz#check", quiz_target: "checkbox" } }, choice, nil %>
+                        <span style="color: #b03a2e; font-weight: bold;"><%= simple_format(choice) %></span>
+                      </label>
+                    </div>
+                  <% end %>
+                </div>
 
-              <div id="answer_submit" class="d-flex justify-content-center mt-4">
-                <%= f.submit '回答する', class: "btn btn-secondary btn-lg px-4 py-2 shadow-lg", data: { quiz_target: "submitButton" } %>
-              </div>
-              <div id="answer">
-              </div>
-            <% end %>
+                <div id="answer_submit" class="text-center mt-4">
+                  <%= f.submit '回答する', class: "btn btn-lg px-4 py-2 shadow", style: "background-color: #b03a2e; color: #fff; border-radius: 8px; font-weight: bold;" %>
+                </div>
+                <div id="answer"></div>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 

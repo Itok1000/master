@@ -1,0 +1,43 @@
+<div class="top-wrapper">
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow" style="border: 2px solid #d99873; border-radius: 15px;">
+          <div class="card-body" style="background-color: #fff8e7; border-radius: 10px;">
+            <h2 class="card-title h4 mb-4 text-center" style="color: #b03a2e; font-family: 'Georgia', serif;">
+              <%= @question.content %>
+            </h2>
+
+            <div data-controller="quiz">
+              <%= form_with model: @quiz, url: quizzes_path, html: { style: "font-family: 'Georgia', serif;" } do |f| %>
+                <%= f.hidden_field :question_id, value: @question.id %>
+
+                <div class="form-group">
+                  <% @question.choices.shuffle.each do |choice| %>
+                    <div class="form-check mb-3">
+                     <label id="answers_<%= choice %>_label" 
+                      class="form-check-label d-flex align-items-center justify-content-center"
+                      style="cursor: pointer; background: #f8e1c4; padding: 15px; border-radius: 8px; border: 2px solid #d99873; transition: all 0.3s ease;"
+                      onmouseover="this.style.background='#d99873'; this.style.color='#fff';"
+                      onmouseout="if (!this.classList.contains('active')) { this.style.background='#f8e1c4'; this.style.color='#b03a2e'; }"
+                      onclick="document.querySelectorAll('.form-check-label').forEach(el => el.classList.remove('active')); this.classList.add('active'); this.style.background='#d99873'; this.style.color='#fff';">
+                      <%= f.check_box :selected_answers, { multiple: true, name: 'quiz[selected_answers][]', id: "answers_#{choice}", class: "form-check-input d-none", data: { action: "quiz#check", quiz_target: "checkbox" } }, choice, nil %>
+                      <span style="color: #b03a2e; font-weight: bold;"><%= simple_format(choice) %></span>
+                     </label>
+                    </div>
+                  <% end %>
+                </div>
+
+                <div id="answer_submit" class="text-center mt-4">
+                  <%= f.submit '回答する', class: "btn btn-lg px-4 py-2 shadow", style: "background-color: #b03a2e; color: #fff; border-radius: 8px; font-weight: bold;" %>
+                </div>
+                <div id="answer"></div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

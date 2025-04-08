@@ -162,7 +162,12 @@
       <!-- 診断スタートボタン -->
       <div class="start-button-container">
         <%= link_to t('static_pages.start_button'), new_diagnosis_path, class: 'orange' %>
-      </div> 
+      </div>
+      <br>
+      <div class = "kaisei-decol-regular">
+       <h5>ジョージアについて、あなたはどのくらい知っている？</h5>
+      </div>
+       <%= link_to 'クイズを始める', new_quiz_path, class: "btn btn-lg px-4 py-2 shadow", style: "background-color: rgb(179, 62, 92); color: white; border-radius: 8px; font-weight: bold;" %>
     <% end %>
   </div>
 </div>

@@ -45,6 +45,8 @@ GEM
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
+    active_hash (3.3.1)
+      activesupport (>= 5.0.0)
     activejob (7.2.1)
       activesupport (= 7.2.1)
       globalid (>= 0.3.6)
@@ -106,7 +108,7 @@ GEM
       debug_inspector (>= 1.2.0)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
-    brakeman (7.0.0)
+    brakeman (7.0.2)
       racc
     builder (3.3.0)
     bullet (8.0.1)
@@ -491,6 +493,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  active_hash
   aws-sdk-s3
   better_errors
   binding_of_caller

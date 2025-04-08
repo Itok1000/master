@@ -223,12 +223,3 @@ en:
       success: Password reset instructions sent
     update:
       success: password changed
-  quizzes:
-    submit_button: "Submit"
-    question: "Question"
-    correct_answer: "Correct answer"
-    explanation: "Explanation"
-    result_title: "Quiz Result
-    correct_count: "Correct Count"
-    try_again: "Try Again"
-    share_on_x: "share on x"

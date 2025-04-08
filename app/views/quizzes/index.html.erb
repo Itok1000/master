@@ -30,7 +30,7 @@
         </div>
       <% end %>
       <div class="text-center mt-4">
-        <a href="https://twitter.com/intent/tweet?text=<%= ERB::Util.url_encode("正解数: #{@correct_count} / #{@questions.count} \nジョージアについて、あなたはどのくらい知っている？\n#ガマルジョバ・გამარჯობა\n") %>&url=<%= ERB::Util.url_encode("#{request.protocol}#{request.host_with_port}") %>"
+        <a href="https://twitter.com/intent/tweet?text=<%= ERB::Util.url_encode("正解数: #{@correct_count} / #{@questions.count} \nジョージアについて、あなたはどのくらい知っている？\n#ガマルジョバ #გამარჯობა #ジョージア #ジョージアクイズチャレンジ \n") %>&url=<%= ERB::Util.url_encode("#{request.protocol}#{request.host_with_port}") %>"
            target="_blank" rel="noopener noreferrer"
            class="btn btn-lg px-4 py-2 shadow"
            style="background-color: #b03a2e; color: #fff; border-radius: 8px; font-weight: bold;">

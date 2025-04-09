@@ -21,7 +21,6 @@
       <div class = "kaisei-decol-regular">
        <h4><%= t('static_pages.another_diagnosis') %></h4>
       </div>
-      <!-- 診断スタートボタン -->
       <div class="start-button-container">
          <%= link_to t('static_pages.start_button'), new_diagnosis_path, class: 'orange' %>
       </div>
@@ -31,9 +30,7 @@
       </div>
     </div>
       <div class="food-container">
-        <!-- ログイン後の掲示板一覧の表示 -->
         <div class="food-grid">
-          <!-- 画像を含むボタン例 -->
           <div class="food-item">
             <%= link_to posts_path(recipe: "ojakhuri"), class: 'food-link' do %>
               <%= image_tag('Answer01.webp', class: 'food-image') %>
@@ -42,7 +39,7 @@
                 <div class = "noto-serif-georgian-uniquifier">
                  <p>ოჯახური</p>
                 </div>
-               </span> <!-- 画像の中央に表示するテキスト -->
+               </span> 
             <% end %>
           </div>
           <div class="food-item">
@@ -53,7 +50,7 @@
                 <div class = "noto-serif-georgian-uniquifier">
                  <p>ბადრიჯანი</p>
                 </div>
-               </span> <!-- 画像の中央に表示するテキスト -->
+               </span> 
             <% end %>
           </div>
           <div class="food-item">
@@ -64,7 +61,7 @@
                 <div class = "noto-serif-georgian-uniquifier">
                  <p>სოკოს ჭაშუშული</p>
                 </div>
-               </span> <!-- 画像の中央に表示するテキスト -->
+               </span> 
             <% end %>
           </div>
           <div class="food-item">
@@ -75,7 +72,7 @@
                 <div class = "noto-serif-georgian-uniquifier">
                  <p>ფხალი</p>
                 </div>
-               </span> <!-- 画像の中央に表示するテキスト -->
+               </span> 
             <% end %>
           </div>
           <div class="food-item">
@@ -86,7 +83,7 @@
                 <div class = "noto-serif-georgian-uniquifier">
                  <p>ოსტრი</p>
                 </div>
-               </span> <!-- 画像の中央に表示するテキスト -->
+               </span> 
             <% end %>
           </div>
           <div class="food-item">
@@ -97,7 +94,7 @@
                 <div class = "noto-serif-georgian-uniquifier">
                  <p>ჩიხირთმა</p>
                 </div>
-               </span> <!-- 画像の中央に表示するテキスト -->
+               </span> 
             <% end %>
           </div>
           <div class="food-item">
@@ -108,7 +105,7 @@
                 <div class = "noto-serif-georgian-uniquifier">
                  <p>შქმერული</p>
                 </div>
-               </span> <!-- 画像の中央に表示するテキスト -->
+               </span> 
             <% end %>
           </div>
           <div class="food-item">
@@ -119,18 +116,16 @@
                 <div class = "noto-serif-georgian-uniquifier">
                  <p>ჩახოხბილი</p>
                 </div>
-               </span> <!-- 画像の中央に表示するテキスト -->
+               </span> 
             <% end %>
           </div>
         </div>
       </div>
     <% else %>
-      <!-- ログイン前のコンテンツ -->
       <div class = "kaisei-decol-regular">
       <h4><%= t('static_pages.check here before starting diagnosis') %></h4>
       </div>
       <div class="button-container">
-        <!-- 上部のボタン -->
        <div class="image-container">
         <div class="button upper-button">
          <div class = "kaisei-decol-regular">
@@ -138,7 +133,6 @@
          </div>
         </div>
        </div>
-        <!-- 中央部のボタン -->
        <div class="image-container">
         <div class="button middle-button">
          <div class = "kaisei-decol-regular">
@@ -146,7 +140,6 @@
          </div>
         </div>
        </div>
-        <!-- 下部のボタン -->
        <div class="image-container">
         <div class="button under-button">
          <div class = "kaisei-decol-regular">
@@ -154,12 +147,10 @@
          </div>
         </div>
        </div>
-        <!-- みんなの口コミのボタン -->
       </div>
       <div class = "kaisei-decol-regular">
        <h5><%= t('static_pages.If you can confirm it.') %></h5>
       </div>
-      <!-- 診断スタートボタン -->
       <div class="start-button-container">
         <%= link_to t('static_pages.start_button'), new_diagnosis_path, class: 'orange' %>
       </div>

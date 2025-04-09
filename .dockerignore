@@ -43,6 +43,9 @@
 # Ignore development files
 /.devcontainer
 
+
+/app/models/active_hash/questions.yml
+
 # Ignore Docker-related files
 /.dockerignore
 /Dockerfile*

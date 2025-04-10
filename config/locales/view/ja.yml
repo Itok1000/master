@@ -233,7 +233,7 @@ ja:
     new:
       answer: 回答する
       correct: ✔ 正解！
-      incoorect: ✖ 不正解
+      incorrect: ✖ 不正解
       Answer_is: 正解は：
       next_question: 次の問題
       look_a_result: 結果を見る

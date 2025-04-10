@@ -118,8 +118,6 @@ ja:
     reference_materials: "参考資料:"
     If you can confirm it: 確認出来たら
     start_button: "診断スタート"
-    How much do you know about Georgia?: "ジョージアについて、あなたはどのくらい知っている？"
-    Start Quiz: "クイズを始める"
     return_button: "トップページに戻る"
     another_diagnosis: "投稿前に、もう一回診断してみる？"
     click_to_comment_or_post!: "クリックして、コメントや投稿をしてみよう"
@@ -229,22 +227,6 @@ ja:
       success: パスワードリセット手順を送信しました
     update:
       success: パスワードを変更しました
-  quizzes:
-    new:
-      answer: 回答する
-      correct: ✔ 正解！
-      incorrect: ✖ 不正解
-      Answer_is: 正解は：
-      next_question: 次の問題
-      look_a_result: 結果を見る
-    index:
-      question: "問題"
-      correct_answer: "正解:"
-      explanation: "解説"
-      result: "結果"
-      correct_count: "正解数"
-      try_again: "もう一度やる"
-      share_on_x: "結果をXでシェア"
   admin:
     user_sessions:
       new:

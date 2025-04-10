@@ -114,8 +114,6 @@ ka:
     reference_materials: "საცნობარო მასალები:"
     If you can confirm it: თუ შეგიძლიათ დაადასტურეთ.
     start_button: "დაწყება"
-    How much do you know about Georgia?: "რამდენი იცით საქართველოს შესახებ?"
-    Start Quiz: "დაიწყე ვიქტორინა"
     return_button: "დაბრუნება"
     another_diagnosis: "გსურთ სხვა დიაგნოზი მიმოხილვის გაგზავნამდე?"
     click_to_comment_or_post!: "დააწკაპუნეთ კომენტარის ან გამოქვეყნებისთვის!"
@@ -182,22 +180,6 @@ ka:
       diagnosis-again: ისევ დიაგნოზი
       registration: რეგისტრაცია
       result: ნახეთ შედეგი
-  quizzes:
-    new:
-      answer: პასუხი
-      correct: ✔ სწორია!
-      incorrect: ✖ არასწორი
-      Answer_is:  პასუხია：
-      next_question: შემდეგი კითხვა
-      look_a_result: შედეგების ნახვა
-    index:
-      question: კითხვა
-      correct_answer: უპასუხე
-      explanation: განმარტება
-      result: თქვენი შედეგი
-      correct_count: სწორი დათვლა
-      try_again: სცადეთ ისევ
-      share_on_x: გააზიარეთ X-ზე
   posts:
     new:
       title: შეაფასეთ

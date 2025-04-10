@@ -28,7 +28,7 @@ module ApplicationHelper
             description: :description,
             type: "website",
             url: request.original_url,
-            image: image_url("ジョージア料理診断アプリ ガマルジョバ.png"),
+            image: image_url("logo.png"),
             local: "ja-JP"
           },
           twitter: {

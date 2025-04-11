@@ -20,7 +20,7 @@ module ApplicationHelper
           separator: "|",
           icon: [
             { href: image_url("logo.png") },
-            { href: image_url("ジョージア料理診断アプリ ガマルジョバ.png"), rel: "apple-touch-icon", sizes: "600x315", type: "image/png" }
+            { href: image_url("logo.png"), rel: "apple-touch-icon", sizes: "600x315", type: "image/png" }
           ],
           og: {
             site_name: :site,

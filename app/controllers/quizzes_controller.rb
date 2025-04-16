@@ -16,8 +16,8 @@ class QuizzesController < ApplicationController
 
     def create
       @question = Question.find(quiz_params[:question_id])
-      @select_answers = quiz_params[:selected_answers]
-      @is_correct = @question.answers.sort == @select_answers.sort
+      @select_localized_answers = quiz_params[:selected_localized_answers]
+      @is_correct = @question.localized_answers.sort == @select_localized_answers.sort
       @questions_count = Question.all.count
       session[:correct_count] = session[:correct_count].to_i + 1 if @is_correct
     end
@@ -25,6 +25,6 @@ class QuizzesController < ApplicationController
     private
 
     def quiz_params
-      params.require(:quiz).permit(:question_id, selected_answers: [])
+      params.require(:quiz).permit(:question_id, selected_localized_answers: [])
     end
 end

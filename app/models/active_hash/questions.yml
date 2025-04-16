@@ -1,42 +1,126 @@
 - id: 1
-  content: ジョージアの首都は？
+  content: 
+    ja: "ジョージアの首都は？"
+    en: "What is the capital of Georgia?"
+    ka: "რა არის საქართველოს დედაქალაქი?"
   choices:
+    ja:
     - トビリシ
     - バトゥミ
     - ザルビシュタ
+    en:
+    - Tbilisi
+    - Batumi
+    - Zarbishta
+    ka:
+    - თბილისი
+    - ბათუმი
+    - ზარბიშტა
   answers:
+    ja: 
     - トビリシ
-  explain: "人口は約110万人。\nトビリシとは「あたたかい」を意味するトビリに由来し、温泉と関係があるとされていて、旧市街のアバノトゥバニ地区には温泉公衆浴場がある\nまた、トビリシは「トビリシの母」と呼ばれる聖ニノがキリスト教を広めた地でもあり、キリスト教徒が多い"
+    en: 
+    - Tbilisi
+    ka:
+    - თბილისი
+  explain:
+    ja: "人口は約110万人。\nトビリシとは「あたたかい」を意味するトビリに由来し、温泉と関係があるとされていて、旧市街のアバノトゥバニ地区には温泉公衆浴場がある\nまた、トビリシは「トビリシの母」と呼ばれる聖ニノがキリスト教を広めた地でもあり、キリスト教徒が多い"
+    en: "The population is approximately 1.1 million.\nThe name Tbilisi comes from Tbilisi, meaning “warm,” and is believed to be related to hot springs, and there is a public hot spring bathhouse in the Avano-Tubani district of the old city.\nTbilisi is also the place where St. Nino, the “Mother of Tbilisi,” spread Christianity, and there are many Christians in Tbilisi."
+    ka: "მოსახლეობა დაახლოებით 1.1 მილიონია.\nტბილისი მოდის ტბილიდან, რაც ნიშნავს „ცხელი“, და მიიჩნევა, რომ ეს დაკავშირებულია ცხელი წყაროსთან, და ძველი ქალაქის ავანო-ტუბანის რაიონში არის საზოგადოებრივი ცხელი წყლის აბანო.\nტბილისი ასევე არის ადგილი, სადაც წმინდა ნინო, „ტბილისის დედა“, გავრცელდა ქრისტიანობა და ტბილიში ბევრი ქრისტიანი ცხოვრობს."
 - id: 2
-  content: ジョージアのチーズをたっぷりと使ったパン料理の名前は？
+  content: 
+    ja: ジョージアのチーズをたっぷりと使ったパン料理の名前は？
+    en: What is the name of the Georgia bread dish with lots of cheese?
+    ka: რა ჰქვია საქართველოს პურის კერძს ბევრი ყველით?
   choices:
+    ja:
     - ワンプリ
     - ハチャプリ
     - アへプリ
+    en:
+    - Wanpuri
+    - Khachapuri
+    - Ahepri
+    ka:
+    - ვანპური
+    - ხაჭაპური
+    - აჰეპრი
   answers:
+    ja:
     - ハチャプリ
-  explain: "ちなみにハチャはジョージア語で「チーズ」、パンは「プリ」を意味する\nジョージアの地方によって、ハチャプリの形や具材が異なる\nもっとも有名なアジャリア地方のハチャプリは、卵とバターをトッピングしたもので、アジャリアハチャプリと呼ばれる"
+    en:
+    - Khachapuri
+    ka:
+    - ხაჭაპური
+  explain: 
+    ja: "ちなみにハチャはジョージア語で「チーズ」、パンは「プリ」を意味する\nジョージアの地方によって、ハチャプリの形や具材が異なる\nもっとも有名なアジャリア地方のハチャプリは、卵とバターをトッピングしたもので、アジャリアハチャプリと呼ばれる"
+    en: "By the way, khacha means “cheese” in Georgian, and bread means “puri.”\nThe shape and ingredients of khachapuri vary by region in Georgia.\nThe most famous is the Ajara khachapuri, which is topped with egg and butter, and is called Ajara khachapuri."
+    ka: "შეგახსენებთ, რომ ხაჭა ქართულად ნიშნავს „ყველ“, ხოლო პური ნიშნავს „პური“.\nხაჭაპურის ფორმა და ინგრედიენტები განსხვავდება საქართველოს რეგიონების მიხედვით.\nყველაზე ცნობილი აჭარული ხაჭაპურია, რომელიც გაწვდილი კვერცხითა და კარაქით არის გაწვდილი და აჭარული ხაჭაპური ეწოდება."
 - id: 3
-  content: ジョージア語で「ありがとう」は？
+  content: 
+    ja: ジョージア語で「ありがとう」は？
+    en: What is "Thank you" in Georgian?
+    ka: რა არის "მადლობა" იაპონურად?
   choices:
+    ja:
     - マドロバ
     - アラ
     - ラギルス
+    en:
+    - Madrova(მადლობა)
+    - Ara(არა)
+    - Ragirus(რაგირს)
+    ka:
+    - ありがとう(Arigato)
+    - いいえ(Iie)
+    - いくらですか？(Ikura desu ka?)
   answers:
+    ja:
     - マドロバ
-  explain: "ちなみにアラはジョージア語で「いいえ」\nラギルスはジョージア語で「いくらですか？」"
+    en:
+    - Madrova(მადლობა)
+    ka:
+    - ありがとう(Arigato)
+  explain: 
+    ja: "ちなみにアラはジョージア語で「いいえ」\nラギルスはジョージア語で「いくらですか？」"
+    en: "By the way, Ara means “no” in Georgian.\nRagirus means “how much is it?” in Georgian."
+    ka: "სხვათა შორის, [Iie(いいえ)] იაპონურად ნიშნავს 「არას」.\n[Ikura desu ka?(いくらですか？)] ნიშნავს 「რამდენი ღირს?」 იაპონურად."
 - id: 4
-  content: ジョージアの世界遺産で抹消されたのは？
+  content: 
+    ja: ジョージアの世界遺産で抹消されたのは？
+    en: Which World Heritage Site in Georgia has been deleted?
+    ka: რომელი მსოფლიო მემკვიდრეობის ძეგლი არის წაშლილი საქართველოდან?
   choices:
+    ja:
     - スヴェティツホヴェリ大聖堂
     - ゲラティ修道院
     - バグラティ大聖堂
+    en:
+    - Svetitskhoveli Cathedral
+    - Gelati Monastery
+    - Bagrati Cathedral
+    ka:
+    - სვეტიცხოველის ტაძარი
+    - გელათის მონასტერი
+    - ბაგრატის ტაძარი
   answers:
+    ja:
     - バグラティ大聖堂
-  explain: "バグラティ大聖堂は、ジョージアのイメレティ州にある大聖堂で、11世紀に建設された\nバグラティ大聖堂は、ジョージアの建築様式を代表するものであり、ユネスコの世界遺産に登録されていたが、\n再建方法において、世界遺産としての真正性と完全性を損うと判断され、2017年に抹消された"
+    en:
+    - Bagrati Cathedral
+    ka:
+    - ბაგრატის ტაძარი
+  explain: 
+    ja: "バグラティ大聖堂は、ジョージアのイメレティ州にある大聖堂で、11世紀に建設された\nバグラティ大聖堂は、ジョージアの建築様式を代表するものであり、ユネスコの世界遺産に登録されていたが、\n再建方法において、世界遺産としての真正性と完全性を損うと判断され、2017年に抹消された"
+    en: "Bagrati Cathedral is a cathedral located in the Imereti region of Georgia, built in the 11th century.\nThe Bagrati Cathedral represents Georgian architectural style and was registered as a UNESCO World Heritage Site, but\nit was deleted in 2017 because it was judged that the method of reconstruction would impair its authenticity and integrity as a World Heritage Site."
+    ka: "ბაგრატის ტაძარი არის ტაძარი საქართველოს იმერეთის რეგიონში, რომელიც აშენდა XI საუკუნეში.\nბაგრატის ტაძარი წარმოადგენს ქართული არქიტექტურის სტილს და იყო რეგისტრირებული იუნესკოს მსოფლიო მემკვიდრეობის ძეგლზე, მაგრამ\n2017 წელს წაიშალა, რადგან აღდგენის მეთოდი დააზიანებდა მის ნამდვილობასა და მთლიანობას მსოფლიო მემკვიდრეობის ძეგლზე."
 - id: 5
-  content: ジョージアの査証政策において入国拒否される旅券はどこの旅券？(正解は複数)
+  content: 
+    ja: ジョージアの査証政策において入国拒否される旅券はどこの旅券？(正解は複数)
+    en: Which passport is denied entry under Georgia's visa policy? (There are multiple correct answers)
+    ka: რომელი პასპორტი უარყოფილია საქართველოს ვიზის პოლიტიკის მიხედვით? (არსებობს რამდენიმე სწორი პასუხი)
   choices:
+    ja:
     - 台湾
     - イスラエル
     - 澳門
@@ -44,43 +128,139 @@
     - コソボ
     - 北朝鮮
     - アフガニスタン
+    en:
+    - Taiwan
+    - Israel
+    - Macau
+    - Palestine
+    - Kosovo
+    - North Korea
+    - Afghanistan
+    ka:
+    - ტაივანი
+    - ისრაელი
+    - მაკაო
+    - პალესტინა
+    - კოსოვო
+    - ჩრდილოეთ კორეა
+    - ავღანეთი
   answers:
+    ja:
     - 台湾
     - パレスチナ
     - コソボ
-  explain: "航空機から出国せず、同じ便で移動する場合であっても、入国や通過が拒否される。\n台湾のパスポートに対してはジョージアで開催される国際会議や国際スポーツイベントなどに招待されない限り、ビザを取得するのは非常に難しい"
+    en:
+    - Taiwan
+    - Palestine
+    - Kosovo
+    ka:
+    - ტაივანი
+    - პალესტინა
+    - კოსოვო
+  explain: 
+    ja: "航空機から出国せず、同じ便で移動する場合であっても、入国や通過が拒否される。\n台湾のパスポートに対してはジョージアで開催される国際会議や国際スポーツイベントなどに招待されない限り、ビザを取得するのは非常に難しい"
+    en: "Even if you do not leave the aircraft and move on the same flight, entry or transit may be denied.\nIt is very difficult to obtain a visa for a Taiwanese passport unless invited to international conferences or international sporting events held in Georgia."
+    ka: "თვითმფრინავიდან არ გადახვიდეთ და იმავე რეისზე იმოძრავოთ, შესვლა ან ტრანზიტი შეიძლება უარყოს.\nტაივანის პასპორტისთვის ძალიან რთულია ვიზის მიღება, თუ არ გიწვევენ საერთაშორისო კონფერენციებზე ან საერთაშორისო სპორტულ ღონისძიებებზე, რომლებიც საქართველოს მასპინძლობს."
 - id: 6
-  content: 葡萄の果汁を小麦粉や胡桃と混ぜて作られる、ジョージアの伝統的なデザートは？
+  content: 
+    ja: 葡萄の果汁を小麦粉や胡桃と混ぜて作られる、ジョージアの伝統的なデザートは？
+    en: What is the traditional Georgian dessert made by mixing grape juice with flour and walnuts?
+    ka: რა არის ტრადიციული ქართული დესერტი, რომელიც მზადდება ყურძნის წვენის, ფქვილისა და ნიგვზის შერევით?
   choices:
+    ja:
     - チャチャ
     - チュルチュヘラ
     - ボルジョミ
+    en:
+    - Chacha
+    - Churchkhela
+    - Borjomi
+    ka:
+    - ჩაჩა
+    - ჩურჩხელა
+    - ბორჯომი
   answers:
+    ja:
     - チュルチュヘラ
-  explain: "ジョージアでは市場のほかにもスーパーマーケットでも購入できる\nチュルチュヘラは、ジョージア語で「ナッツの糸」という意味で、ナッツを糸に通して作られる\nまた、チュルチュヘラは「ジョージアのスニッカーズ」とも呼ばれている"
+    en:
+    - Churchkhela
+    ka:
+    - ჩურჩხელა
+  explain: 
+    ja: "ジョージアでは市場のほかにもスーパーマーケットでも購入できる\nチュルチュヘラは、ジョージア語で「ナッツの糸」という意味で、ナッツを糸に通して作られる\nまた、チュルチュヘラは「ジョージアのスニッカーズ」とも呼ばれている"
+    en: "In Georgia, you can buy it not only at the market but also at supermarkets.\nChurchkhela means “thread of nuts” in Georgian and is made by threading nuts onto a string.\nIt is also called the “Georgian Snickers.”"
+    ka: "საქართველოში შეგიძლიათ შეიძინოთ არა მხოლოდ ბაზარში, არამედ სუპერმარკეტებშიც.\nჩურჩხელა ქართულად ნიშნავს „ნიგვზის ძაფს“ და მზადდება ნიგვზების ძაფზე გაწვდით.\nასევე ეწოდება „ქართული სნიკერსი“."
 - id: 7
-  content: 2015年4月以前のジョージアの日本語国家名称は？
+  content: 
+    ja: 2015年4月以前のジョージアの日本語国家名称は？
+    en: What was the Japanese national name of Georgia before April 2015?
+    ka: 2015 წლის აპრილამდე საქართველოს იაპონური ეროვნული სახელი რა იყო?
   choices:
+    ja:
     - グルジア
     - サカルトヴェロ
     - ジョジョ
+    en:
+    - Gruzia
+    - Sakartvelo
+    - Jojo
+    ka:
+    - გურჯია
+    - სქარტველო
+    - ჯოჯო
   answers:
+    ja:
     - グルジア
-  explain: "ジョージアは、2015年4月に日本語の国家名称を「グルジア」から「ジョージア」に変更した\nジョージアは、国際的には「Georgia」と呼ばれているが、ロシア語では「Грузия（グルジヤ）」と呼ばれている\nまた、ジョージアの国名は、聖ゲオルギオスに由来している"
+    en:
+    - Gruzia
+    ka:
+    - გურჯია
+  explain: 
+    ja: "ジョージアは、2015年4月に日本語の国家名称を「グルジア」から「ジョージア」に変更した\nジョージアは、国際的には「Georgia」と呼ばれているが、ロシア語では「Грузия（グルジヤ）」と呼ばれている\nまた、ジョージアの国名は、聖ゲオルギオスに由来している"
+    en: "Georgia changed its Japanese national name from “Gruzia” to “Georgia” in April 2015.\nInternationally, Georgia is called “Georgia,” but in Russian it is called “Грузия (Gruziya).”\nIn addition, the name of Georgia is derived from St. George."
+    ka: "საქართველომ 2015 წლის აპრილში თავისი ეროვნული სახელი „გურჯია“ შეცვალა „ჯორჯიით“.\nსაერთაშორისო დონეზე საქართველო ეწოდება „Georgia“, მაგრამ რუსულად ეწოდება „Грузия (Gruziya)“.\nასევე, საქართველოს სახელი მომდინარეობს წმინდა გიორგისგან."
 - id: 8
-  content: ジョージア語で「伊藤健太」は？
+  content: 
+    ja: ジョージア語で「伊藤健太」は？
+    en: What is "Kenta Ito" in Georgian?
+    ka: როგორ იტყვით "იტო კენტა" იაპონურად?
   choices:
+    ja:
     - კიკუმოტო ჰისაჯუ
     - ნაკაი კენსუკე
     - პროგრამირების სკოლა
     - კენტა იტო
     - რანტეკუნი
-  answers:
+    en:
+    - კიკუმოტო ჰისაჯუ
+    - ნაკაი კენსუკე
+    - პროგრამირების სკოლა
     - კენტა იტო
-  explain: "კიკუმოტო ჰისაჯუは「菊本久寿」\nნაკაი კენსუკეは「中井健介(ファラオさん)」\nპროგრამირების სკოლაは「プログラミングスクール」\nრანტეკუნიは「らんてくん」"
+    - რანტეკუნი
+    ka:
+    - 菊本久寿
+    - 中井健介(ファラオさん)
+    - プログラミングスクール
+    - 伊藤健太
+    - らんてくん
+  answers:
+    ja:
+    - კენტა იტო
+    en:
+    - კენტა იტო
+    ka:
+    - 伊藤健太
+  explain: 
+    ja: "კიკუმოტო ჰისაჯუは「菊本久寿」\nნაკაი კენსუკეは「中井健介(ファラオさん)」\nპროგრამირების სკოლაは「プログラミングスクール」\nრანტეკუნიは「らんてくん」"
+    en: "კიკუმოტო ჰისაჯუ is “菊本久寿”\nნაკაი კენსუკე is “中井健介(ファラオさん)”\nპროგრამირების სკოლა is “プログラミングスクール”\nრანტეკუნი is “らんてくん”"
+    ka: "კიკუმოტო ჰისაჯუ არის „菊本久寿“\nნაკაი კენსუკე არის „中井健介(ファラオさん)“\nპროგრამირების სკოლა არის „プログラミングスクール“\nრანტეკუნი არის „らんてくん“"
 - id: 9
-  content: ジョージアの国歌「タヴィスプレバ」は和訳すると？
+  content: 
+    ja: ジョージアの国歌「タヴィスプレバ」は和訳すると？
+    en: What does the national anthem of Georgia "Tavisupleba" mean in Japanese?
+    ka: საქართველოს ჰიმნი „ტავისუფლება“ ქართულად რას ნიშნავს?
   choices:
+    ja:
     - 自由
     - 祖国
     - 友
@@ -88,17 +268,65 @@
     - 希望
     - 博愛
     - vimハラ
+    en:
+    - Freedom
+    - Motherland
+    - Friend
+    - Future
+    - Hope
+    - Charity
+    - vim command Harassment
+    ka:
+    - თავისუფლება
+    - სამშობლო
+    - მეგობარი
+    - მომავალი
+    - იმედი
+    - კეთილი
+    - vim ბრძანება ჰარასმენტი
   answers:
+    ja:
     - 自由
-  explain: "2004年4月23日にそれまでの国歌だったコテ・ポツフヴェラシヴィリ作曲の「賞賛」（დიდება, Dideba）に代わり、新たに採択された。"
+    en:
+    - Freedom
+    ka:
+    - თავისუფლება
+  explain: 
+    ja: "2004年4月23日にそれまでの国歌だったコテ・ポツフヴェラシヴィリ作曲の「賞賛」（დიდება, Dideba）に代わり、新たに採択された。"
+    en: "On April 23, 2004, it was newly adopted to replace the previous national anthem, “Dideba,” composed by Kote Potskhverashvili."
+    ka: "2004 წლის 23 აპრილს იგი ახალი ეროვნული ჰიმნია, რომელიც შეცვალა წინა ეროვნული ჰიმნი „დიდება“, რომელიც დაწერილია კოტე პოწხვერაშვილის მიერ."
 - id: 10
-  content: ジョージアのことわざ「◯◯◯◯◯がヒバリに歌を教える」の◯に入るのはどんな言葉？
+  content: 
+    ja: ジョージアのことわざ「◯◯◯◯◯がヒバリに歌を教える」の◯に入るのはどんな言葉？
+    en: What word fits in the ◯ of the Georgian proverb "◯◯◯◯◯ teaches a lark to sing"?
+    ka: რა სიტყვა შეესაბამება ◯◯◯◯◯ ქართულ გამონათქვამში „◯◯◯◯◯ ასწავლის შაშვს სიმღერას“?
   choices:
+    ja:
     - アナウサギ
     - ドブネズミ
     - コウノトリ
     - モルモット
     - ジャッカル
+    en:
+    - Rabbit
+    - Rat
+    - Stork
+    - Guinea pig
+    - Jackal
+    ka:
+    - კურდღელი
+    - თაგვი
+    - ჩიტი
+    - მღრღნელი
+    - ჯაკალი
   answers:
+    ja:
     - ジャッカル
-  explain: "物事をよく知る人に未熟な者がアドバイスをすることを意味する"
+    en:
+    - Jackal
+    ka:
+    - ჯაკალი
+  explain: 
+    ja: "物事をよく知る人に未熟な者がアドバイスをすることを意味する"
+    en: "It means that an inexperienced person gives advice to a knowledgeable person."
+    ka: "ეს ნიშნავს, რომ გამოუცდელი ადამიანი რჩევას აძლევს გამოცდილი ადამიანს."

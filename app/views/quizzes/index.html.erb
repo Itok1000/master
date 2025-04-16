@@ -11,12 +11,12 @@
       <% @questions.each_with_index do |question, index| %>
         <div class="card mb-4 shadow-sm" style="border: 1px solid #d99873; border-radius: 10px;">
           <div class="card-body" style="background-color: #fff8e7;">
-            <h3 class="h5 font-weight-bold" style="color: #b03a2e;">問題 <%= index + 1 %>: <%= question.content %></h3>
+            <h3 class="h5 font-weight-bold" style="color: #b03a2e;">問題 <%= index + 1 %>: <%= question.localized_content %></h3>
 
             <div class="mt-3">
               <p class="font-weight-bold" style="color: #b03a2e;">正解:</p>
               <ul class="list-group">
-                <% question.answers.each do |correct_answer| %>
+                <% question.localized_answers.each do |correct_answer| %>
                   <li class="list-group-item" style="color: #28a745; font-weight: bold;"><%= correct_answer %></li>
                 <% end %>
               </ul>
@@ -24,7 +24,7 @@
 
             <div class="mt-3">
               <p class="font-weight-bold" style="color: #b03a2e;">解説:</p>
-              <p class="text-muted mt-2"><%= question.explain %></p>
+              <p class="text-muted mt-2"><%= question.localized_explain %></p>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@
         <div class="card shadow" style="border: 2px solid #d99873; border-radius: 15px;">
           <div class="card-body" style="background-color: #fff8e7; border-radius: 10px;">
             <h2 class="card-title h4 mb-4 text-center" style="color: #b03a2e; font-family: 'Georgia', serif;">
-              <%= @question.content %>
+              <%= @question.localized_content %>
             </h2>
 
             <div data-controller="quiz">
@@ -13,15 +13,15 @@
                 <%= f.hidden_field :question_id, value: @question.id %>
 
                 <div class="form-group">
-                  <% @question.choices.shuffle.each do |choice| %>
+                  <% @question.localized_choices.shuffle.each do |choice| %>
                     <div class="form-check mb-3">
-                     <label id="answers_<%= choice %>_label" 
-                      class="form-check-label d-flex align-items-center justify-content-center"
+                     <label id="localized_answers_<%= choice %>_label" 
+                      class="form-check-label d-flex align-items-center justify-localized_content-center"
                       style="cursor: pointer; background: #f8e1c4; padding: 15px; border-radius: 8px; border: 2px solid #d99873; transition: all 0.3s ease;"
                       onmouseover="this.style.background='#d99873'; this.style.color='#fff';"
                       onmouseout="if (!this.classList.contains('active')) { this.style.background='#f8e1c4'; this.style.color='#b03a2e'; }"
                       onclick="document.querySelectorAll('.form-check-label').forEach(el => el.classList.remove('active')); this.classList.add('active'); this.style.background='#d99873'; this.style.color='#fff';">
-                      <%= f.check_box :selected_answers, { multiple: true, name: 'quiz[selected_answers][]', id: "answers_#{choice}", class: "form-check-input d-none", data: { action: "quiz#check", quiz_target: "checkbox" } }, choice, nil %>
+                      <%= f.check_box :selected_localized_answers, { multiple: true, name: 'quiz[selected_localized_answers][]', id: "localized_answers_#{choice}", class: "form-check-input d-none", data: { action: "quiz#check", quiz_target: "checkbox" } }, choice, nil %>
                       <span style="color: #b03a2e; font-weight: bold;"><%= simple_format(choice) %></span>
                      </label>
                     </div>

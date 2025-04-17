@@ -125,6 +125,17 @@ ka:
       title: რა არის ქართული საკვები?
     how_to_use:
       title: როგორ გამოვიყენოთ ეს აპლიკაცია
+  quizzes:
+    index:
+      result: შედეგი
+      correct_count: სწორი პასუხების რაოდენობა
+      quiz: ვიქტორინა
+      answer: პასუხი
+      explanation: მხოლოდ სწორი პასუხი
+      share_with_x: გაზიარება X-თან
+      try_again: მოიძიეთ კიდევ ერთხელ
+    new:
+      answer: პასუხი 
   diagnoses:
     new:
       title: დაიწყეთ დიაგნოზები

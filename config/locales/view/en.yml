@@ -125,6 +125,17 @@ en:
       title: What is a Georgian Food?
     how_to_use:
       title: how_to_use_this_app
+  quizzes:
+    index:
+      result: Result
+      correct_count: Correct answer count
+      quiz: Question
+      answer: Correct answer
+      explanation: Explanation
+      share_with_x: Share results with X
+      try_again: Try again
+    new:
+      answer: Answer 
   diagnoses:
     new:
       title: Start diagnoses

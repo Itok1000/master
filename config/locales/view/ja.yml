@@ -129,6 +129,17 @@ ja:
       title: ジョージア料理って何？
     how_to_use:
       title: このアプリの使い方
+  quizzes:
+    index:
+      result: 結果
+      correct_count: 正解数
+      quiz: 問題
+      answer: 正解
+      explanation: 解説
+      share_with_x: 結果をXでシェア
+      try_again: もう一度診断
+    new:
+      answer: 回答する  
   diagnoses:
     new:
       title: 診断スタート

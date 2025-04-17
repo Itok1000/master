@@ -126,6 +126,12 @@ en:
     how_to_use:
       title: how_to_use_this_app
   quizzes:
+    correct: "✔ Correct！"
+    incorrect: "✖ Incorrect"
+    correct_answer_label: "Answer："
+    explanation: "Explanation"
+    next_question: "Next question"
+    see_results: "See results"
     index:
       result: Result
       correct_count: Correct answer count

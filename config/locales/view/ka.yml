@@ -126,6 +126,12 @@ ka:
     how_to_use:
       title: როგორ გამოვიყენოთ ეს აპლიკაცია
   quizzes:
+    correct: "✔ სწორი"
+    incorrect: "✖ არასწორი"
+    correct_answer_label: "უპასუხე："
+    explanation: "ახსნა"
+    next_question: "შემდეგი კითხვა"
+    see_results: "იხილეთ შედეგები"
     index:
       result: შედეგი
       correct_count: სწორი პასუხების რაოდენობა

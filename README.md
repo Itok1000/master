@@ -160,7 +160,6 @@ https://app.diagrams.net/#HItok1000%2Fmaster%2FER_diagram_request%2F%E5%90%8D%E7
 # ■ 技術スタック
 |ツール| 内容 |
 | -------- | -------- |
-<<<<<<< HEAD
 | フロントエンド|Ruby on Rails,Node.js 20.17.0|
 | バックエンド| Rails 7.2.1, (ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x86_64-linux])|
 | CSSフレームワーク|Bootstrap, CANVA, 農民イラスト，CannonEOS M6(過去に自分が撮影した写真を使用していることから), BecassoApp|
@@ -170,21 +169,6 @@ https://app.diagrams.net/#HItok1000%2Fmaster%2FER_diagram_request%2F%E5%90%8D%E7
 | 開発環境|Docker|
 | その他|rubocop,CarrierWave,mini magick,letter opener web,Maps JavaScript API/Geolocation API|
 | バージョン管理|GitHub|
-=======
-|・フロントエンド| Rails 7.2.1, JavaScript, Bootstrap, CANVA, 農民イラスト，BecassoApp, 
-https://www.mofa.go.jp/mofaj/area/georgia/index.html (ジョージアって何？のコーナーにて位置を参考にしたため)|
-
-|・バックエンド| Rails 7.2.1, (ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x86_64-linux])|
-
-|・インフラ| fly.io, AWS S3|
-
-|・データベース| PostgreSQL|
-
-|・認証|Sorcery|
-
-|・開発環境|Docker|
-| -------- | -------- |
->>>>>>> 1dc1b8e (READMEの修正)
 
 
 # 個人開発にて得た経験と方法をもとに作成した技術記事

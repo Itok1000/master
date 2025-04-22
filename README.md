@@ -1,4 +1,4 @@
-# サービス概要
+# ■ サービス概要
 サービスURL: **https://gamarjoba.jp/**
 
 ![ジョージア料理診断アプリ ガマルジョバ](https://github.com/user-attachments/assets/286864db-b868-496f-a1ed-55805c6b6295)
@@ -7,7 +7,7 @@
 
 Xで共有できるジョージア料理診断サービスWebアプリです。
 
-# 想定されるユーザー層
+# ■ 想定されるユーザー層
 ・エスニック料理が好きな人
 
 ・エスニック料理を家で作りたいと考えている人
@@ -16,7 +16,7 @@ Xで共有できるジョージア料理診断サービスWebアプリです。
 
 ・ジョージアが好きな人
 
-# サービスコンセプト
+# ■ サービスコンセプト
 グローバル化で食文化が多様になる時代、ベトナムや韓国などのエスニック料理が日本でブームになっています。
 
 しかし、1ブームがすぎると飽きられるケースも多いです。
@@ -40,7 +40,7 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 
 ゆくゆくはランキング機能を追加し、どの料理がユーザーに好まれているのかを知ることでその料理にアクセスしてユーザーの感想を見やすくする体験もできるようにします
 
-# サービスの利用イメージ
+# ■ サービスの利用イメージ
 | クイズ機能 |
 | :------------------------------------------------------------------------------------------------: |
 [![Image from Gyazo](https://i.gyazo.com/ddd2e03d3a6a09de008b2218f70c66a9.png)](https://gyazo.com/ddd2e03d3a6a09de008b2218f70c66a9)
@@ -81,7 +81,7 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 |<p align="left">いいねした投稿、ユーザー自身が投稿した口コミはヘッダー上でにアクセスできます|
 
 
-# ユーザーの獲得について
+# ■ ユーザーの獲得について
 ・X(旧Twitter)を用いてWebアプリ上でリリース公開します
 
 ・[Facebook](https://ja-jp.facebook.com/people/%E4%BC%8A%E8%97%A4%E5%81%A5%E5%A4%AA/pfbid0qTUGyTWXz25SVuS13YzG1G9jjtxvKQS9i6cuABJtmjcE3wD2pyQQmEQHQA8XquTgl/)と[instagram](https://www.instagram.com/uotiatnek2525/?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr)も個人で使用しているので、本リリース後はこちらのSNSで告知も検討します
@@ -90,12 +90,12 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 
 ※READMEには「個人開発にて得た経験と方法をもとに作成した技術記事」に機能実装についての記事を紹介しています
 
-# サービスの差別化ポイント・推しポイント
+# ■ サービスの差別化ポイント・推しポイント
 診断して結果を出すだけでなく、作り方のページに遷移して自分で料理できるチャンスを与えるところです
 
 また、身近な物の診断アプリと異なり、ジョージアというマイナーな国をテーマにしているので、多くのユーザーがジョージアを知る機会になるところも大きな推しです
 
-# 実装機能
+# ■ 実装機能
 |ログインなしで利用可能|
 | -------- |
 |位置情報(「ジョージアって何？」におけるジョージアの位置情報を表示させるため)|
@@ -147,12 +147,12 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 | ランキング機能|
 | オートコンプリート検索機能|
 
-# 画面遷移図(企画時)
+# ■ 画面遷移図(企画時)
 [![Image from Gyazo](https://i.gyazo.com/b594e92d0724eef5a28875eeb4c03912.png)](https://gyazo.com/b594e92d0724eef5a28875eeb4c03912)
 
 Figma：https://www.figma.com/design/7mF5VkcFrHRPTxVFbwi1wh/%E7%84%A1%E9%A1%8C?node-id=0-1&node-type=canvas&t=RkSKDCDXuFFcGs0e-0
 
-# ER図(企画時)
+# ■ ER図(企画時)
 [![Image from Gyazo](https://i.gyazo.com/9789f01580f3e75e651c231c4c6abbf8.png)](https://gyazo.com/9789f01580f3e75e651c231c4c6abbf8)
 
 https://app.diagrams.net/#HItok1000%2Fmaster%2FER_diagram_request%2F%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB.drawio#%7B%22pageId%22%3A%22C5RBs43oDa-KdzZeNtuy%22%7D
@@ -171,7 +171,7 @@ https://app.diagrams.net/#HItok1000%2Fmaster%2FER_diagram_request%2F%E5%90%8D%E7
 | バージョン管理|GitHub|
 
 
-# 個人開発にて得た経験と方法をもとに作成した技術記事
+# ■ 個人開発にて得た経験と方法をもとに作成した技術記事
 |タイトル| 記事URL |
 | -------- | -------- |
 |【個人開発】ジョージアを認識し魅力を持つためのジョージア料理診断アプリを作成しました| https://qiita.com/jiantaiyiteng1/items/94f321646051001a72de |

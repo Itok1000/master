@@ -22,10 +22,29 @@
           <%= f.label :password_confirmation, class: "form-label" %>
           <%= f.password_field :password_confirmation, class: "form-control custom-input" %>
         </div>
-        <%= f.submit t('users.new.register'), class: "btn btn-primary" %>
+        <div class='text-center text-sm'>
+         <div class="amplify-flex amplify-field amplify-checkboxfield">
+          <label class="amplify-flex amplify-checkbox">
+           <span class="amplify-visually-hidden">
+            <input aria-invalid="false" class="amplify-input amplify-field-group__control amplify-checkbox__input" data-id="amplify-id-:r27:" type="checkbox" value="yes" name= :acknowledgement>
+           </span>
+           <span class="amplify-text amplify-checkbox__label">
+            <p>
+             <a target="_blank" rel="noreferrer" class="font-bold text-orange underline decoration-2 underline-offset-1" href="/terms">
+              利用規約
+             </a> 、
+             <a target="_blank" rel="noreferrer" class="font-bold text-orange underline decoration-2 underline-offset-1" href="https://www.kiyac.app/privacypolicy/FjpZb0f14mVOOlbu7Bdk">
+              プライバシーポリシー
+             </a>に同意する
+            </p>
+           </span>
+           </label><p class="amplify-text amplify-field__error-message">同意の上、チェックボックスにチェックをしてください</p></div>
+        </div>
+        <div class="text-center mt-3">
+         <%= f.submit t('users.new.register'), class: "btn btn-primary" %>
+        </div>
       <% end %>
       <br>
-        <!-- 「Googleログインの方はこちら」のリンク -->
         <div class='text-center text-sm'>
           <%= t('users.new.google') %>
         </div>

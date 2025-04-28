@@ -162,7 +162,7 @@ https://app.diagrams.net/#HItok1000%2Fmaster%2FER_diagram_request%2F%E5%90%8D%E7
 | -------- | -------- |
 | フロントエンド|Ruby on Rails,Node.js 20.17.0|
 | バックエンド| Rails 7.2.1, (ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x86_64-linux])|
-| CSSフレームワーク|Bootstrap, CANVA, 農民イラスト，CannonEOS M6(過去に自分が撮影した写真を使用していることから), BecassoApp|
+| CSSフレームワーク|Bootstrap, CANVA，CannonEOS M6(過去に自分が撮影した写真を使用していることから), BecassoApp|
 | インフラ| fly.io,AWS S3,Google Cloud|
 | データベース| PostgreSQL|
 | 認証|Sorcery|

@@ -43,6 +43,7 @@ ja:
       title: ユーザー登録
       register: 登録する
       google: Googleログインの方はこちら
+      agree : に同意する
       please_check_the_box_to_agree: 同意の上、チェックボックスにチェックをしてください
     create:
       success: ユーザー登録が完了しました

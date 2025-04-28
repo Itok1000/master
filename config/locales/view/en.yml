@@ -39,6 +39,7 @@ en:
       title: User Registration
       register: Register
       google: Click here for Google Login
+      agree : Do you agree?
       please_check_the_box_to_agree: Please check the box to agree
     create:
       success: User registration completed

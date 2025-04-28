@@ -38,7 +38,11 @@
              </a>に同意する
             </p>
            </span>
-           </label><p class="amplify-text amplify-field__error-message">同意の上、チェックボックスにチェックをしてください</p></div>
+           </label>
+            <p class="amplify-text amplify-field__error-message">
+             <%= t('users.new.please_check_the_box_to_agree') %>
+            </p>
+         </div>
         </div>
         <div class="text-center mt-3">
          <%= f.submit t('users.new.register'), class: "btn btn-primary" %>

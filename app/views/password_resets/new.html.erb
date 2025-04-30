@@ -12,10 +12,12 @@
       <%= form.label :email, class: "form-label" %><br />
       <%= form.text_field :email, class: "form-control custom-input" %>
      </div>
-     <div class="mt-3">
+     <div class="text-center mt-3">
       <%= form.submit t('.submit'), class: "btn btn-primary" %>
+      <br/>
+      <br/>
+      <%= link_to t('password_resets.new.back'), login_path, class: 'font-bold text-orange underline decoration-2 underline-offset-1' %>
      </div>
-
     <% end %>
    </div> 
   </div> 

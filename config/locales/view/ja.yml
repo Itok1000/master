@@ -242,6 +242,7 @@ ja:
     new:
       title: パスワードリセット申請
       submit: 送信
+      back: ログインページに戻る
     edit:
       title: パスワードリセット
     create:

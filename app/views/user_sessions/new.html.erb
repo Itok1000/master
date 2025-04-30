@@ -17,23 +17,23 @@
           <%= f.password_field :password, class: "form-control custom-input" %>
         </div>
 
-        <!-- ログインボタン -->
+
         <div class="text-center mt-3">
           <%= f.submit t('user_sessions.new.login'),class: "btn btn-primary" %>
         </div>
       <% end %>
 
-      <!-- 「初めての方はこちら」のリンク -->
+
       <div class='text-center mt-3'>
-        <%= link_to t('user_sessions.new.to_register_page'), new_user_path, class: 'custom-link' %>
+        <%= link_to t('user_sessions.new.to_register_page'), new_user_path, class: 'font-bold text-orange underline decoration-2 underline-offset-1' %>
       </div>
 
-      <!-- 「パスワードをお忘れの方はこちら」のリンク -->
+
         <div class='text-center'>
-          <%= link_to t('user_sessions.new.password_forget'), new_password_reset_path, class: 'custom-link' %>
+          <%= link_to t('user_sessions.new.password_forget'), new_password_reset_path, class: 'font-bold text-orange underline decoration-2 underline-offset-1' %>
         </div>
         <br>
-        <!-- 「Googleログインの方はこちら」のリンク -->
+
         <div class='text-center text-sm'>
           <%= t('users.new.google') %>
         </div>

@@ -11,25 +11,23 @@
 
     <div class='collapse navbar-collapse' id='navbarSupportedContent'>
       <ul class='navbar-nav ms-auto main-nav align-items-center'>
-      <!-- ログアウト -->
+
         <li class='nav-item'>
           <%= link_to t('header.logout'), logout_path, data: { turbo_method: :delete } , class: 'nav-link'%>
         </li>
 
-        <!-- ドロップダウンメニュー -->
         <li class='nav-item dropdown'>
-          <!-- トリガー部分 -->
+
           <a href='#' class='nav-link dropdown-toggle' id='navbarDropdown' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
-            <%= current_user.decorate.full_name %> <!-- ログインしているユーザー名 -->
+            <%= current_user.decorate.full_name %> 
           </a>
 
-          <!-- ドロップダウンメニュー -->
           <ul class='dropdown-menu dropdown-menu-end custom-bg'>
            <div style='text-align: center;'>
             <li class='nav-item'><%= link_to t('header.show'), profile_path , class: 'nav-link'%></li>
             <li><hr class='dropdown-divider'></li>
             <li class='nav-item'><%= link_to t('header.helpful'), favorites_posts_path, class: 'nav-link' %></li>
-            <!-- ユーザー自身が投稿したものをヘッダーの「投稿一覧」にアクセスした際に確認できるように実装 -->
+
             <li class='nav-item'><%= link_to t('header.list_of_posts'), posts_posts_path, class: 'nav-link' %></li>
             <%= link_to 'JP', url_for(locale: :ja), class: "text-white text-xs py-2 px-2" %> /
             <%= link_to 'EN', url_for(locale: :en), class: "text-white text-xs py-2 px-2" %> /

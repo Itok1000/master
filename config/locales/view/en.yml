@@ -234,6 +234,87 @@ en:
   terms:
     terms:
       title: Terms of Use
+      content1: These Terms of Use (hereinafter referred to as “these Terms”) set forth the conditions for the use of the services (hereinafter referred to as “the Service”) provided on this website by Gamarjobat (hereinafter referred to as “the Company”).
+        By agreeing to the Terms of Use, you may use the Service.
+      content2: Registered users (hereinafter referred to as “Users”) shall use the Service in accordance with these Terms.
+      rule1: Article 1 (Application)
+      content3: These Terms shall apply to all relationships between the User and the Company regarding the use of the Service.
+      content4: In addition to these Terms, the Company may establish separate rules and other provisions (hereinafter referred to as “Individual Provisions”) regarding the use of the Service.
+      content5: These Individual Provisions shall form a part of these Terms regardless of their titles.
+      content6: If any provision of these Terms conflicts with an Individual Provision, the Individual Provision shall prevail unless otherwise specified.
+      rule2: Article 2 (User Registration)
+      content7: Registration for the Service shall be completed when a person wishing to register agrees to these Terms, applies in a manner prescribed by the Company, and the Company approves the application.
+      content8: The Company may refuse registration if it determines that the applicant falls under any of the following, and shall not be obliged to disclose the reasons.
+      content9: If false information was provided during registration.
+      content10: If the applicant has previously violated these Terms.
+      content11: If the Company otherwise deems the registration inappropriate.
+      rule3: Article 3 (Management of User ID and Password)
+      content12: Users shall manage their User ID and password for the Service responsibly and appropriately.
+      content13: Users may not, under any circumstances, transfer, lend, or share their User ID and password with any third party.
+      content14: If a login is made with a combination of User ID and password that matches the registration, the Company will consider it to be use by the registered User.
+      content15: The Company shall not be liable for any damage caused by third-party use of a User ID or password unless due to the Company’s willful misconduct or gross negligence.
+      rule4: Article 4 (Fees and Payment Methods)
+      content16: Users shall pay the usage fees for paid parts of the Service as displayed on the website, by the method designated by the Company.
+      content17: If a User delays payment, the User shall pay a late fee at the rate of 14.6% per annum.
+      rule5: Article 5 (Prohibited Acts)
+      content18: Users shall not engage in the following acts while using the Service
+      content19: Acts that violate laws or public order and morals
+      content20: Criminal acts or acts related to criminal behavior
+      content21: Infringement of copyrights, trademarks, or other intellectual property rights related to the Service
+      content22: Disruption or destruction of servers or networks of the Company, other users, or third parties
+      content23: Commercial use of information obtained through the Service
+      content24: Acts that may interfere with the operation of the Service
+      content25: Unauthorized access or attempts thereof
+      content26: Collection or storage of personal information about other users
+      content27: Use of the Service for fraudulent purposes
+      content28: Acts that cause disadvantage, damage, or discomfort to other users or third parties
+      content29: Impersonating another user
+      content30: Advertising, solicitation, or commercial activities not authorized by the Company
+      content31: Acts intended to meet unacquainted members of the opposite sex
+      content32: Providing benefits to antisocial forces directly or indirectly in connection with the Service
+      content33: Any other acts deemed inappropriate by the Company
+      rule6: Article 6 (Suspension of Service)
+      content34: The Company may suspend or interrupt all or part of the Service without prior notice if it determines that any of the following applies
+      content35: Maintenance or updates to the system of the Service
+      content36: Force majeure events such as earthquakes, lightning, fire, power outages, or natural disasters
+      content37: Accidents causing system or communication failure
+      content38: Other cases where the Company deems the provision of the Service difficult
+      content39: The Company shall not be liable for any loss or damage incurred by Users or third parties due to the suspension or interruption of the Service.
+      rule7: Article 7 (Usage Restrictions and Deregistration)
+      content40: The Company may, without prior notice, restrict access to all or part of the Service or delete a User’s registration if the User falls under any of the following
+      content41: Violation of any provision of these Terms
+      content42: False information found in registration details
+      content43: Failure to fulfill payment obligations
+      content44: No response from the User to Company communications for a certain period
+      content45: No use of the Service for a certain period since the last use
+      content46: Other cases where the Company deems use of the Service inappropriate
+      content47: The Company shall not be liable for any damages arising from actions taken under this Article.
+      rule8: Article 8 (Withdrawal)
+      content48: Users may withdraw from the Service by following the withdrawal procedure prescribed by the Company.
+      rule9: Article 9 (Disclaimer and Limitation of Liability)
+      content49: The Company does not guarantee, expressly or implicitly, that the Service is free of factual or legal defects (including but not limited to safety, reliability, accuracy, completeness, effectiveness, fitness for a particular purpose, security, errors, bugs, or infringement of rights).
+      content50: The Company shall not be liable for any damages arising from use of the Service, except in cases of willful misconduct or gross negligence.
+      content51: However, if the contract between the User and the Company regarding the Service (including these Terms) is a consumer contract under the Consumer Contract Act, this disclaimer shall not apply.
+      content52: Even in such a case, the Company shall not be liable for damages resulting from special circumstances (including cases where the Company or the User foresaw or could have foreseen such damages) caused by non-performance or tort due to the Company’s negligence (excluding gross negligence).
+      content53: Furthermore, compensation for damages caused by the Company’s negligence (excluding gross negligence) shall be limited to the amount of fees received in the month in which the damage occurred.
+      content54: The Company shall not be responsible for any transactions, communications, or disputes between Users and other users or third parties in relation to the Service.
+      rule10: Article 10 (Changes to Service Content)
+      content55: The Company may, with prior notice to the User, change, add to, or discontinue the content of the Service, and the User agrees to such changes.
+      rule11: Article 11 (Amendment to the Terms of Use)
+      content56: The Company may amend these Terms without the individual consent of Users in the following cases
+      content57: When the amendment is in the general interest of the User
+      content58: When the amendment is reasonable in light of the purpose of the Service contract, the necessity of the amendment, the appropriateness of the amended content, and other circumstances
+      content59: The Company shall notify Users in advance of the changes to these Terms, including the content and effective date.
+      rule12: Article 12 (Handling of Personal Information)
+      content60: The Company shall handle personal information obtained through the use of the Service appropriately in accordance with the Company’s Privacy Policy.
+      rule13: Article 13 (Notices and Communication)
+      content61: Communication between the User and the Company shall be conducted in the manner prescribed by the Company.
+      content62: Unless otherwise notified in the manner designated by the Company, the Company will consider the currently registered contact information as valid and will deem any notifications or communications sent to such contact information as having been received at the time of dispatch.
+      rule14: Article 14 (Prohibition of Transfer of Rights and Obligations)
+      content63: Users may not assign or pledge their position under the usage contract or their rights or obligations under these Terms to any third party without the prior written consent of the Company.
+      rule15: Article 15 (Governing Law and Jurisdiction)
+      content64: These Terms shall be governed by the laws of Japan. In the event of any disputes regarding the Service, the court with jurisdiction over the Company’s principal office shall have exclusive jurisdiction.
+      content65: End
   password_resets:
     new:
       title: Password reset request

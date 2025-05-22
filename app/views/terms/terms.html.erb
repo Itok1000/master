@@ -1,5 +1,8 @@
 <% content_for(:title, t('.title')) %>
 <div class="top-wrapper">
+<div class="d-flex justify-content-center my-4">
+ <div class="rounded border border-white border-4 bg-warning-subtle p-3 w-50 w-lg-40">
+  <div class="text-dark lh-lg mb-4">
   <div class="my-8">
     <h1 class="md:text-3xl text-xl font-bold mb-5"><%= t('.title') %></h1>
     <p><%= t('terms.terms.content1') %></p>
@@ -148,6 +151,9 @@
   <div class="my-8">
     <p><%= t('terms.terms.content65') %></p>
   </div>
+ </div>
+</div>
+</div>
   <div class="overview">
     <%= link_to t('static_pages.return_button'), top_path, class: 'orange' %>
   </div>

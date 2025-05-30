@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "/georgia", to: "static_pages#georgia"
   get "/food", to: "static_pages#food"
     get "/terms", to: "terms#terms"
+    get "/policies", to: "policies#policies"
 
   resources :quizzes, only: %i[index show new create destroy]
   resources :diagnoses, only: %i[index show new create]

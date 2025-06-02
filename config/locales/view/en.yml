@@ -231,6 +231,52 @@ en:
       previous: “&lsaquo; back to previous”
       next: “next &rsaquo;”
       truncate: “...”
+  policies:
+    policies:
+      title: Privacy Policy
+      rules1: Our Privacy Policy
+      content1: We collect the following information from our customers.
+      content2: Name (including nickname or pen name)
+      content3: Email address
+      content4: Photos and videos
+      content5: Behavioral history on our website, such as time spent on the website, input history, and purchase history
+      rule2: Purpose of use of customer information
+      content6: We use the information obtained from customers for the following purposes.
+      content7: For registration for our services, identity verification, and authentication
+      content8: To manage customers' usage history of our services
+      content9: For payment of usage fees
+      content10: To analyze customers' behavioral history on our services and use it to maintain and improve our services
+      content11: To provide information about our services
+      content12: To respond to inquiries from customers
+      content13: To respond to acts that violate our terms and conditions or laws and regulations
+      content14: To notify changes, suspension, termination, or cancellation of our services
+      content15: To notify changes to our terms and conditions
+      content16: In addition to the above, for the provision, maintenance, protection, and improvement of our services
+      rule3: Measures taken for safety management
+      content17: If you contact us at the contact information listed at the end, we will individually respond in accordance with laws and regulations regarding the safety management measures we have taken for the information obtained from customers.
+      rule4: Provision to third parties
+      content18: Of the information obtained from customers, we will not provide personal data (as defined in Article 16, Paragraph 3 of the Personal Information Protection Law) to third parties (including those outside Japan) without the prior consent of the customer.
+      content19: However, the following cases are excluded.
+      content20: When handling of personal data is outsourced to an external party
+      content21: When our company or our services are acquired
+      content22: When jointly used with business partners (if there is specific joint use, the details will be announced separately)
+      content23: Other cases where provision to third parties is legally permitted
+      rule5: Access analysis tools
+      content24: We use "Google Analytics" for access analysis of our customers. Google Analytics uses cookies to collect traffic data. Traffic data is collected anonymously and does not identify individuals. You can refuse the collection of this information by disabling cookies. Please check your browser settings for details. For more information about Google Analytics, please see below.
+      content25: https://marketingplatform.google.com/about/analytics/terms/us/
+      rule6: Changes to the privacy policy
+      content26: We may change our privacy policy in accordance with amendments to laws and regulations. The revised privacy policy will take effect when posted on our website.
+      rule7: Contact information
+      content27: If you wish to disclose, correct, suspend, or delete your information, please contact us at the email address below.
+      content28: e-mail
+      content29: jiantaiyiteng1@gmail.com
+      content30: In this case, we will confirm that the request is from the person himself/herself by the method specified by us, such as presenting a driver's license. Please note that a handling fee of 1,000 yen per request will be charged for disclosure requests, regardless of whether disclosure is made.
+      rule8: Name of business operator
+      content31: Kenta Ito
+      rule9: Address of business operator
+      content32: Chiba City, Chiba Prefecture
+      content33: Established November 12, 2024
+      content34: Revised November 12, 2024
   terms:
     terms:
       title: Terms of Use

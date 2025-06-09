@@ -2,7 +2,6 @@ ja:
   defaults:
     create: 作成
     post: 投稿
-    search_word: 検索ワード(タイトルまたは本文のキーワードから検索)
     delete_confirm: 削除しますか？
     flash_message:
       created: "%{item}を作成しました"
@@ -222,6 +221,7 @@ ja:
     posts:
       title: 投稿一覧
       no_result: 投稿がありません
+    search_placeholder: 検索ワード(タイトルまたは本文のキーワードから検索)
   profiles:
     show:
       title: プロフィール設定

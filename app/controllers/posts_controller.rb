@@ -77,6 +77,10 @@ class PostsController < ApplicationController
       @user_posts = @q.result.page(params[:page]).per(9)
     end
 
+    def autocomplete
+     posts = Post.ransack(title_cont: params[:q]).result.limit(10)
+     render json: posts.pluck(:title)
+    end
 
     private
 

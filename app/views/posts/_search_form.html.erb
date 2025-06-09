@@ -1,8 +1,9 @@
-<%= search_form_for @q, url: url do |f| %>
+<%= search_form_for @q, url: url, method: :get, html: { autocomplete: "off", data: { controller: "autocomplete" } } do |f| %>
     <div class="input-group mb-3">
-      <%= f.search_field :title_or_body_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
+      <%= f.text_field :title_or_body_cont, class: "form-control", placeholder: t('posts.search_placeholder'), data: { autocomplete_target: "input", action: "input->autocomplete#search", autocomplete_url_value: autocomplete_posts_path } %>
       <div class="input-group-append">
         <%= f.submit class: 'btn btn-primary' %>
       </div>
     </div>
   <% end %>
+

@@ -41,6 +41,7 @@ Rails.application.routes.draw do
 
 
      collection do
+      get :autocomplete
       get :favorites
       get :posts
      end

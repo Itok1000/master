@@ -140,12 +140,11 @@ https://ca-voir.com/topics/nobuyo-kitchen/
 | レーティング機能|
 |管理者ページログイン機能 |
 |口コミ投稿の編集・削除機能(管理者のみ)|
-
+| オートコンプリート検索機能|
 
 |今後予定してる機能|
 | -------- |
 | ランキング機能|
-| オートコンプリート検索機能|
 
 # ■ 画面遷移図(企画時)
 [![Image from Gyazo](https://i.gyazo.com/b594e92d0724eef5a28875eeb4c03912.png)](https://gyazo.com/b594e92d0724eef5a28875eeb4c03912)

@@ -5,7 +5,6 @@
    </div>
  <div class="container pt-3">
     <div class="col-lg-10 offset-lg-1">
-      <!-- 検索フォームをここに追加 -->
       <%= render 'search_form', url: posts_posts_path, post_posts: @q %>
     </div>
   <div class="row">
@@ -13,8 +12,8 @@
       <div class="row">
        <% if @user_posts.present? %>
           <div class="row">
-          <%= render partial: 'posts/post', collection: @user_posts, as: :post %> <!-- 各投稿を表示する -->
-          <%= paginate @user_posts %> <!-- ページネーションの表示 -->
+          <%= render partial: 'posts/post', collection: @user_posts, as: :post %> 
+          <%= paginate @user_posts %> 
        <% else %>
           <p><%= t('.no_result') %></p>
        <% end %>

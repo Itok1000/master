@@ -58,4 +58,3 @@ let(:post4) { create(:post, user: user, title: 'ソコスチャシュシュリ�
     end
   end
 end
-

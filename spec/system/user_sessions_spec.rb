@@ -66,7 +66,7 @@ RSpec.describe "UserSessions", type: :system do
           click_button 'ログイン'
           Capybara.assert_current_path("/", ignore_query: true)
           expect(current_path).to eq root_path
-          expect(page).to have_content('ログインしました'), 'フラッシュメッセージ「ログインしました」が表示されていません'
+          expect(page).to have_content('ログインしました'), 'フラッシュメッセージ「ログインしました」が表示されていること'
         end
     end
   end

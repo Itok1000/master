@@ -56,4 +56,18 @@ RSpec.describe "UserSessions", type: :system do
       end
     end
   end
+  describe "ログイン" do
+    let!(:user) { create(:user, email: "test@test.com", password: "123456789", password_confirmation: "123456789") }
+    context '認証情報が正しい場合' do
+        it 'ログインできること' do
+          visit '/login'
+          fill_in 'メールアドレス', with: "test@test.com"
+          fill_in 'パスワード', with: "123456789"
+          click_button 'ログイン'
+          Capybara.assert_current_path("/", ignore_query: true)
+          expect(current_path).to eq root_path
+          expect(page).to have_content('ログインしました'), 'フラッシュメッセージ「ログインしました」が表示されていません'
+        end
+    end
+  end
 end

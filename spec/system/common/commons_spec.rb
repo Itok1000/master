@@ -28,8 +28,19 @@ RSpec.describe '共通系', type: :system do
     end
     describe 'ヘッダー' do
       it 'ヘッダーが正しく表示されていること' do
-        expect(page).to have_content('ログアウト'), 'ヘッダーに「ログアウト」というテキストが表示されていません'
+        expect(page).to have_content('ログアウト'), 'ヘッダーに「ログアウト」というテキストが表示されていること'
       end
     end
+  end
+
+  describe 'ログアウト' do
+      before do
+        login_as_general
+      end
+      it 'ログアウトできること' do
+        click_on('ログアウト')
+        expect(current_path).to eq root_path
+        expect(page).to have_content('ログアウトしました'), 'フラッシュメッセージ「ログアウトしました」が表示されていること'
+      end
   end
 end

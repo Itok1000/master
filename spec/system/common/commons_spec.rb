@@ -21,4 +21,16 @@ RSpec.describe '共通系', type: :system do
       end
     end
   end
+
+  context 'ログイン後' do
+    before do
+      login_as_general
+    end
+    describe 'ヘッダー' do
+      it 'ヘッダーが正しく表示されていること' do
+        expect(page).to have_content('ログアウト'), 'ヘッダーに「ログアウト」というテキストが表示されていません'
+        
+      end
+    end
+  end
 end

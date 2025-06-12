@@ -54,6 +54,12 @@ RSpec.describe "UserSessions", type: :system do
         visit "/login"
         expect(page).to have_content 'Googleログインの方はこちら'
       end
+
+      it 'Googleログインのリンクを押下するとGoogle認証ページに遷移すること' do
+        visit "/login"
+        visit "/auth/google_oauth2"
+        Capybara.assert_current_path("/auth/google_oauth2", ignore_query: true)
+      end
     end
   end
   describe "ログイン" do

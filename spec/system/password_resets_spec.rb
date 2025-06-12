@@ -3,6 +3,21 @@ require 'rails_helper'
 RSpec.describe 'PasswordResset', type: :system do
   let(:user) { create(:user) }
 
+  describe "ログイン前" do
+    context "ログイン" do
+      it 'パスワードリセット申請するためのリンクがあること' do
+        visit "/login"
+        expect(page).to have_content 'パスワードをお忘れの方はこちら'
+      end
+
+      it 'パスワードリセット申請のリンクを押下するとパスワードリセット申請ページに遷移すること' do
+        visit "/login"
+        click_link "パスワードをお忘れの方はこちら"
+        Capybara.assert_current_path("/password_resets/new", ignore_query: true)
+      end
+    end
+  end
+
   describe 'タイトル' do
     describe 'パスワードリセット申請ページ' do
       it '正しいタイトルが表示されていること' do

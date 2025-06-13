@@ -56,10 +56,18 @@ RSpec.describe "Posts", type: :system do
       expect(page).to have_content post.title
     end
 
-    it "口コミ編集ができること" do
+    it "口コミのタイトルが編集ができること" do
       visit "/posts/#{post.id}/edit"
       expect(current_path).to eq("/posts/#{post.id}/edit")
       fill_in "post[title]", with: "新しいタイトル"
+      click_button "更新"
+      expect(page).to have_content '料理の評価を更新しました'
+    end
+
+    it "口コミの本文が編集ができること" do
+      visit "/posts/#{post.id}/edit"
+      expect(current_path).to eq("/posts/#{post.id}/edit")
+      fill_in "post[body]", with: "新しい本文"
       click_button "更新"
       expect(page).to have_content '料理の評価を更新しました'
     end

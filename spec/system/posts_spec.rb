@@ -40,4 +40,28 @@ RSpec.describe "Posts", type: :system do
       expect(page).to have_content 'ログインしてください'
     end
   end
+
+  describe "ログイン後" do
+    let!(:user) { create(:user, email: "test@test.com", password: "123456789", password_confirmation: "123456789") }
+    before do
+      visit '/login'
+      fill_in "email", with: "test@test.com"
+      fill_in "password", with: "123456789"
+      click_button "ログイン"
+    end
+
+    it "口コミ詳細が見れること" do
+      visit "/posts/#{post.id}"
+      expect(current_path).to eq("/posts/#{post.id}")
+      expect(page).to have_content post.title
+    end
+
+    it "口コミ編集ができること" do
+      visit "/posts/#{post.id}/edit"
+      expect(current_path).to eq("/posts/#{post.id}/edit")
+      fill_in "post[title]", with: "新しいタイトル"
+      click_button "更新"
+      expect(page).to have_content '料理の評価を更新しました'
+    end
+  end
 end

@@ -12,6 +12,13 @@ RSpec.describe "Posts", type: :system do
       expect(page).to have_content 'ログインしてください'
     end
 
+    it "口コミ投稿ができないこと" do
+      visit "/posts/new"
+      Capybara.assert_current_path("/login", ignore_query: true)
+      expect(current_path).to eq('/login')
+      expect(page).to have_content 'ログインしてください'
+    end
+
     it "口コミ詳細が見れないこと" do
       visit "/posts/2"
       Capybara.assert_current_path("/login", ignore_query: true)

@@ -71,5 +71,17 @@ RSpec.describe "Posts", type: :system do
       click_button "更新"
       expect(page).to have_content '料理の評価を更新しました'
     end
+    let!(:post) { create(:post, user: user, title: "テストタイトル", body: "テスト本文") }
+    it "「投稿一覧」が見れること" do
+      visit "/posts/posts"
+      expect(current_path).to eq('/posts/posts')
+      expect(page).to have_content '投稿一覧'
+    end
+
+    it "「参考になった」投稿が見れること" do
+      visit "/posts/favorites"
+      expect(current_path).to eq('/posts/favorites')
+      expect(page).to have_content '「参考になった」投稿'
+    end
   end
 end

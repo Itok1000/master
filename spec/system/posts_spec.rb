@@ -26,7 +26,14 @@ RSpec.describe "Posts", type: :system do
       expect(page).to have_content 'ログインしてください'
     end
 
-    it "口コミ編集できないこと" do
+    it "口コミのタイトルが編集できないこと" do
+      visit "posts/2/edit"
+      Capybara.assert_current_path("/login", ignore_query: true)
+      expect(current_path).to eq('/login')
+      expect(page).to have_content 'ログインしてください'
+    end
+
+    it "口コミの本文が編集できないこと" do
       visit "posts/2/edit"
       Capybara.assert_current_path("/login", ignore_query: true)
       expect(current_path).to eq('/login')

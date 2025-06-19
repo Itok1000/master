@@ -85,7 +85,7 @@ RSpec.describe "Posts", type: :system do
       click_button "更新"
       expect(page).to have_content '料理の評価を更新しました'
     end
-    
+
     let!(:post) { create(:post, user: user, title: "テストタイトル", body: "テスト本文") }
     it "「投稿一覧」が見れること" do
       visit "/posts/posts"

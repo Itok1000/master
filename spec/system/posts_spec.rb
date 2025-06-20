@@ -64,6 +64,14 @@ RSpec.describe "Posts", type: :system do
       click_button "ログイン"
     end
 
+    it "口コミ投稿ができること" do
+      visit "/posts/new/?recipe=ojakhuri"
+      fill_in "post[title]", with: "新しい口コミ"
+      fill_in "post[body]", with: "口コミの本文"
+      click_button "登録"
+      expect(page).to have_content '料理の評価を作成しました'
+    end
+
     it "口コミ詳細が見れること" do
       visit "/posts/#{post.id}"
       expect(current_path).to eq("/posts/#{post.id}")

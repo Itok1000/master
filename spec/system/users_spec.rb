@@ -1,5 +1,9 @@
 require 'rails_helper'
 RSpec.describe "Users", type: :system do
+  it '正しいタイトルが表示されていること' do
+    visit '/users/new'
+    expect(page).to have_title("ユーザー登録 | ガマルジョバ/გამარჯობა"), 'ユーザー登録ページのタイトルに「ユーザー登録 | ガマルジョバ/გამარჯობა」が含まれていること'
+  end
   describe "ログイン前" do
     context '入力情報異常系' do
       it 'ユーザーが新規作成できないこと' do

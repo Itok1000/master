@@ -1,5 +1,9 @@
 require 'rails_helper'
 RSpec.describe "UserSessions", type: :system do
+  it '正しいタイトルが表示されていること' do
+    visit '/login'
+    expect(page).to have_title("ログイン | ガマルジョバ/გამარჯობა"), 'ユーザー登録ページのタイトルに「ユーザー登録 | ガマルジョバ/გამარჯობა」が含まれていること'
+  end
   let(:user) { create(:user) }
   describe "ログイン前" do
     context "ログイン" do

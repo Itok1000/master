@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe 'PasswordResset', type: :system do
+  it '正しいタイトルが表示されていること' do
+    visit new_password_reset_path
+    expect(page).to have_title("パスワードリセット申請 | ガマルジョバ/გამარჯობა"), 'ユーザー登録ページのタイトルに「パスワードリセット | ガマルジョバ/გამარჯობა」が含まれていること'
+  end
   let(:user) { create(:user) }
 
   describe "ログイン前" do

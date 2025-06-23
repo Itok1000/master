@@ -138,6 +138,7 @@ ja:
     next_question: "次の問題"
     see_results: "結果を見る"
     index:
+      title: クイズ結果
       result: 結果
       correct_count: 正解数
       quiz: 問題
@@ -146,6 +147,7 @@ ja:
       share_with_x: 結果をXでシェア
       try_again: もう一度診断
     new:
+      title: ジョージアクイズ
       answer: 回答する  
   diagnoses:
     new:

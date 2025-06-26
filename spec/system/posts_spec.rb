@@ -106,5 +106,13 @@ RSpec.describe "Posts", type: :system do
       expect(current_path).to eq('/posts/favorites')
       expect(page).to have_content '「参考になった」投稿'
     end
+
+    context '20件以下の場合' do
+      let!(:posts) { create_list(:post, 20, user: user) }
+      it 'ページングが表示されないこと' do
+        visit "/posts?recipe=ojakhuri"
+        expect(page).not_to have_selector('.pagination')
+      end
+    end
   end
 end

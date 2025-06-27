@@ -72,6 +72,24 @@ RSpec.describe "Posts", type: :system do
       expect(page).to have_content '料理の評価を作成しました'
     end
 
+    it "(タイトル未入力の場合)口コミ投稿が失敗すること" do
+      visit "/posts/new/?recipe=ojakhuri"
+      fill_in "post[title]", with: ""
+      fill_in "post[body]", with: "口コミの本文(本文は必須)"
+      click_button "登録"
+      expect(current_path).to eq("/posts/new/")
+      expect(page).to have_content "タイトルを入力してください"
+    end
+
+    it "(タイトル未入力の場合)口コミ投稿が失敗すること" do
+      visit "/posts/new/?recipe=ojakhuri"
+      fill_in "post[title]", with: "口コミのタイトル(タイトルは必須)"
+      fill_in "post[body]", with: ""
+      click_button "登録"
+      expect(current_path).to eq("/posts/new/")
+      expect(page).to have_content "本文を入力してください"
+    end
+
     it "口コミ詳細が見れること" do
       visit "/posts/#{post.id}"
       expect(current_path).to eq("/posts/#{post.id}")

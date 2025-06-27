@@ -108,7 +108,7 @@ RSpec.describe "Posts", type: :system do
     end
 
     context '20件以下の場合' do
-      let!(:posts) { create_list(:post, 20, user: user) }
+      let!(:posts) { create_list(:post, 9, user: user) }
       it 'ページングが表示されないこと' do
         visit "/posts?recipe=ojakhuri"
         expect(page).not_to have_selector('.pagination')

@@ -113,10 +113,21 @@ RSpec.describe "Posts", type: :system do
     end
 
     let!(:post) { create(:post, user: user, title: "テストタイトル", body: "テスト本文") }
+    
+    it '正しいタイトルが表示されていること' do
+     visit "/posts/posts"
+     expect(page).to have_title("投稿一覧 | ガマルジョバ/გამარჯობა"), 'ユーザー登録ページのタイトルに「投稿一覧」が含まれていること'
+    end
+    
     it "「投稿一覧」が見れること" do
       visit "/posts/posts"
       expect(current_path).to eq('/posts/posts')
       expect(page).to have_content '投稿一覧'
+    end
+
+    it '正しいタイトルが表示されていること' do
+     visit "/posts/favorites"
+     expect(page).to have_title("「参考になった」投稿 | ガマルジョバ/გამარჯობა"), 'ユーザー登録ページのタイトルに「参考になった」投稿が含まれていること'
     end
 
     it "「参考になった」投稿が見れること" do

@@ -90,6 +90,11 @@ RSpec.describe "Posts", type: :system do
       expect(page).to have_content "本文を入力してください"
     end
 
+    it '正しいタイトルが表示されていること(評価の詳細とみんなの反応)' do
+     visit "/posts/#{post.id}"
+     expect(page).to have_title("#{post.title} | ガマルジョバ/გამარჯობა"), '口コミ詳細のタイトルに「参考になった」投稿が含まれていること'
+    end
+
     it "口コミ詳細が見れること" do
       visit "/posts/#{post.id}"
       expect(current_path).to eq("/posts/#{post.id}")
@@ -114,9 +119,9 @@ RSpec.describe "Posts", type: :system do
 
     let!(:post) { create(:post, user: user, title: "テストタイトル", body: "テスト本文") }
 
-    it '正しいタイトルが表示されていること' do
+    it '正しいタイトルが表示されていること(投稿一覧)' do
      visit "/posts/posts"
-     expect(page).to have_title("投稿一覧 | ガマルジョバ/გამარჯობა"), 'ユーザー登録ページのタイトルに「投稿一覧」が含まれていること'
+     expect(page).to have_title("投稿一覧 | ガマルジョバ/გამარჯობა"), '投稿一覧ページのタイトルに「投稿一覧」が含まれていること'
     end
 
     it "「投稿一覧」が見れること" do
@@ -125,9 +130,9 @@ RSpec.describe "Posts", type: :system do
       expect(page).to have_content '投稿一覧'
     end
 
-    it '正しいタイトルが表示されていること' do
+    it '正しいタイトルが表示されていること(「参考になった」投稿)' do
      visit "/posts/favorites"
-     expect(page).to have_title("「参考になった」投稿 | ガマルジョバ/გამარჯობა"), 'ユーザー登録ページのタイトルに「参考になった」投稿が含まれていること'
+     expect(page).to have_title("「参考になった」投稿 | ガマルジョバ/გამარჯობა"), '「参考になった」投稿を保存するページのタイトルに「参考になった」投稿が含まれていること'
     end
 
     it "「参考になった」投稿が見れること" do

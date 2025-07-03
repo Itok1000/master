@@ -21,5 +21,10 @@ RSpec.describe Post, type: :model do
       body = build(:post, body: "a" * 65_535)
       expect(body).to be_invalid
     end
+
+    it "5段階評価が記載されていること" do
+      no_star = build(:post, star: nil)
+      expect(no_star).to be_invalid
+    end
   end
 end

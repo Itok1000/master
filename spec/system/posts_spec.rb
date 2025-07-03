@@ -117,7 +117,7 @@ RSpec.describe "Posts", type: :system do
       expect(page).to have_content '料理の評価を更新しました'
     end
 
-    let!(:post) { create(:post, user: user, title: "テストタイトル", body: "テスト本文") }
+    let!(:post) { create(:post, user: user, title: "テストタイトル", body: "テスト本文", star: 3) }
 
     it '正しいタイトルが表示されていること(投稿一覧)' do
      visit "/posts/posts"
@@ -142,7 +142,7 @@ RSpec.describe "Posts", type: :system do
     end
 
     context '20件以下の場合' do
-      let!(:posts) { create_list(:post, 9, user: user) }
+      let!(:posts) { create_list(:post, 9, user: user, star: 3) }
       it 'ページングが表示されないこと' do
         visit "/posts?recipe=ojakhuri"
         expect(page).not_to have_selector('.pagination')

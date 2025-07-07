@@ -141,10 +141,18 @@ RSpec.describe "Posts", type: :system do
       expect(page).to have_content '「参考になった」投稿'
     end
 
-    context '20件以下の場合' do
+    context '20件以下の場合(口コミ一覧)' do
       let!(:posts) { create_list(:post, 9, user: user, star: 3) }
       it 'ページングが表示されないこと' do
         visit "/posts?recipe=ojakhuri"
+        expect(page).not_to have_selector('.pagination')
+      end
+    end
+
+    context '20件以下の場合(「参考になった」投稿)' do
+      let!(:posts) { create_list(:post, 9, user: user, star: 3) }
+      it 'ページングが表示されないこと' do
+        visit "/posts/favorites"
         expect(page).not_to have_selector('.pagination')
       end
     end

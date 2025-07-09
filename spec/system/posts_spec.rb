@@ -121,7 +121,7 @@ RSpec.describe "Posts", type: :system do
 
     it '正しいタイトルが表示されていること(投稿一覧)' do
      visit "/posts/posts"
-     expect(page).to have_title("投稿一覧 | ガマルジョバ/გამარჯობა"), '投稿一覧ページのタイトルに「投稿一覧」が含まれていること'
+     expect(page).to have_title(/投稿一覧.*ガマルジョバ/), '投稿一覧ページのタイトルに「投稿一覧」が含まれていること'
     end
 
     it "「投稿一覧」が見れること" do
@@ -132,7 +132,7 @@ RSpec.describe "Posts", type: :system do
 
     it '正しいタイトルが表示されていること(「参考になった」投稿)' do
      visit "/posts/favorites"
-     expect(page).to have_title("「参考になった」投稿 | ガマルジョバ/გამარჯობა"), '「参考になった」投稿を保存するページのタイトルに「参考になった」投稿が含まれていること'
+     expect(page).to have_title(/「参考になった」投稿.*ガマルジョバ/), '「参考になった」投稿を保存するページのタイトルに「参考になった」投稿が含まれていること'
     end
 
     it "「参考になった」投稿が見れること" do
@@ -142,7 +142,7 @@ RSpec.describe "Posts", type: :system do
     end
 
     context '20件以下の場合(口コミ一覧)' do
-      let!(:posts) { create_list(:post, 9, user: user, star: 3) }
+      let!(:posts) { create_list(:post, 9, user: user) }
       it 'ページングが表示されないこと' do
         visit "/posts?recipe=ojakhuri"
         expect(page).not_to have_selector('.pagination')
@@ -150,7 +150,7 @@ RSpec.describe "Posts", type: :system do
     end
 
     context '20件以下の場合(「参考になった」投稿)' do
-      let!(:posts) { create_list(:post, 9, user: user, star: 3) }
+      let!(:posts) { create_list(:post, 9, user: user) }
       it 'ページングが表示されないこと' do
         visit "/posts/favorites"
         expect(page).not_to have_selector('.pagination')

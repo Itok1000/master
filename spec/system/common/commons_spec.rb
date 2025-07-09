@@ -30,6 +30,7 @@ RSpec.describe '共通系', type: :system do
       it 'ヘッダーが正しく表示されていること' do
         expect(page).to have_content('ログアウト'), 'ヘッダーに「ログアウト」というテキストが表示されていること'
         find('#navbarDropdown').click
+        expect(page).to have_content('プロフィール設定'), 'ヘッダーに「プロフィール設定」というテキストが表示されていること'
         expect(page).to have_content('「参考になった」投稿'), 'ヘッダーに「参考になった」投稿というテキストが表示されていること'
         expect(page).to have_content('投稿一覧'), 'ヘッダーに「投稿一覧」というテキストが表示されていること'
       end

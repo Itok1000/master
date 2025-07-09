@@ -39,5 +39,27 @@ RSpec.describe "Profiles", type: :system do
       click_button "更新"
       expect(page).to have_content('ユーザーを更新しました'), 'プロフィール更新後に成功メッセージが表示されること'
     end
+
+    it "ユーザーネームが未記載の場合、プロフィールの編集が失敗すること" do
+      find('#navbarDropdown').click
+      click_on 'プロフィール設定'
+      click_on '編集'
+      expect(page).to have_content('プロフィール編集'), 'プロフィール編集ページに「プロフィール編集」というテキストが表示されていること'
+      fill_in "ユーザーネーム", with: ""
+      click_button "更新"
+      expect(page).to have_content('ユーザーを更新出来ませんでした'), 'プロフィール更新後にエラーメッセージが表示されること'
+      expect(page).to have_content("ユーザーネームを入力してください"), 'ユーザーネームが未記載の場合のエラーメッセージが表示されること'
+    end
+
+    it "メールアドレスが未記載の場合、プロフィールの編集が失敗すること" do
+      find('#navbarDropdown').click
+      click_on 'プロフィール設定'
+      click_on '編集'
+      expect(page).to have_content('プロフィール編集'), 'プロフィール編集ページに「プロフィール編集」というテキストが表示されていること'
+      fill_in "メールアドレス", with: ""
+      click_button "更新"
+      expect(page).to have_content('ユーザーを更新出来ませんでした'), 'プロフィール更新後にエラーメッセージが表示されること'
+      expect(page).to have_content("メールアドレスを入力してください"), 'メールアドレスが未記載の場合のエラーメッセージが表示されること'
+    end
   end
 end

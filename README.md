@@ -180,3 +180,4 @@ https://app.diagrams.net/#HItok1000%2Fmaster%2FER_diagram_request%2F%E5%90%8D%E7
 |診断結果を表示させたいあなたに| https://qiita.com/jiantaiyiteng1/items/4c7fe574ab150e70c77c |
 |アプリの機能に悩むあなたに| https://qiita.com/jiantaiyiteng1/items/c35813dc51ae30bffe23 |
 |active_hashを使って何が作れるか知りたいあなたに| https://qiita.com/jiantaiyiteng1/items/4c8e3ca9ad70e2f92a13 |
+|nodeモジュールでオートコンプリート検索機能を実装したいあなたに|https://qiita.com/jiantaiyiteng1/items/37f63590c2ddac87d26b|

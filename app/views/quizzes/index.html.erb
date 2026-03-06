@@ -6,6 +6,21 @@
         <div class="card-body text-center" style="background-color: #fff8e7; border-radius: 10px;">
           <h2 class="card-title h2" style="color: #b03a2e; font-family: 'Georgia', serif;"><%= t('quizzes.index.result') %></h2>
           <p class="mt-4" style="color: #b03a2e; font-weight: bold;"><%= t('quizzes.index.correct_count') %>: <span class="text-primary"><%= @correct_count %></span> / <%= @questions.count %></p>
+          <% if @correct_count == @questions.count %>
+            <p style="color: #b03a2e; font-weight: bold;">パーフェクト！あなたはジョージア博士ですね！</p>
+            <p style="color: #b03a2e; font-weight: bold;">これを機にジョージアに行ってみましょう。</p>
+          <% elsif @correct_count >= 7 %>
+            <p style="color: #b03a2e; font-weight: bold;">素晴らしい！満点まであともう少しです。</p>
+          <% elsif @correct_count >= 3 && @correct_count <= 5 %>
+            <p style="color: #b03a2e; font-weight: bold;">まずまずの成績！</p>
+            <p style="color: #b03a2e; font-weight: bold;">あなたはもう半分ジョージア通です！</p>
+          <% elsif @correct_count >= 1 && @correct_count <= 3 %>
+            <p style="color: #b03a2e; font-weight: bold;">もしかしてコーヒーのジョージアを思い浮かべましたか？</p>
+            <p style="color: #b03a2e; font-weight: bold;">ワイン発祥の地ジョージア、覚えておきましょう！</p>
+          <% else %>
+            <p style="color: #b03a2e; font-weight: bold;">今回は残念！</p>
+            <p style="color: #b03a2e; font-weight: bold;">これを機にジョージアについて学んでみましょう。</p>
+          <% end %>
         </div>
       </div>
 

@@ -7,19 +7,19 @@
           <h2 class="card-title h2" style="color: #b03a2e; font-family: 'Georgia', serif;"><%= t('quizzes.index.result') %></h2>
           <p class="mt-4" style="color: #b03a2e; font-weight: bold;"><%= t('quizzes.index.correct_count') %>: <span class="text-primary"><%= @correct_count %></span> / <%= @questions.count %></p>
           <% if @correct_count == @questions.count %>
-            <p style="color: #b03a2e; font-weight: bold;">パーフェクト！あなたはジョージア博士ですね！</p>
-            <p style="color: #b03a2e; font-weight: bold;">これを機にジョージアに行ってみましょう。</p>
+            <p style="color: #b03a2e; font-weight: bold;"><%= t('quizzes.index.perfect_score1') %></p>
+            <p style="color: #b03a2e; font-weight: bold;"><%= t('quizzes.index.perfect_score2') %></p>
           <% elsif @correct_count >= 7 %>
-            <p style="color: #b03a2e; font-weight: bold;">素晴らしい！満点まであともう少しです。</p>
-          <% elsif @correct_count >= 3 && @correct_count <= 5 %>
-            <p style="color: #b03a2e; font-weight: bold;">まずまずの成績！</p>
-            <p style="color: #b03a2e; font-weight: bold;">あなたはもう半分ジョージア通です！</p>
-          <% elsif @correct_count >= 1 && @correct_count <= 3 %>
-            <p style="color: #b03a2e; font-weight: bold;">もしかしてコーヒーのジョージアを思い浮かべましたか？</p>
-            <p style="color: #b03a2e; font-weight: bold;">ワイン発祥の地ジョージア、覚えておきましょう！</p>
+            <p style="color: #b03a2e; font-weight: bold;"><%= t('quizzes.index.7_or_more_questions') %></p>
+          <% elsif @correct_count >= 3 && @correct_count <= 6 %>
+            <p style="color: #b03a2e; font-weight: bold;"><%= t('quizzes.index.3_to_5_questions_correct1') %></p>
+            <p style="color: #b03a2e; font-weight: bold;"><%= t('quizzes.index.3_to_5_questions_correct2') %></p>
+          <% elsif @correct_count >= 1 && @correct_count <= 2 %>
+            <p style="color: #b03a2e; font-weight: bold;"><%= t('quizzes.index.1_to_2_questions_correct1') %></p>
+            <p style="color: #b03a2e; font-weight: bold;"><%= t('quizzes.index.1_to_2_questions_correct2') %></p>
           <% else %>
-            <p style="color: #b03a2e; font-weight: bold;">今回は残念！</p>
-            <p style="color: #b03a2e; font-weight: bold;">これを機にジョージアについて学んでみましょう。</p>
+            <p style="color: #b03a2e; font-weight: bold;"><%= t('quizzes.index.all_uncorrect1') %></p>
+            <p style="color: #b03a2e; font-weight: bold;"><%= t('quizzes.index.all_uncorrect2') %></p>
           <% end %>
         </div>
       </div>

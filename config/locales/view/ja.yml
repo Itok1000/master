@@ -146,6 +146,15 @@ ja:
       explanation: 解説
       share_with_x: 結果をXでシェア
       try_again: もう一度診断
+      perfect_score1: "パーフェクト！あなたはジョージア博士ですね！"
+      perfect_score2: "これを機にジョージアに行ってみましょう。"
+      7_or_more_questions: "7問以上正解！あなたはジョージアの専門家ですね！"
+      3_to_5_questions_correct1: "まずまずの成績！"
+      3_to_5_questions_correct2: "あなたはもう半分ジョージア通です！"
+      1_to_2_questions_correct1: "もしかしてコーヒーのジョージアを思い浮かべましたか？"
+      1_to_2_questions_correct2: "ワイン発祥の地ジョージア、覚えておきましょう！"
+      all_uncorrect1: "今回は残念！"
+      all_uncorrect2: "ジョージアについてもっと知りましょう！"
     new:
       title: ジョージアクイズ
       answer: 回答する  

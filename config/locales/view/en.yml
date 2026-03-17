@@ -142,6 +142,15 @@ en:
       explanation: Explanation
       share_with_x: Share results with X
       try_again: Try again
+      perfect_score1: “Perfect! You must be Dr. Georgia!”
+      perfect_score2: “Why not take this opportunity to visit Georgia?”
+      7_or_more_questions: “You got 7 or more questions right! You're a Georgia expert!”
+      3_to_5_questions_correct1: “Not bad!”
+      3_to_5_questions_correct2: “You're already halfway to being a Georgia expert!”
+      1_to_2_questions_correct1: “Did you happen to think of the coffee brand Georgia?”
+      1_to_2_questions_correct2: “Remember: Georgia is the birthplace of wine!”
+      all_uncorrect1: “Too bad this time!”
+      all_uncorrect2: “Let's learn more about Georgia!”
     new:
       answer: Answer 
   diagnoses:

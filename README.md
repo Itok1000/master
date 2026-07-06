@@ -1,5 +1,5 @@
 # ■ サービス概要
-サービスURL: **https://gamarjoba.jp/**
+サービスURL: **https://gamarjoba.fly.dev/**
 
 ![ジョージア料理診断アプリ ガマルジョバ](https://github.com/user-attachments/assets/286864db-b868-496f-a1ed-55805c6b6295)
 

@@ -1,5 +1,5 @@
 # ■ サービス概要
-サービスURL: **https://gamarjoba.fly.dev/**
+サービスURL: **https://obliged-koala-itok1000-a2f02880.koyeb.app//**
 
 ※https://gamarjoba.jp(2025年8月をもって公開終了としました)
 

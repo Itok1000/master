@@ -68,7 +68,7 @@ class PostsController < ApplicationController
 
 
     def favorites
-      @q = Post.joins(:favorites).where(favorites: { user_id: current_user.id }).ransack(params[:q])
+      @q = Post.includes(:user).joins(:favorites).where(favorites: { user_id: current_user.id }).ransack(params[:q])
       @favorite_posts = @q.result.page(params[:page]).per(9)
     end
 
@@ -78,7 +78,7 @@ class PostsController < ApplicationController
     end
 
     def autocomplete
-     posts = Post.ransack(title_cont: params[:q]).result.limit(10)
+     posts = Post.includes(:user).ransack(title_cont: params[:q]).result.limit(10)
      render json: posts.pluck(:title)
     end
 
